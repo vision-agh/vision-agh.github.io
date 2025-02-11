@@ -9,6 +9,10 @@ last_name: Wąsala
 # Is this the primary user of the site?
 superuser: yes
 
+# Username (this should match the folder name)
+authors:
+  - MW
+  
 # Role/position
 role: Assistant
 
