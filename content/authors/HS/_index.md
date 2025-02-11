@@ -1,44 +1,43 @@
 ---
 # Display name
-title: Alice Wu 吳恩達
+title: Hubert Szolc
 
 # Full name (for SEO)
-first_name: Alice
-last_name: Wu
+first_name: Hubert
+last_name:  Szolc
 
 # Username (this should match the folder name)
 authors:
-  - 吳恩達
+  - HS
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Assistant
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
+  - name: AGH University of Krakow
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: I am interested in the control of autonomous vehicles based primarily on visual information. I use FPGAs and heterogeneous computing platforms for hardware implementation of the algorithms.
 
 interests:
   - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - PINN
 
 education:
   courses:
     - course: PhD in Artificial Intelligence
-      institution: Stanford University
+      institution: AGH University of Krakow
       year: 2012
     - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+      institution: AGH University of Krakow
       year: 2009
     - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+      institution: AGH University of Krakow
       year: 2008
 
 # Social/Academic Networking
@@ -48,16 +47,17 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:test@example.org'
-  - icon: twitter
+    link: 'mailto:szolc@agh.edu.pl'
+  - icon: linkedin
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-  - icon: google-scholar
+    link: https://www.linkedin.com/in/hubert-szolc-3178791ab/
+  - icon: researchgate
     icon_pack: ai
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-  - icon: github
+    link: https://www.researchgate.net/profile/Hubert_Szolc
+  - icon: orcid
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://orcid.org/0000-0003-3018-5731
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -71,9 +71,6 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Researchers
-  - Visitors
 ---
 
-吳恩達 is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+HSZ

@@ -1,16 +1,20 @@
 ---
 # Display name
-title: Mateusz Wąsala
+title: Tomasz Kryjak
 
 # Full Name (for SEO)
-first_name: Mateusz
-last_name: Wąsala
+first_name: Tomasz
+last_name: Kryjak
+
+# Username (this should match the folder name)
+authors:
+  - TK
 
 # Is this the primary user of the site?
-superuser: yes
+superuser: no
 
 # Role/position
-role: Assistant
+role: PhD
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +22,7 @@ organizations:
     url: 'https://www.agh.edu.pl/'
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am interested in embedded vision systems, in particular SLAM algorithms for ambient map generation and positioning of unmanned aerial vehicles. I also design and build equipment for these vehicles.
+bio: I am interested in embedded vision systems for autonomous vehicles, drones and advanced automated video surveillance. I implement these in FPGAs and reprogrammable heterogeneous devices. I also work with event cameras, neuromorphic computing and embedded AI systems.
 
 interests:
   - Embedded Vision Systems
@@ -45,17 +49,19 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:wasala@agh.edu.pl'
+    link: 'mailto:tomasz.kryjak@agh.edu.pl'
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/in/mateusz-wasala/
+    link: https://www.linkedin.com/in/tomasz-kryjak-784184174/
   - icon: researchgate
     icon_pack: ai
-    link: https://www.researchgate.net/profile/Mateusz_Wasala2
+    link: https://www.researchgate.net/profile/Tomasz_Kryjak
   - icon: orcid
     icon_pack: fab
-    link: https://orcid.org/0000-0002-8631-8428
-
+    link: https://orcid.org/0000-0001-6798-4444
+  - icon: publons
+    icon_pack: ai
+    link: https://publons.com/researcher/654084/tomasz-kryjak
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
