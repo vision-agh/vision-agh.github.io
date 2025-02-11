@@ -14,9 +14,7 @@ sections:
         filename: welcome.jpg
       text: |
         <br>
-        
-        The **EVS Research Group** has been a center of excellence 
-  # for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        The Embedded Vision Systems (EVS) group works within the Computer Vision Laboratory, Department of Automatic Control and Robotics, Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering (EAIiIB), AGH University of Science and Technology in Krakow, Poland.
   - block: collection
     content:
       title: Latest News
