@@ -15,8 +15,8 @@ sections:
       address:
         street: al. A. Mickiewicza 30
         city: Kraków
-        region: CA
-        postcode: '30-0595'
+        # region: 
+        postcode: '30-059'
         country: Poland
         country_code: PL
       coordinates:
