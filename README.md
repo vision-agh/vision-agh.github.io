@@ -1,4 +1,4 @@
-# [Hugo Research Group Theme](https://github.com/wowchemy/starter-hugo-research-group)
+<!-- # [Hugo Research Group Theme](https://github.com/wowchemy/starter-hugo-research-group)
 
 [![Screenshot](preview.png)](https://hugoblox.com/hugo-themes/)
 
@@ -45,4 +45,4 @@ Please replace the demo images with your own.
   - https://unsplash.com/photos/OYzbqk2y26c
 - Avatars
   - https://unsplash.com/photos/5yENNRbbat4
-  - https://unsplash.com/photos/WNoLnJo7tS8
+  - https://unsplash.com/photos/WNoLnJo7tS8 -->
