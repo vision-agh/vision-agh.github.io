@@ -1,40 +1,41 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Tomasz Kryjak
 
 # Full Name (for SEO)
-first_name: Nelson
-last_name: Bighetti
+first_name: Tomasz
+last_name: Kryjak
 
 # Is this the primary user of the site?
-superuser: true
+superuser: no
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: PhD
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
-    url: ''
+  - name: AGH University of Krakow
+    url: 'https://www.agh.edu.pl/'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: I am interested in embedded vision systems for autonomous vehicles, drones and advanced automated video surveillance. I implement these in FPGAs and reprogrammable heterogeneous devices. I also work with event cameras, neuromorphic computing and embedded AI systems.
 
 interests:
+  - Embedded Vision Systems
+  - Reprogrammable Haterogeneous
   - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Autonomous Vehicles
 
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
+    - course: PhD in Automatic Control and Robotics
+      institution: AGH University of Krakow
       year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+    - course: MEng in Automatic Control and Robotics
+      institution: AGH University of Krakow
       year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+    - course: BSc in Automatic Control and Robotics
+      institution: AGH University of Krakow
       year: 2008
 
 # Social/Academic Networking
@@ -44,16 +45,19 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:test@example.org'
-  - icon: twitter
+    link: 'mailto:tomasz.kryjak@agh.edu.pl'
+  - icon: linkedin
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-  - icon: google-scholar
+    link: https://www.linkedin.com/in/tomasz-kryjak-784184174/
+  - icon: researchgate
     icon_pack: ai
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-  - icon: github
+    link: https://www.researchgate.net/profile/Tomasz_Kryjak
+  - icon: orcid
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://orcid.org/0000-0001-6798-4444
+  - icon: publons
+    icon_packL fab
+    link: https://publons.com/researcher/654084/tomasz-kryjak/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -64,7 +68,7 @@ social:
 email: ''
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
