@@ -56,8 +56,8 @@ social:
     icon_pack: fab
     link: https://orcid.org/0000-0001-6798-4444
   - icon: publons
-    icon_pack: fab
-    link: https://publons.com/researcher/654084/tomasz-kryjak/
+    icon_pack: ai
+    link: https://publons.com/researcher/654084/tomasz-kryjak
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
