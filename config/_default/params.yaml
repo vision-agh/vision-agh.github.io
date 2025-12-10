@@ -7,7 +7,7 @@
 
 appearance:
   theme_day: minimal
-  theme_night: 
+  theme_night:
   font: native
   font_size: L
 
@@ -116,3 +116,29 @@ extensions:
 publications:
   date_format: January 2006
   citation_style: apa
+hugoblox:
+  identity:
+    type: organization
+    name: Embedded Vision Systems Group
+    organization: AGH University of Krakow
+    tagline: EVS Researcher | AGH
+    description: AGH Embedded Vision Systems group advances real-time vision, AI and event-camera processing on FPGA, SoC and GPU for drones and robotics applications.
+  theme:
+    pack: minimal
+    colors:
+      primary: purple
+      secondary: emerald
+      neutral: neutral
+  content:
+    citations:
+      style: mla
+  seo:
+    title: Embedded Vision Systems Group | AGH University of Krakow
+    location:
+      address:
+        street: al. Mickiewicza 30
+        city: Kraków
+        postal_code: 31-069
+        country: Polska
+  comments:
+    provider: giscus
