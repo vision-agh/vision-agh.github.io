@@ -1,0 +1,99 @@
+collections:
+  - name: authors
+    label: Authors
+    label_singular: Author
+    folder: content/authors
+    path: '{{slug}}/_index'
+    format: yaml
+    create: true
+    fields:
+      - { label: 'Schema', name: 'schema', widget: 'hidden', default: 'hugoblox/author/v1' }
+      - { label: 'Username (slug)', name: 'slug', widget: 'string' }
+      - label: 'Name'
+        name: 'name'
+        widget: 'object'
+        fields:
+          - { label: 'Display Name', name: 'display', widget: 'string' }
+          - { label: 'First Name', name: 'given', widget: 'string', required: false }
+          - { label: 'Last Name', name: 'family', widget: 'string', required: false }
+      - { label: 'Role', name: 'role', widget: 'string', required: false }
+      - { label: 'Biography', name: 'bio', widget: 'text', required: false }
+      - label: 'Status'
+        name: 'status'
+        widget: 'object'
+        required: false
+        fields:
+          - { label: 'Icon', name: 'icon', widget: 'string', default: '👋', required: false }
+      - { label: 'Is Owner', name: 'is_owner', widget: 'boolean', default: false, required: false }
+      - { label: 'Weight (for ordering)', name: 'weight', widget: 'number', required: false }
+      - label: 'Social Links'
+        name: 'links'
+        widget: 'list'
+        required: false
+        fields:
+          - { label: 'Icon (e.g. hero/at-symbol, brands/linkedin)', name: 'icon', widget: 'string' }
+          - { label: 'URL', name: 'url', widget: 'string' }
+          - { label: 'Label', name: 'label', widget: 'string', required: false }
+      - label: 'IDs'
+        name: 'ids'
+        widget: 'object'
+        required: false
+        fields:
+          - { label: 'ORCID', name: 'orcid', widget: 'string', required: false }
+          - { label: 'Google Scholar', name: 'google_scholar', widget: 'string', required: false }
+          - { label: 'ResearchGate', name: 'research_gate', widget: 'string', required: false }
+      - label: 'Interests'
+        name: 'interests'
+        widget: 'list'
+        required: false
+      - label: 'Education'
+        name: 'education'
+        widget: 'list'
+        required: false
+        fields:
+          - { label: 'Degree', name: 'degree', widget: 'string' }
+          - { label: 'Institution', name: 'institution', widget: 'string' }
+          - { label: 'Start Date', name: 'start', widget: 'string', required: false }
+          - { label: 'End Date', name: 'end', widget: 'string', required: false }
+          - { label: 'Summary', name: 'summary', widget: 'text', required: false }
+      - label: 'Affiliations'
+        name: 'affiliations'
+        widget: 'list'
+        required: false
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'URL', name: 'url', widget: 'string', required: false }
+      - label: 'Experience'
+        name: 'experience'
+        widget: 'list'
+        required: false
+        fields:
+          - { label: 'Role', name: 'role', widget: 'string' }
+          - { label: 'Organization', name: 'org', widget: 'string' }
+          - { label: 'Start Date', name: 'start', widget: 'string', required: false }
+          - { label: 'End Date (leave empty for current)', name: 'end', widget: 'string', required: false }
+          - { label: 'Summary', name: 'summary', widget: 'text', required: false }
+      - label: 'Languages'
+        name: 'languages'
+        widget: 'list'
+        required: false
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Level', name: 'level', widget: 'number', required: false }
+          - { label: 'Label', name: 'label', widget: 'string', required: false }
+      - label: 'Awards'
+        name: 'awards'
+        widget: 'list'
+        required: false
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Awarder', name: 'awarder', widget: 'string', required: false }
+          - { label: 'Date', name: 'date', widget: 'string', required: false }
+          - { label: 'Summary', name: 'summary', widget: 'text', required: false }
+          - { label: 'Icon', name: 'icon', widget: 'string', required: false }
+      - label: 'Skills'
+        name: 'skills'
+        widget: 'list'
+        required: false
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string' }
