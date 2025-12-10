@@ -1,9 +1,0 @@
-slug: "e"
-name:
-  display: "etest"
-role: ""
-bio: ""
-status:
-  icon: "👋"
-schema: "hugoblox/author/v1"
-weight: null
