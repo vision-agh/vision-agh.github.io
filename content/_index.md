@@ -8,8 +8,7 @@ sections:
   - block: hero
     content:
       title: |
-        EVS
-        Research Group
+        Embedded Vision Systems Group
       image:
         filename: welcome.jpg
       text: |
