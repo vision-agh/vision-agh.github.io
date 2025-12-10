@@ -14,11 +14,14 @@ To add an image to a publication:
 
 ### 1. Locate Your Publication
 
-Publications are stored in individual folders under `content/publication/`. For example:
-- `content/publication/journal-article/`
-- `content/publication/badap-agh-118434/`
+Publications are stored in individual folders under `content/publication/`. Each publication has its own folder containing an `index.md` file with the publication metadata.
 
-Each publication folder contains an `index.md` file with the publication metadata.
+For example, existing publications in this repository:
+- `content/publication/journal-article/` (example publication)
+- `content/publication/badap-agh-118434/` (actual publication)
+- `content/publication/conference-paper/` (example publication)
+
+Your publication folder will typically be named after the publication ID or a descriptive slug.
 
 ### 2. Add Your Image File
 
@@ -133,10 +136,12 @@ The automatic import workflow doesn't include images, so they must be added manu
 
 ## Examples in This Repository
 
-See these publications for working examples:
-- `content/publication/journal-article/` - Journal article with featured image
-- `content/publication/conference-paper/` - Conference paper with featured image
-- `content/publication/preprint/` - Preprint with featured image
+See these publications for working examples with featured images:
+- [`content/publication/journal-article/`](/content/publication/journal-article/) - Journal article example
+- [`content/publication/conference-paper/`](/content/publication/conference-paper/) - Conference paper example
+- [`content/publication/preprint/`](/content/publication/preprint/) - Preprint example
+
+All three examples include a `featured.jpg` file and image configuration in their `index.md` files.
 
 ## Additional Resources
 
