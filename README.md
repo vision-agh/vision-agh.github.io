@@ -1,3 +1,39 @@
+# Vision AGH Website
+
+This is the official website for the Vision AGH research group, built with [Hugo Blox Builder](https://hugoblox.com).
+
+## Quick Links
+
+- 📖 **[How to Add Images to Publications](PUBLICATIONS_IMAGES.md)** - Step-by-step guide for adding featured images to your publications
+- 📚 [Hugo Blox Documentation](https://docs.hugoblox.com/)
+- 💬 [Hugo Community](https://discourse.gohugo.io)
+
+## Working with Publications
+
+### Adding Publications from BibTeX
+
+Publications are automatically imported from `publications.bib` using a GitHub Actions workflow. Simply add your BibTeX entries to this file and push to the main branch.
+
+### Adding Images to Publications
+
+See the detailed guide: **[PUBLICATIONS_IMAGES.md](PUBLICATIONS_IMAGES.md)**
+
+**Quick summary:**
+1. Add a file named `featured.jpg` or `featured.png` to your publication's folder in `content/publication/`
+2. Optionally configure image settings in the publication's `index.md` frontmatter
+
+## Development
+
+This site uses the Hugo Blox Research Group template.
+
+- 👉 [Get Started with Hugo Blox](https://hugoblox.com/hugo-themes/)
+- 📚 [View the documentation](https://docs.hugoblox.com/)
+- ⬇️ [Automatically import citations from BibTeX](https://github.com/GetRD/academic-file-converter)
+
+---
+
+<!-- Original template README below -->
+
 <!-- # [Hugo Research Group Theme](https://github.com/wowchemy/starter-hugo-research-group)
 
 [![Screenshot](preview.png)](https://hugoblox.com/hugo-themes/)
