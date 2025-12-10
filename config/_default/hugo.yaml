@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: EVS Research Group # Website name
-baseURL: 'https://kair.agh.edu.pl/evs/' # Website URL
+baseURL: 'https://vision-agh.github.io/' # Website URL
 
 ############################
 ## LANGUAGE
