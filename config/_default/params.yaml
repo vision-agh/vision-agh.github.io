@@ -142,3 +142,7 @@ hugoblox:
         country: Polska
   comments:
     provider: giscus
+  privacy:
+    enable: false
+  security:
+    frame_options: allow
