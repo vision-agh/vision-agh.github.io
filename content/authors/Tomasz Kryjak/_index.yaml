@@ -1,0 +1,44 @@
+slug: "Tomasz Kryjak"
+name:
+  display: "Tomasz Kryjak"
+  given: "Tomasz"
+  family: "Kryjak"
+role: "PhD"
+bio: "I am interested in embedded vision systems for autonomous vehicles, drones and advanced automated video surveillance. I implement these in FPGAs and reprogrammable heterogeneous devices. I also work with event cameras, neuromorphic computing and embedded AI systems."
+status:
+  icon: "👋"
+schema: "hugoblox/author/v1"
+weight: null
+links:
+  - icon: "hero/at-symbol"
+    url: "mailto:tomasz.kryjak@agh.edu.pl"
+    label: "Email"
+  - icon: "brands/linkedin"
+    url: "https://www.linkedin.com/in/tomasz-kryjak-784184174/"
+    label: "LinkedIn"
+  - icon: "academicons/researchgate"
+    url: "https://www.researchgate.net/profile/Tomasz_Kryjak"
+    label: "ResearchGate"
+  - icon: "brands/orcid"
+    url: "https://orcid.org/0000-0001-6798-4444"
+    label: "ORCID"
+ids:
+  orcid: "0000-0001-6798-4444"
+interests:
+  - "Embedded Vision Systems"
+  - "Reprogrammable Heterogeneous"
+  - "Artificial Intelligence"
+  - "Autonomous Vehicles"
+education:
+  - degree: "PhD in Automatic Control and Robotics"
+    institution: "AGH University of Krakow"
+    end: "2012"
+  - degree: "MEng in Automatic Control and Robotics"
+    institution: "AGH University of Krakow"
+    end: "2009"
+  - degree: "BSc in Automatic Control and Robotics"
+    institution: "AGH University of Krakow"
+    end: "2008"
+affiliations:
+  - name: "AGH University of Krakow"
+    url: "https://www.agh.edu.pl/"
