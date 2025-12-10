@@ -3,8 +3,7 @@ collections:
     label: Authors
     label_singular: Author
     folder: content/authors
-    path: '{{slug}}/_index'
-    format: yaml
+    path: '{{slug}}/index'
     create: true
     fields:
       - { label: 'Schema', name: 'schema', widget: 'hidden', default: 'hugoblox/author/v1' }

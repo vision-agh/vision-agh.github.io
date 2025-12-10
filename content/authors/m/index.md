@@ -1,3 +1,4 @@
+---
 slug: "m"
 name:
   display: "MW"
@@ -7,3 +8,7 @@ status:
   icon: "👋"
 schema: "hugoblox/author/v1"
 weight: null
+user_groups:
+  - Researchers
+---
+

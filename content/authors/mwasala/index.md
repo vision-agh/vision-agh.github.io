@@ -1,3 +1,4 @@
+---
 slug: "mwasala"
 name:
   display: "Mateusz Wąsala"
@@ -8,6 +9,8 @@ bio: "TESTSET SETST"
 status:
   icon: "👋"
 is_owner: true
+user_groups:
+  - Researchers
 links:
   - icon: "hero/at-symbol"
     url: "mailto:wasala@agh.edu.pl"
@@ -51,3 +54,5 @@ skills:
     items: []
 schema: "hugoblox/author/v1"
 weight: null
+---
+

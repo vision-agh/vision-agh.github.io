@@ -1,3 +1,4 @@
+---
 slug: "Hubert Szolc"
 name:
   display: "Hubert Szolc"
@@ -9,6 +10,8 @@ status:
   icon: "👋"
 schema: "hugoblox/author/v1"
 weight: null
+user_groups:
+  - Researchers
 links:
   - icon: "hero/at-symbol"
     url: "mailto:szolc@agh.edu.pl"
@@ -40,3 +43,5 @@ education:
 affiliations:
   - name: "AGH University of Krakow"
     url: ""
+---
+
