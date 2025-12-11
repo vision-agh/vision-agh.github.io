@@ -1,11 +1,13 @@
 ---
-slug: "Hubert Szolc"
+slug: "hubert-szolc"
 name:
   display: "Hubert Szolc"
   given: "Hubert"
   family: "Szolc"
 role: "Assistant"
 bio: "I am interested in the control of autonomous vehicles based primarily on visual information. I use FPGAs and heterogeneous computing platforms for hardware implementation of the algorithms."
+image:
+  filename: avatar.jpg
 status:
   icon: "👋"
 schema: "hugoblox/author/v1"
@@ -45,3 +47,4 @@ affiliations:
     url: ""
 ---
 
+Hubert Szolc is an Assistant at AGH University of Krakow specializing in visual control of autonomous vehicles using FPGAs.

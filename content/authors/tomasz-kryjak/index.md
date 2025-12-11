@@ -1,11 +1,13 @@
 ---
-slug: "Tomasz Kryjak"
+slug: "tomasz-kryjak"
 name:
   display: "Tomasz Kryjak"
   given: "Tomasz"
   family: "Kryjak"
 role: "PhD"
 bio: "I am interested in embedded vision systems for autonomous vehicles, drones and advanced automated video surveillance. I implement these in FPGAs and reprogrammable heterogeneous devices. I also work with event cameras, neuromorphic computing and embedded AI systems."
+image:
+  filename: avatar.jpg
 status:
   icon: "👋"
 schema: "hugoblox/author/v1"
@@ -47,3 +49,4 @@ affiliations:
     url: "https://www.agh.edu.pl/"
 ---
 
+Tomasz Kryjak is a PhD researcher at AGH University of Krakow focused on embedded vision systems for autonomous vehicles and drones.

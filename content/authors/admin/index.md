@@ -6,6 +6,8 @@ name:
   family: "Wąsala"
 role: "Assistant"
 bio: "I am interested in embedded vision systems, in particular SLAM algorithms for ambient map generation and positioning of unmanned aerial vehicles. I also design and build equipment for these vehicles."
+image:
+  filename: avatar.jpg
 status:
   icon: "👋"
 is_owner: true
@@ -48,3 +50,4 @@ affiliations:
     url: "https://www.agh.edu.pl/"
 ---
 
+Mateusz Wąsala is an Assistant at AGH University of Krakow working on embedded vision systems and autonomous vehicles.

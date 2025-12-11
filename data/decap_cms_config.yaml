@@ -25,6 +25,13 @@ collections:
           - { label: 'Icon', name: 'icon', widget: 'string', default: '👋', required: false }
       - { label: 'Is Owner', name: 'is_owner', widget: 'boolean', default: false, required: false }
       - { label: 'Weight (for ordering)', name: 'weight', widget: 'number', required: false }
+      - label: 'User Groups'
+        name: 'user_groups'
+        widget: 'list'
+        required: false
+        allow_add: true
+        field:
+          { label: 'Group', name: 'group', widget: 'select', options: ['Principal Investigators', 'Researchers', 'Grad Students', 'Administration', 'Visitors', 'Alumni'] }
       - label: 'Social Links'
         name: 'links'
         widget: 'list'

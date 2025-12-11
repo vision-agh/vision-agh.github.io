@@ -107,7 +107,7 @@ features:
 extensions:
   decap_cms:
     branch: main
-    local_backend: false
+    local_backend: true
   academicons:
     enable: true
 
@@ -124,7 +124,7 @@ hugoblox:
     tagline: EVS Researcher | AGH
     description: AGH Embedded Vision Systems group advances real-time vision, AI and event-camera processing on FPGA, SoC and GPU for drones and robotics applications.
   theme:
-    pack: minimal
+    pack: academic
     colors:
       primary: purple
       secondary: emerald

@@ -6,6 +6,8 @@ name:
   family: "Wąsala"
 role: "Phd Student"
 bio: "TESTSET SETST"
+image:
+  filename: avatar.jpg
 status:
   icon: "👋"
 is_owner: true
@@ -56,3 +58,4 @@ schema: "hugoblox/author/v1"
 weight: null
 ---
 
+PhD Student at AGH University of Krakow specializing in visual odometry and autonomous vehicles.
