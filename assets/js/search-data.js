@@ -42,6 +42,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "members-msc-hubert-szolc",
+          title: 'MSc Hubert Szolc',
+          description: "Profile of Dr. Matteo Biagiola, Postdoctoral Researcher at the Programming Group.",
+          section: "Members",handler: () => {
+              window.location.href = "/members/szolc";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
