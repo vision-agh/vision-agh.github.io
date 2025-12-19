@@ -18,7 +18,7 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "vision-agh/www",
+    "data-repo": "vision-agh/vision-agh.github.io",
     "data-repo-id": "",
     "data-category": "Comments",
     "data-category-id": "",
