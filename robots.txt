@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://vision-agh.github.ioo/sitemap.xml
+Sitemap: https://vision-agh.github.io/sitemap.xml
