@@ -42,9 +42,9 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "members-msc-hubert-szolc",
-          title: 'MSc Hubert Szolc',
-          description: "Profile of Dr. Matteo Biagiola, Postdoctoral Researcher at the Programming Group.",
+            },},{id: "members-prof-dr-guido-salvaneschi",
+          title: 'Prof. Dr. Guido Salvaneschi',
+          description: "Profile of Prof. Dr. Guido Salvaneschi, Head of the Programming Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/szolc";
             },},{id: "news-a-simple-inline-announcement",
