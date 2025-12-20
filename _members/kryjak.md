@@ -1,7 +1,7 @@
 ---
 layout: default
 inline: false
-group: Faculty
+group: Principal Investigators
 team_frontpage: false
 group_rank: 1
 team_head: true

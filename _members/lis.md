@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Konrad Lis
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/KonradLis.jpg
     email: kolis@agh.edu.pl

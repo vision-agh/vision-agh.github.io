@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Piotr Wzorek
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/PiotrWzorek.jpg
     email: pwzorek@agh.edu.pl

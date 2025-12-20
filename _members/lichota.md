@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Olivier Lichota
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/OlivierLichota.jpg
     email: olichota@agh.edu.pl

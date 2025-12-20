@@ -18,7 +18,7 @@ profile:
     tile: MSc
     name: Krzysztof Błachut
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/KrzysztofBlachut.jpg
     email: szolc@agh.edu.pl

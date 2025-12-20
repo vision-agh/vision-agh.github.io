@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 inline: false
 group: Doctoral researcher
 team_frontpage: true
@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Mateusz Wąsala
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/MateuszWasala.jpg
     email: wasala@agh.edu.pl

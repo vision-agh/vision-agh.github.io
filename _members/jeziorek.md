@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Kamil Jeziorek
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/KamilJeziorek.jpg
     email: kjeziorek@agh.edu.pl

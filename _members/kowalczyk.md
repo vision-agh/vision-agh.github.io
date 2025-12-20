@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Marcin Kowalczyk
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/MarcinKowalczyk.jpg
     email: kowalczyk@agh.edu.pl
@@ -32,7 +32,7 @@ profile:
     #     Torstrasse 25<br />
     #     9000 St. Gallen, Switzerland
     short_bio:
-    keywords: event camera, filtration
+    keywords: event camera & filtration & real-time
 ---
 
 ## Short Bio

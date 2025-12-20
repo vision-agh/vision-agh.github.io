@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Michał Daniłowicz
     position: Research and teaching assistant
-    role: Doctoral researcher
+    role: PhD Students
     align: right
     image: people/MichalDanilowicz.jpg
     email: danilowi@agh.edu.pl

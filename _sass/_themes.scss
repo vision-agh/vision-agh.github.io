@@ -43,6 +43,19 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  --spacing: .25rem;
+
   #light-toggle-system {
     padding-left: 10px;
     padding-top: 12px;
@@ -74,6 +87,8 @@
     width: $back-to-top-width;
     z-index: $back-to-top-z-index;
   }
+
+
 }
 
 html[data-theme="dark"] {
@@ -142,6 +157,8 @@ html[data-theme-setting="dark"] {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
   }
+
+  
 }
 
 html[data-theme-setting="light"] {
@@ -157,5 +174,19 @@ html[data-theme-setting="light"] {
     padding-left: 10px;
     padding-top: 12px;
     display: block;
+  }
+
+  
+}
+html[data-theme="light"] {
+  .card-body .more-info-keywords span {
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-700);
+  }
+}
+html[data-theme="dark"] {
+.card-body .more-info-keywords span {
+    background-color: var(--color-gray-700);
+    color: var(--color-gray-300);
   }
 }
