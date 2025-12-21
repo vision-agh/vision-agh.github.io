@@ -182,6 +182,7 @@ ul.task-list input[type="checkbox"] {
 
   .card-title {
     color: var(--global-text-color);
+    text-align: center;
   }
 
   .card-body {
@@ -234,6 +235,24 @@ ul.task-list input[type="checkbox"] {
 .profile .address {
   margin-bottom: 5px;
   margin-top: 5px;
+
+  a {
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+
+  .social-icons a {
+    color: var(--global-theme-color);
+
+    &:hover {
+      color: var(--global-text-color);
+      text-decoration: none;
+    }
+  }
 }
 
 .profile.float-right {
@@ -564,7 +583,12 @@ footer.sticky-bottom {
 
       .badge {
         color: var(--global-card-bg-color) !important;
-        background-color: var(--global-theme-color) !important;
+        background-color: var(--global-badge-bg-color) !important;
+      }
+
+      .badge .project {
+        color: var(--global-card-bg-color) !important;
+        background-color: var(--global-badge-project-bg-color) !important;
       }
     }
   }
@@ -783,13 +807,19 @@ footer.sticky-bottom {
       .preview {}
 
       .abbr {
+        margin-top: -15px;
         margin-bottom: 0.5rem;
+        display: inline;
+        text-align: right;
+        float: right;
+
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
+          // background-color: var(--global-theme-color);
           color: var(--global-card-bg-color) !important;
+
+
 
           a {
             color: white;
@@ -800,9 +830,20 @@ footer.sticky-bottom {
           }
         }
 
+
         .award {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
+        }
+
+        .badge {
+          color: var(--global-card-bg-color) !important;
+          background-color: var(--global-badge-bg-color) !important;
+        }
+
+        .badge.project {
+          color: var(--global-card-bg-color) !important;
+          background-color: var(--global-badge-project-bg-color) !important;
         }
       }
 
@@ -854,7 +895,8 @@ footer.sticky-bottom {
         }
 
         a.award.btn {
-          border-color: var(--global-highlight-color);
+          background-color: var(--global-highlight-color);
+          color: white;
         }
       }
 
@@ -1546,8 +1588,11 @@ mjx-container[jax="CHTML"][display="true"] {
   a {
     margin-right: 15px;
     font-size: 1.75em;
+    text-decoration: none;
   }
 }
+
+
 
 .card-body {
   // .social-icons {
@@ -1556,13 +1601,13 @@ mjx-container[jax="CHTML"][display="true"] {
 
   .social-icons a {
     margin: 0 5px;
-    color: var(--global-text-color);
+    color: var(--global-theme-color);
     transition: color 0.3s ease;
     font-size: 1.25em;
   }
 
   .social-icons a:hover {
-    color: var(--global-theme-color);
+    color: var(--global-text-color);
   }
 }
 

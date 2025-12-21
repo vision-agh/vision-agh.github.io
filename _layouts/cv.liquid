@@ -58,7 +58,7 @@ layout: default
       {{ content }}
 
       {% if page.interests %}
-      {% assign keywords = page.interests %}
+      {% assign keywords = page.interests | sort_natural %}
       <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
           {% for kw in keywords %}
           <span class="text-xs px-2 py-1 rounded">{{ kw }}</span>

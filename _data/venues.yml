@@ -1,9 +1,27 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"CVPR":
+  url: https://cvpr.thecvf.com/
 
-"PhysRev":
-  url: https://journals.aps.org/
 
-"Vision":
-  color: "#009f36"
+"IROS":
+  url: https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros/
+
+"DSD":
+  url: https://dsd-seaa.com/
+
+"DASIP2025":
+  name: "DASIP"
+  url: https://dasip-2025.github.io/
+
+"DASIP2026":
+  name: "DASIP"
+  url: https://dasip-2026.org/
+
+
+"ARC2025":
+  name: "ARC"
+  url: https://arc2025.org/
+
+
+"SPA":
+  url: https://spaconference.org.pl/
+

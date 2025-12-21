@@ -33,7 +33,10 @@ profile:
     #     Torstrasse 25<br />
     #     9000 St. Gallen, Switzerland
     short_bio:
-    keywords: event camera & filtration & real-time
+    keywords: 
+    - event camera 
+    - filtration 
+    - real-time
 ---
 
 ## Short Bio

@@ -64,12 +64,12 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
   {% assign members = site.members | where: "team_frontpage", true | sort: "vis_order" %}
-  <div class="d-flex flex-wrap align-content-stretch justify-content-center pt-5 no-gutters">
+  <div class="d-flex flex-wrap align-content-stretch justify-content-center pt-5 no-gutters mb-5">
       {% for member in members %}
-          {% assign colsMod6 = forloop.length | modulo: 6 %}
+          {% assign colsMod6 = forloop.length | modulo: 5 %}
           {% assign colIdMod4 = forloop.index | modulo: 4 %}
           {% if colsMod6 == 1 and colIdMod4 == 1 %}<div class="col-md-2 w-100"></div>{% endif %}
-          <div class="col-6 col-sm-3 col-md-2 mb-3">
+          <div class="col-6 col-sm-3 col-md-2 mb-6">
               <a href="{{ member.url | relative_url }}" class="no-decoration">
                   <div class="card hoverable h-100 m-2">
                       <img src="{{ '/assets/img/' | append: member.profile.image | relative_url }}" class="card-img-top" alt="{{ member.profile.name }}" />
@@ -85,15 +85,15 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      <h2 class="font-bold text-center">
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
+      <h2 class="font-bold text-center">
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
@@ -101,8 +101,8 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      <h2 class="font-bold text-center">
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Featured publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

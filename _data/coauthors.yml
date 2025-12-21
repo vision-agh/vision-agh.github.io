@@ -1,34 +1,39 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Blachut":
+  - firstname: ["Krzysztof", "K.", "Krzysztof Blachut", "Krzysztof Błachut"]
+    url: /members/blachut
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Danilowicz":
+  - firstname: ["Michał", "M.", "Michal", "Michał Daniłowicz", "Michal Danilowicz"]
+    url: /members/danilowicz
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Jeziorek":
+  - firstname: ["Kamil", "K.", "Kamil Jeziorek"]
+    url: /members/jeziorek
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Kowalczyk":
+  - firstname: ["Marcin", "M.", "Marcin Kowalczyk"]
+    url: /members/kowalczyk
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Kryjak":
+  - firstname: ["Tomasz", "T.", "Tomasz Kryjak"]
+    url: /members/kryjak
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Lichota":
+  - firstname: ["Olivier", "O.", "Olivier Lichota"]
+    url: /members/lichota
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Lis":
+  - firstname: ["Konrad", "K.", "Konrad Lis"]
+    url: /members/lis
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Szolc":
+  - firstname: ["Hubert", "H.", "Hubert Szolc"]
+    url: /members/szolc
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Wasala":
+  - firstname: ["Mateusz", "M.", "Mateusz Wasala", "Mateusz Wąsala"]
+    url: /members/wasala
+
+"Wzorek":
+  - firstname: ["Piotr", "P.", "Piotr Wzorek"]
+    url: /members/wzorek

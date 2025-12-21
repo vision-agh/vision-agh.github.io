@@ -29,7 +29,9 @@ profile:
     googlescholar: fjtHTooAAAAJ
     address:
     short_bio:
-    keywords: UAVs & control systems (MPC, PINN)
+    keywords: 
+    - UAVs 
+    - control systems (MPC, PINN)
 
 interests: 
   - "UAVs"
