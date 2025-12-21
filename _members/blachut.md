@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 inline: false
 group: Doctoral researcher
 team_frontpage: true
@@ -26,13 +26,12 @@ profile:
     orcid: 0000-0002-1071-335X
     researchgate: Krzysztof-Blachut
     scopus: 57219118798
-    # address: >
-    #     School of Computer Science<br />
-    #     Office 64-114<br />
-    #     Torstrasse 25<br />
-    #     9000 St. Gallen, Switzerland
----
+    googlescholar:
+    address:
+    short_bio:
+    keywords: 
 
+---
 ## Short Bio
 
 My research interests include embedded vision systems in flying and driving autonomous vehicles and in video surveillance systems. I use heterogeneous computing platforms with a particular focus on FPGAs for real-time implementation of frame and event-based data processing algorithms.

@@ -26,19 +26,26 @@ profile:
     orcid: 0000-0003-3018-5731
     researchgate: Hubert-Szolc
     scopus: 57219119237
-    # address: >
-    #     School of Computer Science<br />
-    #     Office 64-114<br />
-    #     Torstrasse 25<br />
-    #     9000 St. Gallen, Switzerland
+    googlescholar: fjtHTooAAAAJ
+    address:
     short_bio:
     keywords: UAVs & control systems (MPC, PINN)
+
+interests: 
+  - "UAVs"
+  - "automatic control"
+  - "SoC FPGA"
+  - "computer vision"
+  - "event cameras"
+  - "hardware acceleration"
+  - "real-time processing"
+
 
 education:
   - degree: "PhD candidate"
     institution: "AGH University of Krakow"
     start: "2019"
-    end: ""
+    end: 
     summary: "Automation, Electronics, Electrical Engineering and Space Technologies"
   - degree: "Master of Science"
     institution: "AGH University of Krakow"
@@ -55,26 +62,36 @@ affiliations:
     name: "Automatic Control and Robotics"
     url: "www.agh.edu.pl"
     
-interests:
-  - "UAVs"
-  - "automatic control"
-  - "SoC FPGA"
-  - "computer vision"
-  - "event cameras"
-  - "hardware acceleration"
-  - "real-time processing"
+
   
 experience:
   - role: "Research and teaching assistant"
-    org: "AGH University of Krakow"
+    institution: "AGH University of Krakow"
     start: "2021"
-    end: ""
+    end: 
     summary: "I am conducting research on utilising SoC computing platforms for vision-based autonomous control of UAVs . In my work I am using using both classical algorithms as well as AI methods and hybrid approches. I am also responsible for running labs with students on parallel computing, vision algorithms and control methods. "
   - role: "IT&V Engineer"
-    org: "Delphi/Aptiv Poland"
+    institution: "Delphi/Aptiv Poland"
     start: "2017-07-01"
     end: "2018-02-01"
     summary: "I worked as an Independent Test & Verification Engineer, responsible for the software and hardware used by car manufacturers."
+
+awards:
+  - title: Obtaining NCN PRELUDIUM Grant
+    institution: Polish National Science Centre
+    date: 2025-01-21
+    summary: Project titled Hardware-Aware Neural Network Design for Event-Based Object Detection
+
+  - title: AMD Open Hardware Design Competition 2024 - Winner in PhD category
+    institution: Advanced Micro Devices (AMD
+    date: 2024-08-28
+    summary: Project titled Graph Convolutional Neural Networks for Event Based Vision for AMD SoC FPGA
+
+  - title: Best Paper Presentation Award - IEEE SPA conference 2022
+    institution: Institute of Electrical and Electronics Engineers (IEEE)
+    date: 2022-09-22
+    summary: Presentation titled "Traffic sign detection with event cameras and DCNN"
+
 
 languages:
   - name: "polish"
@@ -82,8 +99,6 @@ languages:
   - name: "english"
     label: "Fluent"
 ---
-
-## Short Bio
 
 I'm interested in controlling autonomous vehicles - especially Unmanned Aerial Vehicles (UAVs) - primarily based on visual information. 
 I use FPGAs and heterogeneous computing platforms to implement the algorithms in hardware.

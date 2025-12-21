@@ -2,127 +2,162 @@
 layout: default
 
 ---
-{% unless site.data.resume %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.profile.name }}</h1>
+  </header>
+  <article>
+    {% if page.profile %}
+    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      {% if page.profile.image %}
+      {% if page.profile.href %}<a href="{{ page.profile.href | relative_url }}">{% endif %}
+        <img
+          class="img-fluid{% assign ext = page.profile.image | slice: -4, 4 %}{% if ext != '.svg' %} z-depth-1 rounded{% endif %}"
+          src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ page.profile.name }}">
+        {% if page.profile.href %}</a>{% endif %}
       {% endif %}
-    </header>
+      {% if page.profile %}
+      <div class="address">
+        <p>
+          {% if page.profile.href %}<a href="{{ page.profile.href | relative_url }}">{% endif %}
+            <span class="name font-semibold">{{ page.profile.title }} {{ page.profile.name }}</span>
+            {% if page.profile.href %}</a>{% endif %}
+          {% if page.profile.position %}<br />{{ page.profile.position }}{% endif %}
+          {% if page.profile.role %}<br />{{ page.profile.role }}{% endif %}
+          {% if page.profile.email %}<br /><a href="mailto:{{ page.profile.email }}"><i class="fas fa-envelope"></i> {{
+            page.profile.email }}</a>{% endif %}
+          {% if page.profile.phone %}<br /><a href="tel:{{ page.profile.phone }}"><i class="fas fa-phone"></i> {{
+            page.profile.phone }}</a>{% endif %}
+          {% if page.profile.website %}<br /><a href="{{ page.profile.website }}" target="_blank"><i
+              class="fas fa-globe"></i> {{ page.profile.website }}</a>{% endif %}
 
-    <article>
-      <div class="cv">
-        {% for entry in site.data.cv %}
-          <a class="anchor" id="{{ entry.title }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
-              {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
-              {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
-              {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
-              {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
-              {% else %}
-                {{ entry.contents }}
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
+        <div class="social-icons text-center">
+          {% if page.profile.linkedin %}<a href="https://www.linkedin.com/in/{{ page.profile.linkedin }}/"
+            target="_blank"><i class="fab fa-linkedin"></i></a>{% endif %}
+          {% if page.profile.orcid %}<a href="https://orcid.org/{{ page.profile.orcid }}" target="_blank"><i
+              class="ai ai-orcid ai-1x"></i> </a>{% endif %}
+          {% if page.profile.researchgate %}<a
+            href="https://www.researchgate.net/profile/{{ page.profile.researchgate }}" target="_blank"><i
+              class="ai ai-researchgate ai-1x"></i></a>{% endif %}
+          {% if page.profile.scopus %}<a
+            href="https://www.scopus.com/authid/detail.uri?authorId={{ page.profile.scopus }}" target="_blank"><i
+              class="ai ai-scopus ai-1x"></i></a>{% endif %}
+          {% if page.profile.googlescholar %}<a
+            href="https://scholar.google.com/citations?user={{ page.profile.googlescholar }}" target="_blank"><i
+              class="ai ai-google-scholar ai-1x"></i></a>{% endif %}
+
+        </div>
+        </p>
+        <p class="post">{{ page.profile.address }}</p>
       </div>
-    </article>
-  </div>
-{% else %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
       {% endif %}
-    </header>
+    </div>
+    {% endif %}
 
-    <article>
-      <div class="cv">
-        {% for data in site.data.resume %}
-          {% if site.jsonresume and site.jsonresume.size > 0 %}
-            {% unless site.jsonresume contains data[0] %}
-              {% continue %}
-            {% endunless %}
-          {% endif %}
-          {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
-          <a class="anchor" id="{{ data[0] }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
-            <div>
-              {% case data[0] %}
-                {% when 'basics' %}
-                  {% include resume/basics.liquid %}
-                {% when 'education' %}
-                  {% include resume/education.liquid %}
-                {% when 'work' %}
-                  {% include resume/work.liquid %}
-                {% when 'volunteer' %}
-                  {% include resume/volunteer.liquid %}
-                {% when 'projects' %}
-                  {% include resume/projects.liquid %}
-                {% when 'awards' %}
-                  {% include resume/awards.liquid %}
-                {% when 'skills' %}
-                  {% include resume/skills.liquid %}
-                {% when 'publications' %}
-                  {% include resume/publications.liquid %}
-                {% when 'languages' %}
-                  {% include resume/languages.liquid %}
-                {% when 'interests' %}
-                  {% include resume/interests.liquid %}
-                {% when 'certificates' %}
-                  {% include resume/certificates.liquid %}
-                {% when 'references' %}
-                  {% include resume/references.liquid %}
-                {% else %}
+    <div class="clearfix">
+      {{ content }}
 
-              {% endcase %}
-            </div>
-          </div>
-        {% endfor %}
+      {% if page.interests %}
+      {% assign keywords = page.interests %}
+      <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
+          {% for kw in keywords %}
+          <span class="text-xs px-2 py-1 rounded">{{ kw }}</span>
+          {% endfor %}
       </div>
-    </article>
-  </div>
-{% endunless %}
+      {% endif %}
+
+    </div>
+
+    {% assign sections = "experience,education,awards" | split: "," %}
+    {% for section in sections %}
+
+    {% assign entries = page[section] %}
+      {% if entries %}
+
+
+          <div class="w-full">
+            <h3 class="mb-6 font-bold text-center">{{ section | capitalize }}</h3>
+
+            {% if section == "awards" %}
+              {% assign sorted_entries = entries | sort: 'date' | reverse %}
+            {% else %}
+              {% assign sorted_entries = entries | sort: 'start' | reverse %}
+            {% endif %}
+            {% for item in sorted_entries %}
+
+              <ol class="relative w-full border-l border-gray-200">
+                <li class="mb-10 ml-6">
+                  <span
+                    class="absolute flex items-center justify-center w-10 h-10 bg-primary-100 rounded-full -start-5 ring-8 ring-color">
+                    {% if section == "education" %}
+                      <i class="fas fa-solid fa-graduation-cap text-primary-800"></i>
+                    {% elsif section == "experience" %}
+                      <i class="fas fa-briefcase text-primary-800"></i>
+                    {% elsif section == "awards" %}
+                      <i class="fas fa-solid fa-trophy text-primary-800"></i>
+                    {% endif %}
+
+                  </span>
+                  <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">
+                      {% if section == "education" %}
+                        {{ item.degree }}
+                      {% elsif section == "experience" %}
+                        {{ item.role }}
+                      {% elsif section == "awards" %}
+                        {{ item.title }}
+                      {% endif %}
+                    
+                  </h3>
+                  <span class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{% if item.institution %}{{
+                    item.institution }}{% endif %}</span>
+                  {% if section == "experience" or section == "education" %}
+                    <time class="block mb-3 text-sm font-normal leading-none text-gray-500">
+                      {% if item.start contains "-" %}{{ item.start | date: "%B %Y" }}{% else %}{{ item.start }}{% endif %} - {%
+                      if item.end %}{% if item.end contains "-" %}{{ item.end | date: "%B %Y" }}{% else %}{{ item.end }}{% endif
+                      %}{% else %}Present{% endif %}
+                    </time>
+                  {% else %}
+                    <time class="block mb-3 text-sm font-normal leading-none text-gray-500">{{ item.date | date: "%d %B %Y" }}</time>
+                  {% endif %}
+                  <div class="mb-4 text-base font-normal text-gray-500  prose max-w-none prose-slate">
+                    {{ item.summary }}
+                  </div>
+                </li>
+              </ol>
+
+            {% endfor %}
+          </div>
+
+        {% endif %}
+      {% endfor %}
+
+
+      {% if page.news %}
+      <h2 id="news">News</h2>
+      {% comment %} {% include news.html %} {% endcomment %}
+      {% endif %}
+
+      {% if page.selected_papers %}
+      <h2 id="recent-publications">Recent Publications</h2>
+      {% comment %} {% include selected_papers.html %} {% endcomment %}
+      {% endif %}
+
+      {% if page.projects %}
+      <h2 id="projects" class="about-tiles">Projects</h2>
+      {% comment %} {% include about_tiles.html items=site.projects %} {% endcomment %}
+      {% endif %}
+
+      {% if page.supports %}
+      <h2 id="support" class="about-tiles">Support</h2>
+      {% comment %} {% include about_tiles.html items=site.supports %} {% endcomment %}
+      {% endif %}
+
+      {% if page.publications %}
+      <h3 id="publications" class="mb-6 font-bold text-center">Publications</h3>
+      <div class="publications">
+       {% bibliography -f papers -q @*[{{page.publications}}]* %} 
+      </div>
+      {% endif %}
+  </article>
+
+</div>

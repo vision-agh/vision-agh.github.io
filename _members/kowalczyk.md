@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 inline: false
 group: Doctoral researcher
 team_frontpage: true
@@ -25,7 +25,8 @@ profile:
     linkedin: 
     orcid: 
     researchgate: 
-    scopus: 
+    scopus:
+    googlescholar:
     # address: >
     #     School of Computer Science<br />
     #     Office 64-114<br />

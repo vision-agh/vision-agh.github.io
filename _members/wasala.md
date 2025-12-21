@@ -26,12 +26,14 @@ profile:
     orcid: 0000-0002-8631-8428
     researchgate: Mateusz_Wasala2
     scopus: 57219120038
+    googlescholar:
     # address: >
     #     School of Computer Science<br />
     #     Office 64-114<br />
     #     Torstrasse 25<br />
     #     9000 St. Gallen, Switzerland
-    short_bio: 
+    short_bio:
+    keywords: 
 ---
 
 ## Short Bio

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 inline: false
 group: Principal Investigators
 team_frontpage: false
@@ -26,12 +26,8 @@ profile:
     orcid: 0000-0001-6798-4444
     researchgate: Tomasz_Kryjak
     scopus: 35177649900
-    # address: >
-    #     School of Computer Science<br />
-    #     Office 64-114<br />
-    #     Torstrasse 25<br />
-    #     9000 St. Gallen, Switzerland
-
+    googlescholar:
+    address:
     short_bio:
     keywords:  
 ---

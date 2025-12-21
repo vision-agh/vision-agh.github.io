@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 inline: false
 group: Doctoral researcher
 team_frontpage: true
@@ -25,8 +25,11 @@ profile:
     linkedin: konrad-lis-ml
     orcid: 0000-0003-2034-0590
     researchgate: Konrad-Lis-2
-    scopus: 
+    scopus:
+    googlescholar:
     # address: >
+    short_bio:
+    keywords:
     #     School of Computer Science<br />
     #     Office 64-114<br />
     #     Torstrasse 25<br />

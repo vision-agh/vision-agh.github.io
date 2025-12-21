@@ -40,18 +40,20 @@ layout: default
         <div class="address">
           <p>
             {% if head_member.url %}<a href="{{ head_member.url | relative_url }}">{% endif %}
-              <span class="name">{{ head_member.profile.name }}</span>
+              <span class="name font-semibold">{{ head_member.profile.title }} {{ head_member.profile.name }}</span>
             {% if head_member.url %}</a>{% endif %}
             {% if head_member.profile.position %}<br />{{ head_member.profile.position }}{% endif %}
+            {% if head_member.profile.role %}<br />{{ head_member.profile.role }}{% endif %}
             {% if head_member.profile.email %}<br /><a href="mailto:{{ head_member.profile.email }}"><i class="fas fa-envelope"></i> {{ head_member.profile.email }}</a>{% endif %}
             {% if head_member.profile.phone %}<br /><a href="tel:{{ head_member.profile.phone }}"><i class="fas fa-phone"></i> {{ head_member.profile.phone }}</a>{% endif %}
             {% if head_member.profile.website %}<br /><a href="{{ head_member.profile.website }}" target="_blank"><i class="fas fa-globe"></i> {{ head_member.profile.website }}</a>{% endif %}
 
             <div class="social-icons text-center">
             {% if head_member.profile.linkedin %}<a href="https://www.linkedin.com/in/{{ head_member.profile.linkedin }}/" target="_blank"><i class="fab fa-linkedin"></i></a>{% endif %}
-            {% if head_member.profile.orcid %}<a href="https://orcid.org/{{ head_member.profile.orcid }}" target="_blank"><i class="fab fa-orcid"></i> </a>{% endif %}
-            {% if head_member.profile.researchgate %}<a href="https://www.researchgate.net/profile/{{ head_member.profile.researchgate }}" target="_blank"><i class="fab fa-researchgate"></i></a>{% endif %}
-            {% if head_member.profile.scopus %}<a href="https://www.scopus.com/authid/detail.uri?authorId={{ head_member.profile.scopus }}" target="_blank"><i class="fab fa-scopus"></i></a>{% endif %}
+            {% if head_member.profile.orcid %}<a href="https://orcid.org/{{ head_member.profile.orcid }}" target="_blank"><i class="ai ai-orcid ai-1x"></i> </a>{% endif %}
+            {% if head_member.profile.researchgate %}<a href="https://www.researchgate.net/profile/{{ head_member.profile.researchgate }}" target="_blank"><i class="ai ai-researchgate ai-1x"></i></a>{% endif %}
+            {% if head_member.profile.scopus %}<a href="https://www.scopus.com/authid/detail.uri?authorId={{ head_member.profile.scopus }}" target="_blank"><i class="ai ai-scopus ai-1x"></i></a>{% endif %}
+            {% if head_member.profile.googlescholar %}<a href="https://scholar.google.com/citations?user={{ head_member.profile.googlescholar }}" target="_blank"><i class="ai ai-google-scholar ai-1x"></i></a>{% endif %}
             </div>
           </p>
           <p class="post">{{ head_member.profile.address }}</p>

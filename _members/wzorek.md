@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 inline: false
 group: Doctoral researcher
 team_frontpage: true
@@ -26,7 +26,10 @@ profile:
     orcid: 0000-0003-3885-600X
     researchgate: Piotr-Wzorek
     scopus: 57219119237
+    googlescholar:
     # address: >
+    short_bio:
+    keywords:
     #     School of Computer Science<br />
     #     Office 64-114<br />
     #     Torstrasse 25<br />

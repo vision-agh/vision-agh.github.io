@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 inline: false
 group: Doctoral researcher
 team_frontpage: true
@@ -26,11 +26,10 @@ profile:
     orcid: 0000-0001-8851-8186
     researchgate: Michal-Danilowicz
     scopus: 
-    # address: >
-    #     School of Computer Science<br />
-    #     Office 64-114<br />
-    #     Torstrasse 25<br />
-    #     9000 St. Gallen, Switzerland
+    googlescholar:
+    address:
+    short_bio:
+    keywords: 
 ---
 
 ## Short Bio

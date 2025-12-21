@@ -20,12 +20,10 @@
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{$white-color};
   --global-highlight-color: #{$red-color-dark};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel($black-color, "red", $space: rgb)},
+  --global-back-to-top-bg-color: rgba(#{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
     #{color.channel($black-color, "blue", $space: rgb)},
-    0.4
-  );
+    0.4);
   --global-back-to-top-text-color: #{$white-color};
   --global-newsletter-bg-color: #{$white-color};
   --global-newsletter-text-color: #{$black-color};
@@ -55,6 +53,36 @@
   --color-gray-900: #111827;
 
   --spacing: .25rem;
+
+  --text-xs: .75rem;
+  --text-xs--line-height: calc(1 / .75);
+  --text-sm: .875rem;
+  --text-sm--line-height: calc(1.25 / .875);
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
 
   #light-toggle-system {
     padding-left: 10px;
@@ -106,12 +134,10 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel($white-color, "red", $space: rgb)},
+  --global-back-to-top-bg-color: rgba(#{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},
     #{color.channel($white-color, "blue", $space: rgb)},
-    0.5
-  );
+    0.5);
   --global-back-to-top-text-color: #{$black-color};
   --global-newsletter-bg-color: #{$grey-color-light};
   --global-newsletter-text-color: #{$grey-color-dark};
@@ -158,7 +184,7 @@ html[data-theme-setting="dark"] {
     background: var(--global-back-to-top-bg-color);
   }
 
-  
+
 }
 
 html[data-theme-setting="light"] {
@@ -176,17 +202,72 @@ html[data-theme-setting="light"] {
     display: block;
   }
 
-  
+
+
+
 }
+
 html[data-theme="light"] {
-  .card-body .more-info-keywords span {
-    background-color: var(--color-gray-100);
+  .more-info-keywords span {
+    background-color: var(--color-gray-200);
     color: var(--color-gray-700);
   }
+
+
+  .text-gray-200 {
+    color: var(--color-gray-200)
+  }
+
+  .text-gray-400 {
+    color: var(--color-gray-400)
+  }
+
+  .text-gray-500 {
+    color: var(--color-gray-500)
+  }
+
+  .text-gray-600 {
+    color: var(--color-gray-600)
+  }
+
+  .text-gray-700 {
+    color: var(--color-gray-700)
+  }
+
+  .text-gray-800 {
+    color: var(--color-gray-800)
+  }
+
+  .text-gray-900 {
+    color: var(--color-gray-900)
+  }
 }
+
 html[data-theme="dark"] {
-.card-body .more-info-keywords span {
+  .more-info-keywords span {
     background-color: var(--color-gray-700);
     color: var(--color-gray-300);
   }
+
+
+  .text-gray-100 {
+    color: var(--color-gray-100)
+  }
+
+  .text-gray-200 {
+    color: var(--color-gray-200)
+  }
+
+  .text-gray-500 {
+    color: var(--color-gray-300)
+  }
+
+  .text-gray-400 {
+    color: var(--color-gray-400)
+  }
+
+  .text-gray-700 {
+    color: var(--color-gray-700)
+  }
+
 }
