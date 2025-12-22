@@ -1675,11 +1675,11 @@ ol {
 }
 
 .-start-3 {
-  inset-inline-start: calc(var(--spacing) * -3);
+  inset-inline-start: -0.75rem;
 }
 
 .-start-5 {
-  inset-inline-start: calc(var(--spacing) * -5);
+  inset-inline-start: -1.25rem;
 }
 
 .bg-primary-100 {
