@@ -1,0 +1,51 @@
+<div class="col">
+    <div class="card h-100 hoverable">
+      {% if project.img %}
+        {%
+          include figure.liquid
+          loading="eager"
+          path=project.img
+          sizes = "250px"
+          alt="project thumbnail"
+          class="card-img-top d-block mx-auto"
+        %}
+      {% endif %}
+      <div class="card-body">
+        <h2 class="card-title">{{ project.name }}</h2>
+        {% if project.topic %}
+          <p class="card-text text-center">Topic: <span class="text-">  {{ project.topic }} </span></p>
+        {% endif %}
+
+        {% if project.presenter %}
+          {% if project.presentation_type == 'poster' %}
+            <p class="card-text text-center mb-0"><strong>Poster presented by</strong></p>
+          {% elsif project.presentation_type == 'presentation' %}
+            <p class="card-text text-center mb-0"><strong>Presented by</strong></p>
+          {% endif %}
+
+          {%  assign pi_lastname = project.presenter |  split: " " | last | remove_accents  %}
+          <p class="card-text text-center"> <a href="/members/{{ pi_lastname | downcase }}">{{ project.presenter }}  </a></p>
+        {% endif %}
+        {% if project.start_date and project.end_date %}
+          <p class="card-text text-center"> {{ project.start_date | date: "%d %b %Y" }} - {{ project.end_date | date: "%d %b %Y" }}</p>
+        {% endif %}
+
+        <div class="social-icons border-gray-200 pt-2 border-t gap-3 mt-4">
+            {% if project.pdf %}
+            <a href="/assets/pdf/{{ project.pdf }}" target="_blank"
+                title="PDF of the presentation">
+                <i class="fa-solid fa-file-pdf"></i>
+            </a>
+            {% endif %}
+            {% if project.drive %}
+            <a href="{{ project.drive }}" target="_blank"
+                title="Google Drive folder with presentation materials">
+                <i class="fa-brands fa-google-drive"></i>
+            </a>
+            {% endif %}
+            
+           
+          </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+"DASIP":
+  name: "DASIP"
+  url: https://dasip2025.org/
+  start_date: 2025-01-20
+  end_date: 2025-01-22
+  presentation_type: presentation
+  presenter: Konrad Lis
+  topic: LiFT - lightweight, FPGA-tailored 3D object detection based on LiDAR data
+  pdf: example_pdf.pdf
+  drive: https://drive.google.com/drive/u/0/my-drive
+
+"ARC":
+  name: "ARC"
+  url: https://arc2025.org/
+  start_date: 2025-04-09
+  end_date: 2025-04-11
+  presentation_type: presentation
+  presenter: Kamil Jeziorek
+  topic: Hardware-accelerated event-graph neural networks for low-latency time-series classification on SoC FPGA
+
+"CVPRW":
+  name: "CVPRW"
+  url: https://cvpr.thecvf.com/
+  start_date: 2025-06-11
+  end_date: 2025-06-13
+  presentation_type: poster
+  presenter: Marcin Kowalczyk, Kamil Jeziorek
+  topic: Learning from noise - enhancing DNNs for event-based vision through controlled noise injection
+
+"DSD":
+  name: "DSD"
+  url: https://dsd-seaa.com/
+  start_date: 2025-09-09
+  end_date: 2025-09-11
+  presentation_type: presentation
+  presenter: Mateusz Wąsala
+  topic: Hardware-Aware Feature Extraction Quantisation for Real-Time Visual Odometry on FPGA Platforms
+
+"SPA2025_1":
+  name: "SPA"
+  url: https://spaconference.org.pl/
+  start_date: 2025-09-17
+  end_date: 2025-09-19
+  presentation_type: presentation
+  presenter: Tomasz Kryjak
+  topic: Embedded perception and control system for an autonomous surface vehicle using visual-LiDAR fusion and SLAM
+
+"SPA2025_2":
+  name: "SPA"
+  url: https://spaconference.org.pl/
+  start_date: 2025-09-17
+  end_date: 2025-09-19
+  presentation_type: presentation
+  presenter: Michał Michniak
+  topic: A model-driven TTFS translation for ReLU neural networks
+
+"SPA2025_3":
+  name: "SPA"
+  url: https://spaconference.org.pl/
+  start_date: 2025-09-17
+  end_date: 2025-09-19
+  presentation_type: presentation
+  presenter: Tomasz Kryjak
+  topic: Hardware-aware Graph Neural Networks prunning for embedded event-based vision
+
+
