@@ -1,11 +1,23 @@
 ---
 layout: page
-title: NCN
-description: with background image
-img: assets/img/12.jpg
+title: NCN Preludium
+description: 
+principal_investigator: Msc Piotr Wzorek
+img: assets/img/projects/logo_ncn-preludium.png
 importance: 1
-category: work
+category: NCN
 related_publications: true
+keywords: 
+    - Event Cameras
+    - Event-based Odometry
+    - UAVs
+    - Embedded Platforms
+    - Deep Neural Networks
+
+start_date: 2025
+end_date: 2028
+
+
 ---
 
 Every project has a beautiful feature showcase page.

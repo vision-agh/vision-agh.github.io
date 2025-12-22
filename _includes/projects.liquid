@@ -8,12 +8,28 @@
           path=project.img
           sizes = "250px"
           alt="project thumbnail"
-          class="card-img-top"
+          class="card-img-top d-block mx-auto"
         %}
       {% endif %}
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
-        <p class="card-text">{{ project.description }}</p>
+        {% if project.principal_investigator %}
+          {%  assign pi_lastname = project.principal_investigator |  split: " " | last | remove_accents  %}
+          <p class="card-text text-center"> <a href="/members/{{ pi_lastname | downcase }}">{{ project.principal_investigator }}  </a></p>
+        {% endif %}
+        {% if project.start_date and project.end_date %}
+          <p class="card-text text-center"> {{ project.start_date }} - {{ project.end_date }}</p>
+        {% endif %}
+
+        {% if project.keywords %}
+          {% assign keywords = project.keywords | sort_natural %}
+          <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
+              {% for kw in keywords %}
+              <span class="text-xs px-2 py-1 rounded">{{ kw | strip }}</span>
+              {% endfor %}
+          </div>
+        {% endif %}
+
         <div class="row ml-1 mr-1 p-0">
           {% if project.github %}
             <div class="github-icon">
