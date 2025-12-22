@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -143,11 +143,31 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project";
-            },},{id: "projects-ncn",
-          title: 'NCN',
-          description: "with background image",
+            },},{id: "projects-ncn-preludium",
+          title: 'NCN Preludium',
+          description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/ncn";
+              window.location.href = "/projects/preludium_KJ";
+            },},{id: "projects-ncn-preludium",
+          title: 'NCN Preludium',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/preludium_MK";
+            },},{id: "projects-ncn-preludium",
+          title: 'NCN Preludium',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/preludium_MW";
+            },},{id: "projects-ncn-preludium",
+          title: 'NCN Preludium',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/preludium_PW";
+            },},{id: "projects-ncn-sonata",
+          title: 'NCN Sonata',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sonata_TK";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
