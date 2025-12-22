@@ -2,7 +2,7 @@
 layout: page
 title: NCN Preludium
 description: 
-principal_investigator: Msc Kamil Jeziorek
+principal_investigator: Msc Marcin Kowalczyk
 img: assets/img/projects/logo_ncn-preludium.png
 importance: 1
 category: NCN
@@ -14,8 +14,8 @@ keywords:
     - Embedded Platforms
     - Deep Neural Networks
 
-start_date: 2025
-end_date: 2028
+start_date: 2021-01-01
+end_date: 2025-01-01
 
 ---
 

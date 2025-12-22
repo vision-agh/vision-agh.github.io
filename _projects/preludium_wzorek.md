@@ -14,8 +14,8 @@ keywords:
     - Embedded Platforms
     - Deep Neural Networks
 
-start_date: 2025
-end_date: 2028
+start_date: 2025-01-21
+end_date: 2028-01-21
 
 
 ---

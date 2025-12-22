@@ -1,18 +1,21 @@
 ---
 layout: page
-title: NCN Sonata
+title: NCN Preludium
 description: 
-principal_investigator: PhD Tomasz Kryjak
-img: assets/img/projects/logo_ncn-sonata.png
+principal_investigator: Msc Kamil Jeziorek
+img: assets/img/projects/logo_ncn-preludium.png
 importance: 1
 category: NCN
 related_publications: true
 keywords: 
-    - 4K
+    - Event Cameras
+    - Event-based Odometry
+    - UAVs
     - Embedded Platforms
+    - Deep Neural Networks
 
-start_date: 2015
-end_date: 2022
+start_date: 2025-03-01
+end_date: 2028-03-01
 
 ---
 

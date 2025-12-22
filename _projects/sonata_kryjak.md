@@ -1,21 +1,18 @@
 ---
 layout: page
-title: NCN Preludium
+title: NCN Sonata
 description: 
-principal_investigator: Msc Marcin Kowalczyk
-img: assets/img/projects/logo_ncn-preludium.png
+principal_investigator: PhD Tomasz Kryjak
+img: assets/img/projects/logo_ncn-sonata.png
 importance: 1
 category: NCN
 related_publications: true
 keywords: 
-    - Event Cameras
-    - Event-based Odometry
-    - UAVs
+    - 4K
     - Embedded Platforms
-    - Deep Neural Networks
 
-start_date: 2021
-end_date: 2025
+start_date: 2015-01-01
+end_date: 2022-01-01
 
 ---
 

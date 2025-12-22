@@ -1,0 +1,81 @@
+---
+layout: default
+---
+{% if page._styles %}
+<!-- Page/Post style -->
+<style type="text/css">
+  {
+      {
+      page._styles
+    }
+  }
+</style>
+{% endif %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+
+  <article>
+    <h2 class="flex items-center mb-1 text-lg font-semibold text-gray-900">{{ page.acronym_en }}:{{ page.title_en }}
+    </h2>
+    <h3 class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{{ page.acronym_pl }}:{{ page.title_pl }}
+    </h3>
+
+    {% assign pi_lastname = page.principal_investigator | split: " " | last | remove_accents %}
+    <p class="mt-4 mb-0">
+      <span class="font-semibold ml-4">Principal Investigator:</span>
+      <a href="/members/{{ pi_lastname | downcase }}">{{ page.principal_investigator }} </a>
+    </p>
+    <p class="mt-0 mb-0">
+      <span class="font-semibold ml-4">Project Duration:</span>
+      {{ page.start_date | date: "%d %B %Y" }} - {{ page.end_date | date: "%d %B %Y" }}
+    </p>
+    <p class="mt-0 mb-4">
+      <span class="font-semibold ml-4">Budget:</span> {{ page.budget | number_with_delimiter: " " }} PLN
+    </p>
+
+
+    {% if page.image %}
+    <div class="row">
+      <div class="col-sm mt-3 mt-md-0">
+        {% assign image_path = "assets/img/projects/" | append: page.image | relative_url %}
+        {% include figure.liquid loading="eager" path=image_path title="Scheme" class="img-fluid rounded z-depth-1" %}
+      </div>
+    </div>
+    <div class="caption">
+      {{ page.image_caption }}
+    </div>
+    {% endif %}
+
+    {% if page.abstract %}
+      <span class="font-semibold mt-4">Abstract:</span>
+      <p> {{ page.abstract }} </p>
+    {% endif %}
+
+    {% if page.keywords %}
+    {% assign keywords = page.keywords | sort_natural %}
+    <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
+      {% for kw in keywords %}
+      <span class="text-xs px-2 py-1 rounded">{{ kw | strip }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {{ content }}
+  </article>
+
+
+  {% if page.related_publications %}
+    <h3 id="publications" class="mt-6 mb-6 font-bold text-center">Publications</h3>
+    <div class="publications">
+      {% if page.publications %}
+        {% bibliography -f papers -q @*[{{ page.publications }}]* %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+
+</div>

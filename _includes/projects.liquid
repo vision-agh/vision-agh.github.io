@@ -18,7 +18,7 @@
           <p class="card-text text-center"> <a href="/members/{{ pi_lastname | downcase }}">{{ project.principal_investigator }}  </a></p>
         {% endif %}
         {% if project.start_date and project.end_date %}
-          <p class="card-text text-center"> {{ project.start_date }} - {{ project.end_date }}</p>
+          <p class="card-text text-center"> {{ project.start_date | date: "%B %Y" }} - {{ project.end_date | date: "%B %Y" }}</p>
         {% endif %}
 
         {% if project.keywords %}
