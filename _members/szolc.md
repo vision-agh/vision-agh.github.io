@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Hubert Szolc
     position: Research and teaching assistant
-    role: PhD Students
+    role: PhD Student
     align: right
     image: people/HubertSzolc.jpg
     email: szolc@agh.edu.pl
@@ -30,22 +30,27 @@ profile:
     address:
     short_bio:
     keywords: 
-    - UAVs 
-    - control systems (MPC, PINN)
+    - "UAVs"
+    - "Automatic Control"
+    - "SoC FPGA"
+    - "Computer Vision"
+    - "Event Cameras"
+    - "Hardware Acceleration"
+    - "Real-Time Processing"
 
 interests: 
   - "UAVs"
-  - "automatic control"
+  - "Automatic Control"
   - "SoC FPGA"
-  - "computer vision"
-  - "event cameras"
-  - "hardware acceleration"
-  - "real-time processing"
+  - "Computer Vision"
+  - "Event Cameras"
+  - "Hardware Acceleration"
+  - "Real-Time Processing"
 
 
 education:
   - degree: "PhD candidate"
-    institution: "AGH University of Krakow"
+    institution: "AGH Doctoral School, AGH University of Kraków"
     start: "2019"
     end: 
     summary: "Automation, Electronics, Electrical Engineering and Space Technologies"
@@ -79,21 +84,31 @@ experience:
     summary: "I worked as an Independent Test & Verification Engineer, responsible for the software and hardware used by car manufacturers."
 
 awards:
-  - title: Obtaining NCN PRELUDIUM Grant
-    institution: Polish National Science Centre
-    date: 2025-01-21
-    summary: Project titled Hardware-Aware Neural Network Design for Event-Based Object Detection
 
-  - title: AMD Open Hardware Design Competition 2024 - Winner in PhD category
-    institution: Advanced Micro Devices (AMD
-    date: 2024-08-28
-    summary: Project titled Graph Convolutional Neural Networks for Event Based Vision for AMD SoC FPGA
 
-  - title: Best Paper Presentation Award - IEEE SPA conference 2022
-    institution: Institute of Electrical and Electronics Engineers (IEEE)
-    date: 2022-09-22
-    summary: Presentation titled "Traffic sign detection with event cameras and DCNN"
-
+technical_skills:
+  programming_languages:
+    - C/C++
+    - Python
+    - CUDA C++
+    - Verilog / SystemVerilog
+    - MATLAB
+  libraries:
+    - acados
+    - CasADi
+    - Eigen
+    - OpenCV
+    - PyTorch
+    - NumPy
+  hardware_platforms:
+    - Nvidia GPUs
+    - Jetson eGPUs
+    - SoC FPGAs (UltraScale+, Zynq-7000)
+  tools:
+    - Docker
+    - Robot Operating System (ROS)
+    - Git
+    - CMake
 
 languages:
   - name: "polish"

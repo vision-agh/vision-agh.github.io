@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Konrad Lis
     position: Research and teaching assistant
-    role: PhD Students
+    role: PhD Student
     align: right
     image: people/KonradLis.jpg
     email: kolis@agh.edu.pl
@@ -28,15 +28,97 @@ profile:
     scopus:
     googlescholar:
     # address: >
-    short_bio:
+    short_bio: >
+        My research focuses on embedded vision systems and autonomous vehicle perception systems,
+        with particular interest in LiDAR-based solutions. My work covers algorithm development
+        for real-time processing, as well as the implementation and optimization of perception
+        pipelines on embedded platforms.
     keywords:
-    #     School of Computer Science<br />
-    #     Office 64-114<br />
-    #     Torstrasse 25<br />
-    #     9000 St. Gallen, Switzerland
+        - FPGA
+        - Deep Neural Networks
+        - Computer Vision
+        - LiDAR
+        - 3D Object Detection
+        - Hardware Acceleration
+
+interests:
+  - FPGA
+  - Deep Neural Networks
+  - Computer Vision
+  - LiDAR
+  - 3D Object Detection
+  - Hardware Acceleration
+
+education:
+  - degree: "PhD candidate"
+    institution: "AGH Doctoral School, AGH University of Kraków"
+    start: "2020"
+    end: 
+    summary: "Automation, Electronics, Electrical Engineering, and Space Technologies"
+
+  - degree: "Master of Science"
+    institution: "AGH University of Kraków"
+    start: "2019"
+    end: "2020"
+    summary: "Automatic Control and Robotics / Intelligent Control Systems"
+
+  - degree: "Bachelor of Engineering"
+    institution: "AGH University of Kraków"
+    start: "2015"
+    end: "2019"
+    summary: "Automatic Control and Robotics"
+
+experience:
+  - role: "Machine Learning Engineer"
+    institution: "Vumo sp. zoo."
+    start: "2021-04-01"
+    end: 
+    summary: >
+      Design and implementation of algorithmic and DNN-based computer vision solutions to process
+      vehicle photos used in presentation and inspection.
+
+  - role: "Embedded Software Developer"
+    institution: "JPEmbedded Mazan Filipek Spółka Jawna"
+    start: "2019-03-01"
+    end: "2021-04-30"
+    summary: >
+      Developing C and Python software for IoT gateway module running embedded Linux.
+
+  - role: "System Test Engineer"
+    institution: "JPEmbedded Mazan Filipek Spółka Jawna"
+    start: "2018-07-01"
+    end: "2019-03-31"
+    summary: >
+      Developing and performing manual and semi-automated tests for PLC.
+
+technical_skills:
+  programming_languages:
+    - Python (Advanced)
+    - SystemVerilog (Advanced)
+    - Verilog (Advanced)
+    - C (Intermediate)
+    - C++ (Intermediate)
+  tools_and_libraries:
+    - Xilinx FPGAs
+    - Vivado
+    - Vitis SoC development
+    - OpenCV
+    - PyTorch
+    - Theia
+    - TensorRT
+    - Brevitas
+    - FINN
+    - Linux-based OS
+    - Git
+
+languages:
+  - name: "English"
+    label: "Advanced C1"
+  - name: "Polish"
+    label: "Native"
+
 ---
 
-## Short Bio
 
 My research focuses on embedded vision systems and autonomous vehicle perception systems, with particular interest in LiDAR-based solutions. 
 My work covers algorithm development for real-time processing, as well as the implementation and optimization of perception pipelines on embedded platforms.
