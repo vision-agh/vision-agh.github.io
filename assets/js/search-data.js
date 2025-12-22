@@ -147,27 +147,27 @@ ninja.data = [{
           title: 'NCN Preludium',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/preludium_KJ";
+              window.location.href = "/projects/preludium_jeziorek";
             },},{id: "projects-ncn-preludium",
           title: 'NCN Preludium',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/preludium_MK";
+              window.location.href = "/projects/preludium_kowalczyk";
             },},{id: "projects-ncn-preludium",
           title: 'NCN Preludium',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/preludium_MW";
+              window.location.href = "/projects/preludium_wasala";
             },},{id: "projects-ncn-preludium",
           title: 'NCN Preludium',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/preludium_PW";
+              window.location.href = "/projects/preludium_wzorek";
             },},{id: "projects-ncn-sonata",
           title: 'NCN Sonata',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/sonata_TK";
+              window.location.href = "/projects/sonata_kryjak";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
