@@ -57,7 +57,7 @@ education:
   - degree: "PhD candidate"
     institution: "AGH Doctoral School, AGH University of Krakow"
     start: "2019"
-    end: "-"
+    end: 
     summary: "Automation, Electronics, Electrical Engineering and Space Technologies"
 
   - degree: "Master of Science"
@@ -76,7 +76,7 @@ experience:
   - role: "Research and teaching assistant"
     institution: "AGH University of Krakow"
     start: "2022-10-01"
-    end: "-"
+    end: 
     summary: >
       Research in hardware-accelerated image and video processing domains. Teaching students
       about implementation of vision algorithms on reprogrammable FPGA devices and in Python.
