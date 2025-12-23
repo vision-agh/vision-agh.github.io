@@ -8,6 +8,8 @@
   topic: LiFT - lightweight, FPGA-tailored 3D object detection based on LiDAR data
   pdf: example_pdf.pdf
   drive: https://drive.google.com/drive/u/0/my-drive
+  arxiv: 2501.11159
+  journal_link: https://arxiv.org/pdf/2501.11159
 
 "ARC":
   name: "ARC"
@@ -43,6 +45,7 @@
   end_date: 2025-09-19
   presentation_type: presentation
   presenter: Tomasz Kryjak
+  author: Olivier Lichota, Mateusz Wąsala, Hubert Szolc, Tomasz Kryjak
   topic: Embedded perception and control system for an autonomous surface vehicle using visual-LiDAR fusion and SLAM
 
 "SPA2025_2":

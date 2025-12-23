@@ -13,8 +13,20 @@
       <div class="card-body">
         <h2 class="card-title">{{ project.name }}</h2>
         {% if project.topic %}
-          <p class="card-text text-center">Topic: <span class="text-">  {{ project.topic }} </span></p>
+          <p class="card-text text-center">Topic: <span>  {{ project.topic }} </span></p>
         {% endif %}
+
+        {% assign split_authors = project.author | split: ", " %}
+
+        {% if project.author %}
+          <p class="card-text text-center"><strong>Authors:</strong> 
+          {% for author in split_authors %}  
+            {% assign author_lastname = author | split: " " | last | remove_accents %}
+            <span>  <a href="/members/{{ author_lastname | downcase }}">{{ author }}</a> </span>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+          </p>
+        {% endif %}
+
 
         {% if project.presenter %}
           {% if project.presentation_type == 'poster' %}
@@ -23,20 +35,40 @@
             <p class="card-text text-center mb-0"><strong>Presented by</strong></p>
           {% endif %}
 
-          {%  assign pi_lastname = project.presenter |  split: " " | last | remove_accents  %}
-          <p class="card-text text-center"> <a href="/members/{{ pi_lastname | downcase }}">{{ project.presenter }}  </a></p>
+          <p class="card-text text-center">
+          {% assign split_presenter = project.presenter | split: ", " %}
+          {% for presenter in split_presenter %}  
+            {% assign author_lastname = presenter | split: " " | last | remove_accents %}
+            <span>  <a href="/members/{{ author_lastname | downcase }}">{{ presenter }}</a> </span>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+          </p>
         {% endif %}
+
         {% if project.start_date and project.end_date %}
           <p class="card-text text-center"> {{ project.start_date | date: "%d %b %Y" }} - {{ project.end_date | date: "%d %b %Y" }}</p>
         {% endif %}
 
         <div class="social-icons border-gray-200 pt-2 border-t gap-3 mt-4">
+            {% if project.arxiv %}
+            <a href="https://arxiv.org/pdf/{{ project.arxiv }}" target="_blank"
+                title="">
+                <i class="ai ai-arxiv ai-1x"></i>
+            </a>
+            {% endif %}
+
+            {% if project.journal_link %}
+            <a href="{{ project.journal_link }}" target="_blank" title="Link to the journal publication">
+                <i class="fa-brands fa-google-drive"></i>
+            </a>
+            {% endif %}
+
             {% if project.pdf %}
             <a href="/assets/pdf/{{ project.pdf }}" target="_blank"
                 title="PDF of the presentation">
                 <i class="fa-solid fa-file-pdf"></i>
             </a>
             {% endif %}
+
             {% if project.drive %}
             <a href="{{ project.drive }}" target="_blank"
                 title="Google Drive folder with presentation materials">
