@@ -52,6 +52,11 @@ ninja.data = [{
           description: "Profile of Msc Michał Daniłowicz, Doctoral Researcher at the Embedded Vision Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/danilowicz";
+            },},{id: "members-prof-marek-gorgoń",
+          title: 'Prof Marek Gorgoń',
+          description: "Profile of Marek Gorgon, Head of the Embedded Vision Systems Group.",
+          section: "Members",handler: () => {
+              window.location.href = "/members/gorgon";
             },},{id: "members-msc-kamil-jeziorek",
           title: 'Msc Kamil Jeziorek',
           description: "Profile of Msc Kamil Jeziorek, Doctoral Researcher at the Embedded Vision Systems Group.",
@@ -62,9 +67,9 @@ ninja.data = [{
           description: "Profile of Msc Marcin Kowalczyk, Doctoral Researcher at the Embedded Vision Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kowalczyk";
-            },},{id: "members-dr-tomasz-kryjak",
-          title: 'Dr. Tomasz Kryjak',
-          description: "Profile of Tomasz Kryjak, Head of the Embedded Vision Systems Group.",
+            },},{id: "members-phd-tomasz-kryjak",
+          title: 'PhD Tomasz Kryjak',
+          description: "Profile of Tomasz Kryjak, Member of the Embedded Vision Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kryjak";
             },},{id: "members-msc-olivier-lichota",
