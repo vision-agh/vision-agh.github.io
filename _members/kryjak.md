@@ -2,12 +2,13 @@
 layout: cv
 inline: false
 group: Principal Investigators
-team_frontpage: false
+team_frontpage: true
 group_rank: 1
-team_head: true
+team_head: false
+vis_order: 0
 
-title: Dr. Tomasz Kryjak
-description: Profile of Tomasz Kryjak, Head of the Embedded Vision Systems Group.
+title: PhD Tomasz Kryjak
+description: Profile of Tomasz Kryjak, Member of the Embedded Vision Systems Group.
 lastname: Kryjak
 publications: 'author^=*Kryjak'
 
@@ -32,6 +33,7 @@ profile:
     keywords:  
 ---
 
+I am interested in embedded vision systems for autonomous vehicles, drones and advanced automated video surveillance. I implement these in FPGAs and reprogrammable heterogeneous devices. I also work with event cameras, neuromorphic computing and embedded AI systems.
 
 ## Recent Committees (Selected)
 
@@ -77,8 +79,3 @@ profile:
 * NII Shonan Meeting on "Programming Languages for Distributed Systems", 2019
 * REBLS workshop series at Splash: REBLS'21,'20,'19,’18,’17,’16,’15,’14,REM’13
 * COP’16 workshop at ECOOP
-
-
-## Short Bio
-
-I am interested in embedded vision systems for autonomous vehicles, drones and advanced automated video surveillance. I implement these in FPGAs and reprogrammable heterogeneous devices. I also work with event cameras, neuromorphic computing and embedded AI systems.
