@@ -17,7 +17,7 @@ teaser: >
 profile:
     title: Msc
     name: Olivier Lichota
-    position: Research and teaching assistant
+    position: 
     role: PhD Student
     align: right
     image: people/OlivierLichota.jpg
