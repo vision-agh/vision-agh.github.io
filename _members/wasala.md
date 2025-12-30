@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Mateusz Wąsala
     position: Research and teaching assistant
-    role: PhD Students
+    role: PhD Student
     align: right
     image: people/MateuszWasala.jpg
     email: wasala@agh.edu.pl
