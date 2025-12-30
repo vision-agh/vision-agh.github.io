@@ -22,7 +22,7 @@ profile:
     align: right
     image: people/OlivierLichota.jpg
     email: olichota@agh.edu.pl
-    linkedin: 
+    linkedin: olivier-lichota
     orcid: 
     researchgate: 
     scopus: 
