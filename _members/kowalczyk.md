@@ -18,7 +18,7 @@ profile:
     title: Msc
     name: Marcin Kowalczyk
     position: Research and teaching assistant
-    role: PhD Students
+    role: PhD Student
     align: right
     image: people/MarcinKowalczyk.jpg
     email: kowalczyk@agh.edu.pl
