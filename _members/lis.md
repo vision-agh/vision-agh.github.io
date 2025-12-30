@@ -17,7 +17,7 @@ teaser: >
 profile:
     title: Msc
     name: Konrad Lis
-    position: Research and teaching assistant
+    position: 
     role: PhD Student
     align: right
     image: people/KonradLis.jpg
