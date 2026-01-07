@@ -34,14 +34,10 @@ profile:
         particular focus on FPGAs for real-time implementation of frame and event-based data
         processing algorithms.
     keywords:
-        - SoC FPGA
-        - Computer Vision
+        - Optical Flow
         - Event Cameras
         - Hardware Acceleration
         - Object Detection
-        - Graph Neural Networks
-        - Real-Time Processing
-        - Optical Flow
 
 interests:
   - SoC FPGA
