@@ -18,9 +18,9 @@ layout: page
                 {% if member.profile.image %}
                 {% assign profile_image_path = member.profile.image | prepend: 'assets/img/' %}
                 {% if member.profile.image_circular %}
-                {% assign profile_image_class = 'card-img-top img-fluid z-depth-1 rounded-circle mx-auto mt-3' %}
+                {% assign profile_image_class = 'card-img-top img-fluid z-depth-1 rounded-circle mx-auto' %}
                 {% else %}
-                {% assign profile_image_class = 'card-img-top img-fluid z-depth-1 rounded mx-auto mt-3' %}
+                {% assign profile_image_class = 'card-img-top img-fluid z-depth-1 rounded mx-auto' %}
                 {% endif %}
                 {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.25}}px,
                 (min-width: 992px) 25vw, (min-width: 768px) 50vw, 95vw"{% endcapture %}
