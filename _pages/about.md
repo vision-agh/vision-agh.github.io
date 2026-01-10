@@ -29,7 +29,9 @@ Welcome to the Embedded Vision Systems Group.
 
 We are part of the Computer Vision Laboratory, Department of Automatic Control and Robotics, Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering (EAIiIB), AGH University of Krakow, Poland.
 
-We are involved in research on implementation of various types of vision systems, which can operate in real time even for high-resolution video streams and sampling – up to UHD (3840 x 2160 @ 60 fps) – while maintaining low power consumption. As hardware platforms, we use reprogrammable FPGAs (Field Programmable Gate Array), reprogrammable SoCs (System on Chip) such as Zynq SoC, Zynq UltraScale+ MPSoC (Multi Processor System on Chip), or embedded GPU (Graphic Processing Unit) solutions such as Nvidia’s Jetson series. We are also interested in neuromorphic platforms.
+We conduct research on the design and implementation of embedded vision systems capable of real-time operation for high-resolution video streams—up to UHD (3840 × 2160 @ 60 fps), while maintaining low power consumption. Our work targets autonomous flying platforms (drones, UAVs), ground vehicles and mobile robots, as well as legged and walking robotic systems, where fast and efficient perception is critical for control and decision-making.
+
+As hardware platforms, we use reprogrammable FPGAs (Field Programmable Gate Arrays), reprogrammable SoCs (System on Chip) such as Zynq SoC and Zynq UltraScale+ MPSoC (Multi-Processor System on Chip), as well as embedded GPU solutions, including NVIDIA Jetson platforms. We are also actively exploring neuromorphic and event-based vision platforms for next-generation autonomous systems.
 
 <!-- Such systems are used in applications requiring very fast and efficient processing of video data so that the information obtained from them can be used almost immediately to support decision-making or control. Current research focuses on the following areas:
 
