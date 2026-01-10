@@ -32,11 +32,8 @@ profile:
     keywords: 
     - "UAVs"
     - "Automatic Control"
-    - "SoC FPGA"
-    - "Computer Vision"
     - "Event Cameras"
     - "Hardware Acceleration"
-    - "Real-Time Processing"
 
 interests: 
   - "UAVs"

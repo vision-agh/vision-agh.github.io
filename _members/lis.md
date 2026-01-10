@@ -34,12 +34,9 @@ profile:
         for real-time processing, as well as the implementation and optimization of perception
         pipelines on embedded platforms.
     keywords:
-        - FPGA
-        - Deep Neural Networks
-        - Computer Vision
-        - LiDAR
         - 3D Object Detection
-        - Hardware Acceleration
+        - LiDAR
+
 
 interests:
   - FPGA
