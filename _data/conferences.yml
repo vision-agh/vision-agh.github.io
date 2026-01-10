@@ -6,8 +6,8 @@
   presentation_type: presentation
   presenter: Konrad Lis
   topic: LiFT - lightweight, FPGA-tailored 3D object detection based on LiDAR data
-  pdf: example_pdf.pdf
-  drive: https://drive.google.com/drive/u/0/my-drive
+  # pdf: example_pdf.pdf
+  # drive: https://drive.google.com/drive/u/0/my-drive
   arxiv: 2501.11159
   journal_link: https://arxiv.org/pdf/2501.11159
 
@@ -19,6 +19,8 @@
   presentation_type: presentation
   presenter: Kamil Jeziorek
   topic: Hardware-accelerated event-graph neural networks for low-latency time-series classification on SoC FPGA
+  arxiv: 2503.06629
+  journal_link: https://link.springer.com/chapter/10.1007/978-3-031-87995-1_4
 
 "CVPRW":
   name: "CVPRW"
@@ -28,6 +30,9 @@
   presentation_type: poster
   presenter: Marcin Kowalczyk, Kamil Jeziorek
   topic: Learning from noise - enhancing DNNs for event-based vision through controlled noise injection
+  arxiv: 2506.03918
+  journal_link: https://ieeexplore.ieee.org/document/11147232
+  pdf: https://openaccess.thecvf.com/content/CVPR2025W/EventVision/papers/Kowalczyk_Learning_from_Noise_Enhancing_DNNs_for_Event-Based_Vision_through_Controlled_CVPRW_2025_paper.pdf
 
 "DSD":
   name: "DSD"
@@ -37,6 +42,9 @@
   presentation_type: presentation
   presenter: Mateusz Wąsala
   topic: Hardware-Aware Feature Extraction Quantisation for Real-Time Visual Odometry on FPGA Platforms
+  arxiv: 2507.07903
+  journal_link: https://ieeexplore.ieee.org/document/11272816
+
 
 "SPA2025_1":
   name: "SPA"
