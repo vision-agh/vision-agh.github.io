@@ -5,6 +5,7 @@
   end_date: 2025-01-22
   presentation_type: presentation
   presenter: Konrad Lis
+  author: Konrad Lis, Tomasz Kryjak, Marek Gorgoń
   topic: LiFT - lightweight, FPGA-tailored 3D object detection based on LiDAR data
   # pdf: example_pdf.pdf
   # drive: https://drive.google.com/drive/u/0/my-drive
@@ -18,6 +19,7 @@
   end_date: 2025-04-11
   presentation_type: presentation
   presenter: Kamil Jeziorek
+  author: Hiroshi Nakano, Krzysztof Blachut, Kamil Jeziorek, Piotr Wzorek, Manon Dampfhoffer, Thomas Mesquida, Hiroaki Nishi, Tomasz Kryjak, Thomas Dalgaty 
   topic: Hardware-accelerated event-graph neural networks for low-latency time-series classification on SoC FPGA
   arxiv: 2503.06629
   journal_link: https://link.springer.com/chapter/10.1007/978-3-031-87995-1_4
@@ -29,6 +31,7 @@
   end_date: 2025-06-13
   presentation_type: poster
   presenter: Marcin Kowalczyk, Kamil Jeziorek
+  author: Marcin Kowalczyk, Kamil Jeziorek, Tomasz Kryjak
   topic: Learning from noise - enhancing DNNs for event-based vision through controlled noise injection
   arxiv: 2506.03918
   journal_link: https://ieeexplore.ieee.org/document/11147232
@@ -41,6 +44,7 @@
   end_date: 2025-09-11
   presentation_type: presentation
   presenter: Mateusz Wąsala
+  author: Mateusz Wąsala, Mateusz Smolarczyk, Michał Daniłowicz, Tomasz Kryjak
   topic: Hardware-Aware Feature Extraction Quantisation for Real-Time Visual Odometry on FPGA Platforms
   arxiv: 2507.07903
   journal_link: https://ieeexplore.ieee.org/document/11272816
@@ -63,6 +67,7 @@
   end_date: 2025-09-19
   presentation_type: presentation
   presenter: Michał Michniak
+  author: Michał Michniak, Kamil Jeziorek, Tomasz Kryjak
   topic: A model-driven TTFS translation for ReLU neural networks
 
 "SPA2025_3":
@@ -72,6 +77,7 @@
   end_date: 2025-09-19
   presentation_type: presentation
   presenter: Tomasz Kryjak
+  author: Piotr Wzorek, Kamil Jeziorek, Tomasz Kryjak
   topic: Hardware-aware Graph Neural Networks prunning for embedded event-based vision
 
 
