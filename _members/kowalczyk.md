@@ -22,11 +22,11 @@ profile:
     align: right
     image: people/MarcinKowalczyk.jpg
     email: kowalczyk@agh.edu.pl
-    linkedin: 
-    orcid: 
-    researchgate: 
-    scopus:
-    googlescholar:
+    linkedin: marcin-kowalczyk-55046211a
+    orcid: 0000-0002-4257-8877
+    researchgate: Marcin-Kowalczyk-3
+    scopus: 57194614327
+    googlescholar: 
     # address: >
     #     School of Computer Science<br />
     #     Office 64-114<br />
@@ -37,6 +37,7 @@ profile:
     - event camera 
     - filtration 
     - real-time
+    - SoC FPGA
 ---
 
 ## Short Bio
