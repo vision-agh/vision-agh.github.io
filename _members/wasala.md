@@ -26,7 +26,7 @@ profile:
     orcid: 0000-0002-8631-8428
     researchgate: Mateusz_Wasala2
     scopus: 57219120038
-    googlescholar:
+    googlescholar: y7fJsTQAAAAJ
     address:
     short_bio:
     keywords: 
