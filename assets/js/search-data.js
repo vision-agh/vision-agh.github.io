@@ -37,12 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "members-msc-krzysztof-błachut",
+        },{id: "members-msc-krzysztof-błachut",
           title: 'Msc Krzysztof Błachut',
           description: "Profile of Msc Krzysztof Błachut, Doctoral Researcher at the Embedded Vision Systems Group.",
           section: "Members",handler: () => {
