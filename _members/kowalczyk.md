@@ -27,19 +27,12 @@ profile:
     researchgate: Marcin-Kowalczyk-3
     scopus: 57194614327
     googlescholar: 
-    # address: >
-    #     School of Computer Science<br />
-    #     Office 64-114<br />
-    #     Torstrasse 25<br />
-    #     9000 St. Gallen, Switzerland
     short_bio:
     keywords: 
-    - event camera 
-    - filtration 
-    - real-time
+    - Event Camera 
+    - Filtration 
+    - Real-time
     - SoC FPGA
 ---
-
-## Short Bio
 
 My interests are focused on real-time vision systems for autonomous robots. In my research, I use heterogeneous computing platforms and high-level environments enabling the modelling of algorithms and designed systems. My research also concerns the use of neuromorphic event sensors in modern vision data processing systems that require the development of new data processing methods.
