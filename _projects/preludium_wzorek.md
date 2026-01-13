@@ -1,93 +1,55 @@
 ---
-layout: page
-title: NCN Preludium
-description: 
-principal_investigator: Msc Piotr Wzorek
+layout: project
+
 img: assets/img/projects/logo_ncn-preludium.png
 importance: 1
 category: NCN
 related_publications: true
-keywords: 
-    - Event Cameras
-    - Event-based Odometry
-    - UAVs
-    - Embedded Platforms
-    - Deep Neural Networks
 
-start_date: 2025-01-21
+title: NCN Preludium
+principal_investigator: Msc Piotr Wzorek
+
+title_en: Hardware-Aware Neural Network Design for Event-Based Object Detection
+title_pl: Projektowanie sieci neuronowych do detekcji obiektów na podstawie danych zdarzeniowych z uwzględnieniem docelowej platformy sprzętowej.
+
+start_date: 2025-01-22
 end_date: 2028-01-21
 
+budget: 209230
 
+keywords: 
+    - DVS, event camera,
+    - object detection,
+    - FPGA, heterogeneous devices,
+    - vision systems,
+    - deep neural networks
+
+abstract: >
+    The main aim of the proposed basic research is to design deep neural network systems for a heterogeneous SoC FPGA platform that enable real-time, low-latency object detection based on data recorded by an event camera. The key method for meeting these requirements will involve designing hardware-aware systems that account for the specific features of the target platform.
+
+    The rapid development of computer vision over the past 60 years has resulted in high-quality solutions for various tasks. However, traditional frame-based cameras often face issues that reduce their accuracy under specific conditions. Examples include "motion blur" when the camera moves rapidly relative to observed objects or disturbances in recorded images due to varying or extreme lighting conditions.
+
+    Event cameras offer a solution to these problems. Unlike classical cameras, these sensors capture only changes in brightness for each pixel independently, rather than synchronously recording the entire matrix at specified intervals. This approach provides high dynamic range and temporal resolution and significantly reduces redundant information, leading to lower average power consumption. The data from an event camera can be described as a sparse point cloud in space-time, where each point is defined by four values: timestamp, pixel coordinates (x, y), and brightness change polarity (positive or negative). Processing such data, which differs significantly from classical video frames, is a scientific challenge.
+
+    These issues are notably relevant to advanced mobile robotics, which operate at high speeds in dynamic environments. For these applications, vision systems must meet real-time execution, low latency, and low power consumption requirements. This need motivates the development of event-based vision systems for embedded platforms. Reconfigurable FPGAs and heterogeneous SoC FPGAs are chosen for this research due to their low power consumption and high capability for parallel processing.
+    A technique to enable the hardware implementation of efficient systems with high throughput and low latency is to consider the target platform's characteristics during the design stage. This involves accounting for limited memory resources, the necessity of using integer or fixed-point values instead of floating-point values, and the specific characteristics of individual chip resources (LUT, DSP, etc.).
+
+    Object detection is selected as the research task due to its critical role in the context of modern robotics. Although there is a trend toward implementing event-driven systems for FPGAs, solutions for this task are still lacking. It should be noted that object detection is a non-trivial task as it requires a high level of understanding of the observed scene. Therefore, over the past several years leading detectors use deep neural networks, which are inherently complex and demand significant computational power and memory. Their efficient and rapid application is an essential element of this project.
+
+    The proposed research will explore several FPGA-specific methods to implement embedded event detection systems, including:
+        - Modern methods for neural networks quantization.
+        - Optimization of operations such as matrix multiplication.
+        - Use of hardware-friendly and event data-appropriate network architectures, such as graph neural networks.
+        - Implementation of filtering and preprocessing methods for event data.
+        - Division of tasks between reconfigurable and processor-appropriate parts for SoCs, including Versal Adaptive SoCs.
+        - Optimization of memory usage among available internal and external resources.
+
+    The end result of the proposed research will be a collection of software models, hardware modules and tests realised using a hardware description language (SystemVerilog) that can implement an end-to-end detector operating on event data. Additionally, a comprehensive system for simulating hardware modules will be developed. This system will incorporate pre-recorded test sequences, randomly generated sequences by the simulation environment, as well as data generated by a hardware-in-the-loop simulator.
+
+    The findings will be presented in journals and scientific conferences, and part of the code will be made available in an open repository. This research will not only address the scientific challenges posed by processing event camera data but also contribute to the development of more efficient vision systems for mobile robotics, enhancing their safety and reliability.
+
+image: preludium_PW.png
+image_caption: 
+
+publications: 'author^=*Wzorek, projects^=*Preludium'
 ---
-
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
