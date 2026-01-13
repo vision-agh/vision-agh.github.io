@@ -19,10 +19,16 @@ layout: default
   </header>
 
   <article>
-    <h2 class="flex items-center mb-1 text-lg font-semibold text-gray-900">{{ page.acronym_en }}:{{ page.title_en }}
-    </h2>
-    <h3 class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{{ page.acronym_pl }}:{{ page.title_pl }}
-    </h3>
+    {% if page.acronym_en %}
+      <h2 class="flex items-center mb-1 text-lg font-semibold text-gray-900">{{ page.acronym_en }}: {{ page.title_en }}</h2>
+    {% else %}
+      <h2 class="flex items-center mb-1 text-lg font-semibold text-gray-900">{{ page.title_en }}</h2>
+    {% endif %}
+    {% if page.acronym_pl %}
+      <h3 class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{{ page.acronym_pl }}: {{ page.title_pl }}</h3>
+    {% else %}
+      <h3 class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{{ page.title_pl }}</h3>
+    {% endif %}
 
     {% assign pi_lastname = page.principal_investigator | split: " " | last | remove_accents %}
     <p class="mt-4 mb-0">
