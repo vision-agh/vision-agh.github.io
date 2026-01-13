@@ -34,9 +34,7 @@ profile:
         design tailored to the target platform, as well as implementation and verification of hardware
         modules on reconfigurable FPGA platforms.
     keywords:
-        - FPGA
         - Deep Neural Networks
-        - Computer Vision
         - Event Cameras
         - Neuromorphic Vision
         - Hardware Acceleration

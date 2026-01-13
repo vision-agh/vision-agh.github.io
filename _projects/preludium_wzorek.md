@@ -18,11 +18,13 @@ end_date: 2028-01-21
 budget: 209230
 
 keywords: 
-    - DVS, event camera,
-    - object detection,
-    - FPGA, heterogeneous devices,
-    - vision systems,
-    - deep neural networks
+    - DVS
+    - Event Camera
+    - Object Detection
+    - FPGA
+    - Heterogeneous devices
+    - Vision Systems
+    - Deep Neural Networks
 
 abstract: >
     The main aim of the proposed basic research is to design deep neural network systems for a heterogeneous SoC FPGA platform that enable real-time, low-latency object detection based on data recorded by an event camera. The key method for meeting these requirements will involve designing hardware-aware systems that account for the specific features of the target platform.
