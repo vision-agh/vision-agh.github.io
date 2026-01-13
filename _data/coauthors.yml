@@ -3,7 +3,8 @@
     url: /members/blachut
 
 "Danilowicz":
-  - firstname: ["Michał", "M.", "Michal", "Michał Daniłowicz", "Michal Danilowicz"]
+  - firstname:
+      ["Michał", "M.", "Michal", "Michał Daniłowicz", "Michal Danilowicz"]
     url: /members/danilowicz
 
 "Jeziorek":

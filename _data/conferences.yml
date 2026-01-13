@@ -10,7 +10,7 @@
   # pdf: example_pdf.pdf
   # drive: https://drive.google.com/drive/u/0/my-drive
   arxiv: 2501.11159
-  journal_link: https://arxiv.org/pdf/2501.11159 
+  journal_link: https://arxiv.org/pdf/2501.11159
 
 "ARC":
   name: "ARC"
@@ -19,7 +19,7 @@
   end_date: 2025-04-11
   presentation_type: presentation
   presenter: Piotr Wzorek
-  author: Hiroshi Nakano, Krzysztof Blachut, Kamil Jeziorek, Piotr Wzorek, Manon Dampfhoffer, Thomas Mesquida, Hiroaki Nishi, Tomasz Kryjak, Thomas Dalgaty 
+  author: Hiroshi Nakano, Krzysztof Blachut, Kamil Jeziorek, Piotr Wzorek, Manon Dampfhoffer, Thomas Mesquida, Hiroaki Nishi, Tomasz Kryjak, Thomas Dalgaty
   topic: Hardware-accelerated event-graph neural networks for low-latency time-series classification on SoC FPGA
   arxiv: 2503.06629
   journal_link: https://link.springer.com/chapter/10.1007/978-3-031-87995-1_4
@@ -48,7 +48,6 @@
   topic: Hardware-Aware Feature Extraction Quantisation for Real-Time Visual Odometry on FPGA Platforms
   arxiv: 2507.07903
   journal_link: https://ieeexplore.ieee.org/document/11272816
-
 
 "SPA2025_1":
   name: "SPA"
@@ -79,5 +78,3 @@
   presenter: Tomasz Kryjak
   author: Piotr Wzorek, Kamil Jeziorek, Tomasz Kryjak
   topic: Hardware-aware Graph Neural Networks prunning for embedded event-based vision
-
-
