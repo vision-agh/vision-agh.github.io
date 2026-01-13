@@ -10,7 +10,7 @@
   # pdf: example_pdf.pdf
   # drive: https://drive.google.com/drive/u/0/my-drive
   arxiv: 2501.11159
-  journal_link: https://arxiv.org/pdf/2501.11159
+  journal_link: https://arxiv.org/pdf/2501.11159 
 
 "ARC":
   name: "ARC"
