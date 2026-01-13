@@ -18,7 +18,7 @@
   start_date: 2025-04-09
   end_date: 2025-04-11
   presentation_type: presentation
-  presenter: Kamil Jeziorek
+  presenter: Piotr Wzorek
   author: Hiroshi Nakano, Krzysztof Blachut, Kamil Jeziorek, Piotr Wzorek, Manon Dampfhoffer, Thomas Mesquida, Hiroaki Nishi, Tomasz Kryjak, Thomas Dalgaty 
   topic: Hardware-accelerated event-graph neural networks for low-latency time-series classification on SoC FPGA
   arxiv: 2503.06629
