@@ -182,12 +182,14 @@
     </div>
 
     <!-- Journal/Book title and date -->
-    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+    {% assign proceedings = 'inproceedings,incollection,inbook' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {% comment %} BaDAP exports store the venue in series instead of booktitle {% endcomment %}
+      {% assign venue = entry.booktitle | default: entry.series | remove: ' [Dokument elektroniczny]' %}
+      {% capture entrytype %}<em>In {{ venue }}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
     {% else %}
