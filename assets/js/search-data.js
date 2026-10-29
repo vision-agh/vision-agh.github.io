@@ -38,72 +38,61 @@ ninja.data = [{
             window.location.href = "/projects/";
           },
         },{id: "members-msc-krzysztof-błachut",
-          title: 'Msc Krzysztof Błachut',
-          description: "Profile of Msc Krzysztof Błachut, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Krzysztof Błachut',
+          description: "Profile of MSc Krzysztof Błachut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/blachut";
             },},{id: "members-msc-michał-daniłowicz",
-          title: 'Msc Michał Daniłowicz',
-          description: "Profile of Msc Michał Daniłowicz, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Michał Daniłowicz',
+          description: "Profile of MSc Michał Daniłowicz, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/danilowicz";
+            },},{id: "members-msc-mateusz-gołąbek",
+          title: 'MSc Mateusz Gołąbek',
+          description: "Profile of MSc Mateusz Gołąbek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+          section: "Members",handler: () => {
+              window.location.href = "/members/golabek";
             },},{id: "members-prof-marek-gorgoń",
           title: 'Prof Marek Gorgoń',
-          description: "Profile of Marek Gorgon, Head of the Embedded Vision Systems Group.",
+          description: "Profile of Marek Gorgon, Head of the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/gorgon";
             },},{id: "members-msc-kamil-jeziorek",
-          title: 'Msc Kamil Jeziorek',
-          description: "Profile of Msc Kamil Jeziorek, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Kamil Jeziorek',
+          description: "Profile of MSc Kamil Jeziorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/jeziorek";
             },},{id: "members-msc-marcin-kowalczyk",
-          title: 'Msc Marcin Kowalczyk',
-          description: "Profile of Msc Marcin Kowalczyk, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Marcin Kowalczyk',
+          description: "Profile of MSc Marcin Kowalczyk, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kowalczyk";
             },},{id: "members-phd-tomasz-kryjak",
           title: 'PhD Tomasz Kryjak',
-          description: "Profile of Tomasz Kryjak, Member of the Embedded Vision Systems Group.",
+          description: "Profile of Tomasz Kryjak, Associate Professor at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kryjak";
-            },},{id: "members-msc-olivier-lichota",
-          title: 'Msc Olivier Lichota',
-          description: "Profile of Msc Olivier Lichota, Doctoral Researcher at the Embedded Vision Systems Group.",
-          section: "Members",handler: () => {
-              window.location.href = "/members/lichota";
             },},{id: "members-msc-konrad-lis",
-          title: 'Msc Konrad Lis',
-          description: "Profile of Msc Konrad Lis, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Konrad Lis',
+          description: "Profile of MSc Konrad Lis, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/lis";
             },},{id: "members-msc-hubert-szolc",
-          title: 'Msc Hubert Szolc',
-          description: "Profile of Msc Hubert Szolc, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Hubert Szolc',
+          description: "Profile of MSc Hubert Szolc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/szolc";
             },},{id: "members-msc-mateusz-wąsala",
-          title: 'Msc Mateusz Wąsala',
-          description: "Profile of Msc Mateusz Wąsala, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Mateusz Wąsala',
+          description: "Profile of MSc Mateusz Wąsala, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/wasala";
             },},{id: "members-msc-piotr-wzorek",
-          title: 'Msc Piotr Wzorek',
-          description: "Profile of Msc Piotr Wzorek, Doctoral Researcher at the Embedded Vision Systems Group.",
+          title: 'MSc Piotr Wzorek',
+          description: "Profile of MSc Piotr Wzorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/wzorek";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "projects-ncn-preludium",
+            },},{id: "projects-ncn-preludium",
           title: 'NCN Preludium',
           description: "",
           section: "Projects",handler: () => {
