@@ -54,7 +54,7 @@ ninja.data = [{
               window.location.href = "/members/golabek";
             },},{id: "members-prof-marek-gorgoń",
           title: 'Prof Marek Gorgoń',
-          description: "Profile of Marek Gorgon, Head of the Embedded Perception and Autonomous Systems Group.",
+          description: "Profile of Marek Gorgoń, Professor at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/gorgon";
             },},{id: "members-msc-kamil-jeziorek",
@@ -69,7 +69,7 @@ ninja.data = [{
               window.location.href = "/members/kowalczyk";
             },},{id: "members-phd-tomasz-kryjak",
           title: 'PhD Tomasz Kryjak',
-          description: "Profile of Tomasz Kryjak, Associate Professor at the Embedded Perception and Autonomous Systems Group.",
+          description: "Profile of Tomasz Kryjak, Head of the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kryjak";
             },},{id: "members-msc-konrad-lis",
