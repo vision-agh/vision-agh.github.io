@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 3
 
-title: Msc Hubert Szolc
-description: Profile of Msc Hubert Szolc, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Hubert Szolc
+description: Profile of MSc Hubert Szolc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Szolc
 publications: 'author^=*Szolc'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: Msc
+    title: MSc
     name: Hubert Szolc
     position: Research and teaching assistant
     role: PhD Student

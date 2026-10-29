@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 5
 
-title: Msc Michał Daniłowicz
-description: Profile of Msc Michał Daniłowicz, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Michał Daniłowicz
+description: Profile of MSc Michał Daniłowicz, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Daniłowicz
 publications: 'author^=*Danilowicz'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: Msc
+    title: MSc
     name: Michał Daniłowicz
     position: Research and teaching assistant
     role: PhD Student

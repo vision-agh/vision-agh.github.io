@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 1
 
-title: Msc Marcin Kowalczyk
-description: Profile of Msc Marcin Kowalczyk, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Marcin Kowalczyk
+description: Profile of MSc Marcin Kowalczyk, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Kowalczyk
 publications: 'author^=*Kowalczyk'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: Msc
+    title: MSc
     name: Marcin Kowalczyk
     position: Research and teaching assistant
     role: PhD Student

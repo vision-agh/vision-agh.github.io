@@ -7,6 +7,10 @@
       ["Michał", "M.", "Michal", "Michał Daniłowicz", "Michal Danilowicz"]
     url: /members/danilowicz
 
+"Golabek":
+  - firstname: ["Mateusz", "M.", "Mateusz Golabek", "Mateusz Gołąbek"]
+    url: /members/golabek
+
 "Jeziorek":
   - firstname: ["Kamil", "K.", "Kamil Jeziorek"]
     url: /members/jeziorek
@@ -18,10 +22,6 @@
 "Kryjak":
   - firstname: ["Tomasz", "T.", "Tomasz Kryjak"]
     url: /members/kryjak
-
-"Lichota":
-  - firstname: ["Olivier", "O.", "Olivier Lichota"]
-    url: /members/lichota
 
 "Lis":
   - firstname: ["Konrad", "K.", "Konrad Lis"]

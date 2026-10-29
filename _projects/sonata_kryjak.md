@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: NCN Sonata
 description: 
 principal_investigator: PhD Tomasz Kryjak

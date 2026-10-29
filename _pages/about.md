@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Welcome to the Embedded Vision Systems Group.
+Welcome to the Embedded Perception and Autonomous Systems Group.
 
 We are part of the Computer Vision Laboratory, Department of Automatic Control and Robotics, Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering (EAIiIB), AGH University of Krakow, Poland.
 

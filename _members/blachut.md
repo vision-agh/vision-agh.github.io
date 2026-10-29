@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 2
 
-title: Msc Krzysztof Błachut
-description: Profile of Msc Krzysztof Błachut, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Krzysztof Błachut
+description: Profile of MSc Krzysztof Błachut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Błachut
 publications: 'author^=*Blachut'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    tile: MSc
+    title: MSc
     name: Krzysztof Błachut
     position: Research and teaching assistant
     role: PhD Student

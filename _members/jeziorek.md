@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 8
 
-title: Msc Kamil Jeziorek
-description: Profile of Msc Kamil Jeziorek, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Kamil Jeziorek
+description: Profile of MSc Kamil Jeziorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Jeziorek
 publications: 'author^=*Jeziorek'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: Msc
+    title: MSc
     name: Kamil Jeziorek
     position: Research and teaching assistant
     role: PhD Student

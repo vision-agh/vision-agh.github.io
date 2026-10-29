@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 7
 
-title: Msc Piotr Wzorek
-description: Profile of Msc Piotr Wzorek, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Piotr Wzorek
+description: Profile of MSc Piotr Wzorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Wzorek
 publications: 'author^=*Wzorek'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: Msc
+    title: MSc
     name: Piotr Wzorek
     position: Research and teaching assistant
     role: PhD Student
@@ -25,7 +25,7 @@ profile:
     linkedin: piotr-wzorek
     orcid: 0000-0003-3885-600X
     researchgate: Piotr-Wzorek
-    scopus: 57219119237
+    scopus:
     googlescholar: 0IttTXQAAAAJ
     address: 
     short_bio: >

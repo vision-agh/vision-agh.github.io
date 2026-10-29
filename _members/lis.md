@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 6
 
-title: Msc Konrad Lis
-description: Profile of Msc Konrad Lis, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Konrad Lis
+description: Profile of MSc Konrad Lis, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Lis
 publications: 'author^=*Lis'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: Msc
+    title: MSc
     name: Konrad Lis
     position: 
     role: PhD Student

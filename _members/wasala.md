@@ -6,16 +6,16 @@ team_frontpage: true
 group_rank: 3
 vis_order: 4
 
-title: Msc Mateusz Wąsala
-description: Profile of Msc Mateusz Wąsala, Doctoral Researcher at the Embedded Vision Systems Group.
+title: MSc Mateusz Wąsala
+description: Profile of MSc Mateusz Wąsala, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Wąsala
 publications: 'author^=*Wasala'
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Vision Systems Group at the AGH University of Krakow, Poland.
+    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: Msc
+    title: MSc
     name: Mateusz Wąsala
     position: Research and teaching assistant
     role: PhD Student
