@@ -9,33 +9,33 @@ vis_order: 9
 title: MSc Mateusz Gołąbek
 description: Profile of MSc Mateusz Gołąbek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Gołąbek
-publications: 'author^=*Golabek'
+publications: "author^=*Golabek"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Mateusz Gołąbek
-    position:
-    role: PhD Student
-    align: right
-    image: people/MateuszGolabek.jpg
-    email: matgolabek@agh.edu.pl
-    linkedin: matgolabek
-    orcid:
-    researchgate:
-    scopus:
-    googlescholar:
-    address:
-    short_bio: >
-        My research mainly focuses on deep neural networks for embedded computer vision. Often it
-        consists of sensor data fusion and is deployable on drones.
-    keywords:
-        - Deep Neural Networks
-        - Sensor Fusion
-        - UAVs
-        - SoC FPGA
+  title: MSc
+  name: Mateusz Gołąbek
+  position:
+  role: PhD Student
+  align: right
+  image: people/MateuszGolabek.jpg
+  email: matgolabek@agh.edu.pl
+  linkedin: matgolabek
+  orcid:
+  researchgate:
+  scopus:
+  googlescholar:
+  address:
+  short_bio: >
+    My research mainly focuses on deep neural networks for embedded computer vision. Often it
+    consists of sensor data fusion and is deployable on drones.
+  keywords:
+    - Deep Neural Networks
+    - Sensor Fusion
+    - UAVs
+    - SoC FPGA
 
 interests:
   - Deep Neural Networks
@@ -137,11 +137,10 @@ awards:
     date: "2025-05-01"
     summary: "Presentation of a scientific paper on autonomous threat detection using UAV swarms."
 
-  - title: "Laureate of the 14th National Olympiad \"The Diamond Index of the AGH UST\""
+  - title: 'Laureate of the 14th National Olympiad "The Diamond Index of the AGH UST"'
     institution: "AGH University of Kraków"
     date: "2021-06-01"
     summary: "Awarded in mathematics."
-
 ---
 
 My research mainly focuses on deep neural networks for embedded computer vision. Often it consists of sensor data fusion and is deployable on drones.

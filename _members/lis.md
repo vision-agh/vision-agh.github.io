@@ -9,34 +9,33 @@ vis_order: 6
 title: MSc Konrad Lis
 description: Profile of MSc Konrad Lis, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Lis
-publications: 'author^=*Lis'
+publications: "author^=*Lis"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Konrad Lis
-    position: 
-    role: PhD Student
-    align: right
-    image: people/KonradLis.jpg
-    email: kolis@agh.edu.pl
-    linkedin: konrad-lis-ml
-    orcid: 0000-0003-2034-0590
-    researchgate: Konrad-Lis-2
-    scopus:
-    googlescholar:
-    # address: >
-    short_bio: >
-        My research focuses on embedded vision systems and autonomous vehicle perception systems,
-        with particular interest in LiDAR-based solutions. My work covers algorithm development
-        for real-time processing, as well as the implementation and optimization of perception
-        pipelines on embedded platforms.
-    keywords:
-        - 3D Object Detection
-        - LiDAR
-
+  title: MSc
+  name: Konrad Lis
+  position:
+  role: PhD Student
+  align: right
+  image: people/KonradLis.jpg
+  email: kolis@agh.edu.pl
+  linkedin: konrad-lis-ml
+  orcid: 0000-0003-2034-0590
+  researchgate: Konrad-Lis-2
+  scopus:
+  googlescholar:
+  # address: >
+  short_bio: >
+    My research focuses on embedded vision systems and autonomous vehicle perception systems,
+    with particular interest in LiDAR-based solutions. My work covers algorithm development
+    for real-time processing, as well as the implementation and optimization of perception
+    pipelines on embedded platforms.
+  keywords:
+    - 3D Object Detection
+    - LiDAR
 
 interests:
   - FPGA
@@ -50,7 +49,7 @@ education:
   - degree: "PhD candidate"
     institution: "AGH Doctoral School, AGH University of Kraków"
     start: "2020"
-    end: 
+    end:
     summary: "Automation, Electronics, Electrical Engineering, and Space Technologies"
 
   - degree: "Master of Science"
@@ -69,7 +68,7 @@ experience:
   - role: "Machine Learning Engineer"
     institution: "Vumo sp. zoo."
     start: "2021-04-01"
-    end: 
+    end:
     summary: >
       Design and implementation of algorithmic and DNN-based computer vision solutions to process
       vehicle photos used in presentation and inspection.
@@ -113,9 +112,7 @@ languages:
     label: "Advanced C1"
   - name: "Polish"
     label: "Native"
-
 ---
 
-
-My research focuses on embedded vision systems and autonomous vehicle perception systems, with particular interest in LiDAR-based solutions. 
+My research focuses on embedded vision systems and autonomous vehicle perception systems, with particular interest in LiDAR-based solutions.
 My work covers algorithm development for real-time processing, as well as the implementation and optimization of perception pipelines on embedded platforms.

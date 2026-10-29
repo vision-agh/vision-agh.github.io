@@ -9,28 +9,28 @@ vis_order: 1
 title: MSc Marcin Kowalczyk
 description: Profile of MSc Marcin Kowalczyk, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Kowalczyk
-publications: 'author^=*Kowalczyk'
+publications: "author^=*Kowalczyk"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Marcin Kowalczyk
-    position: Research and teaching assistant
-    role: PhD Student
-    align: right
-    image: people/MarcinKowalczyk.jpg
-    email: kowalczyk@agh.edu.pl
-    linkedin: marcin-kowalczyk-55046211a
-    orcid: 0000-0002-4257-8877
-    researchgate: Marcin-Kowalczyk-3
-    scopus: 57194614327
-    googlescholar: 
-    short_bio:
-    keywords: 
-    - Event Camera 
-    - Filtration 
+  title: MSc
+  name: Marcin Kowalczyk
+  position: Research and teaching assistant
+  role: PhD Student
+  align: right
+  image: people/MarcinKowalczyk.jpg
+  email: kowalczyk@agh.edu.pl
+  linkedin: marcin-kowalczyk-55046211a
+  orcid: 0000-0002-4257-8877
+  researchgate: Marcin-Kowalczyk-3
+  scopus: 57194614327
+  googlescholar:
+  short_bio:
+  keywords:
+    - Event Camera
+    - Filtration
     - Real-time
     - SoC FPGA
 ---

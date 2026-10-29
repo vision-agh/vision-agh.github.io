@@ -22,66 +22,102 @@ layout: default
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
-    
 
-  {% assign head_member = site.members | where: "team_head", true | first %}
+  {% assign head_member = site.members | where: 'team_head', true | first %}
 
   {% comment %} {{ head_member | inspect }} {% endcomment %}
-    
+
   <article>
     {% if head_member.profile %}
-    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-      {% if head_member.profile.image %}
-        <a href="{{ head_member.url | relative_url }}">
-          <img class="img-fluid{% assign ext = head_member.profile.image | slice: -4, 4 %}{% if ext != '.svg' %} z-depth-1 rounded{% endif %}" src="{{ head_member.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ head_member.profile.name }}">
-        </a>
-      {% endif %}
-      {% if head_member.profile %}
-        <div class="address">
-          <p>
-            {% if head_member.url %}<a href="{{ head_member.url | relative_url }}">{% endif %}
-              <span class="name font-semibold">{{ head_member.profile.title }} {{ head_member.profile.name }}</span>
-            {% if head_member.url %}</a>{% endif %}
-            {% if head_member.profile.position %}<br />{{ head_member.profile.position }}{% endif %}
-            {% if head_member.profile.role %}<br />{{ head_member.profile.role }}{% endif %}
-            {% if head_member.profile.email %}<br /><a href="mailto:{{ head_member.profile.email }}"><i class="fas fa-envelope"></i> {{ head_member.profile.email }}</a>{% endif %}
-            {% if head_member.profile.phone %}<br /><a href="tel:{{ head_member.profile.phone }}"><i class="fas fa-phone"></i> {{ head_member.profile.phone }}</a>{% endif %}
-            {% if head_member.profile.website %}<br /><a href="{{ head_member.profile.website }}" target="_blank"><i class="fas fa-globe"></i> {{ head_member.profile.website }}</a>{% endif %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+        {% if head_member.profile.image %}
+          <a href="{{ head_member.url | relative_url }}">
+            <img
+              class="img-fluid{% assign ext = head_member.profile.image | slice: -4, 4 %}{% if ext != '.svg' %} z-depth-1 rounded{% endif %}"
+              src="{{ head_member.profile.image | prepend: '/assets/img/' | relative_url }}"
+              alt="{{ head_member.profile.name }}"
+            >
+          </a>
+        {% endif %}
+        {% if head_member.profile %}
+          <div class="address">
+            <p>
+              {% if head_member.url %}<a href="{{ head_member.url | relative_url }}">{% endif %}
+              <span class="name font-semibold">
+                {{- head_member.profile.title }}
+                {{ head_member.profile.name -}}
+              </span>
+              {% if head_member.url %}</a>{% endif %}
+              {% if head_member.profile.position -%}
+                <br>
+                {{ head_member.profile.position -}}
+              {%- endif %}
+              {% if head_member.profile.role -%}
+                <br>
+                {{ head_member.profile.role -}}
+              {%- endif %}
+              {% if head_member.profile.email -%}
+                <br>
+                <a href="mailto:{{ head_member.profile.email }}"><i class="fas fa-envelope"></i> {{ head_member.profile.email }}</a>
+              {%- endif %}
+              {% if head_member.profile.phone -%}
+                <br>
+                <a href="tel:{{ head_member.profile.phone }}"><i class="fas fa-phone"></i> {{ head_member.profile.phone }}</a>
+              {%- endif %}
+              {% if head_member.profile.website -%}
+                <br>
+                <a href="{{ head_member.profile.website }}" target="_blank"><i class="fas fa-globe"></i> {{ head_member.profile.website }}</a>
+              {%- endif %}
 
-            <div class="social-icons text-center">
-            {% if head_member.profile.linkedin %}<a href="https://www.linkedin.com/in/{{ head_member.profile.linkedin }}/" target="_blank"><i class="fab fa-linkedin"></i></a>{% endif %}
-            {% if head_member.profile.orcid %}<a href="https://orcid.org/{{ head_member.profile.orcid }}" target="_blank"><i class="ai ai-orcid ai-1x"></i> </a>{% endif %}
-            {% if head_member.profile.researchgate %}<a href="https://www.researchgate.net/profile/{{ head_member.profile.researchgate }}" target="_blank"><i class="ai ai-researchgate ai-1x"></i></a>{% endif %}
-            {% if head_member.profile.scopus %}<a href="https://www.scopus.com/authid/detail.uri?authorId={{ head_member.profile.scopus }}" target="_blank"><i class="ai ai-scopus ai-1x"></i></a>{% endif %}
-            {% if head_member.profile.googlescholar %}<a href="https://scholar.google.com/citations?user={{ head_member.profile.googlescholar }}" target="_blank"><i class="ai ai-google-scholar ai-1x"></i></a>{% endif %}
-            </div>
-          </p>
-          <p class="post">{{ head_member.profile.address }}</p>
-        </div>
-      {% endif %}
-    </div>
+              <div class="social-icons text-center">
+                {% if head_member.profile.linkedin -%}
+                  <a href="https://www.linkedin.com/in/{{ head_member.profile.linkedin }}/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                {%- endif %}
+                {% if head_member.profile.orcid -%}
+                  <a href="https://orcid.org/{{ head_member.profile.orcid }}" target="_blank"><i class="ai ai-orcid ai-1x"></i> </a>
+                {%- endif %}
+                {% if head_member.profile.researchgate -%}
+                  <a href="https://www.researchgate.net/profile/{{ head_member.profile.researchgate }}" target="_blank"
+                    ><i class="ai ai-researchgate ai-1x"></i
+                  ></a>
+                {%- endif %}
+                {% if head_member.profile.scopus -%}
+                  <a href="https://www.scopus.com/authid/detail.uri?authorId={{ head_member.profile.scopus }}" target="_blank"
+                    ><i class="ai ai-scopus ai-1x"></i
+                  ></a>
+                {%- endif %}
+                {% if head_member.profile.googlescholar -%}
+                  <a href="https://scholar.google.com/citations?user={{ head_member.profile.googlescholar }}" target="_blank"
+                    ><i class="ai ai-google-scholar ai-1x"></i
+                  ></a>
+                {%- endif %}
+              </div>
+            </p>
+            <p class="post">{{ head_member.profile.address }}</p>
+          </div>
+        {% endif %}
+      </div>
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
-  {% assign members = site.members | where: "team_frontpage", true | sort: "vis_order" %}
-  <div class="d-flex flex-wrap align-content-stretch justify-content-center pt-5 no-gutters mb-5">
+    {% assign members = site.members | where: 'team_frontpage', true | sort: 'vis_order' %}
+    <div class="d-flex flex-wrap align-content-stretch justify-content-center pt-5 no-gutters mb-5">
       {% for member in members %}
-          {% assign colsMod6 = forloop.length | modulo: 5 %}
-          {% assign colIdMod4 = forloop.index | modulo: 4 %}
-          {% if colsMod6 == 1 and colIdMod4 == 1 %}<div class="col-md-2 w-100"></div>{% endif %}
-          <div class="col-6 col-sm-3 col-md-2 mb-6">
-              <a href="{{ member.url | relative_url }}" class="no-decoration">
-                  <div class="card hoverable h-100 m-2">
-                      <img src="{{ '/assets/img/' | append: member.profile.image | relative_url }}" class="card-img-top" alt="{{ member.profile.name }}" />
-                      <div class="card-body p-2">
-                          <div class="card-title m-0">{{ member.profile.name }}</div>
-                      </div>
-                  </div>
-              </a>
-          </div>
+        {% assign colsMod6 = forloop.length | modulo: 5 %}
+        {% assign colIdMod4 = forloop.index | modulo: 4 %}
+        {% if colsMod6 == 1 and colIdMod4 == 1 %}<div class="col-md-2 w-100"></div>{% endif %}
+        <div class="col-6 col-sm-3 col-md-2 mb-6">
+          <a href="{{ member.url | relative_url }}" class="no-decoration">
+            <div class="card hoverable h-100 m-2">
+              <img src="{{ '/assets/img/' | append: member.profile.image | relative_url }}" class="card-img-top" alt="{{ member.profile.name }}">
+              <div class="card-body p-2">
+                <div class="card-title m-0">{{ member.profile.name }}</div>
+              </div>
+            </div>
+          </a>
+        </div>
       {% endfor %}
-  </div>
-
+    </div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -106,8 +142,6 @@ layout: default
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
-
-
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

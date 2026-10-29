@@ -9,33 +9,33 @@ vis_order: 3
 title: MSc Hubert Szolc
 description: Profile of MSc Hubert Szolc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Szolc
-publications: 'author^=*Szolc'
+publications: "author^=*Szolc"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Hubert Szolc
-    position: Research and teaching assistant
-    role: PhD Student
-    align: right
-    image: people/HubertSzolc.jpg
-    email: szolc@agh.edu.pl
-    linkedin: hubert-szolc
-    orcid: 0000-0003-3018-5731
-    researchgate: Hubert-Szolc
-    scopus: 57219119237
-    googlescholar: fjtHTooAAAAJ
-    address:
-    short_bio:
-    keywords: 
+  title: MSc
+  name: Hubert Szolc
+  position: Research and teaching assistant
+  role: PhD Student
+  align: right
+  image: people/HubertSzolc.jpg
+  email: szolc@agh.edu.pl
+  linkedin: hubert-szolc
+  orcid: 0000-0003-3018-5731
+  researchgate: Hubert-Szolc
+  scopus: 57219119237
+  googlescholar: fjtHTooAAAAJ
+  address:
+  short_bio:
+  keywords:
     - "UAVs"
     - "Automatic Control"
     - "Event Cameras"
     - "Hardware Acceleration"
 
-interests: 
+interests:
   - "UAVs"
   - "Automatic Control"
   - "SoC FPGA"
@@ -44,12 +44,11 @@ interests:
   - "Hardware Acceleration"
   - "Real-Time Processing"
 
-
 education:
   - degree: "PhD candidate"
     institution: "AGH Doctoral School, AGH University of Kraków"
     start: "2019"
-    end: 
+    end:
     summary: "Automation, Electronics, Electrical Engineering and Space Technologies"
   - degree: "Master of Science"
     institution: "AGH University of Krakow"
@@ -61,18 +60,16 @@ education:
     start: "2014"
     end: "2018"
     summary: "Automatic Control and Robotics"
-    
-affiliations:
-    name: "Automatic Control and Robotics"
-    url: "www.agh.edu.pl"
-    
 
-  
+affiliations:
+  name: "Automatic Control and Robotics"
+  url: "www.agh.edu.pl"
+
 experience:
   - role: "Research and teaching assistant"
     institution: "AGH University of Krakow"
     start: "2021"
-    end: 
+    end:
     summary: "I am conducting research on utilising SoC computing platforms for vision-based autonomous control of UAVs . In my work I am using using both classical algorithms as well as AI methods and hybrid approches. I am also responsible for running labs with students on parallel computing, vision algorithms and control methods. "
   - role: "IT&V Engineer"
     institution: "Delphi/Aptiv Poland"
@@ -81,7 +78,6 @@ experience:
     summary: "I worked as an Independent Test & Verification Engineer, responsible for the software and hardware used by car manufacturers."
 
 awards:
-
 
 technical_skills:
   programming_languages:
@@ -114,5 +110,5 @@ languages:
     label: "Fluent"
 ---
 
-I'm interested in controlling autonomous vehicles - especially Unmanned Aerial Vehicles (UAVs) - primarily based on visual information. 
+I'm interested in controlling autonomous vehicles - especially Unmanned Aerial Vehicles (UAVs) - primarily based on visual information.
 I use FPGAs and heterogeneous computing platforms to implement the algorithms in hardware.
