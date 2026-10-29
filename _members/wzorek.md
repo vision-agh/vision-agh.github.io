@@ -25,7 +25,7 @@ profile:
     linkedin: piotr-wzorek
     orcid: 0000-0003-3885-600X
     researchgate: Piotr-Wzorek
-    scopus:
+    scopus: 57288847500
     googlescholar: 0IttTXQAAAAJ
     address: 
     short_bio: >
