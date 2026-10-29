@@ -2,8 +2,7 @@
 layout: team
 permalink: /team
 title: Team
-description: 
+description:
 nav: true
 nav_order: 2
 ---
- 

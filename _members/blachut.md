@@ -9,35 +9,35 @@ vis_order: 2
 title: MSc Krzysztof Błachut
 description: Profile of MSc Krzysztof Błachut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Błachut
-publications: 'author^=*Blachut'
+publications: "author^=*Blachut"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Krzysztof Błachut
-    position: Research and teaching assistant
-    role: PhD Student
-    align: right
-    image: people/KrzysztofBlachut.jpg
-    email: kblachut@agh.edu.pl
-    linkedin: krzysztof-błachut-55a670340
-    orcid: 0000-0002-1071-335X
-    researchgate: Krzysztof-Blachut
-    scopus: 57219118798
-    googlescholar:
-    address:
-    short_bio: >
-        My research interests include embedded vision systems in flying and driving autonomous
-        vehicles and in video surveillance systems. I use heterogeneous computing platforms with a
-        particular focus on FPGAs for real-time implementation of frame and event-based data
-        processing algorithms.
-    keywords:
-        - Optical Flow
-        - Event Cameras
-        - Hardware Acceleration
-        - Object Detection
+  title: MSc
+  name: Krzysztof Błachut
+  position: Research and teaching assistant
+  role: PhD Student
+  align: right
+  image: people/KrzysztofBlachut.jpg
+  email: kblachut@agh.edu.pl
+  linkedin: krzysztof-błachut-55a670340
+  orcid: 0000-0002-1071-335X
+  researchgate: Krzysztof-Blachut
+  scopus: 57219118798
+  googlescholar:
+  address:
+  short_bio: >
+    My research interests include embedded vision systems in flying and driving autonomous
+    vehicles and in video surveillance systems. I use heterogeneous computing platforms with a
+    particular focus on FPGAs for real-time implementation of frame and event-based data
+    processing algorithms.
+  keywords:
+    - Optical Flow
+    - Event Cameras
+    - Hardware Acceleration
+    - Object Detection
 
 interests:
   - SoC FPGA
@@ -53,7 +53,7 @@ education:
   - degree: "PhD candidate"
     institution: "AGH Doctoral School, AGH University of Krakow"
     start: "2019"
-    end: 
+    end:
     summary: "Automation, Electronics, Electrical Engineering and Space Technologies"
 
   - degree: "Master of Science"
@@ -72,7 +72,7 @@ experience:
   - role: "Research and teaching assistant"
     institution: "AGH University of Krakow"
     start: "2022-10-01"
-    end: 
+    end:
     summary: >
       Research in hardware-accelerated image and video processing domains. Teaching students
       about implementation of vision algorithms on reprogrammable FPGA devices and in Python.
@@ -109,8 +109,6 @@ awards:
     institution: "AMD"
     date: "2024-08-28"
     summary: "Graph Convolutional Neural Networks for Event-Based Vision for AMD SoC FPGA"
-
 ---
-
 
 My research interests include embedded vision systems in flying and driving autonomous vehicles and in video surveillance systems. I use heterogeneous computing platforms with a particular focus on FPGAs for real-time implementation of frame and event-based data processing algorithms.

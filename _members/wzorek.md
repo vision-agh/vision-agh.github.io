@@ -9,35 +9,35 @@ vis_order: 7
 title: MSc Piotr Wzorek
 description: Profile of MSc Piotr Wzorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Wzorek
-publications: 'author^=*Wzorek'
+publications: "author^=*Wzorek"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Piotr Wzorek
-    position: Research and teaching assistant
-    role: PhD Student
-    align: right
-    image: people/PiotrWzorek.jpg
-    email: pwzorek@agh.edu.pl
-    linkedin: piotr-wzorek
-    orcid: 0000-0003-3885-600X
-    researchgate: Piotr-Wzorek
-    scopus: 57288847500
-    googlescholar: 0IttTXQAAAAJ
-    address: 
-    short_bio: >
-        I focus on hardware acceleration for computer vision systems, with particular interest in
-        event-based (neuromorphic) vision and deep neural network solutions. My work covers algorithm
-        design tailored to the target platform, as well as implementation and verification of hardware
-        modules on reconfigurable FPGA platforms.
-    keywords:
-        - Deep Neural Networks
-        - Event Cameras
-        - Neuromorphic Vision
-        - Hardware Acceleration
+  title: MSc
+  name: Piotr Wzorek
+  position: Research and teaching assistant
+  role: PhD Student
+  align: right
+  image: people/PiotrWzorek.jpg
+  email: pwzorek@agh.edu.pl
+  linkedin: piotr-wzorek
+  orcid: 0000-0003-3885-600X
+  researchgate: Piotr-Wzorek
+  scopus: 57288847500
+  googlescholar: 0IttTXQAAAAJ
+  address:
+  short_bio: >
+    I focus on hardware acceleration for computer vision systems, with particular interest in
+    event-based (neuromorphic) vision and deep neural network solutions. My work covers algorithm
+    design tailored to the target platform, as well as implementation and verification of hardware
+    modules on reconfigurable FPGA platforms.
+  keywords:
+    - Deep Neural Networks
+    - Event Cameras
+    - Neuromorphic Vision
+    - Hardware Acceleration
 
 interests:
   - FPGA
@@ -51,7 +51,7 @@ education:
   - degree: "PhD candidate"
     institution: "AGH Doctoral School, AGH University of Kraków"
     start: "2021"
-    end: 
+    end:
     summary: "Automation, Electronics, Electrical Engineering, and Space Technologies"
 
   - degree: "Master of Science"
@@ -70,7 +70,7 @@ experience:
   - role: "Research and teaching assistant"
     institution: "AGH University of Kraków"
     start: "2023-10-01"
-    end: 
+    end:
     summary: >
       Conducting research and teaching on artificial intelligence acceleration for embedded platforms,
       perception systems, and reconfigurable logic.
@@ -98,9 +98,6 @@ awards:
     institution: Institute of Electrical and Electronics Engineers (IEEE)
     date: 2022-09-22
     summary: Presentation titled "Traffic sign detection with event cameras and DCNN"
-
 ---
-
-
 
 I focus on hardware acceleration for computer vision systems, with particular interest in event-based (neuromorphic) vision and deep neural network solutions. My work covers algorithm design tailored to the target platform, as well as the implementation and verification of hardware modules on reconfigurable FPGA platforms.

@@ -9,35 +9,35 @@ vis_order: 5
 title: MSc Michał Daniłowicz
 description: Profile of MSc Michał Daniłowicz, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Daniłowicz
-publications: 'author^=*Danilowicz'
+publications: "author^=*Danilowicz"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Michał Daniłowicz
-    position: Research and teaching assistant
-    role: PhD Student
-    align: right
-    image: people/MichalDanilowicz.jpg
-    email: danilowi@agh.edu.pl
-    linkedin:
-    orcid: 0000-0001-8851-8186
-    researchgate: Michal-Danilowicz
-    scopus: 
-    googlescholar:
-    address:
-    short_bio: >
-        I am interested in control systems based on computer vision and artificial intelligence,
-        in particular object detection and tracking. I investigate the possibility of their
-        implementation on platforms such as GPUs and FPGAs.
-    keywords:
-        - Computer Vision
-        - Object Tracking
-        - Object Detection
-        - Hardware Acceleration
-        - Embedded AI
+  title: MSc
+  name: Michał Daniłowicz
+  position: Research and teaching assistant
+  role: PhD Student
+  align: right
+  image: people/MichalDanilowicz.jpg
+  email: danilowi@agh.edu.pl
+  linkedin:
+  orcid: 0000-0001-8851-8186
+  researchgate: Michal-Danilowicz
+  scopus:
+  googlescholar:
+  address:
+  short_bio: >
+    I am interested in control systems based on computer vision and artificial intelligence,
+    in particular object detection and tracking. I investigate the possibility of their
+    implementation on platforms such as GPUs and FPGAs.
+  keywords:
+    - Computer Vision
+    - Object Tracking
+    - Object Detection
+    - Hardware Acceleration
+    - Embedded AI
 
 interests:
   - Computer Vision
@@ -50,7 +50,7 @@ education:
   - degree: "PhD candidate"
     institution: "AGH Doctoral School, AGH University of Krakow"
     start: "2020"
-    end: 
+    end:
     summary: "Automation, Electronics, Electrical Engineering and Space Technologies"
 
   - degree: "Master of Science"
@@ -69,7 +69,7 @@ experience:
   - role: "Research and Teaching Assistant"
     institution: "AGH University of Krakow"
     start: "2020-10-01"
-    end: 
+    end:
     summary: >
       I am conducting research on object tracking algorithms and hardware acceleration of AI algorithms.
       I am also teaching courses in digital image processing and programming.
@@ -110,8 +110,6 @@ languages:
     label: "C1"
   - name: "German"
     label: "B1"
-
-
 ---
 
 I am interested in control systems based on computer vision and artificial intelligence, in particular object detection and tracking. I investigate the possibility of their implementation on platforms such as GPUs and FPGAs.

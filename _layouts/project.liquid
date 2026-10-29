@@ -2,14 +2,14 @@
 layout: default
 ---
 {% if page._styles %}
-<!-- Page/Post style -->
-<style type="text/css">
-  {
-      {
-      page._styles
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {
+        {
+        page._styles
+      }
     }
-  }
-</style>
+  </style>
 {% endif %}
 
 <div class="post">
@@ -30,49 +30,45 @@ layout: default
       <h3 class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{{ page.title_pl }}</h3>
     {% endif %}
 
-    {% assign pi_lastname = page.principal_investigator | split: " " | last | remove_accents %}
+    {% assign pi_lastname = page.principal_investigator | split: ' ' | last | remove_accents %}
     <p class="mt-4 mb-0">
       <span class="font-semibold ml-4">Principal Investigator:</span>
       <a href="/members/{{ pi_lastname | downcase }}">{{ page.principal_investigator }} </a>
     </p>
     <p class="mt-0 mb-0">
       <span class="font-semibold ml-4">Project Duration:</span>
-      {{ page.start_date | date: "%d %B %Y" }} - {{ page.end_date | date: "%d %B %Y" }}
+      {{ page.start_date | date: '%d %B %Y' }} - {{ page.end_date | date: '%d %B %Y' }}
     </p>
-    <p class="mt-0 mb-4">
-      <span class="font-semibold ml-4">Budget:</span> {{ page.budget | number_with_delimiter: " " }} PLN
-    </p>
-
+    <p class="mt-0 mb-4"><span class="font-semibold ml-4">Budget:</span> {{ page.budget | number_with_delimiter: ' ' }} PLN</p>
 
     {% if page.image %}
-    <div class="row">
-      <div class="col-sm mt-3 mt-md-0">
-        {% assign image_path = "assets/img/projects/" | append: page.image | relative_url %}
-        {% include figure.liquid loading="eager" path=image_path title="Scheme" class="img-fluid rounded z-depth-1" %}
+      <div class="row">
+        <div class="col-sm mt-3 mt-md-0">
+          {% assign image_path = 'assets/img/projects/' | append: page.image | relative_url %}
+          {% include figure.liquid loading="eager" path=image_path title="Scheme" class="img-fluid rounded z-depth-1" %}
+        </div>
       </div>
-    </div>
-    <div class="caption">
-      {{ page.image_caption }}
-    </div>
+      <div class="caption">
+        {{ page.image_caption }}
+      </div>
     {% endif %}
 
     {% if page.abstract %}
       <span class="font-semibold mt-4">Abstract:</span>
-      <p> {{ page.abstract }} </p>
+      <p>{{ page.abstract }}</p>
     {% endif %}
 
     {% if page.keywords %}
-    {% assign keywords = page.keywords | sort_natural %}
-    <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
-      {% for kw in keywords %}
-      <span class="text-xs px-2 py-1 rounded">{{ kw | strip }}</span>
-      {% endfor %}
-    </div>
+      {% assign keywords = page.keywords | sort_natural %}
+      <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
+        {% for kw in keywords %}
+          <span class="text-xs px-2 py-1 rounded">{{ kw | strip }}</span>
+        {% endfor %}
+      </div>
     {% endif %}
 
     {{ content }}
   </article>
-
 
   {% if page.related_publications %}
     <h3 id="publications" class="mt-6 mb-6 font-bold text-center">Publications</h3>
@@ -82,6 +78,4 @@ layout: default
       {% endif %}
     </div>
   {% endif %}
-
-
 </div>

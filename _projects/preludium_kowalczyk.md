@@ -1,7 +1,7 @@
 ---
 layout: project
 title: NCN Preludium
-description: 
+description:
 principal_investigator: MSc Marcin Kowalczyk
 title_en: Acceleration of processing event-based visual data with the use of heterogeneous, reprogrammable computing devices
 title_pl: Akceleracja przetwarzania zdarzeniowych danych wizyjnych z wykorzystaniem heterogenicznych, reprogramowalnych układów obliczeniowych
@@ -12,13 +12,12 @@ image: preludium_MK_scheme.png
 importance: 1
 category: NCN
 related_publications: true
-keywords: 
-    - Event Cameras
-    - SoC FPGA
-    - Embedded Platforms
-    - Real-time
+keywords:
+  - Event Cameras
+  - SoC FPGA
+  - Embedded Platforms
+  - Real-time
 
 start_date: 2021-01-28
 end_date: 2026-07-28
-
 ---

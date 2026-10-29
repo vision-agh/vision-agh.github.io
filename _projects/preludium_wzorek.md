@@ -17,41 +17,41 @@ end_date: 2028-01-21
 
 budget: 209230
 
-keywords: 
-    - DVS
-    - Event Camera
-    - Object Detection
-    - FPGA
-    - Heterogeneous devices
-    - Vision Systems
-    - Deep Neural Networks
+keywords:
+  - DVS
+  - Event Camera
+  - Object Detection
+  - FPGA
+  - Heterogeneous devices
+  - Vision Systems
+  - Deep Neural Networks
 
 abstract: >
-    The main aim of the proposed basic research is to design deep neural network systems for a heterogeneous SoC FPGA platform that enable real-time, low-latency object detection based on data recorded by an event camera. The key method for meeting these requirements will involve designing hardware-aware systems that account for the specific features of the target platform.
+  The main aim of the proposed basic research is to design deep neural network systems for a heterogeneous SoC FPGA platform that enable real-time, low-latency object detection based on data recorded by an event camera. The key method for meeting these requirements will involve designing hardware-aware systems that account for the specific features of the target platform.
 
-    The rapid development of computer vision over the past 60 years has resulted in high-quality solutions for various tasks. However, traditional frame-based cameras often face issues that reduce their accuracy under specific conditions. Examples include "motion blur" when the camera moves rapidly relative to observed objects or disturbances in recorded images due to varying or extreme lighting conditions.
+  The rapid development of computer vision over the past 60 years has resulted in high-quality solutions for various tasks. However, traditional frame-based cameras often face issues that reduce their accuracy under specific conditions. Examples include "motion blur" when the camera moves rapidly relative to observed objects or disturbances in recorded images due to varying or extreme lighting conditions.
 
-    Event cameras offer a solution to these problems. Unlike classical cameras, these sensors capture only changes in brightness for each pixel independently, rather than synchronously recording the entire matrix at specified intervals. This approach provides high dynamic range and temporal resolution and significantly reduces redundant information, leading to lower average power consumption. The data from an event camera can be described as a sparse point cloud in space-time, where each point is defined by four values: timestamp, pixel coordinates (x, y), and brightness change polarity (positive or negative). Processing such data, which differs significantly from classical video frames, is a scientific challenge.
+  Event cameras offer a solution to these problems. Unlike classical cameras, these sensors capture only changes in brightness for each pixel independently, rather than synchronously recording the entire matrix at specified intervals. This approach provides high dynamic range and temporal resolution and significantly reduces redundant information, leading to lower average power consumption. The data from an event camera can be described as a sparse point cloud in space-time, where each point is defined by four values: timestamp, pixel coordinates (x, y), and brightness change polarity (positive or negative). Processing such data, which differs significantly from classical video frames, is a scientific challenge.
 
-    These issues are notably relevant to advanced mobile robotics, which operate at high speeds in dynamic environments. For these applications, vision systems must meet real-time execution, low latency, and low power consumption requirements. This need motivates the development of event-based vision systems for embedded platforms. Reconfigurable FPGAs and heterogeneous SoC FPGAs are chosen for this research due to their low power consumption and high capability for parallel processing.
-    A technique to enable the hardware implementation of efficient systems with high throughput and low latency is to consider the target platform's characteristics during the design stage. This involves accounting for limited memory resources, the necessity of using integer or fixed-point values instead of floating-point values, and the specific characteristics of individual chip resources (LUT, DSP, etc.).
+  These issues are notably relevant to advanced mobile robotics, which operate at high speeds in dynamic environments. For these applications, vision systems must meet real-time execution, low latency, and low power consumption requirements. This need motivates the development of event-based vision systems for embedded platforms. Reconfigurable FPGAs and heterogeneous SoC FPGAs are chosen for this research due to their low power consumption and high capability for parallel processing.
+  A technique to enable the hardware implementation of efficient systems with high throughput and low latency is to consider the target platform's characteristics during the design stage. This involves accounting for limited memory resources, the necessity of using integer or fixed-point values instead of floating-point values, and the specific characteristics of individual chip resources (LUT, DSP, etc.).
 
-    Object detection is selected as the research task due to its critical role in the context of modern robotics. Although there is a trend toward implementing event-driven systems for FPGAs, solutions for this task are still lacking. It should be noted that object detection is a non-trivial task as it requires a high level of understanding of the observed scene. Therefore, over the past several years leading detectors use deep neural networks, which are inherently complex and demand significant computational power and memory. Their efficient and rapid application is an essential element of this project.
+  Object detection is selected as the research task due to its critical role in the context of modern robotics. Although there is a trend toward implementing event-driven systems for FPGAs, solutions for this task are still lacking. It should be noted that object detection is a non-trivial task as it requires a high level of understanding of the observed scene. Therefore, over the past several years leading detectors use deep neural networks, which are inherently complex and demand significant computational power and memory. Their efficient and rapid application is an essential element of this project.
 
-    The proposed research will explore several FPGA-specific methods to implement embedded event detection systems, including:
-        - Modern methods for neural networks quantization.
-        - Optimization of operations such as matrix multiplication.
-        - Use of hardware-friendly and event data-appropriate network architectures, such as graph neural networks.
-        - Implementation of filtering and preprocessing methods for event data.
-        - Division of tasks between reconfigurable and processor-appropriate parts for SoCs, including Versal Adaptive SoCs.
-        - Optimization of memory usage among available internal and external resources.
+  The proposed research will explore several FPGA-specific methods to implement embedded event detection systems, including:
+      - Modern methods for neural networks quantization.
+      - Optimization of operations such as matrix multiplication.
+      - Use of hardware-friendly and event data-appropriate network architectures, such as graph neural networks.
+      - Implementation of filtering and preprocessing methods for event data.
+      - Division of tasks between reconfigurable and processor-appropriate parts for SoCs, including Versal Adaptive SoCs.
+      - Optimization of memory usage among available internal and external resources.
 
-    The end result of the proposed research will be a collection of software models, hardware modules and tests realised using a hardware description language (SystemVerilog) that can implement an end-to-end detector operating on event data. Additionally, a comprehensive system for simulating hardware modules will be developed. This system will incorporate pre-recorded test sequences, randomly generated sequences by the simulation environment, as well as data generated by a hardware-in-the-loop simulator.
+  The end result of the proposed research will be a collection of software models, hardware modules and tests realised using a hardware description language (SystemVerilog) that can implement an end-to-end detector operating on event data. Additionally, a comprehensive system for simulating hardware modules will be developed. This system will incorporate pre-recorded test sequences, randomly generated sequences by the simulation environment, as well as data generated by a hardware-in-the-loop simulator.
 
-    The findings will be presented in journals and scientific conferences, and part of the code will be made available in an open repository. This research will not only address the scientific challenges posed by processing event camera data but also contribute to the development of more efficient vision systems for mobile robotics, enhancing their safety and reliability.
+  The findings will be presented in journals and scientific conferences, and part of the code will be made available in an open repository. This research will not only address the scientific challenges posed by processing event camera data but also contribute to the development of more efficient vision systems for mobile robotics, enhancing their safety and reliability.
 
 image: preludium_PW.png
-image_caption: 
+image_caption:
 
-publications: 'author^=*Wzorek, projects^=*Preludium'
+publications: "author^=*Wzorek, projects^=*Preludium"
 ---
