@@ -9,38 +9,38 @@ vis_order: 8
 title: MSc Kamil Jeziorek
 description: Profile of MSc Kamil Jeziorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Jeziorek
-publications: 'author^=*Jeziorek'
+publications: "author^=*Jeziorek"
 
 teaser: >
-    I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-    title: MSc
-    name: Kamil Jeziorek
-    position: Research and teaching assistant
-    role: PhD Student
-    align: right
-    image: people/KamilJeziorek.jpg
-    email: kjeziorek@agh.edu.pl
-    linkedin: kamil-jeziorek-044436210
-    orcid: 0000-0001-5446-3682
-    researchgate: Kamil-Jeziorek
-    scopus: 
-    googlescholar: mfdgd-YAAAAJ
-    address:
-    short_bio: >
-        I design low-power, real-time vision systems for autonomous vehicles and robotics.
-        My research centers on event-based (neuromorphic) cameras and graph neural networks,
-        with an emphasis on turning these ideas into deployable hardware on FPGAs and SoC platforms.
-        I’m especially interested in efficient, low-latency AI pipelines and sensor-fusion methods
-        that make perception faster and more reliable in the real world.
-    keywords:
-        - Computer Vision
-        - Event Cameras
-        - Multi-modal Data
-        - Deep Neural Networks
-        - Graph Neural Networks
-        - Hardware Acceleration
+  title: MSc
+  name: Kamil Jeziorek
+  position: Research and teaching assistant
+  role: PhD Student
+  align: right
+  image: people/KamilJeziorek.jpg
+  email: kjeziorek@agh.edu.pl
+  linkedin: kamil-jeziorek-044436210
+  orcid: 0000-0001-5446-3682
+  researchgate: Kamil-Jeziorek
+  scopus:
+  googlescholar: mfdgd-YAAAAJ
+  address:
+  short_bio: >
+    I design low-power, real-time vision systems for autonomous vehicles and robotics.
+    My research centers on event-based (neuromorphic) cameras and graph neural networks,
+    with an emphasis on turning these ideas into deployable hardware on FPGAs and SoC platforms.
+    I’m especially interested in efficient, low-latency AI pipelines and sensor-fusion methods
+    that make perception faster and more reliable in the real world.
+  keywords:
+    - Computer Vision
+    - Event Cameras
+    - Multi-modal Data
+    - Deep Neural Networks
+    - Graph Neural Networks
+    - Hardware Acceleration
 
 interests:
   - Computer Vision
@@ -54,7 +54,7 @@ education:
   - degree: "PhD candidate"
     institution: "AGH Doctoral School, AGH University of Kraków"
     start: "2023"
-    end: 
+    end:
     summary: "Automation, Electronics, Electrical Engineering, and Space Technologies"
 
   - degree: "Master of Science"
@@ -73,7 +73,7 @@ experience:
   - role: "Research and teaching assistant"
     institution: "AGH University of Kraków"
     start: "2025-03-01"
-    end: 
+    end:
     summary: >
       Conducting research and teaching on deep neural networks and image processing.
 
@@ -141,8 +141,6 @@ awards:
     institution: "AMD"
     date: "2024-08-28"
     summary: "Graph Convolutional Neural Networks for Event-Based Vision for AMD SoC FPGA"
-
 ---
 
 I design low-power, real-time vision systems for autonomous vehicles and robotics. My research centers on event-based (neuromorphic) cameras and graph neural networks, with an emphasis on turning these ideas into deployable hardware on FPGAs and SoC platforms. I’m especially interested in efficient, low-latency AI pipelines and sensor-fusion methods that make perception faster, and more reliable in the real world.
-
