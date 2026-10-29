@@ -14,5 +14,7 @@ keywords:
 start_date: 2015-01-01
 end_date: 2022-01-01
 
+publications: 'projects^=*Sonata'
+
 ---
 
