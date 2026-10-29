@@ -2,12 +2,13 @@
 layout: cv
 inline: false
 group: Principal Investigators
-team_frontpage: false
+team_frontpage: true
 group_rank: 1
-team_head: true
+team_head: false
+vis_order: 0
 
 title: Prof Marek Gorgoń
-description: Profile of Marek Gorgon, Head of the Embedded Perception and Autonomous Systems Group.
+description: Profile of Marek Gorgoń, Professor at the Embedded Perception and Autonomous Systems Group.
 lastname: Gorgon
 publications: 'author^=*Gorgon'
 
@@ -18,7 +19,7 @@ profile:
     title: Prof
     name: Marek Gorgoń
     position: Research and teaching professor
-    role: Head of the Group
+    role: Principal Investigator
     align: right
     image: people/MarekGorgon.jpg
     email: mago@agh.edu.pl

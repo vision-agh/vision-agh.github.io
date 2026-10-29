@@ -2,13 +2,13 @@
 layout: cv
 inline: false
 group: Principal Investigators
-team_frontpage: true
+team_frontpage: false
 group_rank: 1
-team_head: false
-vis_order: 0
+team_head: true
+vis_order: -1
 
 title: PhD Tomasz Kryjak
-description: Profile of Tomasz Kryjak, Associate Professor at the Embedded Perception and Autonomous Systems Group.
+description: Profile of Tomasz Kryjak, Head of the Embedded Perception and Autonomous Systems Group.
 lastname: Kryjak
 publications: 'author^=*Kryjak'
 
