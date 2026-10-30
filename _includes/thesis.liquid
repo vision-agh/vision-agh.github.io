@@ -23,7 +23,17 @@
         </div>
       {% endif %}
       <div class="title">{{ thesis.title }}</div>
-      <div class="author">{{ thesis.author }}</div>
+      <div class="author">
+        {{ thesis.author }}
+        {% if thesis.linkedin %}
+          {% if thesis.linkedin contains '://' %}
+            {% assign linkedin_url = thesis.linkedin %}
+          {% else %}
+            {% assign linkedin_url = thesis.linkedin | prepend: 'https://www.linkedin.com/in/' %}
+          {% endif %}
+          <a href="{{ linkedin_url }}" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        {% endif %}
+      </div>
       <div class="periodical">
         <em>
           {%- if thesis.supervisor %}Supervisor: {{ thesis.supervisor }}{% endif -%}

@@ -1,10 +1,12 @@
 # Student theses listed on the Students page (/students/).
 # Fields: title, author, supervisor, year, type (BSc | MSc | PhD),
 #         group (section on the page: MSc | Bachelor | Alumni),
+#         linkedin (author's LinkedIn handle or full profile URL, optional),
 #         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
 #
 # - title: Example thesis title
 #   author: Jan Kowalski
+#   linkedin: jan-kowalski
 #   supervisor: Tomasz Kryjak, PhD
 #   year: 2025
 #   type: MSc
@@ -18,6 +20,7 @@
 # EXAMPLE ENTRY – replace with real theses
 - title: "Example: Real-time object detection on an SoC FPGA for UAV navigation"
   author: Jan Kowalski
+  linkedin: https://www.linkedin.com/
   supervisor: Tomasz Kryjak, PhD
   year: 2025
   type: MSc
