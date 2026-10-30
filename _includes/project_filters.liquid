@@ -1,0 +1,20 @@
+<div class="list-filters project-filters">
+  <div class="list-filter-group" data-filter="year">
+    <span class="list-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
+    <select class="list-filter-select" aria-label="Filter by year">
+      <option value="">All years</option>
+    </select>
+  </div>
+  <div class="list-filter-group" data-filter="type">
+    <span class="list-filter-label"><i class="fa-solid fa-landmark"></i> Type</span>
+    <div class="list-filter-chips">
+      <button type="button" class="filter-chip active" data-value="">All</button>
+    </div>
+  </div>
+  <div class="list-filter-footer">
+    <span id="project-filter-count"></span>
+    <button type="button" id="project-filter-reset" class="list-filter-reset" hidden><i class="fa-solid fa-xmark"></i> Clear filters</button>
+  </div>
+</div>
+<p id="project-filter-empty" class="list-filter-empty" hidden>No projects match the selected filters.</p>
+<script defer src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
