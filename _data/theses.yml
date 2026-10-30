@@ -1,0 +1,15 @@
+# Student theses listed on the Students page (/students/).
+# Fields: title, author, supervisor, year, type (BSc | MSc | PhD),
+#         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
+#
+# - title: Example thesis title
+#   author: Jan Kowalski
+#   supervisor: Tomasz Kryjak, PhD
+#   year: 2025
+#   type: MSc
+#   image: example.png
+#   abstract: >
+#     Short abstract of the thesis.
+#   pdf: https://example.org/thesis.pdf
+#   code: https://github.com/example/repo
+[]

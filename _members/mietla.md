@@ -18,7 +18,7 @@ profile:
   title: MSc
   name: Remigiusz Mietła
   position: Research/Lab Engineer
-  role: Research/Lab Engineer
+  role: 
   align: right
   image: people/placeholder.jpg
   email:
