@@ -1,5 +1,6 @@
 # Student theses listed on the Students page (/students/).
 # Fields: title, author, supervisor, year, type (BSc | MSc | PhD),
+#         group (section on the page: MSc | Bachelor | Alumni),
 #         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
 #
 # - title: Example thesis title
@@ -7,6 +8,7 @@
 #   supervisor: Tomasz Kryjak, PhD
 #   year: 2025
 #   type: MSc
+#   group: MSc
 #   image: example.png
 #   abstract: >
 #     Short abstract of the thesis.
@@ -19,6 +21,7 @@
   supervisor: Tomasz Kryjak, PhD
   year: 2025
   type: MSc
+  group: MSc
   image: example.png
   abstract: >
     This is an example entry showing how a thesis is displayed on the Students page.
