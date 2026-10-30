@@ -5,15 +5,26 @@
   data-conference="{{ project.name }}"
 >
   <div class="card h-100 hoverable">
-    {% if project.img %}
-      {%
-        include figure.liquid
-        loading="eager"
-        path=project.img
-        sizes = "250px"
-        alt="project thumbnail"
-        class="card-img-top d-block mx-auto"
-      %}
+    {% assign conf_logo = project.img %}
+    {% unless conf_logo %}
+      {% assign conf_logo_file = site.data.conference_logos[project.name] %}
+      {% if conf_logo_file %}{% assign conf_logo = conf_logo_file | prepend: 'assets/img/conferences/' %}{% endif %}
+    {% endunless %}
+    {% assign conf_logo_exists = 'false' %}
+    {% if conf_logo %}
+      {% capture conf_logo_exists %}{% file_exists {{ conf_logo }} %}{% endcapture %}
+    {% endif %}
+    {% if conf_logo_exists == 'true' %}
+      <div class="conf-logo">
+        <img src="{{ conf_logo | relative_url }}" alt="{{ project.name }} logo" loading="lazy">
+      </div>
+    {% else %}
+      <div class="conf-logo conf-logo-placeholder">
+        <span>{{ project.name }}</span>
+        {% if project.start_date -%}
+          <small>{{ project.start_date | date: '%Y' }}</small>
+        {%- endif %}
+      </div>
     {% endif %}
     <div class="card-body">
       <h2 class="card-title">{{ project.name }}</h2>

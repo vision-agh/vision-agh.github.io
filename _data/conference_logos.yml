@@ -1,0 +1,7 @@
+# Conference logos for the Conferences page (/conferences/).
+# Key = conference `name` used in _data/conferences.yml; value = image in assets/img/conferences/.
+# Cards of conferences without a logo file show a header with the conference name instead.
+#
+# "ARC": arc.png
+# "DASIP": dasip.png
+{}
