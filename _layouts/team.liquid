@@ -29,15 +29,15 @@ layout: page
             </a>
             <div class="card-body text-center">
               {% if member.profile.name %}
-                <div class="more-info-name">{{ member.profile.name }}</div>
+                <div class="more-info-name">{{ member.profile.name | split: ',' | first }}</div>
               {% endif %}
 
-              {% if member.profile.role %}
+              {% if member.team_head and member.profile.role %}
                 <div class="more-info-role">{{ member.profile.role }}</div>
-              {% endif %}
-
-              {% if member.group == 'PhD Students' and member.profile.position %}
+              {% elsif member.profile.position %}
                 <div class="more-info-role">{{ member.profile.position }}</div>
+              {% elsif member.profile.role %}
+                <div class="more-info-role">{{ member.profile.role }}</div>
               {% endif %}
 
               {% if member.profile.keywords %}

@@ -1,9 +1,9 @@
 ---
 layout: cv
 inline: false
-group: PhD Students
+group: Research Assistants
 team_frontpage: true
-group_rank: 3
+group_rank: 2
 vis_order: 5
 
 title: MSc Michał Daniłowicz
