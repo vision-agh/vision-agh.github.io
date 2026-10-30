@@ -38,6 +38,8 @@
           <p class="card-text text-center mb-0"><strong>Poster presented by</strong></p>
         {% elsif project.presentation_type == 'presentation' %}
           <p class="card-text text-center mb-0"><strong>Presented by</strong></p>
+        {% elsif project.presentation_type == 'demo' %}
+          <p class="card-text text-center mb-0"><strong>Demo presented by</strong></p>
         {% endif %}
 
         <p class="card-text text-center">
