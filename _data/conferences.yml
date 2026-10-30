@@ -83,6 +83,7 @@
   name: "Automation"
   start_date: 2025-01-01
   presentation_type: presentation
+  presenter: Hubert Szolc
   author: Hubert Szolc, Mateusz Wąsala, Remigiusz Mietła, Kacper Iwicki, Tomasz Kryjak
   topic: "Vision-based automatic fruit counting with UAV"
   arxiv: 2503.13080
@@ -93,6 +94,7 @@
   start_date: 2026-04-13
   end_date: 2026-04-15
   presentation_type: presentation
+  presenter: Marcin Kowalczyk
   author: Marcin Kowalczyk, Marek Długosz, Kamil Jeziorek, Mateusz Komorkiewicz, Tomasz Kryjak, Dariusz Marchewka, Marcin Szelest, Piotr Wzorek, Paweł Skruch
   topic: "Towards event-based in-cabin sensing - a synchronized dual-camera dataset pipeline"
 
@@ -101,6 +103,7 @@
   start_date: 2026-04-08
   end_date: 2026-04-10
   presentation_type: presentation
+  presenter: Michał Filipkowski
   author: Michał Filipkowski, Marcin Kowalczyk, Tomasz Kryjak
   topic: "FPGA-based hardware architecture for contrast maximization in event-based vision"
   arxiv: 2605.09581
@@ -111,6 +114,7 @@
   start_date: 2026-04-08
   end_date: 2026-04-10
   presentation_type: presentation
+  presenter: Wiktor Matykiewicz
   author: Wiktor Matykiewicz, Piotr Wzorek, Kamil Jeziorek, Tomás Muñoz, Antonio Rios-Navarro, Angel Jiménez-Fernández, Tomasz Kryjak
   topic: "End-to-end keyword spotting on FPGA using graph neural networks with a neuromorphic auditory sensor"
   arxiv: 2605.09570
@@ -130,6 +134,7 @@
   start_date: 2025-08-26
   end_date: 2025-08-29
   presentation_type: presentation
+  presenter: Mateusz Komorkiewicz
   author: Mateusz Komorkiewicz, Piotr Wzorek, Paweł Skruch
   topic: "Memory-efficient hardware implementation of Time-Ordered Recent Event (TORE) volumes"
   journal_link: https://doi.org/10.1109/MMAR65820.2025.11150932
@@ -148,6 +153,7 @@
   start_date: 2025-04-09
   end_date: 2025-04-11
   presentation_type: presentation
+  presenter: Tomasz Kryjak
   author: Michał Daniłowicz, Tomasz Kryjak
   topic: "Real-time multi-object tracking using YOLOv8 and SORT on a SoC FPGA"
   arxiv: 2503.13023
@@ -158,6 +164,7 @@
   start_date: 2025-04-07
   end_date: 2025-04-10
   presentation_type: presentation
+  presenter: Kamil Jeziorek
   author: Kamil Jeziorek, Tomasz Kryjak
   topic: "Self-supervised event representations - towards accurate, real-time perception on SoC FPGAs"
   arxiv: 2505.07556
@@ -168,6 +175,7 @@
   start_date: 2025-04-02
   end_date: 2025-04-04
   presentation_type: presentation
+  presenter: Marcin Kowalczyk, Kamil Jeziorek
   author: Marcin Kowalczyk, Kamil Jeziorek, Tomasz Kryjak, Marek Gorgoń
   topic: "High-performance computing for event cameras - DIF filtering and graph convolutional networks for object classification"
 
@@ -175,6 +183,7 @@
   name: "SPA"
   start_date: 2024-09-01
   presentation_type: presentation
+  presenter: Hubert Szolc
   author: Hubert Szolc, Karol Desnos, Tomasz Kryjak
   topic: "Tangled Program Graphs as an alternative to DRL-based control algorithms for UAVs"
   arxiv: 2411.05586
@@ -185,6 +194,7 @@
   start_date: 2024-12-10
   end_date: 2024-12-12
   presentation_type: presentation
+  presenter: Piotr Wzorek
   author: Piotr Wzorek, Kamil Jeziorek, Tomasz Kryjak, Andrea Pinna
   topic: "Increasing the scalability of graph convolution for FPGA-implemented event-based vision"
   arxiv: 2411.04269
@@ -205,6 +215,7 @@
   start_date: 2024-08-28
   end_date: 2024-08-30
   presentation_type: presentation
+  presenter: Dominika Przewłocka-Rus
   author: Dominika Przewłocka-Rus, Tomasz Kryjak, Marek Gorgoń
   topic: "PowerYOLO - mixed precision model for hardware efficient object detection with event data"
   arxiv: 2407.08272
