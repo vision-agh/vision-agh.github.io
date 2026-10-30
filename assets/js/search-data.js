@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-students",
+          title: "Students",
+          description: "Bachelor&#39;s, master&#39;s and doctoral theses completed in our group.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/students/";
+          },
         },{id: "nav-conferences",
           title: "Conferences",
           description: "",
