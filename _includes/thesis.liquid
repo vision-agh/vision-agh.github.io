@@ -18,7 +18,9 @@
 
     <div class="{% if thesis.image %}col-sm-10{% else %}col-sm-12{% endif %}">
       {% if thesis.type %}
-        <div class="abbr"><abbr class="badge">{{ thesis.type }}</abbr></div>
+        <div class="abbr">
+          <abbr class="badge">{{ thesis.type }}</abbr>
+        </div>
       {% endif %}
       <div class="title">{{ thesis.title }}</div>
       <div class="author">{{ thesis.author }}</div>
