@@ -37,19 +37,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "members-msc-krzysztof-błachut",
-          title: 'MSc Krzysztof Błachut',
-          description: "Profile of MSc Krzysztof Błachut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+        },{id: "nav-collaboration",
+          title: "Collaboration",
+          description: "Academic and industrial partners we work with.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/collaboration/";
+          },
+        },{id: "members-krzysztof-błachut-msc",
+          title: 'Krzysztof Błachut, MSc',
+          description: "Profile of Krzysztof Błachut, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/blachut";
-            },},{id: "members-msc-michał-daniłowicz",
-          title: 'MSc Michał Daniłowicz',
-          description: "Profile of MSc Michał Daniłowicz, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-michał-daniłowicz-msc",
+          title: 'Michał Daniłowicz, MSc',
+          description: "Profile of Michał Daniłowicz, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/danilowicz";
-            },},{id: "members-msc-mateusz-gołąbek",
-          title: 'MSc Mateusz Gołąbek',
-          description: "Profile of MSc Mateusz Gołąbek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-mateusz-gołąbek-msc",
+          title: 'Mateusz Gołąbek, MSc',
+          description: "Profile of Mateusz Gołąbek, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/golabek";
             },},{id: "members-prof-marek-gorgoń",
@@ -57,14 +64,14 @@ ninja.data = [{
           description: "Profile of Marek Gorgoń, Professor at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/gorgon";
-            },},{id: "members-msc-kamil-jeziorek",
-          title: 'MSc Kamil Jeziorek',
-          description: "Profile of MSc Kamil Jeziorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-kamil-jeziorek-msc",
+          title: 'Kamil Jeziorek, MSc',
+          description: "Profile of Kamil Jeziorek, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/jeziorek";
-            },},{id: "members-msc-marcin-kowalczyk",
-          title: 'MSc Marcin Kowalczyk',
-          description: "Profile of MSc Marcin Kowalczyk, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-marcin-kowalczyk-msc",
+          title: 'Marcin Kowalczyk, MSc',
+          description: "Profile of Marcin Kowalczyk, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kowalczyk";
             },},{id: "members-tomasz-kryjak-phd",
@@ -72,34 +79,34 @@ ninja.data = [{
           description: "Profile of Tomasz Kryjak, Leader of the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kryjak";
-            },},{id: "members-msc-konrad-lis",
-          title: 'MSc Konrad Lis',
-          description: "Profile of MSc Konrad Lis, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-konrad-lis-msc",
+          title: 'Konrad Lis, MSc',
+          description: "Profile of Konrad Lis, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/lis";
-            },},{id: "members-msc-remigiusz-mietła",
-          title: 'MSc Remigiusz Mietła',
-          description: "Profile of MSc Remigiusz Mietła, Research/Lab Engineer at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-remigiusz-mietła-msc",
+          title: 'Remigiusz Mietła, MSc',
+          description: "Profile of Remigiusz Mietła, MSc, Research/Lab Engineer at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/mietla";
-            },},{id: "members-msc-błażej-szargut",
-          title: 'MSc Błażej Szargut',
-          description: "Profile of MSc Błażej Szargut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-błażej-szargut-msc",
+          title: 'Błażej Szargut, MSc',
+          description: "Profile of Błażej Szargut, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/szargut";
-            },},{id: "members-msc-hubert-szolc",
-          title: 'MSc Hubert Szolc',
-          description: "Profile of MSc Hubert Szolc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-hubert-szolc-msc",
+          title: 'Hubert Szolc, MSc',
+          description: "Profile of Hubert Szolc, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/szolc";
-            },},{id: "members-msc-mateusz-wąsala",
-          title: 'MSc Mateusz Wąsala',
-          description: "Profile of MSc Mateusz Wąsala, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-mateusz-wąsala-msc",
+          title: 'Mateusz Wąsala, MSc',
+          description: "Profile of Mateusz Wąsala, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/wasala";
-            },},{id: "members-msc-piotr-wzorek",
-          title: 'MSc Piotr Wzorek',
-          description: "Profile of MSc Piotr Wzorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-piotr-wzorek-msc",
+          title: 'Piotr Wzorek, MSc',
+          description: "Profile of Piotr Wzorek, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/wzorek";
             },},{id: "projects-ncn-preludium",
