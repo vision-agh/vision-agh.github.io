@@ -4,6 +4,7 @@ title: IDUB AGH
 description: Initiative for Excellence – Research University
 title_en: The development of solutions using modern vision sensors (event cameras) for applications related to autonomous, unmanned aerial vehicles
 principal_investigator: Prof Marek Gorgoń
+img: assets/img/projects/agh_idub_pl_rgb.jpg
 importance: 1
 category: IDUB
 related_publications: false

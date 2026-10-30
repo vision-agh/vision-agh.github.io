@@ -2,6 +2,7 @@
 layout: project
 title: FP3-IAM4RAIL
 description: EU-Rail FP3 project funded by Horizon Europe
+img: assets/img/projects/im4rail_fp3.png
 acronym_en: IAM4RAIL
 title_en: Holistic and Integrated Asset Management for Europe's Rail System
 importance: 1

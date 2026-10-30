@@ -2,6 +2,7 @@
 layout: project
 title: NCBR ARTIQ
 description: ARTIQ programme (NCBR & NCN)
+img: assets/img/projects/artiq.png
 title_en: Integration of Reasoning, Learning, Optimisation and Interpretation for Accelerated Commercialisation of Next-Generation Intelligent Software Systems
 importance: 1
 category: NCBR
