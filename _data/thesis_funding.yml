@@ -1,0 +1,6 @@
+# Funding sources for student theses (field `funding` in _data/theses.yml).
+# Each key becomes a button on the thesis card that shows / hides the description.
+"IDUB":
+  name: "Initiative for Excellence – Research University (IDUB)"
+  description: "Funding for research related to degree projects and theses"
+  url: https://excellence.agh.edu.pl/actions/integration-of-educational-process-with-scientific-research

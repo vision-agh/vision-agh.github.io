@@ -5,6 +5,7 @@
 #         supervisor_url (optional; group members are linked automatically),
 #         cooperation (co-supervisors, comma-separated; group members are linked automatically),
 #         keywords (optional, not displayed),
+#         funding (e.g. IDUB; shows a button with the description from _data/thesis_funding.yml),
 #         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
 #
 # - title: Example thesis title
@@ -306,6 +307,7 @@
   year: "2025/2026"
   type: MSc
   group: Alumni
+  funding: IDUB
   keywords: "laser communication, FSO, PPM, FPGA, decoder, Reed-Solomon, synchronization, LEO satellite"
   abstract: >-
     The aim of the thesis was to design, implement and verify a ground-station decoder for a satellite optical downlink in a field-programmable gate array (FPGA). The decoder was developed for the PUCHACZ student CubeSat mission of the AGH SatLab student research group. The satellite will transmit data using a pulsed 1550 nm laser with 1024-ary pulse-position modulation (PPM). The signal is received by a 0.4 m telescope with a PIN photodiode, and the stream of samples from the analog-to-digital converters is to be processed in real time by the developed decoder. The processing chain includes data acquisition from the converters over high-speed differential links with a clock-domain crossing, a correlation filter implemented without multiplications, pulse detection, slot-clock synchronization with a Doppler-shift tracking loop, 1024-PPM demodulation, a Reed-Solomon (RS) decoder over the Galois field GF(2^10) with error correction (one RS(221,205) codeword per frame) and a serial peripheral interface (SPI) output with telemetry. Every stage of the chain was verified in simulation, bit-exactly against golden models written in Python, and the complete receiver, from emulated samples to the data output, was also tested as a whole. Bitstreams covering the complete receiver were generated for the ZCU104 target platform with the Zynq UltraScale+ XCZU7EV device. The operation of the decoding chain was confirmed by measurements on the ZCU104 board, with the stimulus provided by an internal playback generator. A transmission over a real 1550 nm optical path was decoded off-line from a recorded signal waveform, using simulation. Real-time reception with the converter card remains future work.
@@ -318,6 +320,7 @@
   year: "2025/2026"
   type: MSc
   group: Alumni
+  funding: IDUB
   keywords: "AI Engines, AMD Versal, neural network acceleration, PointNetConv, graph neural networks, point clouds, FPGA, heterogeneous systems"
   abstract: >-
     This thesis addresses the acceleration of neural networks processing irregular data, such as point clouds, on the heterogeneous AMD Versal device. The PointNetConv layer from the ointNet family was selected and an accelerator for it was designed on the VEK280 board. The programmable logic builds edge features and performs scatter-max aggregation, while the AI Engine-ML core array executes the dense linear transformations in int16. Single-path and nine-path variants (8 and 72 cores) were implemented, and optimisations reduced their latency on the CORA citation graph (2,708 nodes, 13,264 edges) from about 18 ms to 718.66 and 389.96 𝜇s, respectively. Compared with CPU, CUDA and TensorRT implementations on an NVIDIA Jetson Orin NX module, the nine-path variant achieves 32.7% lower latency than the best GPU implementation, with comparable energy efficiency. The AIE kernels alone are clearly faster than the GPU, but this advantage is limited by data transfer and the programmable logic, and integrating the whole system proved to be the main challenge.
@@ -330,6 +333,7 @@
   year: "2025/2026"
   type: MSc
   group: Alumni
+  funding: IDUB
   keywords: "multi-agent systems, UAV swarm, Artificial Potential Fields (APF), connectivity maintenance, heuristic algorithms, ROS 2, urban exploration"
   abstract: >-
     The subject of this master’s thesis focuses on the autonomous coordination of an Unmanned Aerial Vehicle (UAV) swarm in a complex urban environment. The primary objective of the research was to develop and evaluate a system that ensures continuous communication within a multi-agent network (strictly adhering to Line-of-Sight and maximum range requirements) while simultaneously maximizing the exploration area to locate strategic targets. This work is based on an in-depth comparative analysis of two distinct control paradigms designed for the international ICUAS UAV Competition in 2025 and 2026. The first, classical approach from 2025 was based on deterministic graph algorithms and offline trajectory planning using a simplified 2D occupancy grid. The second, innovative solution from 2026 utilized a heuristic Artificial Potential Fields (APF) method integrated with dynamic role optimization and continuous, three-dimensional Line-of- Sight verification using k-dimensional trees and OctoMaps. Simulation experiments conducted in ROS 2 and Gazebo environments unequivocally demonstrate the superiority of reactive methods over classical static planning. The graph-based algorithms from 2025, while guaranteeing stable connectivity, proved to be too rigid and computationally burdensome in a dynamic environment, drastically limiting the swarm’s exploration capabilities (4th place in the competition in both stages - simulation and hardware). Conversely, the implementation of heuristic methods in 2026 allowed for decentralized, instantaneous adaptation of agents to changing topological conditions and battery levels. This approach resulted in flawless mission execution, outperforming competing solutions (1st place in the competition). The obtained results confirm the thesis that in highly constrained multi-agent missions, heuristic reactive planning provides a significantly more efficient and scalable alternative to deterministic algorithms.
@@ -341,6 +345,7 @@
   year: "2025/2026"
   type: MSc
   group: Alumni
+  funding: IDUB
   keywords: "visual object tracking, correlation filter, MOSSE, convolutional features, AMD Versal, AI Engines, SoC FPGA, embedded systems, fixed-point arithmetic, quantization"
   abstract: >-
     This thesis presents the design, implementation and evaluation of an embedded visual object tracking system realised on the heterogeneous AMD Versal platform. The algorithm combines the MOSSE correlation filter with a convolutional feature representation obtained from the first layer of the ResNet-18 network, reduced to 32 channels by principal component analysis and quantized to eight bits. The processing is distributed across three types of on-chip resources: the programmable logic extracts and preprocesses the region of interest, the AI Engines vector processor array executes the convolution, the two-dimensional Fourier transforms and the spectral multiplication with accumulation across feature channels, and the application processor handles peak search in the response map, filter model update, scale estimation and orchestration. The completed system processes 38.7 frames per second at an energy cost of 12.2 mJ per frame. Evaluated on the VOT-STb2022 dataset under the multi-start protocol, it scored an accuracy of A = 0.5129, a robustness of R = 0.4279 and an expected average overlap of EAO = 0.1960. Its accuracy falls within the band of the classical correlation filters and its robustness stays below them at a fraction of the programmable-logic resources used by the closest published embedded implementation.
@@ -408,6 +413,7 @@
   year: "2025/2026"
   type: BSc
   group: Alumni
+  funding: IDUB
   keywords: "visual odometry, pose estimation, velocity estimation, robotics, event camera"
   abstract: >-
     Event-based cameras offer high temporal resolution, low latency, and large dynamic range, making them attractive for motion estimation in robotics and autonomous navigation. This project develops, implements, and evaluates a monocular event-only visual odometry system that estimates metric 3D position and linear velocity from asynchronous event streams. Two complementary pipelines were compared: DEVO, a learning-based approach that regresses relative camera motion from spatio-temporal voxel grids using a deep neural network; and EVO, a geometric tracker-and-mapper. The evaluation pipeline includes sensor undistortion, event accumulation into temporally-binned representations, Sim(3) trajectory alignment to metric ground-truth, and velocity computation via finite differences. Experiments on publicly available event datasets use Absolute Trajectory Error (ATE) and velocity RMSE to quantify performance and investigate the impact of the event-accumulation window. Results show that DEVO consistently produces substantially lower ATE and velocity RMSE compared to EVO, which exhibits larger errors and failure on longer or more challenging sequences. A parameter study reveals a trade-off between temporal resolution and noise resilience in window sizing. The thesis concludes with a discussion of limitations and directions for future work, including deployment on hardware and inertial fusion for scale robustness.
@@ -420,6 +426,7 @@
   year: "2025/2026"
   type: BSc
   group: Alumni
+  funding: IDUB
   keywords: "visual odometry, autonomous vehicle, deep learning, pose estimation, maritime robotics"
   abstract: >-
     This thesis investigates the enhancement of vision-based odometry for Autonomous Surface Vehicles (ASVs) by integrating deep learning methodologies. The primary objective was to evaluate and compare the performance of a classical computer vision algorithm -- ORB (Oriented FAST and Rotated BRIEF) against a deep learning-based framework, SuperPoint, for trajectory estimation. The study utilized three distinct datasets: the standard KITTI benchmark for automotive scenarios, a synthetic maritime dataset generated via Gazebo simulation, and real-world experimental data collected by the ''Barka'' Autonomous Surface Vehicle. The experiments consisted of a two-step comparison: first, between the baseline methods, and second, by fine-tuning the SuperPoint network on domain-specific maritime images, in order to evaluate the influence of fine-tuning the model on the pose estimation of specific datasets. Results on the KITTI benchmark showed that the deep learning approach clearly outperformed the classical one. In maritime scenes, the pretrained SuperPoint model revealed better local tracking stability compared to ORB. However, fine-tuning the model for marine environments revealed a trade-off. While the model effectively learned to filter out unstable water keypoints in favor of static shoreline features, the reduced distinctiveness of the descriptors ultimately led to higher trajectory errors than the pretrained baseline.
@@ -455,6 +462,7 @@
   year: "2025/2026"
   type: BSc
   group: Alumni
+  funding: IDUB
   keywords: "Reinforcement learning, Curriculum Learning, machine learning, artificial intelligence, bipedal walker, Isaac Lab, Isaac Sim."
   abstract: >-
     The aim of the work was to analyze and verify Curriculum Learning methods in reinforcement learning applications for bipedal robots. Automatic task selection algorithms - aimed at generalizing the agent's skills in diverse environments - were preliminarily evaluated in a simplified 2D simulation environment. The selected method, ALP-GMM, was then used to train locomotion and obstacle avoidance by a digital twin of the robot in a high-fidelity physical environment. The final stage was the verification of the control system architecture in Hardware-in-the-Loop mode. The work demonstrated the effectiveness of automatic curriculum generation, while also pointing out the performance limitations of this method in complex task spaces.
@@ -475,6 +483,7 @@
   year: "2024/2025"
   type: MSc
   group: Alumni
+  funding: IDUB
 
 - title: "Bipedal robot with a reconfigurable controller"
   author: "Błażej Szargut"
@@ -484,6 +493,7 @@
   year: "2024/2025"
   type: MSc
   group: Alumni
+  funding: IDUB
 
 - title: "Perception and control system of an autonomous boat"
   author: "Olivier Lichota"
