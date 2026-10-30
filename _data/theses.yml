@@ -12,4 +12,16 @@
 #     Short abstract of the thesis.
 #   pdf: https://example.org/thesis.pdf
 #   code: https://github.com/example/repo
-[]
+
+# EXAMPLE ENTRY – replace with real theses
+- title: "Example: Real-time object detection on an SoC FPGA for UAV navigation"
+  author: Jan Kowalski
+  supervisor: Tomasz Kryjak, PhD
+  year: 2025
+  type: MSc
+  image: example.png
+  abstract: >
+    This is an example entry showing how a thesis is displayed on the Students page.
+    The abstract is hidden by default and can be shown or hidden with the Abstract button.
+    Replace this entry in _data/theses.yml with real theses completed in the group.
+  code: https://github.com/vision-agh
