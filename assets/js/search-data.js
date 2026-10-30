@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-students",
           title: "Students",
-          description: "Bachelor&#39;s, master&#39;s and doctoral theses completed in our group.",
+          description: "Bachelor&#39;s and master&#39;s theses completed in our group.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/students/";
