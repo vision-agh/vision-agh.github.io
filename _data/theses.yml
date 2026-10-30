@@ -495,17 +495,25 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Mateusz Wąsala"
   year: "2024/2025"
+  defense_date: 2025-10-27
   type: MSc
   group: Alumni
+  keywords: "Visual Odometry, Neural Networks, Self-Supervised Learning, Embedded Artificial Intelligence Systems, FPGA SoC, DPU, Vitis AI, Kria KV260"
+  abstract: >-
+    Accurate position estimation is a very important component of modern navigation systems used by autonomous platforms such as ground vehicles, marine vessels, and drones. This thesis focuses on visual odometry – a system that enables navigation without the use of GPS data, relying solely on camera images.The proposed solution is based on the SuperPoint convolutional neural network, which is used for feature point extraction. Two systems were developed: one based on a single camera image and another using two images to provide depth information.The solution was implemented on an FPGA System-on-Chip (SoC) platform, specifically the AMD/Xilinx Zynq UltraScale+, where the performance of Deep Learning Processing Units (DPUs) was evaluated. The DPU was used to accelerate the processing of the neural network.Various system variants and acceleration methods were tested using the TUM, KITTI, and HPatches datasets.Based on the results of this work, a scientific publication was prepared.
 
 - title: "Utilisation of spiking neural networks with TTFS coding to event data processing"
   author: "Michał Michniak"
   supervisor: "Tomasz Kryjak"
   cooperation: "Kamil Jeziorek"
   year: "2024/2025"
+  defense_date: 2025-09-29
   type: MSc
   group: Alumni
   funding: IDUB
+  keywords: "Spiking Neural Networks, TTFS, SNN , ReL-PSP, NCars, MNIST-DVS, CIFAR10-DVS, NCaltech101, EST, Voxel Map"
+  abstract: >-
+    Spiking neural networks (SNNs) offer a promising avenue for energy-efficient and biologically inspired computation, with the potential to run effectively on neuromorphic hardware. Recent advances have focused on translating conventional artificial neural networks (ANNs) into their spiking counterparts, particularly using time-to-first-spike (TTFS) coding to reduce the number of spikes and improve efficiency. However, most existing TTFS translation methods rely heavily on data-driven threshold estimation and multi-phase operations. In this work, we present a novel, fully model-driven TTFS translation approach for ReLU-PSP (Rectified Linear Postsynaptic Potential function) networks, eliminating the need for training data and employing a single, fixed activation threshold. We introduce a structural upper bound based on the ReLU1 function to control numerical stability and enable accurate inference, even with complex architectures containing residual connections. Our method is evaluated on: NCars, MNIST-DVS, CIFAR10-DVS, NCaltech101, event-based datasets, demonstrating equivalent classification accuracy to conventional ANNs.
 
 - title: "Bipedal robot with a reconfigurable controller"
   author: "Błażej Szargut"
@@ -513,9 +521,13 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Hubert Szolc"
   year: "2024/2025"
+  defense_date: 2025-09-29
   type: MSc
   group: Alumni
   funding: IDUB
+  keywords: "legged robots, embedded AI systems, reinforcement learning, SoC FPGA, Vitis AI, Isaac Sim, Isaac Lab"
+  abstract: >-
+    The aim of this thesis was to design, build, and implement a bipedal walking robot with an FPGA-based controller, serving as an open research platform. The project covered the mechanical and electronic design of the robot, the implementation of the control system architecture, and the development of a reinforcement learning environment. A digital twin of the robot was created, and decision-making policies were trained using various algorithms, followed by the application of Sim-to-Real transfer techniques. The trained policy was adapted to the target platform and subsequently deployed. Hardware-in-the-Loop tests were carried out, confirming the system’s correct operation. The obtained results indicate the potential of FPGA devices for efficient neural network inference acceleration in legged robotics.
 
 - title: "Perception and control system of an autonomous boat"
   author: "Olivier Lichota"
@@ -523,8 +535,12 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Mateusz Wąsala, Hubert Szolc"
   year: "2024/2025"
+  defense_date: 2025-07-11
   type: MSc
   group: Alumni
+  keywords: "convolutional neural networks, perception system, embedded artificial intelligence systems, control system, GPU, machine learning, ROS 2, autonomy, mobile robotics, quantization of neural networks, sensor technology, real-time systems"
+  abstract: >-
+    The objective of this diploma thesis was to design and implement a modular architecture for a perception and control system of an autonomous boat on an embedded SOM (System on Module) device, along with its testing in a configured simulation environment. The objective of the project is to facilitate participation in international competitions organized by RoboNation. The high-level system employs data from a stereo vision camera, a LiDAR laser sensor, and a GNSS unit equipped with an IMU module to perform real-time object detection, simultaneous mapping and localization of the vessel in the environment, and fully autonomous navigation. The operation of a quantized convolutional neural network on constrained hardware resources was analyzed for the purpose of object classification and obstacle detection using laser sensor data. The performance of the control system was also evaluated in the simulation environment. The fundamental assumptions of the autonomous navigation system and its implementation process were presented, from the lowest layer responsible for sensor data acquisition and processing to the highest layer transmitting control commands to the differential drive. The employment of CUDA and TensorRT programming libraries to accelerate the detection algorithm has facilitated the efficient real-time detection and classification of objects. The implementation of control modules and the utilization of the NAV2 navigation library enabled precise and effective control, while avoiding collisions with detected obstacles. The results of the test scenarios demonstrate the effective functioning of the system's modules dedicated to perception and trajectory planning within a rapidly evolving environment.
 
 - title: "Predictive drone control using PINN models"
   author: "Marcin Kosiba"
@@ -532,8 +548,12 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Hubert Szolc"
   year: "2024/2025"
+  defense_date: 2025-10-15
   type: MSc
   group: Alumni
+  keywords: "neural networks, machine learning, Physics Informed Neural Networks, predictive control, MPC, quadrotors, CasADI"
+  abstract: >-
+    This thesis focuses on development of a quadrotor drone control algorithm using neural network. Due to better generalization capabilities and limited availability of training data, the application of PINN (Physics Informed Neural Network) was chosen. This type of model allows for effective integration of training data and physical knowledge, making it possible to achieve a good model even under conditions of limited training data availability. As part of the work, a predictive control algorithm was designed and implemented, in which the PINN model replaces the mathematical model of drone dynamics in the MPC (Model Predictive Control) algorithm. The use of this type of network aims to ensure reduced computational resource requirements and improve system adaptability to variable flight conditions. Validation of the developed approach was conducted based on checking the prediction accuracy of the network itself with known controls, simulations of the proposed MPC algorithm in given test scenarios, and finally the off-line simulation of the entire flight. Additionally, the influence of individual MPC parameters on the achieved accuracy was examined. The obtained results clearly indicate that the chosen approach can be effectively applied in practice, and that the proposed methodology allows for mitigating the disadvantages of classical approaches.
 
 - title: "Swarm control of unmanned aerial vehicles using reinforcement learning"
   author: "Michał Szmuksta"
@@ -550,139 +570,216 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Hubert Szolc"
   year: "2024/2025"
+  defense_date: 2025-10-27
   type: MSc
   group: Alumni
+  keywords: "nonlinear model predictive control, NMPC, quadrotor drone, unmanned aerial vehicle, ROS 2, Gazebo Garden, acados, CrazyFlie 2.1, crazyswarm2, real-time control, delay compensation"
+  abstract: >-
+    This study presents the implementation and verification of a Nonlinear Model Predictive Control (NMPC) system for a quadrotor drone, taking into account real-time operational constraints. The research focused on evaluating the algorithm under conditions close to reality and on preparing a complete, modular experimental environment that enables both direct deployment of the developed solution on the CrazyFlie 2.1 platform and simultaneous control of multiple drones. A Software-In-The-Loop environment was utilized, built with the Gazebo Garden simulator and ROS 2 software. The NMPC controller was equipped with a state predictor used to compensate communication delays and included a trajectory generation module. The acados library was employed to solve the optimal control problem. Two dynamic models of the drone - full and simplified - were developed and compared to assess the impact of model fidelity on controller performance. The conducted experiments covered parameter tuning, analysis of delay effects, and detailed simulation tests, whose results were evaluated in terms of trajectory-tracking accuracy and real-time requirements. As a result, the correct operation of both NMPC controller versions was confirmed, and the use of the state predictor for delay compensation improved control quality under specific conditions.
 
 - title: "An energy-efficient multitask neural network for a driver monitoring system"
   author: "Konrad Pawlik"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-10-22
   type: MSc
   group: Alumni
+  keywords: "Driver Monitoring Systems, Convolutional Neural Networks, Multi-task Learning, Gaze Estimation, Facial Landmark Estimation, Head Pose Estimation"
+  abstract: >-
+    Driver Monitoring Systems (DMS) are critical for modern vehicle safety, but current solutions often rely on a collection of independent algorithms to analyze a driver's state, creating an inefficient and resource-intensive pipeline. This work proposes a lightweight, multi-task learning framework that simultaneously predicts gaze direction, head pose, and facial landmarks within a single, efficient network. The framework is designed with gaze estimation as the primary objective, landmarks and head pose serving as auxiliary tasks for powerful geometric regularization. Built upon a ConvNeXt-Tiny backbone, the model achieves a state-of-the-art gaze estimation error of 4.32 degrees on the MPIIFaceGaze dataset at a low computational cost of 4.5 GFLOPs. The study has revealed that the inclusion of facial landmarks has provided a significant benefit to gaze performance, while adding head pose introduces negative transfer, degrading accuracy. The proposed framework effectively balances between high accuracy and computational efficiency, serving as a practical foundation for the development of resource-aware Driver Monitoring Systems.
 
 - title: "Locating and counting objects using data fusion from unmanned aerial vehicle sensors"
   author: "Remigiusz Mietła"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-02-03
   type: BSc
   group: Alumni
+  keywords: "unmanned aerial vehicle (UAV), drone, object detection, YOLO, SORT, Multi-Object Tracking, Single-Object Tracking, DeepSORT, GPS RTK, Nvidia Jetson Xavier NX, ROS, depth camera Realsense D435i"
+  abstract: >-
+    This study developed and implemented an object (apples) localization system utilizing data fusion from sensors installed on an unmanned aerial vehicle (UAV). The system relies on advanced object detection and tracking methods, including YOLO, SORT, Deep-SORT algorithms, and single-object tracking (SOT) and multi-object tracking (MOT) techniques, ensuring high precision and performance.The proposed solution integrates data from a GPS RTK localization system and utilizes a drone platform equipped with an Nvidia Jetson computing unit, enabling real-time program execution. The system was implemented within the Robot Operating System (ROS) environment using Python and C++ programming languages.Additionally, the study presents the process of adapting the drone platform to the task requirements, detailing hardware specifications, module communication schemes, and the configuration of the Pixhawk The Cube Orange flight controller. Tests and performance analysis evaluated the effectiveness of the applied approaches, including Tracker OpenCV, Tracker MOT, and Tracker SOT with GPS localization. A comparison was also made between the performance of two YOLO versions: v8 and v11.
 
 - title: "Perception and control system for a transport drone"
   author: "Tymoteusz Domagała"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-01-29
   type: BSc
   group: Alumni
+  keywords: "unmanned aerial vehicle, perception systems, control systems, GNSS-denied environment, vision systems, map positioning, SITL, ROS, PX4"
+  abstract: >-
+    In recent years, unmanned aerial vehicles (UAVs) have become an inherent part of modern technology. They have found application in various fields, such as transportation or photography. They are also widely used in the military industry, where they have to tackle moving in space with disrupted satellite positioning signals. This thesis presents the design and implementation of a perception and control system for a transport drone, which tackles GNSS-denied environments. The topic was inspired by one of the Droniada 2024 competitions. The main objective was to design a UAV that moved in the environment composed of ten square platforms. Basic perception sensors of drones, such as the IMU, magnetometer and pressure sensor, were extended by an RGB camera. Its image was processed by vision algorithms. Their purpose was to extract data necessary for positioning based on detected objects from the competition map. The implemented software was tested in the Gazebo simulator in accordance with the Software-In-The-Loop techology, on a specially preperad test scenario. Designed perception module evaluation stated high effectiveness. Furthermore, the entire system was assessed based on the competition task, where the criteria were as follows: number of correctly transported balls and the delivery time. Achieved sufficient results, which proved designed drone systems accuracy.
 
 - title: "Obstacle detection with an event camera"
   author: "Roman Nowak"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-02-03
   type: BSc
   group: Alumni
+  keywords: "DVS, event camera, obstacle detection, object detection, drone, simulation, Software in the Loop, Gazebo"
+  abstract: >-
+    In this work an object detection system - obstacles for a mobile robot (drone) using an event camera (DVS - Dynamic Vision Sensor) was created. This sensor was applied to ensure correct operation under different lighting conditions. Ways of solving the issue in other designs available in the literature were analysed and a custom detection algorithm was created. A SiL (Software in the Loop) simulation was prepared to test the algorithm in daylight and night conditions in variety of scenes with obstacles. A drone equipped with a simulated event camera was deployed in the scene of testing environment. Tests of the obstacle detection system were carried out using the SiL method and available datasets with DVS data. Their results were presented and discussed.
 
 - title: "Integration of an embedded computing platform with the flight controller of the unmanned aerial vehicle"
   author: "Patryk Kamiński"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-01-22
   type: BSc
   group: Alumni
+  keywords: "convolutional neural network, perception, embedded AI, eGPU, UAV"
+  abstract: >-
+    In recent years, unmanned aerial vehicles (UAV) have become widely used in an ever-increasing range of applications. It can be largely attributed to the developments made in the field of machine learning, especially deep and convolutional neural networks. This fact allowed their use for the purpose of autonomous operation of mobile units such as the UAV. By integrating this functionality with the manual control system it is possible to transfer the control over the UAV to the onboard processing unit for the purpose of precise navigation and the continuation of its mission in the event of a disruption or a complete loss of radio connection between the UAV, and its operator. This work presents the implementation of a system containing both hardware and software elements allowing for the integration of the Jetson Nano embedded computing platform with a UAV for the purpose of autonomous object detection and tracking while preserving the manual control functionality. A dedicated switching circuit was developed, allowing the user to pick one of two control signal sources, as well as a Python script for carrying out object detection and control tasks. YOLOv7-tiny was utilized as the object detector and the detection results together with PID controllers were used for correcting the position of the UAV. The described functionality was implemented to only use the data acquired from the onboard camera in order to render the system's performance independent of potentially unavailable or incorrect data in difficult conditions (such as GPS or barometer readings). Despite this, the developed system carries out the intended task with satisfactory accuracy.
 
 - title: "Object tracking utilizing fusion of vision and thermal imaging implemented in an SoC FPGA using the Vitis AI tool"
   author: "Mateusz Gołąbek"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-01-27
   type: BSc
   group: Alumni
+  keywords: "vision system, termovision, calibration, detection, tracking, CNN, YOLO, eGPU, SoC FPGA, Vitis AI"
+  abstract: >-
+    This thesis presents a vision system combining images from a visual and a thermal camera. The calibration process of the two cameras is carried out using the OpenCV library. The system, implemented in Python, performs object detection using the YOLOv3 detector and tracks the objects with the SORT algorithm. The YOLO convolutional neural network model was trained and evaluated on the PST900 image dataset. The Vitis AI 2.0 tool was utilized to implement the detector on the SoC FPGA platform. The vision system was tested on an eGPU (Nvidia Jetson Xavier NX) and SoC FPGA (Xilinx Kria KV260). The computation time and detection quality were tested. On the SoC FPGA system, a significant reduction in computation time was observed, but with a decrease in quality.
 
 - title: "Guiding an autonomous unmanned aerial vehicle towards a target"
   author: "Karolina Piotrowska"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-01-28
   type: BSc
   group: Alumni
+  keywords: "unmanned aerial vehicle, UAV, drone, autonomus guidance, tracking algorithm, visual object tracking, machine vision, correlation filter, convolutional neural network"
+  abstract: >-
+    This bachelor thesis focuses on the design, implementation, and evaluation of an algorithm for guiding an autonomous unmanned aerial vehicle towards a ground target using visual information. The developed algorithm combines MOSSE and DSST correlation filters with features extracted from a convolutional neural network, ensuring high tracking accuracy and robustness in varying environmental conditions.The algorithm was tested in the Gazebo simulation environment, enriched with obstacles and dynamic elements to replicate real-world scenarios. The test results confirmed the effectiveness of the solution both in simple and complex environments.The work provides a foundation for further research, including the implementation of the algorithm on SoC FPGA, and is applicable to military operations, rescue missions, and environmental monitoring. The developed solution demonstrates potential for tasks requiring autonomous tracking and guidance in real-time operations.
 
 - title: "Evaluation of spiking neural networks using the Neurobench tool"
   author: "Mateusz Patora"
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
+  defense_date: 2025-03-17
   type: BSc
   group: Alumni
+  keywords: "Spiking Neural Networks (SNN), Neurobench, Object Detection, EXODUS, SLAYER, DenseNet, Sinabs, surrogate gradient, DVS sensors, mean Average Precision (mAP) metric, SSD detector, GEN1 dataset, LIF neurons."
+  abstract: >-
+    The aim of the project was to compare effects of the change in spiking neural networks training algorithm from standard error backpropagation algorithm, to EXODUS - error backpropagation through time algorithm. The assessment has been undertaken, to check if extending the training domain to include time domain, would result in improved mAP metric value of spiking nets. Within project we modified already available implementation of spiking neural networks trained to perform object detection tasks, changing LIF neurons from spikingjelly framework to LIF neurons from sinabs-exodus framework. Neurobench framework has been utilized within evaluation process. Training resulted in significant improvement in terms of net performance, proving higher efficiency of the training with EXODUS. Obtained results were compares with state-of-the-art models.
 
-- title: "Object detection using an event camera and spiking neural networks"
-  title_pl: "Detekcja obiektów z wykorzystaniem kamery zdarzeniowej oraz impulsowych sieci neuronowych"
+- title: "Object detection using event camera and spiking neural networks"
   author: "Mateusz Kowalski"
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
+  defense_date: 2024-12-09
   type: MSc
   group: Alumni
+  keywords: "object detection, event camera, spiking neural network, YOLO"
+  abstract: >-
+    Object detection is an important issue in automatic monitoring systems, robots and autonomous vehicles perception and medical diagnostics. In most current solutions, the data for detection is provided by frame-based cameras. However, they do not work correctly in environments with insufficient light levels and when recording very fast movements. In such situations, an alternative are event cameras for which the above conditions are not unfavorable.Equally important as the type of chosen sensor is how to process the data and extract the most important information from them. Nowadays, the most popular tool for this purpose are Artificial Neural Networks (ANNs). One type of ANNs are Spiking Neural Networks (SNNs). The principle of their operation is similar to the functioning of human brain neurons. Individual neurons transmit information among themselves through binary spikes. In this work, a literature review of object detection using event cameras and artificial neural network was conducted. Afterwards four variants of spiking neural networks were designed and implemented. Each of them had a different configuration of spiking layers. Models inspired by the convolutional detector YOLOv3 (You Look Only Once) were trained and validated on partial data from the Prophesee's GEN1 Automotive Detection Dataset. In addition, the impact of the chosen mathematical model of the neuron used in the network's architecture on the quality of detection was measured.The best obtained result for a fully spiking network was 0.521 mAP50 and 0.257 mAP50:5:95. Model with a spiking feature pyramid and backbone achieved 0.437 mAP50 and 0.219 mAP50:5:95, network with a partially spiking feature pyramid and backbone obtained 0.588 mAP50 and 0.298 mAP50:5:95. Lastly, model with spiking backbone achieved 0.633 mAP50 and 0.318 mAP50:5:95. In comparison, the convolutional prototype validated on the same dataset obtained 0.624 mAP50 and 0.335 mAP50:5:95 which is comparable to the spiking backbone model. In other cases, the quality of detection is slightly worse than results achieved by convolutional network, confirming a trend also noted in the literature.
 
 - title: "Navigation of an autonomous vehicle model based on visual data"
   author: "Marcin Woszczek"
   supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala"
   year: "2023/2024"
+  defense_date: 2024-12-09
   type: MSc
   group: Alumni
+  keywords: "Jetson Xavier NX, ORB-SLAM3, MultitaskV3, visual navigation, SLAM, autonomous driving"
+  abstract: >-
+    Within the scope of this thesis, a selected vision-based SLAM algorithm (Simultaneous Localization and Mapping) was tested on a challenging urban environment mockup to navigate an autonomous vehicle. For the project, a mobile application was also developed, enabling control of the constructed vehicle equipped with a Jetson Xavier NX computational platform. The application provided functionalities such as activating the autonomous mode and real-time visualization of the vehicle's location on a map generated by the ORB-SLAM3 algorithm. The system was complemented by a logic module responsible for terrain exploration, maintaining the vehicle's trajectory within road lanes, and its efficient navigation using the MultitaskV3 neural network. All project objectives were achieved, and the individual system components operated correctly during testing. However, during the final comprehensive test, where the vehicle was required to autonomously navigate the entire mockup after pressing a button and subsequently travel from a selected point A to point B, certain issues arose. Due to the insufficient frame processing speed (up to 2 FPS), the vehicle occasionally collided with buildings, requiring operator intervention. Despite these limitations, both the application and the vehicle are well-prepared for further testing and improvements. A significant amount of video data was collected during the project, which can be used for further testing and system optimization.
 
 - title: "The use of convolutional graph neural networks in SLAM methods"
   author: "Jakub Kopańko"
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
+  defense_date: 2024-01-29
   type: BSc
   group: Alumni
+  keywords: "Visual Odometry, Simultaneous Localization and Mapping (SLAM), Convolutional Graph Neural Networks, Trajectory Estimation, Deep Learning in Robotics, Feature Extraction, Perception, Pose Estimation"
+  abstract: >-
+    In a simultaneous localization and mapping (SLAM) system, a reliable visual odometry module is an essential component, as it is necessary for accurately perceiving the environment. In this thesis, we explore the potential of graph convolutional neural networks to enrich SLAM methods. We analyze a spectrum of deep learning approaches, from networks employing pretrained convolutional models to those with customized convolutional layers working on raw image data. Although the results of these investigations are unsatisfactory, resulting in less than optimal performance, they offer invaluable insight into the complex interplay between neural network design and visual navigation tasks. Additionally, the integration of the well-known SuperGlue network is addressed, illustrating its potential to improve the accuracy of odometry. This research emphasizes the significance of integrating advanced neural network architectures to strengthen SLAM systems, which may pave the way for future breakthroughs in the field.
 
 - title: "Feasibility Study of Open-Source RISC-V Soft Cores for Mission-Critical Space Systems Applications"
   author: "Filip Tomczyk"
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
+  defense_date: 2024-02-01
   type: BSc
   group: Alumni
+  keywords: "FPGA, RISC-V, space technology, artificial satellites"
+  abstract: >-
+    With the growing privatization of the space industry, access to space has become more democratic. Avionics, including onboard computers, have become a significant part of the overall cost of satellite missions due to the decreasing cost of launching satellites into orbit. The aim of this study was to investigate the potential use of consumer-grade Field Programmable Gate Arrays (FPGA) as an alternative to expensive, specialized microcontrollers. As part of the study, a RISC-V architecture-based onboard computer processor for a nanosatellite was implemented inside an FPGA. Current consumption measurements were taken, and the resistance to errors induced by ionizing radiation was evaluated. The research findings indicate that the system in geostationary orbit radiation conditions would experience an average of 0.68 errors per year. The study identified the potential use of consumer-grade FPGA systems and RISC-V architecture as a promising alternative for the nanosatellite onboard computer, which requires further research.
 
 - title: "Realisation of drone trajectories using the MPC algorithm"
   author: "Sebastian Bucior"
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
+  defense_date: 2024-01-29
   type: BSc
   group: Alumni
+  keywords: "drone, trajectory tracking, nonlinear model, Model Predictive Control, successive linearization, quasi-linear parameter varying (qLPV) model, PyBullet Drone"
+  abstract: >-
+    In this study, an analysis of Model Predictive Control (MPC) algorithms was conducted for the task of trajectory realization by unmanned aerial vehicles (UAVs). The implementation included three versions of the MPC controller: nonlinear, based on successive linearization, and using the quasi-linear parameter varying (qLPV) model. Each of these algorithms was evaluated in the PyBullet Drone simulation environment on prepared test trajectories. The conducted research included assessment of trajectory tracking accuracy, analysis of computational complexity, and testing for disturbance robustness. The obtained results confirmed the functionality of each of the three controller versions, and the conclusions made it possible to a more comprehensive understand of their features and potential application areas.
 
 - title: "Drone formation flight control algorithms"
   author: "Michał Szmuksta"
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
+  defense_date: 2024-01-25
   type: BSc
   group: Alumni
+  keywords: "drone formation control algorithms, drone formation, drone swarm, swarm algorithm, flocking algorithm, potential field algorithm, collision avoidance, IsaacSim, PegasusSimulator"
+  abstract: >-
+    Swarms and drone formations are increasingly finding various applications in many areas of life. Significant advancements in autonomy in robotics and rapid progress in the field of control algorithms have opened the doors to the development of controllers for systems with multiple agents, capable of satisfying diverse needs, including obstacle avoidance. In this paper, selected solutions for controlling drone formations are presented. These solutions, proven successful in real-condition tests, involve the implementation of a drone speed controller and ultimately a formation controller using swarm algorithm. These algorithms draw inspiration from the principles of potential fields and inherit concepts from Reynolds' work. Proposed solution was evaluated, successfully conducting a photorealistic simulation of the flight of six drones through two different tracks with obstacles. The work highlights the strengths and weaknesses of the chosen drone formation flight control algorithm and indicates possible future directions for its development.
 
 - title: "The use of visual feedback in a drone landing algorithm"
   author: "Jan Brodowicz"
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
+  defense_date: 2024-01-25
   type: BSc
   group: Alumni
+  keywords: "Unmanned aerial vehicle, ROS, PX4, PID controller, Discrete Kalman Filter"
+  abstract: >-
+    This work proposed a system designed for automatic landing on a detected platform. The PX4 flight control software was utilised with the iris model of an unmanned aerial vehicle and Software in The Loop (SITL) simulation framework. The system was developed using ROS (Robot Operating System) and the MAVROS library, which facilitated communication between the system and the drone. Initially, the landing algorithm relied on a PID controller with altitude-dependent parameters. The application, in this form, functioned correctly for all prepared test scenarios. Subsequently, an attempt was made to integrate a Discrete Kalman Filter (DKF) into the system, which did not result in success.
 
 - title: "A simultaneous data acquisition system from an event and video camera"
   author: "Wojciech Pełka"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-10-05
   type: MSc
   group: Alumni
+  keywords: "Deep Convolutional Neural Networks, Dynamic Vision Sensor, object detection, event based vision, data aquisition, event camera calibration"
+  abstract: >-
+    The presented work describes the process of creating a vision data acquisition system for automotive scenarios, consisting of a vision camera and an event camera. Firstly, a stand holding both cameras was designed, and suitable hardware was selected for algorithms implementation. Jetson Xavier AGX, powered by the vehicle's battery, was selected as a suitable platform for data processing. Software was developed to concurrently acquire data from both cameras and store them on an external memory device. Several calibration methods were tested and compared to address the issue of projecting points between corresponding images. The obtained recordings were used to assemble a dataset containing object detection coordinates for images from both cameras.The task was achieved using the YOLOv8 neural network on images from the vision camera. The coordinates of the resulting bounding boxes were transferred to the event camera images using a projection method defined in the calibration phase. This process yielded a dataset describing the location of detected objects in the images of both cameras, within time intervals determined by the moments of consecutive frame captures by the vision camera.By leveraging the timing information captured by the event camera for each recording, it became possible to associate the detection coordinates with each event registered between the consecutive frame captured by the vision camera. Thus, a dataset containing the coordinates of detected objects for each frame and registered events was obtained. This dataset can be employed for further development of detection algorithms based on event cameras.
 
 - title: "Graph Neural Networks in event data processing"
   author: "Jakub Prokop"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-10-25
   type: MSc
   group: Alumni
+  keywords: "event cameras, graph neural networks, object classification, object detection"
+  abstract: >-
+    Event cameras have significant potential for application in real-time object recognition and detection systems, due to their high temporal resolution, high dynamic range, and low latency. However, the unique data format recorded by these sensors poses a challenge for established vision algorithms and classical deep learning architectures designed for processing images frame-by-frame. Recent research indicates the high effectiveness of graph neural networks in processing event-based data, both in terms of prediction accuracy and computational efficiency. In this study, we investigated and compared two state-of-the-art graph convolutional network models for event-based object recognition and detection. We also proposed two custom graph neural network architectures tailored for these tasks, based on the dedicated point cloud PointNet convolution. The convolutional model, PointNet-EAGR, achieved a classification accuracy of 0.964 on the N-Cars dataset and 0.703 on the N-Caltech101 dataset, with a mean average precision (mAP) of 0.638 in the detection task on the N-Caltech101 dataset. The graph transformer model, PointNet-GPS, achieved classification accuracy of 0.977 and 0.673 on the N-Cars and N-Caltech101 datasets, respectively, and 0.637 mAP in the detection task on the N-Caltech101 dataset. Both proposed architectures exhibit significantly lower parametric complexity compared to the baseline models, while outperforming them in object detection efficiency.
 
 - title: "Design and construction of a robot on omni-wheels, made using 3D printing technology with thermoplastic polyurethane"
   author: "Kamil Ptak"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-10-25
   type: MSc
   group: Alumni
+  keywords: "swedish wheels, mecanum wheels, holonomy robot, 3D printing, thermoplastic polyurethane, TPU"
+  abstract: >-
+    This paper presents the design and construction of a mobile robot equipped with Swedish wheels made of thermoplastic polyurethane using 3D printing technology. The robot's control algorithm was implemented on the RaspberryPi ZeroW platform. An analysis of the design of the mobile platform and different types of omnidirectional wheels was carried out, considering their advantages, disadvantages and main areas of application. Available technologies and materials used during the 3D printing process were discussed. The effect of the hardness of the material in contact with the substrate, on the ability to generate friction with the substrate was examined on a prepared test bench. A comparison was also made between single and double Swedish wheels in terms of the vibrations generated during driving.
 
 - title: "An autonomous vehicle on mecanum wheels with SoC FPGA as the computing platform"
   author: "Maciej Baczmański"
   supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala"
   year: "2022/2023"
   type: MSc
   group: Alumni
@@ -690,86 +787,135 @@
 - title: "An embedded perception and control system for autonomous vehicles based on convolutional segmentation and detection network"
   author: "Robert Synoczek"
   supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala"
   year: "2022/2023"
+  defense_date: 2023-10-25
   type: MSc
   group: Alumni
+  keywords: "Convolutional neural networks, semantic segmentation, detection, multitask neural networks, FPGA, Zynq, System-on-Chip, System-on-Module"
+  abstract: >-
+    The aim of the work was to design an embedded perception and control system for an autonomous vehicle based on an SoC FPGA (ang. System on Chip Field-Programmable Gate Array). The perception algorithm relied on a single, multitask, convolutional neural network for concurrent segmentation (of the road and horizontal markings) and detection (of pedestrians, traffic lights, and obstacles). Training and evaluation were performed on a custom dataset, created on a model track consistent with the one used in the FPT FPGA Design Competition, which was also built as part of this work. The robot control algorithm used the detections to stop or avoid obstacles and processed the segmentation of horizontal markings using the Hough transform to determine the speed and direction of travel. The system was implemented on the Kria KV260 platform using Vitis AI 2.5 and PYNQ 3.0. Testing was conducted on the model track with a mecanum-wheeled robotic platform. The perception system operated at a speed of 25 frames per second for images with a resolution of 512 x 320 pixels, achieving 11 frames per second along with the control algorithm.
 
 - title: "Memory-Efficient Graph Convolutional Networks for Object Classification and Detection with Event Cameras"
   author: "Kamil Jeziorek"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-07-24
   type: MSc
   group: Alumni
+  keywords: "event camera, dynamic vision sensors, event data processing, graph convolutional networks"
+  abstract: >-
+    Recent advances in event camera research emphasize processing data in its original sparse form, which allows the use of its unique features such as high temporal resolution, high dynamic range, low latency, and resistance to image blur. One promising approach for analyzing event data is through graph convolutional networks (GCNs). However, current research in this domain primarily focuses on optimizing computational costs, neglecting the associated memory costs. In this paper, we consider both factors together in order to achieve satisfying results and relatively low model complexity. For this purpose, we performed a comparative analysis of different graph convolution operations, considering factors such as execution time, the number of trainable model parameters, data format requirements, and training outcomes. Our results show a 450-fold reduction in the number of parameters for the feature extraction module and a 4.5-fold reduction in the size of the data representation while maintaining a classification accuracy of 52.3%, which is 6.3% higher compared to the operation used in state-of-the-art approaches. To further evaluate performance, we implemented the object detection architecture and evaluated its performance on the N-Caltech101 dataset. The results showed an accuracy of 53.7% mAP@0.5 and reached an execution rate of 82 graphs per second.
 
 - title: "Drone path planning and control algorithms in a known environment"
   author: "Michał Niedbała"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-10-25
   type: MSc
   group: Alumni
+  keywords: "drone, predictive control, trajectory planing, neural networks, reinforcement learning, simulation"
+  abstract: >-
+    The aim of this study was to review and implement selected algorithms for trajectory planning and control of unmanned aerial vehicles (UAV). These were tested in an autonomous drone racing scenario. The realised approach is based on classical methods: geometric path planning and non-linear predictive control. An attempt was also made to use deep reinforcement learning for this task. Evaluation of the approaches was carried out in the PyBullet Drone simulation environment on prepared racetracks of varying complexity. The result of this work is an algorithm that sucessfuly navigate the test tracks, and an analysis of the feasibility of using reinforcement learning to realise this task.
 
 - title: "Hardware implementation of real-time disparity map calculation using event cameras"
   author: "Mariusz Grabowski"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-10-05
   type: MSc
   group: Alumni
+  keywords: "SGM, DVS, event camera, FPGA, real-time processing, stereo vision"
+  abstract: >-
+    In this paper, we propose a real-time FPGA implementation of the Semi-Global Matching (SGM) stereo vision algorithm based on event cameras (DVS - Dynamic Vision Sensors), which are cutting-edge sensors that only capture brightness changes that take place in the scene being viewed. As a result, they have low latency and perform efficiently in a variety of illumination situations. Due to the different data format in the described system, the generation of event frames onto which incoming events within a specified time interval are projected is used. The implementation on Field Programmable Gate Array (FPGA) devices allows for the development of numerous vision systems that work in real-time and have minimal power requirements. To reduce latency of generated disparity maps, modified SGM implementation is used to process pixels in the 4ppc format, which provides results comparable to the original design.
 
 - title: "Acceleration of garbage detection algorithm with Xilinx Alveo U50 card"
   author: "Dominik Czyżyk"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-01-27
   type: BSc
   group: Alumni
+  keywords: "CNN, AI, FPGA, Vitis AI, hardware acceleration, object detection"
+  abstract: >-
+    This engineering diploma thesis presents the acceleration process of deep neural network algorithms using the Xilinx Alveo U50 card.The first part discusses theoretical issues related to convolutional neural networks, quantization and acceleration of AI models on different hardware architectures. This was followed by a process of configuring the card and preparing the Vitis AI environment, including the installation of the necessary software. The process of running models started by focusing on the problem of object classification. The accuracy and data processing throughput of the simple MNIST classifier and the ResNet-50 model were investigated.The resulting frame rate was 23,000 and 577 FPS (frames per second), respectively. In the following part, the problem of object detection was considered. The YOLO architecture (\textit{You Only Look Once}) was mainly used here. Several research threads were raised. It was confirmed that used dataset does not affect the speed of the model. Then, three successive versions of YOLO (v2, v3 and v4) were put together to compare their performance. For the test cases considered, the results with the highest confidence factor were returned by the latest, fourth version. However, data were processed fastest by the oldest version. In addition, the throughput of the selected YOLOv4 model was compared for CPU, GPU and Alveo U50 architectures. The FPGA card achieved twice as many frames per second as the better of the two GPUs used. The entire implementation path was presented, from training the model, quantization, compilation and running it on a accelerator. The detection results obtained were at 97\% mAP, while the throughput was identical to other YOLOv4 models.The conclusion presents the findings of the research, describes the encountered problems and presents further opportunities to develop the work.
 
 - title: "Pedestrian detection using event cameras"
   author: "Mateusz Kowalski"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-02-01
   type: BSc
   group: Alumni
+  keywords: "object detection, event-based camera, YOLO, asynchronous neural networks, sparse convolutional neural network"
+  abstract: >-
+    Pedestrian detection is an important issue in advanced driver assistance systems (ADAS), autonomous vehicles and advanced automated video surveillance systems (AVSS). Traditional frame cameras are used in such solutions, but they do not work properly for insufficiently lit environments, large brightness range on the scene and the occurrence of very fast movements. Event cameras can also be used to implement such systems. Due to their characteristics (low latency and high dynamic range) event-based sensors can detect people quickly and under adverse lighting conditions. In this work two network architectures were analyzed and implemented: Event-based Asynchronous Sparse Convolutional Network and the YOLOv7 detector. Both models were trained and tested on sequences from the 1 Megapixel Event Camera dataset.The results obtained from the Event-based Asynchronous Sparse Convolutional Network, despite the change of various model parameters and techniques for slicing the input image into smaller fragments, were unsatisfactory. The best result obtained during testing was 0.033 in the AP metric (Average Precision). Another approach based on the YOLOv7 detector and a two-dimensional representation of events in the form of SAE (\textit{Surface of Active Events}) was also proposed. A significantly better performance of 0.9476 AP was obtained for this model. The implemented detector works correctly for single objects, but due to YOLO limitations, some pedestrians occurring in larger groups remain undetected.
 
 - title: "Object tracking using classical methods and deep neural networks"
   author: "Krzysztof Kandefer"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-05-23
   type: BSc
   group: Alumni
+  keywords: "object tracking, MeanShift, CamShift, correlation filter, KLT, particle filter, Siamese neural networks, tracking by detection"
+  abstract: >-
+    This thesis is devoted to the issue of classical object tracking methods. As part of the undertaken activities, a comprehensive description of popular "classic" object tracking methods was prepared, such as KLT, MeanShift, CamShift, particle filter and correlation filter. They were implemented in Python and compared with methods using Siamese neural networks and tracking by detection. The algorithms were evaluated on sequences downloaded from the VOT challenge database using the methodology of this competition. The obtained results allowed the observation of differences in the effectiveness of individual methods and their characteristics. The summary indicates further directions of development.
 
 - title: "A drone that recognizes people from facial images"
   author: "Adam Piórkowski"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2024-02-08
   type: BSc
   group: Alumni
+  keywords: "drone, event camera, face identification, gender classification, age classification"
+  abstract: >-
+    The aim of the thesis was to develop a system using a DJI Tello EDU drone to autonomously track and follow an identified person, while enabling gender and age classification. The design involved the drone moving freely in open space, without colliding with obstacles. The aim was to make a precise manoeuvre to approach a spotted person, make a photograph and then return safely to the starting point. After the flight, the age and gender of the person in the photo were classified. Due to the technical limitations encountered, it was not possible to realise the free movement of the drone, however, the other aspects were successfully implemented.
 
 - title: "Static obstacle avoidance for a drone using an event camera"
   author: "Miłosz Zeman"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-05-23
   type: BSc
   group: Alumni
+  keywords: "event camera, drone, obstacle avoidance"
+  abstract: >-
+    The aim of the thesis was to develop an event camera based control system for a flying drone controller. The drone should be able to safely traverse a course comprised of static obstacles while avoiding them and maintaining a safe distance from each of them. It was assumed that drone is flying on arbitrarily chosen, fixed altitude and is unable to fly over the detected obstacles. Proposed solution was tested with a computer simulation in MATLAB Simulink. The utilised event stream was extracted from a regular video file using a dedicated, machine learning based, simulation software.
 
 - title: "Vehicle tracking in an urban environment using an autonomous drone"
   author: "Igor Kordzi"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-01-27
   type: BSc
   group: Alumni
+  keywords: "unmanned aerial vehicle, UAV, drone, flight stabilization, depth camera, vehicle tracking, ball detection"
+  abstract: >-
+    Nowadays unmanned aerial vehicles, also known as drones, are very popular. Both within the scientific community and the commercial sector, research on flying vehicles is constantly being conducted due to their high potential for development of various applications, i.e. infrastructure inspection or geodetic data collection. For this reason, many different competitions are held, creating the right conditions for modeling and testing new solutions, and thus stimulating teams from around the world to work on the subject. In this paper, an example of a simple solution was presented, which is an introduction to the first part of the UAV Chase Challenge Competition. The project includes a software model designed in the ROS operating environment. As part of its implementation, the control module of the four rotors and the flight stabilization was made, as well as an application containing a simple vision track for detection and tracking the designated target. To visualize the environment and measure the distance, a depth camera with a resolution of 1280 x 960 and a frame rate of 30 Hz was used, placed on the front of the drone, facing forward. The model has been simulated and tested in the Gazebo 11 environment, on the Linux Ubuntu 20.04 operating system.
 
 - title: "Driver fatigue analysis using an event camera"
   author: "Karol Musiał"
   supervisor: "Tomasz Kryjak"
   year: "2022/2023"
+  defense_date: 2023-01-20
   type: BSc
   group: Alumni
+  keywords: "event cameras, vehicle driver monitoring, fatigue analysis, events temporal characteristics, face tracking"
+  abstract: >-
+    Event cameras (DVS) are modern vision sensors that use in their genesis knowledge of engineering and biology. Their construction was inspired by structure of the human eye, the information is send in the form of pulses - events. Distinguishing features for DVS are: high dynamic range, wide temporal resolution, low power consumption and independent work of pixels. Due to above, it is possible to use event cameras in adverse lighting conditions, for instance in observation of the vehicle driver. State of fatigue is hard to be classified or defined, however it has significant impact on our abilities, by reducing perception or reflex. Information about level of fatigue can be accesed by analysis of length and freequency of blinking, dynamics of head motions or occurrence of yawning. The greatest challange of this paper was implementation of monitoring and level of fatigue analysing application. During program operation, temporal characteristics are examined (with a help of previously prepared ideal models of blinking, mouth opening and closing), also algorithm inspired by Gaussian Blob Tracking was used to track driver's face. At the end, it is made a decision about driver's fatigue level and his driving ability. Important feature of presented application is low memory usage, fluctuating between 20 and 50 [MB], depending on accuracy of prepared patterns. That score is very satisfactory, especially compared to~competetive solution as neural networks. The final stage was to measure system effectiveness. Testing recordings was prepared from a diversed group of people. During tests, one averaged model was used for blinks and second one for yawns. Specialization of program by its adaptation to individual people was not utilized. Quantity of detected blinks oscillated at around 73%, yawning, on the other hand was correctly recognized in 67% cases. Relatively low efficiency of presented algorithm stems from the nature of event cameras, and the fact, that these modern sensors are not well known yet. Moreover, limited ability to acquire resources from vast group of people of different races, genders and age resulted in imperfection of prepared models.
 
 - title: "Traffic light detection and recognition using video and event data"
   author: "Kamil Wrześniak"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-12-06
   type: MSc
   group: Alumni
+  keywords: "ADAS, video and event cameras, image recognition, traffic light detection and classification, neural networks, YOLOv7"
+  abstract: >-
+    In this work the possibility of using event cameras in the traffic light detection and classification system was considered. For this purpose, three algorithms were developed, which were based on the YOLOv7 network. First of them is based on visual information from Huawei P20 Pro. The next one uses data from the event camera Samsung DVS Gen3, and the last one operates on both of these sources simultaneously. Solutions were compared with each other to determine their speed and accuracy. The F1-score measure of the algorithms on the test sets was 98.6%, 93.6% and 98.8%, respectively. Based on obtained results, it can be concluded that use of an event camera is possible, but does not bring significant benefits.
 
 - title: "Implementation of a 3D surround view system using images from multiple cameras on a hardware platform"
   author: "Dawid Skoczny"
@@ -782,157 +928,245 @@
   author: "Tomasz Molęda"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-12-13
   type: MSc
   group: Alumni
+  keywords: "VHDL hardware language, digital signal processing, Design Assurance Guidance for Airborne Electronic Hardware"
+  abstract: >-
+    Test platforms, used for real-time hardware-in-the-loop simulations, reduce the cost and time to market. This thesis describes the implementation of selected signal processing algorithms in the VHDL hardware description language and running them on an FPGA device. The system used a NI 7857R PCI Express card, which was equipped with an FPGA from Xilinx's Kintex-7 family. The module calculated scalar values for each input signal, such as minimum, maximum, arithmetic mean, root mean square, and the number of samples per signal period. The prepared solution will be part of a modular test platform for the verification of additional flight control systems. The verification carried out confirmed the implementation of the assumed functionality.
 
 - title: "Vision-based drone navigation in GPS-denied environments"
   author: "Paweł Miera"
   supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc"
   year: "2021/2022"
+  defense_date: 2022-09-29
   type: MSc
   group: Alumni
+  keywords: "Reinforcement Learning, UAV, Autonomous control, ROS, Gazebo"
+  abstract: >-
+    Reinforcement learning has an increasingly important role in robot control and simulation plays a key role in this process. In the field of drones, a large number of scientific papers have also been published on this topic.The subject of this thesis is the preparation of two different autonomous drone control systems based on an algorithm in the field of reinforcement learning. The first one was prepared for the Dodge Drone Challenge, which involved flying a distance of 60 m ahead, while avoiding obstacles in the form of floating balls. The second system was designed to autonomously fly forward and avoid the trees encountered in a forest. This was done basing only on the readings from a rotating LiDAR sensor.The thesis presents the preparation of environments in three different simulators: Gazebo, Flightmare and a custom one. The last two were used to train Proximal Policy Optimization (PPO) agents responsible for calculating the value of control signals. Gazebo was used to test the drone control scripts, which were based on the Robot Operating System. The work also describes the architecture of the prepared solutions, encountered problems, and the implemented software, which was written in Python and C++.The second system was first tested in the Gazebo simulator, and then it was put into operation in reality. The drone successfully flew through both virtual and real forests.
 
 - title: "Traffic sign classification with event-based data and Spiking Convolutional Neural Networks"
   author: "Jacek Lichwa"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-12-06
   type: MSc
   group: Alumni
+  keywords: "convolutional spiking neural networks, neuromorphic computing, event-based data, artificial neural networks, biological neuron model, LIF model, Lava framework"
+  abstract: >-
+    The study investigated the issue of using neuromorphic computing, specifically convolutional spiking neural networks (CSNN) to perform traffic sign classification (TSR) using event-based data from an event camera.The architecture of the CSNN network was based on the Lenet model. A collection of event camera recordings "Prophesee 1 Megapixel Automotive Detection Dataset was used for the learning process. Implementation and simulation studies were carried out using the Lava environment. Despite performing a variety of experiments, it was not possible to obtain a working classifier using this approach.
 
 - title: "Object classification using deep and quantum neural networks"
   author: "Sylwia Kuros"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-07-06
   type: MSc
   group: Alumni
+  keywords: "CNN, QNN, quanvolution, MNIST, GTSRB"
+  abstract: >-
+    Quantum neural networks are an emerging technology that can be used in many applications, including computer vision. This thesis presents a classification system for handwritten digits and road signs implemented using a hybrid quantum-classical neural network based on a convolutional network architecture. Experiments indicate that currently these networks do not outperform classical deep convolutional neural networks, but especially for the German Traffic Sign Recognition Benchmark dataset, they provide an accuracy of about 90% and are definitely a promising solution for advanced machine vision.
 
 - title: "Autonomous vehicle control using visual information and a detection-segmentation convolutional neural network"
   author: "Michał Knap"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-10-19
   type: MSc
   group: Alumni
+  keywords: "detection-segmentation convolutional neural network, autonomous vehicle, Nvidia Jetson Nano"
+  abstract: >-
+    This work presents an autonomous vehicle control system, where the perception subsystem was based on a detection-segmentation convolutional neural network. An NVIDIA Jetson Nano eGPU with a camera was used as the computing platform. The information about the road area, lane line area and object presence (such as another vehicle) was acquired by using the YOLOP architecture. This information was used to implement driving within a chosen lane, obstacle avoidance and following of a preceding vehicle (platooning). The created system performed properly on test images and sequences, as well as during autonomous driving around the used track. It worked with the speed of 3.7 frames per second.
 
 - title: "Autonomous drone racing control based on visual information"
   author: "Artur Cyba"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-09-13
   type: MSc
   group: Alumni
+  keywords: "Autonomous drone, reinforcement learning, dynamic state determination, dynamic system control, Nvidia Jetson Nano, vision system, Python programming language"
+  abstract: >-
+    The project designed and tested various methods for controlling an autonomous racing drone. These included both typical solutions based on PD controllers, as well as methods using reinforcement learning. In addition, algorithms for locating the drone in space and a system for determining its dynamic state in real time based on its model were also presented. These solutions were implemented to allow the multi-rotor to fly autonomously through a series of gates that determine the route to be taken. They were similar to those used in autonomous drone racing. The operation of the entire system is as follows: At first, based on information from the camera, the multicopter locates the gates and determines its position relative to it. Then the data on its position and orientation go to the algorithm, which, based on the drone's model, determines its current dynamic state. The information about it then goes to the control algorithms, the output from which is sent to the flight controller in the multicopter. The created system was installed on a drone built specifically for this project. It has a carbon fiber frame, an Nvidia Jetson Nano on-board computer with a connected camera, on which the algorithms described earlier were run, as well as a flight controller controlling the motors and a differential GPS module. Tests of the system's performance for different configurations (using different control solutions) were carried out to check the quality of the given solutions' performance and compare them.
 
-- title: "High-speed item counting on a conveyor belt using an event camera"
+- title: "High-speed item counting using an event camera"
   author: "Kamil Bialik"
   supervisor: "Tomasz Kryjak"
+  cooperation: "Marcin Kowalczyk"
   year: "2021/2022"
+  defense_date: 2022-12-13
   type: MSc
   group: Alumni
+  keywords: "Event camera, high-speed object counting, Prophesee, Metavision, item flow regulation, portioning."
+  abstract: >-
+    In this thesis a high-speed object counting stand was designed and built to simulate the conditions that can occur in the industry. It consists of two key parts, a chute that allows one to regulate the number of falling objects by controlling a motor that generates vibrations, and a vision system used to count falling objects. The Prophesee's event camera, the Metavision EVK 1 HD, is used. The stand is equipped with a software-implemented PID controller, which allows to maintain the set flow or, for example, to portion products. The regulator sets the PWM filling control of the motor, taking as feedback the number of counted objects. In the final part of the project, a series of experiments were carried out to evaluate the quality of the system and the correctness of the solution.
 
 - title: "Object detection, recognition and tracking on a football pitch using a vision system"
   author: "Karol Talaga"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-01-24
   type: BSc
   group: Alumni
+  keywords: "football video analysis, object detection, object classification, object tracking"
+  abstract: >-
+    This paper presents a vision system responsible for object detection, recognition and tracking on a football pitch. To develop such a system, video sequences from static cameras were used. To detect person-like objects, a background subtraction algorithm, morphological operations, and contour analysis were applied. To classify them into groups (two different teams and referees) and to detect the ball, convolutional neural networks were used. The tracking problem was divided into two separate problems: single-object and multi-object tracking. They were solved using the mean-shift algorithm and Kalman filter accordingly. A 75% detection and 99,5% classification accuracy were achieved on the test set.
 
 - title: "Embedded system for object segmentation and detection implemented on the Zynq SoC platform"
   author: "Robert Synoczek"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-01-25
   type: BSc
   group: Alumni
+  keywords: "convolutional neural networks, semantic segmentation, detection, FPGA, Zynq, System-on-Chip, System-on-Module"
+  abstract: >-
+    The aim of the work was to design an embedded system for simultaneous segmentation (drivable area and lane line) and object detection (pedestrians, traffic lights, obstacles). The algorithm was implemented with the help of a single, one-stage convolutional neural network, based on U-Net. Model training and evaluation was done using the Barkley Deep Drive 100K dataset. The trained model was then compiled to run on the Zynq UltraScale+ MPSoC chip with the help of the Vitis AI development stack, and run on the Kria KV260 System-on-Module development board. The resulting application enabled simultaneous detection and segmentation at speeds of approximately 11 frames per second. In addition, system operation was analyzed on a miniature road prepared as part of the work, in accordance with the requirements of the FPT FPGA Design Competition.
 
 - title: "Time optimization of a racing drone flight over a closed track using reinforcement learning."
   author: "Krzysztof Słomski"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-02-01
   type: BSc
   group: Alumni
+  keywords: "reinforcement learning, Soft Actor-Critic, autonomous steering, drone racing, trajectory planning, physics simulation"
+  abstract: >-
+    The work presents an usage of reinforcement learning in order to design an autonomous control system for an unmanned aerial vehicle. The intended target is to achieve a decision-providing model of drone control with the use of physic simulation. This result is accomplished by obtaining total flight time reduction techniques. The system's task is to take advantage of available information provided by distance and inertial sensors. Choice of appropriate flying maneuvers is supposed to enable maintaining high average velocity and avoiding collisions with walls. The conducted experiments which involved the Soft Actor-Critic algorithm did not provide satisfactory results. The partial success is limited to the temporal capability of achieving in-air stabilization.
 
 - title: "Image classification with graph neural networks"
   author: "Jakub Prokop"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-01-24
   type: BSc
   group: Alumni
+  keywords: "Graph Neural Networks, Graph Convolutional Networks, image classification, zero-shot classification"
+  abstract: >-
+    Recent works indicate a wide field of applications for Graph Neural Networks (GNN) in many deep learning tasks. Image classification models based on Graph Convolutional Networks (GCN) appear particularly promising. This work describes Graph Neural Networks, as well as other types of neural networks in general. It also presents some of GNN vision applications and proposes an image classification model based on image segmentation and GCN architecture, which achieves 95.01%, 63.34% and 74.29% accuracy on MNIST, CIFAR10 and GTSRB datasets respectively. It finally explains how Graph Neural Networks can be applied in the zero-shot classification problem in which sets of training and test classes are disjoint. To meet this condition, two architectures were proposed, both using word vectors embeddings to catch semantic relations between classes and represent them in knowledge graph. These models achieve 45.10% and 13.19% accuracy on the AwA2 (animals with Attributes 2) and CUB (Caltech–UCSD Birds 200) datasets.
 
 - title: "Traffic signs detection and recognition using an event camera"
   author: "Wojciech Pełka"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-02-02
   type: BSc
   group: Alumni
+  keywords: "Deep Convolutional Neural Networks, Dynamic Vision Sensor, object detection, event based vision"
+  abstract: >-
+    The purpose of the presented work was to develop a road sign detector that uses data from an event camera. The final model was based on the deep convolutional network YOLOv4, well known for its good accuracy-to-speed trade-off. To deliver the data to the detector in the form of two-dimensional images, three 2D representations of the data from the event cameras were used -- event frame, event frequency, and exponentially decaying time surface. The road sign representations and labels were obtained from the events shared by the company Prophesee, in the 1Megapixel dataset. The best results were achieved by the model using the third of introduced 2D representations as input. The highest value of the average precision (mAP) metric in this case was 0.58. Due to the asynchronous nature of the problem, highly dependent on the time context, it was decided to propose additional model evaluation metrics, taking into account the detection of unique objects over the entire test recording, instead of the prediction evaluation for each frame. The work includes the implementation of a road sign classifier that distinguishes different types as well. Due to the lack of training data, the Video to Event model was used to generate a simulation of event frames based on camera recordings from the CURE-TSD set. To generate labels for video frames, the YOLOv4 model was trained for detecting road signs in colour (RGB) images. Its final recall on the test dataset was 0.94. Data acquired via the described process was used to train the final model, that was supposed to detect and classify road signs using event data. The best network model with the YOLOv4 architecture reached average precision (mAP) value of 0.69
 
 - title: "Road segmentation and detection of selected horizontal signs using a vision sensor and the NVIDIA Jetson eGPU platform"
   author: "Balbina Molerus"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-01-20
   type: BSc
   group: Alumni
+  keywords: "image segmentation, semantic segmentation, convolutional neural networks, U-NET, Canny algorithm, Hough transform, lane detection, autonomous car, Mecanum wheels"
+  abstract: >-
+    The project presents the implementation of an algorithm for autonomous driving of robot on Mecanum wheels. Methods of road segmentation and detection of road markings were used, in particular those that use deep neural networks. Additionally, edge detection algorithms (Canny's algorithm) and straight lines (Hough transform) were used. The developed algorithm was implemented on the NVIDIA Jetson computing platform. The vehicle was controlled using visual feedback. The result was the autonomous driving of the robot around the city model. The vehicle detected upcoming curves and pedestrian crossings. On this basis, the car made both turns and stopped in front of the transverse line preceding the pedestrian crossing. The operation of the algorithm was verified in tests - both in the photos of the city model and during test drives. Additionally, the influence of image distortions on the segmentation performance was analyzed.
 
 - title: "Traffic sign detection and recognition using event camera image reconstruction"
   author: "Kamil Jeziorek"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-01-24
   type: BSc
   group: Alumni
+  keywords: "traffic signs, event camera, reconstruction, detection"
+  abstract: >-
+    Event cameras are a new type of sensor based on the action of the human eye. They are characterized by a high dynamic range, high time resolution and low power consumption. Compared to traditional vision cameras, they work better in unfavorable lighting conditions, enable the registration of fast movement and low latency. The information returned by the camera, called events, forms into an asynchronous stream, which makes it impossible to use existing algorithms for sign detection. The solution to this problem turned out to be the methods allowing to reconstruct images in shades of gray from the event camera.This work presents the implementation of a system which enables the detection and recognition of road signs based on reconstructed images from an event camera. In order to perform the reconstruction, the FireNet convolutional neural network was used, which is one of the newest solutions enabling image reconstruction. On the other hand, the YOLOv4 network was used as a road sign detector, which is characterized by high accuracy and relatively low computational complexity. Two separate models were trained, respectively, for colour and grayscale images from the GTSDB (German Traffic Sign Detection Benchmark) dataset. As the base for the recordings from the event camera, the DSEC (Stereo Event Camera Dataset) collection and the Driving Event Camera Dataset were used. Time and quality tests of both algorithms were carried out using the NVIDIA GeForce RTX 2060 computing platform. The time needed to perform the reconstruction from the collected events in 1 ms and 10 ms was 19.15 ms and 52.25 ms, respectively. The proposed solution cannot be used in real time while implemented on a GeForce RTX 2060 graphic card. One solution to this problem would be to reduce the amount of information used for image reconstruction, which would reduce its precision. Qualitative detection tests were carried out using the mAP@0.5IoU and mAP@0.75IoU metrics based on an own test set consisting of 20 reconstructed frames. Better results were achieved by the model trained on gray images. For the mAP@0.5IoU metric, a high mAP value of 87.03% was obtained, while for mAP@0.75IoU it was 64.17%. The average detection time per frame was 30.86 ms, regardless whether the model was trained in colour or grayscale images.
 
 - title: "Hardware implementation of rectification and disparity map computation with the SGM method for a 4K video stream"
   author: "Mariusz Grabowski"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-02-02
   type: BSc
   group: Alumni
+  keywords: "SGM, FPGA, 4K, Ultra HD, real-time processing, stereo vision"
+  abstract: >-
+    The paper describes the architecture and implementation of a stereo vision system for a 4K resolution video stream. The solution includes image acquisition, rectification and estimation of the depth map (disparity). The semi-global matching (SGM) algorithm was used to determine the disparity map, which is considered to be one of the best methods for solutions that require real-time processing. Due to the large data stream related to 4K resolution, the 4ppc (4 pixels per clock) vector format was used. The system implementation and the necessary modifications of the algorithm for processing in the 4ppc format to meet the timing constraints were described. The system was implemented and verified on the VC707 board card with the Xilinx Virtex-7 FPGA chip. It allows the generation of disparity maps from HDMI 4K (3840×2160 pixels) @ 30Hz video stream with 64 disparity levels.
 
 - title: "Object detection using vision and depth sensors and the NVIDIA Jetson eGPU platform"
   author: "Maciej Baczmański"
   supervisor: "Tomasz Kryjak"
   year: "2021/2022"
+  defense_date: 2022-01-20
   type: BSc
   group: Alumni
+  keywords: "image segmentation, convolutional neural networks, Mask R-CNN, autonomous vehicle, vision systems, depth sensors"
+  abstract: >-
+    The goal of the work was to design and implement an algorithm to detect road obstacles, pedestrians and traffic lights with the use of vision and depth sensors. It allowed the control of a vehicle equipped with Mecanum wheels and the NVIDIA Jetson eGPU computing platform.The use of the Mask R-CNN network allowed to obtain an algorithm with a very high efficiency, which was confirmed by tests on many camera shots on a city model and on images with added interference. The refresh rate of the program, equal to about 1.5 FPS (frames per second) turned out to be problematic, because the system's response time would be longer than that of a human. However, the value was still sufficient for the purposes of the project.The result of the work was a robot driving on a miniature model of the city, recognizing pedestrians, obstacles and traffic lights in three colors. The vehicle, when approaching the detected objects, reacted to them by performing appropriate maneuvers.
 
 - title: "ATLAS Local Trigger Interface - firmware development, verification and testing"
   author: "Anna Kulińska"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
+  defense_date: 2021-12-09
   type: MSc
   group: Alumni
+  keywords: "FPGA, ATLAS, TDAQ system, ALTI, TTC System"
+  abstract: >-
+    ATLAS is the largest particle detector ever constructed at the European Organization for Nuclear Research CERN. The detector gathers 60 million megabytes of data per second. To reduce this enormous flow of data, a complex Timing and Data Acquisition (TDAQ) system was developed. The subject of this thesis is the ATLAS Local Trigger Interface module. The ALTI is a part of the ATLAS Level-1 Trigger system. It is a newly developed module which replaces the four previously used TTC interface modules, also called the TTC "Legacy'' system (LTP, TTCvi, TTCex, LTPI), for the incoming Run 3 period. The thesis presents the ALTI module's final firmware and its place in the Timing Trigger and Control (TTC) distribution system. This work focused on the ALTI firmware development and its functionalities verification. The project’s goal to deploy a firmware version that covers all TTC Legacy system functions was achieved. The firmware development process was based on the VHDL language and Vivado 2020.2 environment. The implemented functionalities were thoroughly tested with behavioral simulations as well as hardware tests. To achieve that, the Mentor ModelSim simulation testbench and Python-based hardware testing environment were developed and improved. The ALTI firmware was also compared with the Legacy system in terms of the Level-1 Trigger Accept (L1A) latency. The new module was processing triggers 7.12 ns faster than the old interface system.
 
 - title: "Hardware-in-the-loop simulation for unmanned aerial vehicles applications verification"
   author: "Maciej Talar"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
+  defense_date: 2021-10-29
   type: MSc
   group: Alumni
+  keywords: "3D visualization, algorithms verification, embedded vision system, simulator, hardware-in-the-loop simulation"
+  abstract: >-
+    In this work, a „hardware-in-the-loop” simulator for the verification of vision algorithms dedicated for unmanned aerial vehicles was proposed and designed. The possibility of testing solutions running on embedded computing platforms in a virtual environment leads to a significant acceleration of the prototyping of such systems. It also allows to exclude in the initial phases of testing problems associated with the transition from the stage of the software model to hardware implementation. In this work, a review of the literature treating about similar simulation solutions has been carried out. A number of issues about the construction of aerial vehicles and their control were also developed. In the next part, two versions of the simulator based on the Matlab/Simulink environment were prepared - one of them using Unreal Engine and the other one based on Three.js - JavaScript library. The implementations were tested based on „human-in-the-loop” model and on algorithms: landing on a~platform and flying through a~series of gates. The conducted tests, although limited in scope, allowed to draw a conclusion on the usability of the prepared simulators in the process of development and verification of embedded vision systems.
 
 - title: "Object detection using an event camera"
   author: "Jakub Woźniak"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
+  defense_date: 2021-10-04
   type: MSc
   group: Alumni
+  keywords: "Deep Convolutional Neural Networks, object detection, event-based vision"
+  abstract: >-
+    In this work, selected algorithms for pedestrian and vehicle detection by event camera were implemented and tested. These techniques included the use of popular 2D representations of event data, such as event frame, or time surface. Furthermore, an approach using grayscale image reconstruction from the event stream was also presented.In the first stage, the appropriate form of the event packet is prepared, then the proper detection is performed by using a deep convolutional detector known as YOLOv5, which is one of the state-of-the-art solutions in the field of object detection. The evaluations were carried out on a dataset consisting of selected sequences from Gen1 Automotive Detection Dataset, DDD17, DDD20 datasets and event simulation of several dozen BDD100K videos.The final part of the work is dedicated to optimize the inference speed by creating more compact versions of the trained neural networks. Some well-known methods such as knowledge distillation and neural network pruning have been used. However, the evaluation results indicate a decrease in detection quality that is significantly greater than that of the analogous procedure for data from traditional frame-based cameras. The best-performing algorithm is characterized by an accuracy, expressed as AP, of about 0.48. This is not surprising, since the nature of event sensors makes object detection clearly more difficult. This is especially true for the smallest objects when the amount of information is very limited due to the sparse representation of event data.
 
-- title: "Automatic recording of the course of a duplicate bridge game"
-  title_pl: "Automatyczna rejestracja przebiegu gry w brydża sportowego"
+- title: "Automatic registration of a duplicate bridge game"
   author: "Piotr Wzorek"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
+  defense_date: 2021-09-03
   type: MSc
   group: Alumni
+  keywords: "Deep Convolutional Neural Networks, vision system, object detection, duplicate bridge"
+  abstract: >-
+    In this work, the implementation of an application for automatic registration of a duplicate bridge game is presented. It is based on a vision system that processes images recorded by a system of two cameras directed at the table where the game takes place.The first stage of the task is the detection of elements used during play - cards and bidding calls. For this purpose, two YOLOv4 deep convolutional neural networks were used. During the training process, which was carried out using an automatically generated dataset, we obtained a detector characterised by more than 99.9% accuracy on the test set. The second part of the system is responsible for analysing the obtained information and, based on the rules of the game, reconstructing its course.The prepared application has been tested on video collected during bridge competitions and is characterised by its high accuracy. Minor modifications and hardware acceleration could make it possible to use the system for preparing live broadcasts of bridge competitions.
 
 - title: "Object detection using deep neural networks implemented on an embedded computing platform"
-  title_pl: "Detekcja obiektów z wykorzystaniem głębokich sieci neuronowych zrealizowana na wbudowanej platformie obliczeniowej"
   author: "Michał Machura"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
+  defense_date: 2021-09-03
   type: MSc
   group: Alumni
+  keywords: "Deep Convolutional Neural Networks, vision system, object detection, Quantized Neural Networks, hardware accelerator"
+  abstract: >-
+    This work presents the full process of designing hardware implementation of a detecton system based on deep neural networks for the 2021 DAC SDC competition. The aim was to design a solution with high accuracy, high throughput and low energy consumption. The requirements and assumptions of the competition and the target platform - "Avnet Ultra96 V2" were initially discussed, as well as the available classic solutions and solutions based on neural networks, especially energy-saving solutions, were reviewed. Next, the process of designing the network architecture is presented, along with training and quantization, and the implementation of a hardware accelerator as well as attempts to optimize energy consumption are described. The obtained result was the detection accuracy of 0.7015, measured with the IoU coefficient, with a throughput of 72.7 fps and energy consumption of 2739 J for 52500 images.
 
 - title: "3D reconstruction with an event camera"
   author: "Konrad Wajda"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
+  defense_date: 2021-10-21
   type: MSc
   group: Alumni
+  keywords: "3D reconstruction, vision system, stereovision, event camera"
+  abstract: >-
+    In this work, the implementation of 3D reconstruction system with the usage of data provided by event cameras is presented. This type of sensors register events for each pixel independently and asynchronously, however only the change in the intensity of the incident light is detected. This results in high temporal resolution, low latency, and low energy consumption. At the same time, due to the atypical data format, it is impossible to use ''classic'' methods of image processing and analysis. In this study, four methods of 3D reconstruction (two classical and two based on neural networks) were implemented and evaluated. Various representations of event data were also used -- event frames, reconstructed frames, and voxel grids. Algorithms were evaluated on a publicly available data set and the obtained results were compared with methods presented by research teams that participated in the CVPR 2021 competition. In terms of the most important metric MAE (Mean Absolute Error), the obtained results turned out to be several times worse, but a slight improvement was observed for the 1PE (1 Pixel Error) metric. By using classical algorithms, the obtained results turned out to be better than with usage of neural networks. The fastest method`s processing time for pair of frames was 1.88 seconds.
 
 - title: "Road segmentation using deep convolutional neural networks"
   title_pl: "Segmentacja jezdni z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
