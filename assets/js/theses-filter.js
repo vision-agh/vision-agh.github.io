@@ -1,9 +1,9 @@
-// Year / type filters for the Students page (_pages/students.md)
+// Year / type / funding filters for the Students page (_pages/students.md)
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.querySelector(".list-filters");
   if (!filters) return;
 
-  const state = { year: "", type: "" };
+  const state = { year: "", type: "", funding: "" };
   const countEl = document.getElementById("thesis-filter-count");
   const resetEl = document.getElementById("list-filter-reset");
   const emptyEl = document.getElementById("thesis-filter-empty");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".thesis-section").forEach((section) => {
       let visibleInSection = 0;
       section.querySelectorAll(".thesis-item").forEach((item) => {
-        const match = (!state.year || item.dataset.year === state.year) && (!state.type || item.dataset.type === state.type);
+        const match = Object.entries(state).every(([key, value]) => !value || item.dataset[key] === value);
         item.hidden = !match;
         if (match) visibleInSection++;
       });
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "thesis" : "theses"}`;
-    resetEl.hidden = !state.year && !state.type;
+    resetEl.hidden = Object.values(state).every((value) => !value);
     emptyEl.hidden = visibleTotal > 0;
   };
 

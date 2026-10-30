@@ -2280,3 +2280,20 @@ ol {
 .publications .filter-hidden {
   display: none !important;
 }
+
+// Students page – funding (e.g. IDUB) panel with logo
+.funding-info {
+  overflow: hidden;
+
+  .funding-logo {
+    float: left;
+    margin-right: 1rem;
+
+    img {
+      height: 4rem;
+      width: auto;
+      border-radius: 0.25rem;
+      background-color: #fff;
+    }
+  }
+}

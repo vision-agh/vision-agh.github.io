@@ -1,4 +1,4 @@
-<li class="thesis-item" data-year="{{ thesis.year }}" data-type="{{ thesis.type }}">
+<li class="thesis-item" data-year="{{ thesis.year }}" data-type="{{ thesis.type }}" data-funding="{{ thesis.funding }}">
   <div class="row">
     {% if thesis.image %}
       <div class="col col-sm-2 abbr preview-col">
@@ -107,8 +107,13 @@
       {% if thesis.funding %}
         {% assign funding = site.data.thesis_funding[thesis.funding] %}
         <div class="award hidden">
-          <p>
+          <p class="funding-info">
             {% if funding %}
+              {% if funding.logo %}
+                <a href="{{ funding.url | default: '#' }}" target="_blank" rel="noopener" class="funding-logo">
+                  <img src="{{ funding.logo | relative_url }}" alt="{{ funding.name }}" loading="lazy">
+                </a>
+              {% endif %}
               <strong>{{ funding.name }}</strong><br>
               {{ funding.description }}
               {% if funding.url %}

@@ -1,5 +1,6 @@
 {% assign thesis_years = site.data.theses | map: 'year' | compact | uniq | sort | reverse %}
 {% assign thesis_types = site.data.theses | map: 'type' | compact | uniq | sort %}
+{% assign thesis_fundings = site.data.theses | map: 'funding' | compact | uniq | sort %}
 <div class="list-filters">
   <div class="list-filter-group" data-filter="year">
     <span class="list-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
@@ -19,6 +20,17 @@
       {% endfor %}
     </div>
   </div>
+  {% if thesis_fundings.size > 0 %}
+    <div class="list-filter-group" data-filter="funding">
+      <span class="list-filter-label"><i class="fa-solid fa-hand-holding-dollar"></i> Funding</span>
+      <div class="list-filter-chips">
+        <button type="button" class="filter-chip active" data-value="">All</button>
+        {% for funding in thesis_fundings %}
+          <button type="button" class="filter-chip" data-value="{{ funding }}">{{ funding }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
   <div class="list-filter-footer">
     <span id="thesis-filter-count"></span>
     <button type="button" id="list-filter-reset" class="list-filter-reset" hidden><i class="fa-solid fa-xmark"></i> Clear filters</button>
