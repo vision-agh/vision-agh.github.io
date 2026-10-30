@@ -24,7 +24,7 @@
       {% endif %}
       <div class="title">{{ thesis.title }}</div>
       <div class="author">
-        {{ thesis.author }}
+        Author: {{ thesis.author }}
         {% if thesis.linkedin %}
           {% if thesis.linkedin contains '://' %}
             {% assign linkedin_url = thesis.linkedin %}
@@ -39,24 +39,36 @@
         {% assign supervisor_last = thesis.supervisor | split: ',' | first | split: ' ' | last | remove_accents %}
         {% assign supervisor_url = site.data.coauthors[supervisor_last] | map: 'url' | first %}
       {% endif %}
-      <div class="periodical">
-        <em>
-          {%- if thesis.supervisor -%}
+      {% if thesis.supervisor %}
+        <div class="periodical">
+          <em>
             Supervisor:
             {% if supervisor_url -%}
               <a href="{{ supervisor_url | relative_url }}">{{ thesis.supervisor }}</a>
             {%- else -%}
               {{- thesis.supervisor -}}
             {%- endif %}
-          {%- endif -%}
-          {%- if thesis.supervisor and thesis.year %}, {% endif -%}
-          {{- thesis.year -}}
-        </em>
-      </div>
+          </em>
+        </div>
+      {% endif %}
+      {% if thesis.year or thesis.defense_date %}
+        <div class="periodical">
+          <em>
+            {%- if thesis.year %}Academic year: {{ thesis.year }}{% endif -%}
+            {%- if thesis.defense_date -%}
+              {%- if thesis.year %} · {% endif -%}
+              Defended: {{ thesis.defense_date | date: '%-d %B %Y' }}
+            {%- elsif thesis.group != 'Alumni' -%}
+              {%- if thesis.year %} · {% endif -%}
+              In progress
+            {%- endif -%}
+          </em>
+        </div>
+      {% endif %}
       {% if thesis.cooperation %}
         <div class="periodical">
           <em>
-            Co-supervision:
+            Collaboration:
             {% assign cooperators = thesis.cooperation | split: ', ' %}
             {% for cooperator in cooperators %}
               {% assign cooperator_last = cooperator | split: ' ' | last | remove_accents %}

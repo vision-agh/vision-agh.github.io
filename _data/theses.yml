@@ -3,7 +3,8 @@
 #         group (section on the page: MSc | Bachelor | Alumni),
 #         linkedin (author's LinkedIn handle or full profile URL, optional),
 #         supervisor_url (optional; group members are linked automatically),
-#         cooperation (co-supervisors, comma-separated; group members are linked automatically),
+#         cooperation (collaborators, comma-separated; group members are linked automatically),
+#         defense_date (YYYY-MM-DD, optional),
 #         keywords (optional, not displayed),
 #         funding (e.g. IDUB; shows a button with the description from _data/thesis_funding.yml),
 #         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
@@ -222,6 +223,7 @@
   supervisor: "Piotr Pawlik"
   cooperation: "Tomasz Kryjak, Mateusz Wąsala"
   year: "2025/2026"
+  defense_date: 2026-09-23
   type: MSc
   group: Alumni
   keywords: "Sonar odometry, Sonar, Acustic data processing, Forward-Looking Sonar, Underwater navigation, Deep Neural Network, Vision Transformer, Sonar data simulation"
@@ -234,6 +236,7 @@
   supervisor: "Piotr Pawlik"
   cooperation: "Tomasz Kryjak, Mateusz Wąsala"
   year: "2025/2026"
+  defense_date: 2026-10-20
   type: MSc
   group: Alumni
   keywords: "autonomous vehicle, reinforcement learning, PPO, YOLO, object detection,"
@@ -246,6 +249,7 @@
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak, Mateusz Wąsala"
   year: "2025/2026"
+  defense_date: 2026-10-22
   type: MSc
   group: Alumni
   keywords: "vision system, ROS 2, Gazebo, Raspberry Pi, sim-to-real"
@@ -258,6 +262,7 @@
   supervisor: "Piotr Pawlik"
   cooperation: "Tomasz Kryjak, Hubert Szolc"
   year: "2025/2026"
+  defense_date: 2026-10-19
   type: MSc
   group: Alumni
   keywords: "reinforcement learning, unmanned aerial vehicle swarm, collision avoidance, onboard perception, multi-agent learning, sim-to-real transfer"
@@ -269,6 +274,7 @@
   supervisor: "Piotr Pawlik"
   cooperation: "Tomasz Kryjak, Marcin Kowalczyk"
   year: "2025/2026"
+  defense_date: 2026-10-20
   type: MSc
   group: Alumni
   keywords: "event camera, drone, propellers, rotational speed, RPM, motion compensation, maneuver classification"
@@ -281,6 +287,7 @@
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak, Mateusz Wąsala, Hubert Szolc"
   year: "2025/2026"
+  defense_date: 2026-09-21
   type: MSc
   group: Alumni
   keywords: "motion capture, nano-drone, Crazyflie, distributed processing, multi-camera triangulation, time synchronization, closed-loop control, ROS 2"
@@ -293,6 +300,7 @@
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak"
   year: "2025/2026"
+  defense_date: 2026-10-23
   type: MSc
   group: Alumni
   keywords: "detection-segmentation neural network, perception, UAV"
@@ -305,6 +313,7 @@
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak"
   year: "2025/2026"
+  defense_date: 2026-10-20
   type: MSc
   group: Alumni
   funding: IDUB
@@ -318,6 +327,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Kamil Jeziorek"
   year: "2025/2026"
+  defense_date: 2026-10-20
   type: MSc
   group: Alumni
   funding: IDUB
@@ -331,6 +341,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Hubert Szolc, Mateusz Wąsala"
   year: "2025/2026"
+  defense_date: 2026-07-14
   type: MSc
   group: Alumni
   funding: IDUB
@@ -343,6 +354,7 @@
   linkedin: https://www.linkedin.com/in/karolina-piotrowska-/
   supervisor: "Tomasz Kryjak"
   year: "2025/2026"
+  defense_date: 2026-09-23
   type: MSc
   group: Alumni
   funding: IDUB
@@ -355,6 +367,7 @@
   supervisor: "Piotr Pawlik"
   cooperation: "Anna Broniec-Wójcik"
   year: "2025/2026"
+  defense_date: 2026-01-28
   type: BSc
   group: Alumni
   keywords: "brain-computer interface, BCI, unmanned aerial vehicle, UAV, drone, electroencephalography, EEG, steady state visually evoked potential, SSVEP, Sliding DFT, CCA"
@@ -366,6 +379,7 @@
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak, Hubert Szolc"
   year: "2025/2026"
+  defense_date: 2026-02-02
   type: BSc
   group: Alumni
   keywords: "reinforcement learning, recurrent neural networks, mobile robotics, quantization, SoC FPGA, Isaac Lab, Vitis AI, hls4ml"
@@ -377,6 +391,7 @@
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak, Hubert Szolc"
   year: "2025/2026"
+  defense_date: 2026-01-30
   type: BSc
   group: Alumni
   keywords: "FPGA, Kria KV260, autonomous drone racing, Convolutional Neural Networks, Quantization-Aware Training, AMD FINN, Brevitas, quantization, Vivado, Unmanned Aerial Vehicles, segmentation, gate detection, embedded AI"
@@ -388,6 +403,7 @@
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak"
   year: "2025/2026"
+  defense_date: 2026-01-21
   type: BSc
   group: Alumni
   keywords: "Echo State Networks, Reservoir Computing, Unmanned Aerial Vehicle, UAV, benchmark evaluation, quantization, time-series"
@@ -399,6 +415,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Kamil Jeziorek"
   year: "2025/2026"
+  defense_date: 2026-02-02
   type: BSc
   group: Alumni
   keywords: "spiking neural networks, SNN, event-based cameras, DVS, SYNtzulu accelerator, SoC FPGA, low-power embedded systems, event-based image classification, real-time inference"
@@ -411,6 +428,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Mateusz Wąsala"
   year: "2025/2026"
+  defense_date: 2026-02-02
   type: BSc
   group: Alumni
   funding: IDUB
@@ -424,6 +442,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Mateusz Wąsala"
   year: "2025/2026"
+  defense_date: 2026-02-02
   type: BSc
   group: Alumni
   funding: IDUB
@@ -437,6 +456,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Piotr Wzorek, Kamil Jeziorek"
   year: "2025/2026"
+  defense_date: 2026-01-23
   type: BSc
   group: Alumni
   keywords: "neuromorphic computing, FPGA, SoC, graph convolutional neural networks, neuromorphic auditory sensor, speech recognition, keyword spotting, event-based processing, Edge AI, silicon cochlea"
@@ -449,6 +469,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Marcin Kowalczyk"
   year: "2025/2026"
+  defense_date: 2026-01-28
   type: BSc
   group: Alumni
   keywords: "FPGA, contrast maximization, event-based camera, object tracking, neuromorphic vision"
@@ -460,6 +481,7 @@
   supervisor: "Tomasz Kryjak"
   cooperation: "Hubert Szolc"
   year: "2025/2026"
+  defense_date: 2026-02-02
   type: BSc
   group: Alumni
   funding: IDUB
