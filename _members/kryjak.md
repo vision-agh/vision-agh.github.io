@@ -7,8 +7,8 @@ group_rank: 1
 team_head: true
 vis_order: -1
 
-title: PhD Tomasz Kryjak
-description: Profile of Tomasz Kryjak, Head of the Embedded Perception and Autonomous Systems Group.
+title: Tomasz Kryjak, PhD
+description: Profile of Tomasz Kryjak, Leader of the Embedded Perception and Autonomous Systems Group.
 lastname: Kryjak
 publications: "author^=*Kryjak"
 
@@ -16,13 +16,13 @@ teaser: >
   I’m an Associate Professor at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-  title: PhD
-  name: Tomasz Kryjak
+  title:
+  name: Tomasz Kryjak, PhD
   position: Associate Professor
-  role: Head of the Group
+  role: Leader of the Group
   align: right
   image: people/TomaszKryjak.jpg
-  email: kryjak@agh.edu.pl
+  email: tomasz.kryjak@agh.edu.pl
   linkedin: tomasz-kryjak
   orcid: 0000-0001-6798-4444
   researchgate: Tomasz_Kryjak

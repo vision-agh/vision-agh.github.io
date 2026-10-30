@@ -14,7 +14,7 @@
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
         {% if project.principal_investigator %}
-          {% assign pi_lastname = project.principal_investigator | split: ' ' | last | remove_accents %}
+          {% assign pi_lastname = project.principal_investigator | split: ',' | first | split: ' ' | last | remove_accents %}
           <p class="card-text text-center">
             <a href="/members/{{ pi_lastname | downcase }}">{{ project.principal_investigator }} </a>
           </p>

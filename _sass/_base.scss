@@ -806,6 +806,20 @@ footer.sticky-bottom {
       .preview {
       }
 
+      .abbr.preview-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: none;
+        margin-top: 0;
+        text-align: center;
+
+        figure {
+          margin: 0;
+        }
+      }
+
       .abbr {
         margin-top: -15px;
         margin-bottom: 0.5rem;

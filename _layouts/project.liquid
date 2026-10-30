@@ -30,7 +30,7 @@ layout: default
       <h3 class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{{ page.title_pl }}</h3>
     {% endif %}
 
-    {% assign pi_lastname = page.principal_investigator | split: ' ' | last | remove_accents %}
+    {% assign pi_lastname = page.principal_investigator | split: ',' | first | split: ' ' | last | remove_accents %}
     <p class="mt-4 mb-0">
       <span class="font-semibold ml-4">Principal Investigator:</span>
       <a href="/members/{{ pi_lastname | downcase }}">{{ page.principal_investigator }} </a>
