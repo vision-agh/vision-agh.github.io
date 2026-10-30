@@ -2,6 +2,7 @@
 # Fields: title, author, supervisor, year, type (BSc | MSc | PhD),
 #         group (section on the page: MSc | Bachelor | Alumni),
 #         linkedin (author's LinkedIn handle or full profile URL, optional),
+#         supervisor_url (optional; group members are linked automatically),
 #         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
 #
 # - title: Example thesis title

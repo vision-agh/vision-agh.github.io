@@ -1,0 +1,28 @@
+{% assign thesis_years = site.data.theses | map: 'year' | compact | uniq | sort | reverse %}
+{% assign thesis_types = site.data.theses | map: 'type' | compact | uniq | sort %}
+<div class="thesis-filters d-flex flex-wrap mb-4">
+  <label class="mr-4 mb-2">
+    Year
+    <select id="thesis-filter-year" class="form-control form-control-sm d-inline-block w-auto ml-2">
+      <option value="">All</option>
+      {% for year in thesis_years %}
+        {% if year %}
+          <option value="{{ year }}">{{ year }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  </label>
+  <label class="mb-2">
+    Type
+    <select id="thesis-filter-type" class="form-control form-control-sm d-inline-block w-auto ml-2">
+      <option value="">All</option>
+      {% for type in thesis_types %}
+        {% if type %}
+          <option value="{{ type }}">{{ type }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  </label>
+</div>
+<p id="thesis-filter-empty" class="text-muted" style="display: none">No theses match the selected filters.</p>
+<script defer src="{{ '/assets/js/theses-filter.js' | relative_url }}"></script>

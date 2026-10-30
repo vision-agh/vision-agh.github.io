@@ -1,4 +1,4 @@
-<li>
+<li class="thesis-item" data-year="{{ thesis.year }}" data-type="{{ thesis.type }}">
   <div class="row">
     {% if thesis.image %}
       <div class="col col-sm-2 abbr preview-col">
@@ -34,9 +34,21 @@
           <a href="{{ linkedin_url }}" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         {% endif %}
       </div>
+      {% assign supervisor_url = thesis.supervisor_url %}
+      {% if thesis.supervisor and supervisor_url == null %}
+        {% assign supervisor_last = thesis.supervisor | split: ',' | first | split: ' ' | last | remove_accents %}
+        {% assign supervisor_url = site.data.coauthors[supervisor_last] | map: 'url' | first %}
+      {% endif %}
       <div class="periodical">
         <em>
-          {%- if thesis.supervisor %}Supervisor: {{ thesis.supervisor }}{% endif -%}
+          {%- if thesis.supervisor -%}
+            Supervisor:
+            {% if supervisor_url -%}
+              <a href="{{ supervisor_url | relative_url }}">{{ thesis.supervisor }}</a>
+            {%- else -%}
+              {{- thesis.supervisor -}}
+            {%- endif %}
+          {%- endif -%}
           {%- if thesis.supervisor and thesis.year %}, {% endif -%}
           {{- thesis.year -}}
         </em>
