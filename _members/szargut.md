@@ -1,7 +1,7 @@
 ---
 layout: cv
 inline: false
-group: Doctoral researcher
+group: PhD Students
 team_frontpage: false
 group_rank: 3
 vis_order: 11

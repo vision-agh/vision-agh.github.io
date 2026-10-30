@@ -1,24 +1,24 @@
 ---
 layout: cv
 inline: false
-group: Doctoral researcher
+group: Lab Engineers
 team_frontpage: false
-group_rank: 3
-vis_order: 10
+group_rank: 4
+vis_order: 0
 
 title: MSc Remigiusz Mietła
-description: Profile of MSc Remigiusz Mietła, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+description: Profile of MSc Remigiusz Mietła, Research/Lab Engineer at the Embedded Perception and Autonomous Systems Group.
 lastname: Mietła
 publications: "author^=*Mietla"
 
 teaser: >
-  I am a Doctoral researcher at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
+  I am a Research/Lab Engineer at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
   title: MSc
   name: Remigiusz Mietła
   position: Research/Lab Engineer
-  role: PhD Student
+  role: Research/Lab Engineer
   align: right
   image:
   email:

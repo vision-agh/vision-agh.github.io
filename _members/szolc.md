@@ -1,9 +1,9 @@
 ---
 layout: cv
 inline: false
-group: Doctoral researcher
+group: Research Assistants
 team_frontpage: true
-group_rank: 3
+group_rank: 2
 vis_order: 3
 
 title: MSc Hubert Szolc
