@@ -23,8 +23,22 @@
         </div>
       {% endif %}
       <div class="title">{{ thesis.title }}</div>
+      {% assign author_first = thesis.author | split: ' ' | first %}
+      {% assign author_last = thesis.author | split: ' ' | last | remove_accents %}
+      {% assign author_url = null %}
+      {% for coauthor in site.data.coauthors[author_last] %}
+        {% if coauthor.firstname contains author_first %}
+          {% assign author_url = coauthor.url %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
       <div class="author">
-        Author: {{ thesis.author }}
+        Author:
+        {% if author_url -%}
+          <a href="{{ author_url | relative_url }}">{{ thesis.author }}</a>
+        {%- else -%}
+          {{ thesis.author }}
+        {%- endif %}
         {% if thesis.linkedin %}
           {% if thesis.linkedin contains '://' %}
             {% assign linkedin_url = thesis.linkedin %}
