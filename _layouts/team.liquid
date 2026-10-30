@@ -4,7 +4,9 @@ layout: page
 ---
 {% assign groups = site.members | sort: 'group_rank' | map: 'group' | uniq %}
 {% for group in groups %}
-  <h2 class="mt-4 mb-3 border-b border-gray-200 pb-2">{{ group }}</h2>
+  {% if group != 'Principal Investigators' %}
+    <h2 class="mt-4 mb-3 border-b border-gray-200 pb-2">{{ group }}</h2>
+  {% endif %}
   <p>
     {% assign members = site.members | sort: 'vis_order' | where: 'group', group %}
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
