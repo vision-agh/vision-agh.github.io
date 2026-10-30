@@ -6,7 +6,7 @@ description:
 nav: true
 nav_order: 6
 
-display_categories: [NCN, Industrial]
+display_categories: [NCN, NCBR, EU, IDUB, Industrial]
 horizontal: false
 ---
 

@@ -30,16 +30,27 @@ layout: default
       <h3 class="block mb-2 text-sm font-normal leading-none text-gray-500 ">{{ page.title_pl }}</h3>
     {% endif %}
 
-    {% assign pi_lastname = page.principal_investigator | split: ',' | first | split: ' ' | last | remove_accents %}
-    <p class="mt-4 mb-0">
-      <span class="font-semibold ml-4">Principal Investigator:</span>
-      <a href="/members/{{ pi_lastname | downcase }}">{{ page.principal_investigator }} </a>
-    </p>
-    <p class="mt-0 mb-0">
+    {% if page.principal_investigator %}
+      {% assign pi_lastname = page.principal_investigator | split: ',' | first | split: ' ' | last | remove_accents %}
+      <p class="mt-4 mb-0">
+        <span class="font-semibold ml-4">Principal Investigator:</span>
+        <a href="/members/{{ pi_lastname | downcase }}">{{ page.principal_investigator }} </a>
+      </p>
+    {% endif %}
+    <p class="{% if page.principal_investigator %}mt-0{% else %}mt-4{% endif %} mb-0">
       <span class="font-semibold ml-4">Project Duration:</span>
-      {{ page.start_date | date: '%d %B %Y' }} - {{ page.end_date | date: '%d %B %Y' }}
+      {% if page.duration %}
+        {{ page.duration }}
+      {% else %}
+        {{ page.start_date | date: '%d %B %Y' }} - {{ page.end_date | date: '%d %B %Y' }}
+      {% endif %}
     </p>
-    <p class="mt-0 mb-4"><span class="font-semibold ml-4">Budget:</span> {{ page.budget | number_with_delimiter: ' ' }} PLN</p>
+    {% if page.project_number %}
+      <p class="mt-0 mb-0"><span class="font-semibold ml-4">Project No.:</span> {{ page.project_number }}</p>
+    {% endif %}
+    {% if page.budget %}
+      <p class="mt-0 mb-4"><span class="font-semibold ml-4">Budget:</span> {{ page.budget | number_with_delimiter: ' ' }} PLN</p>
+    {% endif %}
 
     {% if page.image %}
       <div class="row">
