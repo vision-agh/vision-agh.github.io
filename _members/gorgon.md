@@ -19,7 +19,7 @@ profile:
   title: Prof
   name: Marek Gorgoń
   position: Professor
-  role: 
+  role:
   align: right
   image: people/MarekGorgon.jpg
   email: mago@agh.edu.pl

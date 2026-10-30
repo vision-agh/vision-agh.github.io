@@ -25,7 +25,8 @@ layout: default
               <span class="name font-semibold">
                 {%- assign prefix_titles = 'Prof,Dr' | split: ',' -%}
                 {%- if prefix_titles contains page.profile.title -%}
-                  {{ page.profile.title }} {{ page.profile.name }}
+                  {{ page.profile.title }}
+                  {{ page.profile.name }}
                 {%- elsif page.profile.title -%}
                   {{ page.profile.name }}, {{ page.profile.title }}
                 {%- else -%}
