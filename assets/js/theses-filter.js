@@ -1,28 +1,49 @@
 // Year / type filters for the Students page (_pages/students.md)
 document.addEventListener("DOMContentLoaded", () => {
-  const yearSelect = document.getElementById("thesis-filter-year");
-  const typeSelect = document.getElementById("thesis-filter-type");
-  if (!yearSelect || !typeSelect) return;
+  const filters = document.querySelector(".thesis-filters");
+  if (!filters) return;
+
+  const state = { year: "", type: "" };
+  const countEl = document.getElementById("thesis-filter-count");
+  const resetEl = document.getElementById("thesis-filter-reset");
+  const emptyEl = document.getElementById("thesis-filter-empty");
 
   const applyFilters = () => {
-    const year = yearSelect.value;
-    const type = typeSelect.value;
     let visibleTotal = 0;
-
     document.querySelectorAll(".thesis-section").forEach((section) => {
       let visibleInSection = 0;
       section.querySelectorAll(".thesis-item").forEach((item) => {
-        const match = (!year || item.dataset.year === year) && (!type || item.dataset.type === type);
-        item.style.display = match ? "" : "none";
+        const match = (!state.year || item.dataset.year === state.year) && (!state.type || item.dataset.type === state.type);
+        item.hidden = !match;
         if (match) visibleInSection++;
       });
-      section.style.display = visibleInSection ? "" : "none";
+      section.hidden = visibleInSection === 0;
       visibleTotal += visibleInSection;
     });
 
-    document.getElementById("thesis-filter-empty").style.display = visibleTotal ? "none" : "";
+    countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "thesis" : "theses"}`;
+    resetEl.hidden = !state.year && !state.type;
+    emptyEl.hidden = visibleTotal > 0;
   };
 
-  yearSelect.addEventListener("change", applyFilters);
-  typeSelect.addEventListener("change", applyFilters);
+  const setActive = (group, value) => {
+    state[group.dataset.filter] = value;
+    group.querySelectorAll(".thesis-chip").forEach((chip) => chip.classList.toggle("active", chip.dataset.value === value));
+  };
+
+  filters.querySelectorAll(".thesis-filter-group").forEach((group) => {
+    group.addEventListener("click", (event) => {
+      const chip = event.target.closest(".thesis-chip");
+      if (!chip) return;
+      setActive(group, chip.dataset.value);
+      applyFilters();
+    });
+  });
+
+  resetEl.addEventListener("click", () => {
+    filters.querySelectorAll(".thesis-filter-group").forEach((group) => setActive(group, ""));
+    applyFilters();
+  });
+
+  applyFilters();
 });
