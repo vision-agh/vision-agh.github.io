@@ -17,7 +17,7 @@ teaser: >
 profile:
   title: MSc
   name: Krzysztof Błachut
-  position: Research and teaching assistant
+  position: Research & Teaching Assistant
   role: PhD Student
   align: right
   image: people/KrzysztofBlachut.jpg
@@ -69,7 +69,7 @@ education:
     summary: "Automatic Control and Robotics"
 
 experience:
-  - role: "Research and teaching assistant"
+  - role: "Research & Teaching Assistant"
     institution: "AGH University of Krakow"
     start: "2022-10-01"
     end:

@@ -17,7 +17,7 @@ teaser: >
 profile:
   title: MSc
   name: Michał Daniłowicz
-  position: Research and teaching assistant
+  position: Research & Teaching Assistant
   role: PhD Student
   align: right
   image: people/MichalDanilowicz.jpg
@@ -66,7 +66,7 @@ education:
     summary: "Automatic Control and Robotics"
 
 experience:
-  - role: "Research and Teaching Assistant"
+  - role: "Research & Teaching Assistant"
     institution: "AGH University of Krakow"
     start: "2020-10-01"
     end:

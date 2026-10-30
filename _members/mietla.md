@@ -17,7 +17,7 @@ teaser: >
 profile:
   title: MSc
   name: Remigiusz Mietła
-  position:
+  position: Research/Lab Engineer
   role: PhD Student
   align: right
   image:

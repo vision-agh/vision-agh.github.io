@@ -15,4 +15,6 @@ keywords:
 
 start_date: 2011-12-07
 end_date: 2013-06-06
+
+publications: "projects^=*Preludium-Kryjak"
 ---

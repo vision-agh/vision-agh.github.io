@@ -17,7 +17,7 @@ teaser: >
 profile:
   title: MSc
   name: Piotr Wzorek
-  position: Research and teaching assistant
+  position: Research & Teaching Assistant
   role: PhD Student
   align: right
   image: people/PiotrWzorek.jpg
@@ -67,7 +67,7 @@ education:
     summary: "Automatic Control and Robotics"
 
 experience:
-  - role: "Research and teaching assistant"
+  - role: "Research & Teaching Assistant"
     institution: "AGH University of Kraków"
     start: "2023-10-01"
     end:

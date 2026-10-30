@@ -17,7 +17,7 @@ teaser: >
 profile:
   title: MSc
   name: Mateusz Wąsala
-  position: Research and teaching assistant
+  position: Research & Teaching Assistant
   role: PhD Student
   align: right
   image: people/MateuszWasala.jpg
@@ -68,7 +68,7 @@ affiliations:
   url: "www.agh.edu.pl"
 
 experience:
-  - role: "Research and teaching assistant"
+  - role: "Research & Teaching Assistant"
     institution: "AGH University of Krakow"
     start: "2021"
     end:

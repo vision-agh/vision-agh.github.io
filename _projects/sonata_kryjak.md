@@ -3,6 +3,7 @@ layout: project
 title: NCN Sonata
 description:
 principal_investigator: Tomasz Kryjak, PhD
+budget: 255600
 img: assets/img/projects/logo_ncn-sonata.png
 importance: 1
 category: NCN

@@ -36,6 +36,10 @@ layout: page
                 <div class="more-info-role">{{ member.profile.role }}</div>
               {% endif %}
 
+              {% if member.group == 'Doctoral researcher' and member.profile.position %}
+                <div class="more-info-role">{{ member.profile.position }}</div>
+              {% endif %}
+
               {% if member.profile.keywords %}
                 {% assign keywords = member.profile.keywords | sort_natural %}
                 <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">

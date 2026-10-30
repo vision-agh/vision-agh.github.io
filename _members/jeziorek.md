@@ -17,7 +17,7 @@ teaser: >
 profile:
   title: MSc
   name: Kamil Jeziorek
-  position: Research and teaching assistant
+  position: Research & Teaching Assistant
   role: PhD Student
   align: right
   image: people/KamilJeziorek.jpg
@@ -70,7 +70,7 @@ education:
     summary: "Automatic Control and Robotics"
 
 experience:
-  - role: "Research and teaching assistant"
+  - role: "Research & Teaching Assistant"
     institution: "AGH University of Kraków"
     start: "2025-03-01"
     end:

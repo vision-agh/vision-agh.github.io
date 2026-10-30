@@ -17,7 +17,7 @@ teaser: >
 profile:
   title: MSc
   name: Marcin Kowalczyk
-  position: Research and teaching assistant
+  position: Research & Teaching Assistant
   role: PhD Student
   align: right
   image: people/MarcinKowalczyk.jpg
