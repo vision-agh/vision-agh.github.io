@@ -79,7 +79,7 @@ ninja.data = [{
               window.location.href = "/members/lis";
             },},{id: "members-msc-remigiusz-mietła",
           title: 'MSc Remigiusz Mietła',
-          description: "Profile of MSc Remigiusz Mietła, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+          description: "Profile of MSc Remigiusz Mietła, Research/Lab Engineer at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/mietla";
             },},{id: "members-msc-błażej-szargut",
