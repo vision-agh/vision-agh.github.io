@@ -2,7 +2,7 @@
 layout: page
 permalink: /students/
 title: Students
-description: Bachelor's and master's theses completed in our group.
+description: Bachelor's and master's theses carried out in our group.
 nav: true
 nav_order: 5
 ---

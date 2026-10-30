@@ -3,32 +3,1507 @@
 #         group (section on the page: MSc | Bachelor | Alumni),
 #         linkedin (author's LinkedIn handle or full profile URL, optional),
 #         supervisor_url (optional; group members are linked automatically),
+#         cooperation (co-supervisors, comma-separated; group members are linked automatically),
+#         keywords (optional, not displayed),
 #         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
 #
 # - title: Example thesis title
 #   author: Jan Kowalski
 #   linkedin: jan-kowalski
 #   supervisor: Tomasz Kryjak, PhD
-#   year: 2025
+#   year: "2025/2026"
 #   type: MSc
 #   group: MSc
-#   image: example.png
+#   image: thesis_preview.png
 #   abstract: >
 #     Short abstract of the thesis.
 #   pdf: https://example.org/thesis.pdf
 #   code: https://github.com/example/repo
 
-# EXAMPLE ENTRY – replace with real theses
-- title: "Example: Real-time object detection on an SoC FPGA for UAV navigation"
-  author: Jan Kowalski
-  linkedin: https://www.linkedin.com/
-  supervisor: Tomasz Kryjak, PhD
-  year: 2025
+- title: "Adaptive UAV Trajectory Tracking Under Aerodynamic Disturbances Using Reinforcement Learning and Neural Model-Based Adaptation Methods"
+  author: "Paweł Kocur"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc"
+  year: "2026/2027"
   type: MSc
   group: MSc
-  image: example.png
-  abstract: >
-    This is an example entry showing how a thesis is displayed on the Students page.
-    The abstract is hidden by default and can be shown or hidden with the Abstract button.
-    Replace this entry in _data/theses.yml with real theses completed in the group.
-  code: https://github.com/vision-agh
+  keywords: "Unmanned Aerial Vehicle (UAV), Trajectory Tracking, Reinforcement Learning (RL), Rapid Motor Adaptation, Aerodynamic Disturbances, Sim-to-Real, Model Predictive Control (MPC)"
+  abstract: >-
+    This thesis presents the design, simulation training, and physical deployment of an adaptive control system for an Unmanned Aerial Vehicle (UAV) capable of precise trajectory tracking under severe and time-varying aerodynamic disturbances such as wind. The control architecture combines Reinforcement Learning (RL) with an online rapid adaptation module (leveraging residual learning, meta-learning, or latent variable inference) to compensate for flight dynamics model inaccuracies and sim-to-real gaps. Following a literature review of aerial robotics adaptation techniques and sim-to-real gap mitigation, an adaptive RL policy is developed and trained in a simulation environment featuring randomized wind conditions and optional differentiable simulation. The policy performance is quantitatively evaluated and compared against standard Model Predictive Control (MPC) and baseline RL methods (such as PPO). Finally, the neural controller and reference MPC are deployed on a physical drone inside a Motion Capture (MoCap) laboratory setup to evaluate trajectory tracking errors, reaction times to artificial wind gusts, flight stability, and adaptation convergence.
+
+- title: "Hardware Implementation of the Contrast Maximization Algorithm for an Event Camera for Rotation Estimation Using External Memory"
+  author: "Michał Filipkowski"
+  linkedin: https://www.linkedin.com/in/micha%C5%82-filipkowski-b9777a306/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Marcin Kowalczyk"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Event Camera, Contrast Maximization (CMAX), Rotation Estimation, SoC FPGA, External Memory (DDR), High-Definition (HD), Asynchronous Stream Processing"
+  abstract: >-
+    The goal of this thesis is to design, implement, and evaluate a hardware architecture on an SoC FPGA platform that realizes the Contrast Maximization (CMAX) algorithm for event-based cameras to estimate rotational motion parameters. To support high-definition (HD) event stream processing, the architecture incorporates external memory (DDR) management. The project begins with a literature review on rotational motion estimation, HD video pipeline architectures, and external memory controllers in reconfigurable systems, alongside a Python reference model for convergence and early-stopping analysis. A rotation model and double event-buffering mechanism are implemented and verified using a physical event camera. The target high-resolution architecture decouples event transformation from subsequent processing, employing spatial scene decomposition, dynamic task allocation across parallel processing units, and an efficient DDR controller. The complete system is deployed on an SoC FPGA and evaluated in terms of processing latency, hardware resource utilization, throughput, and motion estimation accuracy (Ground Truth error) across benchmark datasets and real-time physical tests.
+
+- title: "Implementation of an Integrated Voice Command Recognition System Using a Neuromorphic Auditory Sensor and Neural Networks for Stream Processing of Event-Based Data on an FPGA"
+  author: "Wiktor Matykiewicz"
+  linkedin: https://www.linkedin.com/in/wiktor-matykiewicz-52135a276/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Piotr Wzorek, Kamil Jeziorek"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Neuromorphic Auditory Sensor (NAS), Voice Command Recognition, State Space Models (SSM), FPGA, Event-Based Processing, Stream Processing, Noise Filtering, VHDL"
+  abstract: >-
+    The primary objective of this thesis is to design, optimize, and implement a real-time voice command recognition system on an FPGA using stream processing of event-based data generated by a Neuromorphic Auditory Sensor (NAS). The classification pipeline utilizes neural network architectures optimized for event data, specifically State Space Models (SSMs). The project focuses on improving system stability and acoustic noise filtering compared to prior GCNN-based implementations. The methodology includes a literature review on event-driven neural architectures and audio filtering techniques, sensor configuration and VHDL generation via OpenNAS, and audio sample conversion using okaertool. Software-based modeling, quantization, and hyperparameter tuning of the SSM architecture are conducted in PyTorch. The target hardware architecture is developed in VHDL/SystemVerilog, integrating the SSM compute modules with the enhanced NAS on an FPGA. Finally, the end-to-end system is evaluated on physical hardware for classification accuracy, stability, latency, logic resource utilization, and power consumption relative to state-of-the-art baselines, concluding with a real-world application demonstration.
+
+- title: "Hardware Acceleration of Convolutional Spiking Neural Networks on FPGA for Event-Based Camera Data Classification"
+  author: "Julia Wiktorowicz"
+  linkedin: https://www.linkedin.com/in/julia-wiktorowicz/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Piotr Wzorek, Marcin Kowalczyk"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Spiking Neural Networks (SNN), Convolutional Spiking Neural Network (CSNN), FPGA, Event Camera, Dynamic Vision Sensor (DVS), Hardware Acceleration, Spiker+, Quantization"
+  abstract: >-
+    The aim of this thesis is to develop, design, and hardware-implement a Convolutional Spiking Neural Network (CSNN) on an FPGA device for high-performance classification of asynchronous event-based sensor data originating from Dynamic Vision Sensors (DVS). The thesis encompasses a comprehensive literature review comparing spiking neuron models, convolutional layer hardware implementation strategies, computing platforms, and standard evaluation metrics. Functional requirements and hardware resource allocations are established, followed by the network and convolutional layer implementation utilizing the Spiker+ hardware generation library. The system's functional correctness is validated by comparing hardware-level classification results against a reference software model. Finally, post-synthesis verification and empirical testing are performed on a physical FPGA device using event camera data, evaluating classification accuracy, hardware resource utilization, latency, and the functional impact of quantization on real-time sensory data processing.
+
+- title: "Control System for a Walking Robot Based on Reinforcement Learning and State Space Models Implemented on an SoC FPGA Platform"
+  author: "Wojciech Czyżowski"
+  linkedin: https://www.linkedin.com/in/wojciech-czy%C5%BCowski-414070304/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BwfZYY%2FlOT2%2BpXIRPccWh9A%3D%3D
+  supervisor: "Mateusz Komorkiewicz"
+  cooperation: "Tomasz Kryjak, Hubert Szolc"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Walking Robot, State Space Models (SSM), Reinforcement Learning (RL), SoC FPGA, Hardware Acceleration, Quantization, Sim-to-Real"
+  abstract: >-
+    The objective of this thesis is the design, hardware implementation, and experimental evaluation of a real-time control system for a walking robot using State Space Model (SSM) neural networks trained via Reinforcement Learning (RL). The research starts with a literature review on mobile and legged robot control, RL methodologies, SSM architectures, and FPGA acceleration. A simulation environment is set up to train the RL controller, after which the policy model is optimized and quantized for embedded hardware execution. An inference hardware engine is developed and deployed on an SoC FPGA, integrating the trained SSM policy with the physical walking robot. Comprehensive comparative experiments assess control performance, execution latency, resource utilization, and sim-to-real gap constraints relative to standard recurrent neural networks (RNNs) and software implementations. An optional perception module integration for autonomous navigation and obstacle avoidance is also considered.
+
+- title: "Efficiency Analysis of Dynamic Function eXchange Technology in an Embedded Reconfigurable Vision System"
+  author: "Paweł Franczak"
+  linkedin: https://www.linkedin.com/in/franczak-pawel/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bhw6Y%2BfFWTwe0Zdj%2FMczB3g%3D%3D
+  supervisor: "Piotr Pawlik"
+  cooperation: "Tomasz Kryjak, Marcin Kowalczyk"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Dynamic Function eXchange (DFX), Partial Reconfiguration, FPGA, Embedded Vision, Resource Optimization, Reconfigurable Computing"
+  abstract: >-
+    The aim of this thesis is to design, implement, and analyze an embedded image processing system utilizing Dynamic Function eXchange (DFX) / partial dynamic reconfiguration technology to optimize FPGA resource utilization. Key vision algorithms are encapsulated into Reconfigurable Modules (RMs) that can be dynamically swapped at runtime within shared reconfigurable regions. Following a detailed review of DFX mechanisms, reconfiguration overhead, and reconfigurable architectures, both DFX-based and static (parallel module implementation) vision pipelines are constructed. A reconfiguration management system ensures seamless interaction between the static logic and active RMs. Experiments rigorously compare the static and DFX implementations across FPGA resource metrics (LUT, FF, BRAM, DSP), maximum operating frequency, throughput, processing latency, reconfiguration speed, and power consumption. The conditions under which DFX provides tangible efficiency benefits are established, with optional extensions toward automatic RM switching and deep learning/CNN accelerator integration.
+
+- title: "Design and Implementation of an Actor-Critic MPC Controller for an Autonomous Unmanned Aerial Vehicle on an Embedded Hardware Platform"
+  author: "Igor Siata"
+  linkedin: https://www.linkedin.com/in/igor-siata-7b2282359/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BgLhI%2B8ydSkehRTmmVoecvg%3D%3D
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak, Hubert Szolc"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Model Predictive Control (MPC), Actor-Critic, Unmanned Aerial Vehicle (UAV), SoC FPGA, NVIDIA Jetson, High-Level Synthesis (HLS), Hardware-Aware Design"
+  abstract: >-
+    This thesis focuses on the design and hardware-aware implementation of an Actor-Critic Model Predictive Control (AC-MPC) system for an autonomous Unmanned Aerial Vehicle (UAV) on embedded heterogeneous computing platforms. In this hybrid control architecture, a trained neural network (the actor) dynamically predicts the weight parameters of the MPC cost function. The AC-MPC algorithm is first reproduced, modified, and validated in simulation against standard MPC and baseline Reinforcement Learning agents. Next, the controller is implemented on an NVIDIA Jetson platform and validated using Hardware-in-the-Loop (HiL) simulations and physical indoor flight tests supported by a Motion Capture system. In the final phase, High-Level Synthesis (HLS) tools are utilized to deploy the solution onto an SoC FPGA, partitioning the neural actor into Programmable Logic (PL) and the MPC optimizer into the Processing System (PS). Performance, tracking accuracy, latency, and resource efficiency are directly evaluated and compared across both hardware platforms.
+
+- title: "Keypoint Detection and Description in the Spatio-Temporal Event Cloud"
+  author: "Jan Mardyła"
+  linkedin: https://www.linkedin.com/in/jan-mardyla/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B7xJ3NHWATpW695ppEtfGgA%3D%3D
+  supervisor: "Piotr Pawlik"
+  cooperation: "Tomasz Kryjak, Piotr Wzorek, Marcin Kowalczyk"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Event Camera, Keypoint Detection, Feature Description, Spatio-Temporal Point Cloud, Graph Neural Networks (GNN), Self-Supervised Learning, Asynchronous Processing"
+  abstract: >-
+    The goal of this thesis is to design, implement, and evaluate a keypoint detection and description pipeline operating directly on asynchronous event camera data streams modeled as sparse spatio-temporal point clouds (x, y, t) without intermediate image accumulation. The descriptor is designed as a Graph Neural Network (GNN) operating on local spatio-temporal neighborhoods and trained in a self-supervised manner on point pairs. Geometric dimensionality, event density, and learned detection criteria operating directly on the event cloud are evaluated and benchmarked. The integrated detector-descriptor pipeline is optimized for continuous real-time execution on incoming event streams. Performance evaluation measures matching accuracy, processing throughput, and latency against baseline methods and reference Motion Capture ground-truth data.
+
+- title: "Event Camera and IMU Data Fusion for the Detection of Independently Moving Objects"
+  author: "Paweł Jerzyna"
+  linkedin: https://www.linkedin.com/in/pawel-jerzyna/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BgLhI%2B8ydSkehRTmmVoecvg%3D%3D
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak, Piotr Wzorek, Marcin Kowalczyk"
+  year: "2026/2027"
+  type: MSc
+  group: MSc
+  keywords: "Event Camera, Inertial Measurement Unit (IMU), Sensor Fusion, Independently Moving Objects (IMO), Ego-Motion Compensation, EVIMO2, Embedded ARM, Real-Time Processing"
+  abstract: >-
+    This thesis presents the design, implementation, and experimental evaluation of a modular data fusion algorithm combining event cameras (neuromorphic sensors) and an Inertial Measurement Unit (IMU) for detecting and segmenting Independently Moving Objects (IMO). The pipeline architecture ensures strict modular separation among event data acquisition/synchronization, ego-motion compensation, and spatial object clustering. A mathematical sensor fusion model incorporates gyroscopic rotation compensation and translation effects relative to scene depth. Validation is conducted on benchmark sequences from the EVIMO2 dataset under varying sensor motion dynamics. To assess real-time capabilities and computational determinism, the processing pipeline is deployed and benchmarked on an embedded multi-core ARM platform (Raspberry Pi 5 / NVIDIA Jetson), profiling event throughput, CPU utilization, and RAM usage.
+
+- title: "Multi-Object Tracking Using Event-Based Cameras"
+  author: "Mikołaj Kołek"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Marcin Kowalczyk"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "Multi-Object Tracking (MOT), Event Camera, Tracking-by-Detection, Event Representation, Feature Fusion, DSEC-MOT, HOTA"
+  abstract: >-
+    This thesis investigates multi-object tracking (MOT) using event-based cameras, focusing on how different event stream representations impact detection quality and tracking continuity. Using the DSEC-MOT dataset, event streams are transformed into representations such as Event Frames, Voxel Grids, and EROS. A tracking-by-detection framework is implemented, extending single-representation detection models to multi-representation fusion with dynamic gating mechanisms, appearance feature embeddings, and temporal memory modules (recurrent networks). Detection association is evaluated using IoU matching, motion models, and appearance features. Comprehensive experiments across general object classes and vehicle-specific subsets evaluate performance using standard MOT metrics including HOTA, DetA, AssA, MOTA, and IDF1, with computational scaling facilitated by ACK Cyfronet infrastructure.
+
+- title: "Autonomous Control of a Patrol and Payload-Delivery UAV Using Behavior Trees"
+  author: "Michał Kępka"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc, Mateusz Wąsala"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "Unmanned Aerial Vehicle (UAV), Behavior Trees, ROS 2, PX4, Visual Target Detection, Payload Delivery, Autonomous Landing, Gazebo"
+  abstract: >-
+    The objective of this thesis is to design and implement an autonomous multirotor UAV control system based on the PX4/ROS 2 stack, designed for GPS waypoint patrol, visual target detection (ArUco/AprilTag), payload delivery, and autonomous landing. Mission logic is orchestrated using Behavior Trees (BT.CPP) executing offboard flight actions (takeoff, waypoint flight, delivery, landing) alongside a high-level system monitor that triggers safe contingency procedures upon detecting anomalies. The complete pipeline—comprising flight action servers, visual perception nodes, geodetic-to-local coordinate transformation, and behavior tree execution—is constructed and validated in Gazebo SITL simulation. Finally, the system is deployed onto a physical UAV equipped with a downward-facing camera and a mechanical payload release mechanism to evaluate real-world performance, execution accuracy, and sim-to-real gap.
+
+- title: "Autonomous Landing of an Unmanned Aerial Vehicle on a Mobile Ground Platform"
+  author: "Hubert Gąska"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc, Mateusz Wąsala"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "Autonomous Landing, Mobile Ground Platform, Unmanned Aerial Vehicle (UAV), ROS 2, PX4, Computer Vision, State Estimation, Web Dashboard"
+  abstract: >-
+    This thesis presents the development and implementation of a perception and control system enabling a multirotor UAV to autonomously detect, track, and land on a moving ground vehicle. Operating on PX4 and ROS 2, the system utilizes a downward-facing camera, LiDAR, and ultrasonic sensors to perform real-time target detection, state estimation, and offboard precision control. A web-based operator dashboard provides two-way telemetry, camera streaming, map visualization, and manual landing override commands. The full processing pipeline and high-level control algorithms are tuned and validated in Gazebo simulation before physical deployment. Real-world experiments evaluate the system's ability to track and land on a ground platform moving at uniform linear velocity, providing qualitative and quantitative performance assessments.
+
+- title: "Design and Implementation of a Handheld 3D Scanner Based on Data Fusion from a LiDAR Sensor and a Stereovision Camera"
+  author: "Kamil Jędrzejko"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "3D Scanner, Sensor Fusion, LiDAR, Stereovision Camera, ROS 2, SLAM, NVIDIA Jetson Orin AGX, Spatial Mapping"
+  abstract: >-
+    The goal of this thesis is to build a mobile 3D spatial mapping scanner on an NVIDIA Jetson Orin AGX embedded computing platform. The system performs real-time sensor fusion combining Livox MID-360 LiDAR and ZED 2i RGB-D stereovision camera data within ROS 2. The project includes CAD mechanical design and 3D printing of a modular handheld enclosure, power management selection, static TF spatial calibration, and real-time SLAM and odometry integration. Field-captured data undergo post-processing to generate high-resolution 3D point cloud maps. The resulting modular software and hardware architecture serves as an extensible field testing platform for advanced vision algorithms, with optional extensions exploring event camera integration.
+
+- title: "Design and Implementation of a Perception and Control System for a Racing Drone Using a Fusion of Visual-Inertial Odometry and Visual Drift Correction"
+  author: "Krzysztof Jagiełło"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc, Mateusz Wąsala"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "Autonomous Racing Drone, Visual-Inertial Odometry (VIO), Drift Correction, ROS 2, PX4, Gate Detection, State Estimation"
+  abstract: >-
+    This thesis details the design, implementation, and experimental validation of a perception and control system for an autonomous racing drone operating in GPS-denied environments without external motion capture support. The state estimation pipeline fuses onboard Visual-Inertial Odometry (VIO) with a visual drift correction mechanism based on detecting race gates with known spatial geometries. Developed using ROS 2, Gazebo simulation, and open-source autopilots (PX4/Ardupilot), the system achieves fast, repeatable autonomous flight through a predefined racing track. Following simulation benchmarking, the integrated perception and flight control architecture is deployed on a physical drone to verify real-world agility, estimation drift reduction, and flight stability.
+
+- title: "Implementation and Comparative Performance Analysis of Language Models Based on Autoregression, Discrete Diffusion, and State Space Models"
+  author: "Maciej Lorenc"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Kamil Jeziorek"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "Language Models, Autoregressive Models, Discrete Diffusion, State Space Models (SSM), Mamba, Inference Latency, Natural Language Processing (NLP)"
+  abstract: >-
+    This thesis provides a comparative analysis of language models representing three distinct sequence generation paradigms: causal autoregressive Transformers, selective State Space Models (Mamba), and discrete diffusion models. A unified evaluation framework is implemented with standardized parameter counts, tokenizers, and training budgets. The models are evaluated on text quality (Perplexity and automatic NLP metrics) and inference computational efficiency (generation throughput, time-to-first-token, VRAM footprint scaling with context length, and latency). The study evaluates the impact of diffusion denoising steps versus autoregressive KV-caching/recurrent states on local resource-constrained hardware versus server infrastructure, highlighting deployment trade-offs for discrete diffusion in natural language processing.
+
+- title: "Design and Construction of a Testbed for Dart Trajectory Tracking and Target Positioning Using Event Cameras"
+  author: "Jakub Delimata"
+  supervisor: "Piotr Pawlik"
+  cooperation: "Tomasz Kryjak, Marcin Kowalczyk"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "Event Camera (DVS), Trajectory Tracking, Target Positioning, Trajectory Prediction, Kalman Filter, Cartesian Robot, Real-Time Processing"
+  abstract: >-
+    This thesis presents the design, construction, and integration of a two-axis Cartesian X-Y robotic testbed with a moving target, alongside a dual Event Camera (DVS) vision system for real-time dart trajectory tracking. The mechanical frame, motor drives, power supply, and an STM32 microcontroller firmware are developed for axis homing and high-speed target positioning. The dual DVS pipeline performs camera calibration, event noise filtering, moving dart detection, and Kalman filter-based 3D trajectory prediction to calculate the impact point on the target plane. Integration between the vision pipeline and motor controller is validated through physical dart throw experiments, evaluating landing accuracy, response latency, and dynamic target positioning efficiency.
+
+- title: "Neuromorphic UAV Flight Stabilization Controller Implemented on FPGA"
+  author: "Agnieszka Kulik"
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak, Hubert Szolc"
+  year: "2026/2027"
+  type: BSc
+  group: Bachelor
+  keywords: "Neuromorphic Controller, Spike-Based PID, Spiking Neural Network (SNN), FPGA, UAV Flight Stabilization, Leaky Integrate-and-Fire (LIF), VHDL"
+  abstract: >-
+    The aim of this thesis is to design, implement, and evaluate a hardware-native neuromorphic PID controller (spike-based PID) for UAV attitude stabilization using Leaky Integrate-and-Fire (LIF) spiking neuron models in VHDL/Verilog on an FPGA platform. Sensory encoding and control signal generation schemes (such as Pulse Frequency Modulation - PFM and PWM) are designed and evaluated alongside a reference classical digital PID controller implemented on the same FPGA logic. Simulation testbenches using synthetic reference signals representative of UAV flight dynamics compare both controllers in terms of reference tracking accuracy, FPGA logic resource utilization (LUTs, FFs, DSPs), estimated power consumption, and control loop latency. Optional hardware testbed extensions with an IMU and single-actuator setups are also outlined.
+
+- title: "System of underwater navigation based on sonar odometry using neural networks"
+  author: "Marcin Janis"
+  linkedin: https://www.linkedin.com/in/marcin-janis-316150270/
+  supervisor: "Piotr Pawlik"
+  cooperation: "Tomasz Kryjak, Mateusz Wąsala"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "Sonar odometry, Sonar, Acustic data processing, Forward-Looking Sonar, Underwater navigation, Deep Neural Network, Vision Transformer, Sonar data simulation"
+  abstract: >-
+    The subject of this thesis was to develop an odometry system for underwater vehicles, based on FLS (Forward-Looking Sonar) data and deep neural networks. As part of the research, an analysis of the physics of acoustic imaging was conducted, and a literature review in the considered field was performed. A synthetic dataset was created using the StoneFish simulation environment. Two odometry systems based on distinct approaches were developed and investigated: the adaptation of the DPVO architecture and the use of the LoFTR (Vision Transformer) model. It was observed that the DPVO architecture encounters optimization difficulties, resulting, among other factors, from the loss of information regarding the acoustic beam elevation. In contrast, the system based on the LoFTR model demonstrated high effectiveness when working with sonar data. Based on the LoFTR model, a complete odometry system was designed, utilizing image filtration, motion estimation accounting for depth changes, and trajectory stabilization using a temporal window mechanism and keyframes. In tests on simulated data, for a trajectory length of 168 m, a translation error of 1.44% and a rotation error of 0.046°/m were achieved, which translated to a final position drift of 1.76 m. At an image resolution of 776×424 pixels, the system processed data at a frequency of 2.2 Hz. The evaluation conducted on the real-world Aracati2017 dataset confirmed the algorithm's robustness to speckle noise and its ability to estimate displacement, while simultaneously highlighting challenges related to orientation estimation, as well as high sensitivity to static artifacts and the ambiguity of geometric mapping in sonar images. The proposed system surpassed the related SONIC model-based solution in displacement estimation accuracy, although it yielded weaker results in determining orientation. Following the integration of the system with reference orientation data from a magnetometer, the odometry effectiveness reached a level comparable to leading models (DISO, ISOPoT), which utilized additional velocity sensors (DVL). The thesis concludes with final remarks and an indication of potential directions for future development.
+
+- title: "Perception and control system for an autonomous vehicle model based on machine learning algorithms"
+  author: "Szymon Tokarz"
+  linkedin: https://www.linkedin.com/in/szymon-tokarz-01a03b29a/
+  supervisor: "Piotr Pawlik"
+  cooperation: "Tomasz Kryjak, Mateusz Wąsala"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "autonomous vehicle, reinforcement learning, PPO, YOLO, object detection,"
+  abstract: >-
+    This thesis presents the design and implementation of a perception and control system for an autonomous vehicle model intended for operation in laboratory conditions. The developed solution integrates a hardware platform based on a Raspberry Pi computer and an ESP8266 microcontroller with a vision system, a control module, reinforcement learning algorithms, and a web application. The perception system uses an RGB camera and a YOLO-based object detection model. A custom dataset was prepared, image augmentation techniques were applied, and hyperparameter optimization was performed using the Optuna framework. The trained model achieved approximately 0.993 mAP50 and 0.842 mAP50:95. A Google Coral accelerator was used to improve inference performance on the target platform. Autonomous control was developed using the Proximal Policy Optimization algorithm. The training process was carried out in a Gazebo simulation environment integrated with ROS 2. Environment randomization and sensory data disturbances were introduced during training in order to reduce the sim-to-real gap. The trained policy was subsequently verified on the physical vehicle platform. Functional tests confirmed the correct operation of the individual modules and demonstrated that they could be integrated into a complete autonomous system. The vision subsystem showed high operational stability, while the vehicle successfully completed approximately 90% of the prepared obstacle-avoidance routes. The main limitations observed during testing were related to the physical drivetrain and the differences between the simulated and real-world platforms.
+
+- title: "State estimation of a mobile robot using event data"
+  author: "Roman Nowak"
+  linkedin: https://www.linkedin.com/in/roman-nowak-b379a2357/
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak, Mateusz Wąsala"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "vision system, ROS 2, Gazebo, Raspberry Pi, sim-to-real"
+  abstract: >-
+    Event cameras register local brightness changes with high temporal resolution and a wide dynamic range, making them particularly useful during rapid motion and under challenging illumination. This thesis presents a simultaneous localization and mapping (SLAM) system that estimates a trajectory from a stereo pair of event cameras. Events are synchronized and aggregated into exponentially decaying image representations. Points detected with GFTT (Good Features to Track) are tracked using the Lucas-Kanade method, and their depth is recovered through stereo triangulation. The resulting 3D-2D correspondences are used for PnP (Perspective-n-Point) estimation with RANSAC (Random Sample Consensus). The system uses gyroscope measurements to compensate for the smearing of structures caused by rotational motion and to determine orientation changes. To reduce drift, the pose is estimated relative to a sparse map constructed from keyframes, while place recognition enables loop closure and pose graph optimization. The system was evaluated on data from the EvSLAM and M3ED datasets, with resolutions of 640 x 480 and 1280 x 720 pixels, respectively. Across seven EvSLAM sequences, the system obtained a total ATE of 3.654 m and a total AUC of 4.996, compared with 0.817 m and 6.286 for the winning entry. For the M3ED sequences with available ground truth, the results varied depending on the sequence characteristics: the ATE values for the two evaluated sequences were 0.162 m and 25.305 m, respectively.
+
+- title: "Swarm control of unmanned aerial vehicles using reinforcement learning"
+  author: "Michał Szmuksta"
+  linkedin: https://www.linkedin.com/in/micha%C5%82-szmuksta-040953309/
+  supervisor: "Piotr Pawlik"
+  cooperation: "Tomasz Kryjak, Hubert Szolc"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "reinforcement learning, unmanned aerial vehicle swarm, collision avoidance, onboard perception, multi-agent learning, sim-to-real transfer"
+  abstract: >-
+    Drone swarms are finding an increasing number of applications, yet controlling them in environments with obstacles remains difficult, especially when decisions are made on board, based on limited information about the surroundings. This thesis extends a reinforcement learning method for swarm control that assumed exact knowledge of obstacle positions and training on a regular grid. Both simplifications were removed by replacing the idealised observation with a model of four range finders, available as a standard module for the Crazyflie platform, and by introducing diverse obstacle arrangements, including layouts resembling building interiors. Simulation studies showed that limited perception and a change in environment structure mainly reduce the safety of a controller trained under simplified conditions. The success rate alone does not fully reveal this, while suitable training conditions make the controller more robust to these changes. The controller, adapted to the capabilities of the onboard microcontroller, was then run on a real drone. After compensating for two effects not captured in simulation, it maintained a stable hover and avoided the obstacle in most flights under its control. The thesis also discusses the limitations of the adopted approach and directions for further research.
+
+- title: "Using an event camera to analyse the operation of drone propellers"
+  author: "Adam Jędrzejczyk"
+  supervisor: "Piotr Pawlik"
+  cooperation: "Tomasz Kryjak, Marcin Kowalczyk"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "event camera, drone, propellers, rotational speed, RPM, motion compensation, maneuver classification"
+  abstract: >-
+    This thesis concerns the use of an event camera to analyse the operation of drone propellers. The main objective was to propose, implement and evaluate an algorithm for localising rotors in an event stream and estimating their rotational speed. The work exploits the properties of event cameras, such as high temporal resolution, low latency and the ability to register local brightness changes, which make these sensors particularly suitable for analysing fast-moving objects. As part of the work, an experimental setup was prepared using EVK1 and EVK4 HD event cameras, together with a reference measurement obtained from an optical tachometer. The developed algorithm included event filtering, localisation of regions corresponding to individual propellers, tracking of their position, event motion compensation and selection of the rotational speed that maximised an objective function based on event accumulation in a histogram. Several objective function variants were tested, together with additional extensions of the method, including centroid position correction and a simplified elliptical model intended for cases where the propeller is observed at an angle. The experimental results showed that the EVK4 HD camera allows significantly more accurate RPM estimation than the older EVK1 model. For the EVK4 HD camera, RMAE values of approximately 0.56-1.04% were obtained, depending on the measurement height and the objective function used. The experiments also demonstrated the significant influence of lighting conditions, contrast and event polarity on propeller localisation and estimation stability. In addition, the estimated RPM signals were used to classify basic manoeuvres of a DJI Ryze Tello drone. The SVM classifier achieved an accuracy of 90.87%, although this result should be interpreted with regard to the limited amount of data and class imbalance. The conducted experiments confirm that event cameras can be an effective tool for analysing drone propeller operation, although the correctness of the method strongly depends on the quality of event data and recording conditions.
+
+- title: "Autonomous control of a micro-drone swarm within a MoCap system's feedback loop"
+  author: "Remigiusz Mietła"
+  linkedin: https://www.linkedin.com/in/remigiusz-mietla/
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak, Mateusz Wąsala, Hubert Szolc"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "motion capture, nano-drone, Crazyflie, distributed processing, multi-camera triangulation, time synchronization, closed-loop control, ROS 2"
+  abstract: >-
+    Nano-drones (Micro Aerial Vehicles, MAVs) such as the Crazyflie are used as research platforms for autonomous flight and swarm control. Their limited payload capacity and operation in indoor environments, where GNSS is unavailable, require an external source of position information. For closed-loop control, such a system must provide a high measurement rate, sufficient accuracy, and low and predictable latency. This thesis presents a distributed motion-capture (MoCap) system designed to provide real-time position feedback for Crazyflie nano-drones. The system uses four global-shutter cameras with infrared illumination, while each drone carries a single passive infrared-reflective marker. Image processing is performed locally on Jetson Nano units, which transmit only the coordinates of detected markers to a Jetson AGX master instead of complete images. Measurement synchronization is achieved using hardware camera triggering, frame counters, and IEEE 1588 Precision Time Protocol (PTP). The master reconstructs 3D positions using Linear Optimal Sine Triangulation (LOST) and filters the measurements with an Extended Kalman Filter. The system operates at rates of up to 220 Hz and achieves sub-millimetre static positional accuracy. It was also validated in a closed-loop control experiment, where the position feedback enabled a Crazyflie to perform an autonomous reference manoeuvre. An additional experiment demonstrated simultaneous tracking of three Crazyflies. The obtained results confirm that the proposed system can provide accurate and sufficiently fast position feedback for experiments involving autonomous control of multi-drone swarms.
+
+- title: "Perception and control system of a self-guided drone"
+  author: "Patryk Kamiński"
+  linkedin: https://www.linkedin.com/in/patryk-kami%C5%84ski-91b664300/
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "detection-segmentation neural network, perception, UAV"
+  abstract: >-
+    The importance of unmanned aerial vehicles (UAVs) has grown significantly in recent years, driven by technological advances and the widespread use of civilian UAVs. Machine learning and developments related to deep and convolutional neural networks are highly significant for this field, as they allow for a significant expansion of the autonomy of mobile robots. The use of perception methods based on these solutions enables the analysis of a UAV’s environment and the precise navigation of such a vehicle without relying on positioning methods that require additional infrastructure. This paper presents the implementation of a system capable of detecting a selected target, estimating the drone’s position relative to it, and planning and executing a flight path for the UAV to reach that target. An appropriate training dataset was prepared for the YOLO26n-seg model used for instance segmentation. A control script was created using Python to generate flight trajectories and control signals for the drone. To achieve this, the script also performs RGB image processing to position the drone relative to the selected target and fuses data from the camera and the onboard IMU (Inertial Measurement Unit). The planned functionality has been achieved without the use of additional sensors, which allows the system to operate independently in conditions where it is not possible to obtain data on the UAV’s position from sources such as satellite navigation. The system’s operation was evaluated as part of a SITL (Software-in-the-Loop) simulation; however, its functionality has not been tested in a real-world environment.
+
+- title: "Signal decoder for space laser communication implemented in an FPGA system"
+  author: "Mateusz Maź"
+  linkedin: https://www.linkedin.com/in/mateusz-ma%C5%BA-95386027a/
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "laser communication, FSO, PPM, FPGA, decoder, Reed-Solomon, synchronization, LEO satellite"
+  abstract: >-
+    The aim of the thesis was to design, implement and verify a ground-station decoder for a satellite optical downlink in a field-programmable gate array (FPGA). The decoder was developed for the PUCHACZ student CubeSat mission of the AGH SatLab student research group. The satellite will transmit data using a pulsed 1550 nm laser with 1024-ary pulse-position modulation (PPM). The signal is received by a 0.4 m telescope with a PIN photodiode, and the stream of samples from the analog-to-digital converters is to be processed in real time by the developed decoder. The processing chain includes data acquisition from the converters over high-speed differential links with a clock-domain crossing, a correlation filter implemented without multiplications, pulse detection, slot-clock synchronization with a Doppler-shift tracking loop, 1024-PPM demodulation, a Reed-Solomon (RS) decoder over the Galois field GF(2^10) with error correction (one RS(221,205) codeword per frame) and a serial peripheral interface (SPI) output with telemetry. Every stage of the chain was verified in simulation, bit-exactly against golden models written in Python, and the complete receiver, from emulated samples to the data output, was also tested as a whole. Bitstreams covering the complete receiver were generated for the ZCU104 target platform with the Zynq UltraScale+ XCZU7EV device. The operation of the decoding chain was confirmed by measurements on the ZCU104 board, with the stimulus provided by an internal playback generator. A transmission over a real 1550 nm optical path was decoded off-line from a recorded signal waveform, using simulation. Real-time reception with the converter card remains future work.
+
+- title: "Acceleration of Deep Vision Neural Networks on AI Engines"
+  author: "Stanisław Olech"
+  linkedin: https://www.linkedin.com/in/solech2002/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Kamil Jeziorek"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "AI Engines, AMD Versal, neural network acceleration, PointNetConv, graph neural networks, point clouds, FPGA, heterogeneous systems"
+  abstract: >-
+    This thesis addresses the acceleration of neural networks processing irregular data, such as point clouds, on the heterogeneous AMD Versal device. The PointNetConv layer from the ointNet family was selected and an accelerator for it was designed on the VEK280 board. The programmable logic builds edge features and performs scatter-max aggregation, while the AI Engine-ML core array executes the dense linear transformations in int16. Single-path and nine-path variants (8 and 72 cores) were implemented, and optimisations reduced their latency on the CORA citation graph (2,708 nodes, 13,264 edges) from about 18 ms to 718.66 and 389.96 𝜇s, respectively. Compared with CPU, CUDA and TensorRT implementations on an NVIDIA Jetson Orin NX module, the nine-path variant achieves 32.7% lower latency than the best GPU implementation, with comparable energy efficiency. The AIE kernels alone are clearly faster than the GPU, but this advantage is limited by data transfer and the programmable logic, and integrating the whole system proved to be the main challenge.
+
+- title: "Drone swarm coordination system in urban environment with guaranteed communication continuity"
+  author: "Mateusz Gołąbek"
+  linkedin: https://www.linkedin.com/in/matgolabek/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc, Mateusz Wąsala"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "multi-agent systems, UAV swarm, Artificial Potential Fields (APF), connectivity maintenance, heuristic algorithms, ROS 2, urban exploration"
+  abstract: >-
+    The subject of this master’s thesis focuses on the autonomous coordination of an Unmanned Aerial Vehicle (UAV) swarm in a complex urban environment. The primary objective of the research was to develop and evaluate a system that ensures continuous communication within a multi-agent network (strictly adhering to Line-of-Sight and maximum range requirements) while simultaneously maximizing the exploration area to locate strategic targets. This work is based on an in-depth comparative analysis of two distinct control paradigms designed for the international ICUAS UAV Competition in 2025 and 2026. The first, classical approach from 2025 was based on deterministic graph algorithms and offline trajectory planning using a simplified 2D occupancy grid. The second, innovative solution from 2026 utilized a heuristic Artificial Potential Fields (APF) method integrated with dynamic role optimization and continuous, three-dimensional Line-of- Sight verification using k-dimensional trees and OctoMaps. Simulation experiments conducted in ROS 2 and Gazebo environments unequivocally demonstrate the superiority of reactive methods over classical static planning. The graph-based algorithms from 2025, while guaranteeing stable connectivity, proved to be too rigid and computationally burdensome in a dynamic environment, drastically limiting the swarm’s exploration capabilities (4th place in the competition in both stages - simulation and hardware). Conversely, the implementation of heuristic methods in 2026 allowed for decentralized, instantaneous adaptation of agents to changing topological conditions and battery levels. This approach resulted in flawless mission execution, outperforming competing solutions (1st place in the competition). The obtained results confirm the thesis that in highly constrained multi-agent missions, heuristic reactive planning provides a significantly more efficient and scalable alternative to deterministic algorithms.
+
+- title: "Correlation filter-based object tracking realised on a SoC FPGA with acceleration in AI Engines processors"
+  author: "Karolina Piotrowska"
+  linkedin: https://www.linkedin.com/in/karolina-piotrowska-/
+  supervisor: "Tomasz Kryjak"
+  year: "2025/2026"
+  type: MSc
+  group: Alumni
+  keywords: "visual object tracking, correlation filter, MOSSE, convolutional features, AMD Versal, AI Engines, SoC FPGA, embedded systems, fixed-point arithmetic, quantization"
+  abstract: >-
+    This thesis presents the design, implementation and evaluation of an embedded visual object tracking system realised on the heterogeneous AMD Versal platform. The algorithm combines the MOSSE correlation filter with a convolutional feature representation obtained from the first layer of the ResNet-18 network, reduced to 32 channels by principal component analysis and quantized to eight bits. The processing is distributed across three types of on-chip resources: the programmable logic extracts and preprocesses the region of interest, the AI Engines vector processor array executes the convolution, the two-dimensional Fourier transforms and the spectral multiplication with accumulation across feature channels, and the application processor handles peak search in the response map, filter model update, scale estimation and orchestration. The completed system processes 38.7 frames per second at an energy cost of 12.2 mJ per frame. Evaluated on the VOT-STb2022 dataset under the multi-start protocol, it scored an accuracy of A = 0.5129, a robustness of R = 0.4279 and an expected average overlap of EAO = 0.1960. Its accuracy falls within the band of the classical correlation filters and its robustness stays below them at a fraction of the programmable-logic resources used by the closest published embedded implementation.
+
+- title: "Unmanned aerial vehicle control through EEG-based brain-computer interface"
+  author: "Jakub Welc"
+  supervisor: "Piotr Pawlik"
+  cooperation: "Anna Broniec-Wójcik"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "brain-computer interface, BCI, unmanned aerial vehicle, UAV, drone, electroencephalography, EEG, steady state visually evoked potential, SSVEP, Sliding DFT, CCA"
+  abstract: >-
+    The thesis presents the design of a brain–computer interface (BCI) for controlling an unmanned aerial vehicle. Brain signal acquisition was performed using an EEG amplifier and steady-state visually evoked potentials were employed as the control paradigm. The proposed BCI system enables drone control along three axes: up/down, forward/backward, and yaw rotation. A visual interface comprising six flickering stimuli with different frequencies was developed, and the optimal electrode placement was determined. Signal decoding was performed using band-pass filtering and the Sliding DFT algorithm, while classification was based on power spectrum thresholding. The accuracy, precision, and information transfer rate were evaluated and compared for systems considering one and two signal harmonics, as well as against canonical correlation analysis (CCA). The highest performance metrics were achieved for power spectrum thresholding with a single harmonic, yielding an accuracy of 79.81%, a precision of 81.81%, and an information transfer rate of 29 bits/min. Additionally, the designed system incorporates safeguards to mitigate the effects of EMG interference.
+
+- title: "Mobile robot control using a recurrent neural network accelerated in an FPGA device and trained by reinforcement learning"
+  author: "Wojciech Czyżowski"
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak, Hubert Szolc"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "reinforcement learning, recurrent neural networks, mobile robotics, quantization, SoC FPGA, Isaac Lab, Vitis AI, hls4ml"
+  abstract: >-
+    The thesis aimed to design a control system for a bipedal robot using Reinforcement Learning and Recurrent Neural Networks on an FPGA. The training of decision policies in Isaac Lab demonstrated the superiority of LSTM and GRU architectures over MLP. Implementation on the Kria KV260 platform involved quantization, which indicated a requirement for higher precision for recurrent networks. The MLP network was successfully verified in Hardware-in-the-Loop tests, achieving low latency variance. The obtained results demonstrated the feasibility of using FPGAs for real-time control, as well as inference performance comparable to GPU accelerators with lower energy consumption.
+
+- title: "FPGA implementation of an algorithm for detecting gates used in autonomous drone races"
+  author: "Mateusz Tomasiak"
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak, Hubert Szolc"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "FPGA, Kria KV260, autonomous drone racing, Convolutional Neural Networks, Quantization-Aware Training, AMD FINN, Brevitas, quantization, Vivado, Unmanned Aerial Vehicles, segmentation, gate detection, embedded AI"
+  abstract: >-
+    The primary objective of the project was to implement a gate segmentation algorithm for autonomous drone racing on an FPGA, focusing on minimizing processing latency and reducing power consumption. A custom convolutional neural network was designed and trained using Quantization-Aware Training (QAT) with the Brevitas library. The AMD FINN tool was used to synthesize and implement the hardware accelerator, generating a dedicated streaming architecture for the target Kria KV260 platform. The design was verified in the Vivado simulation environment. The results confirmed that the system is capable of processing 160x160 pixel RGB images with a throughput of 485 frames per second, achieving a segmentation accuracy (IoU) of 73%. The estimated total system power consumption is 4.3 W. The achieved parameters confirm that the use of FPGA technology for CNN implementation with deep quantization constitutes an effective alternative to GPU solutions in resource-constrained real-time systems.
+
+- title: "Design and implementation of an echo state network for time-series processing"
+  author: "Rafał Jodłowski"
+  supervisor: "Zbigniew Bubliński"
+  cooperation: "Tomasz Kryjak"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "Echo State Networks, Reservoir Computing, Unmanned Aerial Vehicle, UAV, benchmark evaluation, quantization, time-series"
+  abstract: >-
+    Echo State Networks (ESNs) offer a lightweight, efficient, and scalable approach to Reservoir Computing, making them well suited for time-series processing tasks. This thesis presents the design, implementation, and evaluation of the ESN as a representative model of Reservoir Computing, with a focus on its structure, initialization methods, and quantization strategies for possible long-term time series Unmanned Aerial Vehicle (UAV) trajectory prediction. The work begins with a review of the existing literature on the ESN architecture and its fundamental components, including the description of the reservoir layer, readout mechanism and key hyperparameters. Additionally, relevant developments in the field of Reservoir Computing are considered, and the importance of long-term series prediction approach is identified. A custom ESN implementation is developed and evaluated using the most common, standard benchmark datasets, including Mackey-Glass, NARMA10 and Sunspot time-series prediction tasks. Both power-of-two quantized and non-quantized configurations are considered and their respective performance in compared. The impact of reservoir size and numerical precision on model performance is analyzed to assess the sustainability of quantized ESNs for resource-constrained applications. The network is further extended to accommodate for a more complex scenario involving long-term UAV position estimation based on sparsely placed waypoints and quantized simulation data. Evaluation of the ESN's ability to perform ling-term predictions in a real-world application is conducted. The thesis concludes with a summary of the ESN's performance across both synthetic benchmarks and application in a real-world inspired prediction task, such as UAV's path prediction, and discusses the potential of future hardware-oriented application.
+
+- title: "Adaptation of the neuromorphic accelerator SYNtzulu for event-based data processing on a SoC FPGA platform for real-time classification applications"
+  author: "Kacper Pelczarski"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Kamil Jeziorek"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "spiking neural networks, SNN, event-based cameras, DVS, SYNtzulu accelerator, SoC FPGA, low-power embedded systems, event-based image classification, real-time inference"
+  abstract: >-
+    The growing demand for low-energy computing systems is driving the development of neuromorphic models, such as Spiking Neural Networks (SNNs), and their implementation on embedded hardware platforms, including the SYNtzulu architecture. These solutions enable low-cost and energy-efficient data processing directly near the sensors. This trend encompasses not only computational units but also modern sensing technologies, particularly event-based cameras, which, due to the independent operation of each pixel, exhibit high robustness to challenging lighting conditions. Furthermore, their sparse, asynchronous outputs, represented as sequences of events, are naturally compatible with SNN models, facilitating the creation of neuromorphic vision processing systems with very low power consumption. In the present work, a complete event-data classification system is proposed, employing spiking neural networks implemented on an SoC FPGA based on the SYNtzulu architecture. Originally, the SYNtzulu design was intended for time-series analysis, such as iECG, EEG, and sEMG signals. Here, its applicability is extended to the processing of data acquired from event-based cameras. The SNN models were trained using the SLAYER framework on the N-MNIST and CIFAR10-DVS datasets and subsequently deployed on the hardware implementation of SYNtzulu on a Xilinx Zynq UltraScale+ MPSoC platform available on the Kria KV260 development module. The analysis covers both the implementation of baseline fully connected networks, natively supported by SYNtzulu, as well as architectural extensions incorporating pooling layers. The proposed solution allows the processing of input images of arbitrary resolution while exploiting the sparsity of asynchronous event-based data. The configurable number of parallel neuromorphic processors enables adaptation of resource utilization and latency to application requirements. The hardware implementation consumes only approximately 10% of the available programmable logic, achieving inference times as low as 14 microseconds while maintaining classification accuracy comparable to the state-of-the-art.
+
+- title: "Estimating Position and Velocity from Monocular Event Cameras using Visual Odometry"
+  author: "Julia Czekańska"
+  linkedin: https://www.linkedin.com/in/julia-czekanska/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "visual odometry, pose estimation, velocity estimation, robotics, event camera"
+  abstract: >-
+    Event-based cameras offer high temporal resolution, low latency, and large dynamic range, making them attractive for motion estimation in robotics and autonomous navigation. This project develops, implements, and evaluates a monocular event-only visual odometry system that estimates metric 3D position and linear velocity from asynchronous event streams. Two complementary pipelines were compared: DEVO, a learning-based approach that regresses relative camera motion from spatio-temporal voxel grids using a deep neural network; and EVO, a geometric tracker-and-mapper. The evaluation pipeline includes sensor undistortion, event accumulation into temporally-binned representations, Sim(3) trajectory alignment to metric ground-truth, and velocity computation via finite differences. Experiments on publicly available event datasets use Absolute Trajectory Error (ATE) and velocity RMSE to quantify performance and investigate the impact of the event-accumulation window. Results show that DEVO consistently produces substantially lower ATE and velocity RMSE compared to EVO, which exhibits larger errors and failure on longer or more challenging sequences. A parameter study reveals a trade-off between temporal resolution and noise resilience in window sizing. The thesis concludes with a discussion of limitations and directions for future work, including deployment on hardware and inertial fusion for scale robustness.
+
+- title: "Enhancing Autonomous Vehicle Pose Estimation with Deep Learning for Vision-Based Odometry"
+  author: "Anastasiia Vudvud"
+  linkedin: https://www.linkedin.com/in/anastasiia-vudvud/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "visual odometry, autonomous vehicle, deep learning, pose estimation, maritime robotics"
+  abstract: >-
+    This thesis investigates the enhancement of vision-based odometry for Autonomous Surface Vehicles (ASVs) by integrating deep learning methodologies. The primary objective was to evaluate and compare the performance of a classical computer vision algorithm -- ORB (Oriented FAST and Rotated BRIEF) against a deep learning-based framework, SuperPoint, for trajectory estimation. The study utilized three distinct datasets: the standard KITTI benchmark for automotive scenarios, a synthetic maritime dataset generated via Gazebo simulation, and real-world experimental data collected by the ''Barka'' Autonomous Surface Vehicle. The experiments consisted of a two-step comparison: first, between the baseline methods, and second, by fine-tuning the SuperPoint network on domain-specific maritime images, in order to evaluate the influence of fine-tuning the model on the pose estimation of specific datasets. Results on the KITTI benchmark showed that the deep learning approach clearly outperformed the classical one. In maritime scenes, the pretrained SuperPoint model revealed better local tracking stability compared to ORB. However, fine-tuning the model for marine environments revealed a trade-off. While the model effectively learned to filter out unstable water keypoints in favor of static shoreline features, the reduced distinctiveness of the descriptors ultimately led to higher trajectory errors than the pretrained baseline.
+
+- title: "Implementation of an End-to-End Application for Audio Signal Recognition Using a Neuromorphic Auditory Sensor (NAS) and GCNN Network on FPGA"
+  author: "Wiktor Matykiewicz"
+  linkedin: https://www.linkedin.com/in/wiktor-matykiewicz-52135a276/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Piotr Wzorek, Kamil Jeziorek"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "neuromorphic computing, FPGA, SoC, graph convolutional neural networks, neuromorphic auditory sensor, speech recognition, keyword spotting, event-based processing, Edge AI, silicon cochlea"
+  abstract: >-
+    Neuromorphic signal processing is gaining significance as an energy-efficient alternative to classical data analysis methods in embedded systems. This project involves the implementation and evaluation of a complete end-to-end system for real-time Keyword Spotting (KWS) on an FPGA platform. The designed architecture integrates a digital model of the silicon cochlea (Neuromorphic Auditory Sensor, NAS) with a Graph Convolutional Neural Network (GCNN). The sensory component, generated using the OpenNAS tool, converts acoustic signals into an asynchronous stream of events, which is subsequently analyzed by a neural network operating on dynamic graph structures. The research process encompassed the preparation of an event-based dataset derived from the Google Speech Commands V2 corpus, model training and quantization in PyTorch, and hardware implementation on a ZCU104 SoC device using VHDL and SystemVerilog. Conducted tests confirmed the system's capability to classify voice commands in continuous mode while maintaining power consumption of 2.91 W, 10.7 μs of latency and resource utilization suitable for implementation on mid-range FPGAs. The obtained results indicate the high potential of event-based architectures in Edge AI applications.
+
+- title: "Implementation of a contrast maximization algorithm on an FPGA for an event-based camera image"
+  author: "Michał Filipkowski"
+  linkedin: https://www.linkedin.com/in/micha%C5%82-filipkowski-b9777a306/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Marcin Kowalczyk"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "FPGA, contrast maximization, event-based camera, object tracking, neuromorphic vision"
+  abstract: >-
+    This work presents a hardware architecture that implements the Contrast Maximization (CM) algorithm in Field-Programmable Gate Array (FPGA) resources for event-based vision systems. CM estimates motion parameters by maximizing the contrast of an Image of Warped Events (IWE) reconstructed from asynchronous event streams. Event-based vision sensors generate sparse data with high temporal resolution and low spatial redundancy, which makes them well suited for hardware processing. The deterministic, massively parallel structure of the FPGA is leveraged to design a deeply pipelined architecture capable of high-throughput, energy-efficient processing suitable for real-time embedded applications. This work details the hardware modules responsible for event warping, contrast computation, and iterative optimization, discusses key implementation decisions, and presents the hardware-aware optimization method used in the design. Experimental results demonstrate a substantial speed and efficiency improvement over CPU- and GPU-based implementations, with motion parameter estimation executing over 200 times faster. To the best of current knowledge, this is the first hardware architecture enabling acceleration of CM algorithm computations. Its performance is evaluated in terms of processing speed, energy efficiency, and hardware resource utilization. The proposed design is validated using an event-based object tracking application. The results confirm that the architecture provides a solid foundation for real-time motion estimation in high-speed, low-power embedded systems.
+
+- title: "Integration of Curriculum Learning methods in reinforcement learning for bipedal walker"
+  author: "Paweł Kocur"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc"
+  year: "2025/2026"
+  type: BSc
+  group: Alumni
+  keywords: "Reinforcement learning, Curriculum Learning, machine learning, artificial intelligence, bipedal walker, Isaac Lab, Isaac Sim."
+  abstract: >-
+    The aim of the work was to analyze and verify Curriculum Learning methods in reinforcement learning applications for bipedal robots. Automatic task selection algorithms - aimed at generalizing the agent's skills in diverse environments - were preliminarily evaluated in a simplified 2D simulation environment. The selected method, ALP-GMM, was then used to train locomotion and obstacle avoidance by a digital twin of the robot in a high-fidelity physical environment. The final stage was the verification of the control system architecture in Hardware-in-the-Loop mode. The work demonstrated the effectiveness of automatic curriculum generation, while also pointing out the performance limitations of this method in complex task spaces.
+
+- title: "Implementation of visual odometry using a neural network and an FPGA device"
+  author: "Mateusz Smolarczyk"
+  linkedin: https://www.linkedin.com/in/mateusz-smolarczyk-aaa56a368/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "Utilisation of spiking neural networks with TTFS coding to event data processing"
+  author: "Michał Michniak"
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Kamil Jeziorek"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "Bipedal robot with a reconfigurable controller"
+  author: "Błażej Szargut"
+  linkedin: https://www.linkedin.com/in/blaise-szargut/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "Perception and control system of an autonomous boat"
+  author: "Olivier Lichota"
+  linkedin: https://www.linkedin.com/in/olivier-lichota/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Mateusz Wąsala, Hubert Szolc"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "Predictive drone control using PINN models"
+  author: "Marcin Kosiba"
+  linkedin: https://www.linkedin.com/in/marcin-kosiba-5284371a8/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "Swarm control of unmanned aerial vehicles using reinforcement learning"
+  author: "Michał Szmuksta"
+  linkedin: https://www.linkedin.com/in/micha%C5%82-szmuksta-040953309/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "Controlling an autonomous drone using the MPC algorithm - from simulation to reality"
+  author: "Sebastian Bucior"
+  linkedin: https://www.linkedin.com/in/sebastian-bucior/
+  supervisor: "Tomasz Kryjak"
+  cooperation: "Hubert Szolc"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "An energy-efficient multitask neural network for a driver monitoring system"
+  author: "Konrad Pawlik"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: MSc
+  group: Alumni
+
+- title: "Locating and counting objects using data fusion from unmanned aerial vehicle sensors"
+  author: "Remigiusz Mietła"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: BSc
+  group: Alumni
+
+- title: "Perception and control system for a transport drone"
+  author: "Tymoteusz Domagała"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: BSc
+  group: Alumni
+
+- title: "Obstacle detection with an event camera"
+  author: "Roman Nowak"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: BSc
+  group: Alumni
+
+- title: "Integration of an embedded computing platform with the flight controller of the unmanned aerial vehicle"
+  author: "Patryk Kamiński"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: BSc
+  group: Alumni
+
+- title: "Object tracking utilizing fusion of vision and thermal imaging implemented in an SoC FPGA using the Vitis AI tool"
+  author: "Mateusz Gołąbek"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: BSc
+  group: Alumni
+
+- title: "Guiding an autonomous unmanned aerial vehicle towards a target"
+  author: "Karolina Piotrowska"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: BSc
+  group: Alumni
+
+- title: "Evaluation of spiking neural networks using the Neurobench tool"
+  author: "Mateusz Patora"
+  supervisor: "Tomasz Kryjak"
+  year: "2024/2025"
+  type: BSc
+  group: Alumni
+
+- title: "Detekcja obiektów z wykorzystaniem kamery zdarzeniowej oraz impulsowych sieci neuronowych"
+  author: "Mateusz Kowalski"
+  year: "2023/2024"
+  type: MSc
+  group: Alumni
+
+- title: "Navigation of an autonomous vehicle model based on visual data"
+  author: "Marcin Woszczek"
+  year: "2023/2024"
+  type: MSc
+  group: Alumni
+
+- title: "The use of convolutional graph neural networks in SLAM methods"
+  author: "Jakub Kopańko"
+  supervisor: "Tomasz Kryjak"
+  year: "2023/2024"
+  type: BSc
+  group: Alumni
+
+- title: "Feasibility Study of Open-Source RISC-V Soft Cores for Mission-Critical Space Systems Applications"
+  author: "Filip Tomczyk"
+  supervisor: "Tomasz Kryjak"
+  year: "2023/2024"
+  type: BSc
+  group: Alumni
+
+- title: "Realisation of drone trajectories using the MPC algorithm"
+  author: "Sebastian Bucior"
+  supervisor: "Tomasz Kryjak"
+  year: "2023/2024"
+  type: BSc
+  group: Alumni
+
+- title: "Drone formation flight control algorithms"
+  author: "Michał Szmuksta"
+  supervisor: "Tomasz Kryjak"
+  year: "2023/2024"
+  type: BSc
+  group: Alumni
+
+- title: "The use of visual feedback in a drone landing algorithm"
+  author: "Jan Brodowicz"
+  supervisor: "Tomasz Kryjak"
+  year: "2023/2024"
+  type: BSc
+  group: Alumni
+
+- title: "A simultaneous data acquisition system from an event and video camera"
+  author: "Wojciech Pełka"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "Graph Neural Networks in event data processing"
+  author: "Jakub Prokop"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "Design and construction of a robot on omni-wheels, made using 3D printing technology with thermoplastic polyurethane"
+  author: "Kamil Ptak"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "An autonomous vehicle on mecanum wheels with SoC FPGA as the computing platform"
+  author: "Maciej Baczmański"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "An embedded perception and control system for autonomous vehicles based on convolutional segmentation and detection network"
+  author: "Robert Synoczek"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "Memory-Efficient Graph Convolutional Networks for Object Classification and Detection with Event Cameras"
+  author: "Kamil Jeziorek"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "Drone path planning and control algorithms in a known environment"
+  author: "Michał Niedbała"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "Hardware implementation of real-time disparity map calculation using event cameras"
+  author: "Mariusz Grabowski"
+  year: "2022/2023"
+  type: MSc
+  group: Alumni
+
+- title: "Acceleration of garbage detection algorithm with Xilinx Alveo U50 card"
+  author: "Dominik Czyżyk"
+  supervisor: "Tomasz Kryjak"
+  year: "2022/2023"
+  type: BSc
+  group: Alumni
+
+- title: "Pedestrian detection using event cameras"
+  author: "Mateusz Kowalski"
+  supervisor: "Tomasz Kryjak"
+  year: "2022/2023"
+  type: BSc
+  group: Alumni
+
+- title: "Object tracking using classical methods and deep neural networks"
+  author: "Krzysztof Kandefer"
+  supervisor: "Tomasz Kryjak"
+  year: "2022/2023"
+  type: BSc
+  group: Alumni
+
+- title: "A drone that recognizes people from facial images"
+  author: "Adam Piórkowski"
+  supervisor: "Tomasz Kryjak"
+  year: "2022/2023"
+  type: BSc
+  group: Alumni
+
+- title: "Static obstacle avoidance for a drone using an event camera"
+  author: "Miłosz Zeman"
+  supervisor: "Tomasz Kryjak"
+  year: "2022/2023"
+  type: BSc
+  group: Alumni
+
+- title: "Vehicle tracking in an urban environment using an autonomous drone"
+  author: "Igor Kordzi"
+  supervisor: "Tomasz Kryjak"
+  year: "2022/2023"
+  type: BSc
+  group: Alumni
+
+- title: "Driver fatigue analysis using an event camera"
+  author: "Karol Musiał"
+  supervisor: "Tomasz Kryjak"
+  year: "2022/2023"
+  type: BSc
+  group: Alumni
+
+- title: "Traffic light detection and recognition using video and event data"
+  author: "Kamil Wrześniak"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "Implementation of a 3D surround view system using images from multiple cameras on a hardware platform"
+  author: "Dawid Skoczny"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "A low-latency test platform using signal processing acceleration in an FPGA"
+  author: "Tomasz Molęda"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "Vision-based drone navigation in GPS-denied environments"
+  author: "Paweł Miera"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "Traffic sign classification with event-based data and Spiking Convolutional Neural Networks"
+  author: "Jacek Lichwa"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "Object classification using deep and quantum neural networks"
+  author: "Sylwia Kuros"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "Autonomous vehicle control using visual information and a detection-segmentation convolutional neural network"
+  author: "Michał Knap"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "Autonomous drone racing control based on visual information"
+  author: "Artur Cyba"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "High-speed item counting on a conveyor belt using an event camera"
+  author: "Kamil Bialik"
+  year: "2021/2022"
+  type: MSc
+  group: Alumni
+
+- title: "Object detection, recognition and tracking on a football pitch using a vision system"
+  author: "Karol Talaga"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Embedded system for object segmentation and detection implemented on the Zynq SoC platform"
+  author: "Robert Synoczek"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Time optimization of a racing drone flight over a closed track using reinforcement learning."
+  author: "Krzysztof Słomski"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Image classification with graph neural networks"
+  author: "Jakub Prokop"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Traffic signs detection and recognition using an event camera"
+  author: "Wojciech Pełka"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Road segmentation and detection of selected horizontal signs using a vision sensor and the NVIDIA Jetson eGPU platform"
+  author: "Balbina Molerus"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Traffic sign detection and recognition using event camera image reconstruction"
+  author: "Kamil Jeziorek"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Hardware implementation of rectification and disparity map computation with the SGM method for a 4K video stream"
+  author: "Mariusz Grabowski"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "Object detection using vision and depth sensors and the NVIDIA Jetson eGPU platform"
+  author: "Maciej Baczmański"
+  supervisor: "Tomasz Kryjak"
+  year: "2021/2022"
+  type: BSc
+  group: Alumni
+
+- title: "ATLAS Local Trigger Interface - firmware development, verification and testing"
+  author: "Anna Kulińska"
+  year: "2020/2021"
+  type: MSc
+  group: Alumni
+
+- title: "Hardware-in-the-loop simulation for unmanned aerial vehicles applications verification"
+  author: "Maciej Talar"
+  year: "2020/2021"
+  type: MSc
+  group: Alumni
+
+- title: "Object detection using an event camera"
+  author: "Jakub Woźniak"
+  year: "2020/2021"
+  type: MSc
+  group: Alumni
+
+- title: "Automatyczna rejestracja przebiegu gry w brydża sportowego"
+  author: "Piotr Wzorek"
+  year: "2020/2021"
+  type: MSc
+  group: Alumni
+
+- title: "Detekcja obiektów z wykorzystaniem głębokich sieci neuronowych zrealizowana na wbudowanej platformie obliczeniowej"
+  author: "Michał Machura"
+  year: "2020/2021"
+  type: MSc
+  group: Alumni
+
+- title: "3D reconstruction with an event camera"
+  author: "Konrad Wajda"
+  year: "2020/2021"
+  type: MSc
+  group: Alumni
+
+- title: "Segmentacja jezdni z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
+  author: "Michał Knap"
+  supervisor: "Tomasz Kryjak"
+  year: "2020/2021"
+  type: BSc
+  group: Alumni
+
+- title: "Detekcja i rozpoznawanie sygnalizacji świetlnej z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
+  author: "Kamil Wrześniak"
+  supervisor: "Tomasz Kryjak"
+  year: "2020/2021"
+  type: BSc
+  group: Alumni
+
+- title: "Projekt i wykonanie rezonansowej ładowarki do dronów autonomicznych"
+  author: "Kamil Bialik"
+  supervisor: "Tomasz Kryjak"
+  year: "2020/2021"
+  type: BSc
+  group: Alumni
+
+- title: "System generowania widoku 3D na podstawie obrazu z wielu kamer"
+  author: "Dawid Skoczny"
+  supervisor: "Tomasz Kryjak"
+  year: "2020/2021"
+  type: BSc
+  group: Alumni
+
+- title: "Detekcja i rozpoznawanie znaków drogowych z wykorzystaniem głębokiej konwolucyjnej sieci neuronowej oraz platformy obliczeniowej Nvidia Jetson"
+  author: "Damian Cholewa"
+  supervisor: "Tomasz Kryjak"
+  year: "2020/2021"
+  type: BSc
+  group: Alumni
+
+- title: "Sterowanie dronem na podstawie pozycjonowania wizyjnego opartego o znaczniki ArUco"
+  author: "Artur Cyba"
+  supervisor: "Tomasz Kryjak"
+  year: "2020/2021"
+  type: BSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do detekcji pieszych na obrazach RGB-T"
+  author: "Artur Cabaj"
+  supervisor: "Tomasz Kryjak"
+  year: "2020/2021"
+  type: BSc
+  group: Alumni
+
+- title: "Śledzenie wielu obiektów z wykorzystaniem sieci R-CNN"
+  author: "Michał Daniłowicz"
+  year: "2019/2020"
+  type: MSc
+  group: Alumni
+
+- title: "Śledzenie obiektów z wykorzystaniem syjamskich sieci neuronowych"
+  author: "Daniel Gacek"
+  year: "2019/2020"
+  type: MSc
+  group: Alumni
+
+- title: "Klasyfikacja obiektów z wykorzystaniem głębokich i impulsowych sieci neuronowych"
+  author: "Aleksander Orlikowski"
+  year: "2019/2020"
+  type: MSc
+  group: Alumni
+
+- title: "Akceleracja sprzętowa głębokich sieci neuronowych do detekcji obiektów na podstawie danych z LiDAR z wykorzystaniem układów reprogramowalnych"
+  author: "Joanna Stanisz"
+  year: "2019/2020"
+  type: MSc
+  group: Alumni
+
+- title: "Akceleracja sprzętowa głębokich sieci neuronowych do detekcji obiektów na podstawie danych z LiDAR z wykorzystaniem układów reprogramowalnych"
+  author: "Konrad Lis"
+  year: "2019/2020"
+  type: MSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system wizyjny wspomagający autonomiczne lądowanie drona."
+  author: "Jakub Kłosiński"
+  supervisor: "Tomasz Kryjak"
+  year: "2019/2020"
+  type: BSc
+  group: Alumni
+
+- title: "The use of the advanced image processing in the analysis of gaze patterns related to the psychological profile of the observer"
+  author: "Karolina Stępień"
+  supervisor: "Tomasz Kryjak"
+  year: "2019/2020"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system wizyjny do wyznaczania miejsc bezpiecznego lądowania dla bezzałogowych pojazdów latających wykorzystujący kamerę 4K"
+  author: "Patryk Frączek"
+  year: "2018/2019"
+  type: MSc
+  group: Alumni
+
+- title: "Sprzętowo-programowa implementacja modułu SFM dla strumienia wideo o rozdzielczości 4K"
+  author: "Karol Radwan"
+  year: "2018/2019"
+  type: MSc
+  group: Alumni
+
+- title: "Ewaluacja i integracja algorytmów wizyjnych stosowanych w pojazdach autonomicznych z użyciem symulatora jazdy samochodem"
+  author: "Jarosław Borzęcki"
+  year: "2018/2019"
+  type: MSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system wizyjny do inspekcji terenu z wykorzystaniem bezzałogowego pojazdu latającego oraz kamer: termowizyjnej lub rozdzielczości 4K"
+  author: "Hubert Szolc"
+  year: "2018/2019"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa wieloskalowej detekcji obiektów z wykorzystaniem algorytmu HOG+SVM dla strumienia wideo o rozdzielczości 4K"
+  author: "Mateusz Wąsala"
+  year: "2018/2019"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa wieloskalowych metod obliczania przepływu optycznego dla strumienia wideo o rozdzielczości 4K"
+  author: "Krzysztof Błachut"
+  year: "2018/2019"
+  type: MSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system do wykrywania przeszkód przez drona"
+  author: "Szymon Kamuda"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Detekcja obiektów z wykorzystaniem sieci neuronowych o zredukowanej precyzji obliczeń"
+  author: "Piotr Kaczmarski"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system do śledzenia obiektów wykorzystujący ruchomą kamerę"
+  author: "Michał Daniłowicz"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system detekcji obiektów na podstawie fuzji danych z czujnika LIDAR oraz kamery"
+  author: "Konrad Lis"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system detekcji obiektów na podstawie danych z czujnika LIDAR"
+  author: "Joanna Stanisz"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system wizyjny do detekcji jezdni"
+  author: "Grzegorz Mierzwa"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa algorytmów wyznaczania map dysparycji dla strumienia wizyjnego 4K"
+  author: "Dominika Grabowska"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system do identyfikacji osób na podstawie obrazu twarzy zrealizowany na platformie Zynq SoC"
+  author: "Bartłomiej Styczeń"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu z ograniczeniem kontrastu (CLAHE) dla strumienia wizyjnego 4K w układzie FPGA"
+  author: "Aleksander Orlikowski"
+  supervisor: "Tomasz Kryjak"
+  year: "2018/2019"
+  type: BSc
+  group: Alumni
+
+- title: "Śledzenie obiektów z wykorzystaniem heterogenicznej platformy obliczeniowej Zynq UltraScale+ i ruchomej kamery o rozdzielczości 4K zamontowanej na pojeździe autonomicznym"
+  author: "Marcin Kowalczyk"
+  year: "2017/2018"
+  type: MSc
+  group: Alumni
+
+- title: "Akceleracja sprzętowa głębokich konwolucyjnych sieci neuronowych dla potrzeb sytemu detekcji obiektów"
+  author: "Dominika Przewłocka"
+  year: "2017/2018"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa modułu indeksacji dla strumienia wizyjnego UHD."
+  author: "Piotr Ciarach"
+  year: "2017/2018"
+  type: MSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system wizyjny do detekcji obiektów z wykorzystaniem termowizji."
+  author: "Tomasz Kańka"
+  year: "2017/2018"
+  type: MSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system do lokalizacji i rozpoznawania tablic rejestracyjnych"
+  author: "Gabriel Korbiel"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system wizyjny do inspekcji terenu z wykorzystaniem bezzałogowego pojazdu latającego"
+  author: "Celina Grabowska"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Wykorzystanie częsciowej dynamicznej rekonfiguracji w systemach wizyjnych czasu rzeczywistego"
+  author: "Andrzej Pustelnik"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa algorytmu wyznaczania map dysparycji Semi-Global Matching"
+  author: "Szymon Kozłowski"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa wieloskalowej wersji algorytmu obliczania przepływu optycznego Lucasa-Kanade"
+  author: "Krzysztof Błachut"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo - programowa implementacja modułu SFM dla potrzeb nawigacji bezzałogowych pojazdów latających"
+  author: "Karol Radwan"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Sprzętowo-programowa implementacja systemu wizyjnego do wyznaczania miejsc bezpiecznego lądowania dla bezzałogowych pojazdów latających"
+  author: "Patryk Frączek"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa wieloskalowej detekcji obiektów z wykorzystaniem algorytmu HOG+SVM"
+  author: "Mateusz Wąsala"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Wykorzystanie heterogenicznej platformy obliczeniowej jako podstawowej jednostki sterującej dla bezzałogowego pojazdu latającego"
+  author: "Hubert Szolc"
+  supervisor: "Tomasz Kryjak"
+  year: "2017/2018"
+  type: BSc
+  group: Alumni
+
+- title: "Analiza możliwości wykorzystania narzędzia Vivado HLS w implementacji sprzętowej wbudowanych systemów wizyjnych."
+  author: "Mateusz Woźniak"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Sprzętowo-programowy system do zdalnej opieki nad pacjentem lub osobą samotną."
+  author: "Piotr Konopka"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do rozpoznawania kształtu i koloru naczyń"
+  author: "Piotr Brożyna"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do śledzenia obiektów dla potrzeb nawigacji bezzałogowego statku powietrznego (UAV)"
+  author: "Miłosz Mach"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Metody jednoczesnej lokalizacji i tworzenia mapy dla potrzeb nawigacji pojazdów autonomicznych"
+  author: "Michał Fornalgiel"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu z ograniczeniem kontrastu (CLAHE) w układzie FPGA"
+  author: "Krzystof Grzyb"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Biblioteka modułów sprzętowych do segmentacji obiektów pierwszoplanowych."
+  author: "Piotr Janus"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Wykorzystanie algorytmów stratnej i bezstratnej kompresji danych w implementacji sprzętowej metod modelowania tła."
+  author: "Kamil Piszczek"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Przyspieszanie analizy sekwencji wideo z wykorzystaniem detekcji obiektów"
+  author: "Modesta Wis"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Wykorzystanie systemu operacyjnego Linux we wbudowanych systemach wizyjnych zrealizowanych na platformie Zynq."
+  author: "Wojciech Gumuła"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Metody re-identyfikacji osób w systemach monitoringu wizyjnego"
+  author: "Rafał Płonka"
+  year: "2016/2017"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa metod normalizacji perspektywy oraz klasyfikatorów dla potrzeb wizyjnego systemu szacowania liczby ludzi w danej lokalizacji."
+  author: "Wiktor Wąsowicz"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa oraz optymalizacja algorytmu indeksacji jednoprzebiegowej."
+  author: "Piotr Ciarach"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "System wizyjny sledzący obiekty wykorzystujący ruchomą kamerę zrealizowany w oparciu o heterogeniczny układ Zynq."
+  author: "Marcin Kowalczyk"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Inspekcja terenu z wykorzystaniem bezzałogowego statku powietrznego wyposażonego we wbudowany system wizyjny."
+  author: "Maciej Talar"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do re-identyfikacji osób z wykorzystaniem cech czasowo-przestrzennych."
+  author: "Konrad Adamczyk"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do detekcji i rozpoznawania osób na podstawie obrazu twarzy."
+  author: "Karolina Szmyd"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do re-identyfikacji osób z wykorzystaniem cech opisujących wygląd"
+  author: "Kamil Dobrzyński"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa wybranych modułów obliczania cech dla potrzeb wizyjnego systemu szacowania liczby ludzi w danej lokalizacji"
+  author: "Jakub Tańcula"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Śledzenie obiektów z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
+  author: "Dominika Przewłocka"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do detekcji oznakowania poziomego rozdzielającego pasy ruchu."
+  author: "Damian Paciuch"
+  supervisor: "Tomasz Kryjak"
+  year: "2016/2017"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja algorytmu detekcji twarzy na platformie rekonfigurowalnej FPGA"
+  author: "Konrad Tomasik"
+  year: "2015/2016"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja algorytmu śledzenia obiektów w heterogenicznym układzie Zynq"
+  author: "Tomasz Meresiński"
+  year: "2015/2016"
+  type: MSc
+  group: Alumni
+
+- title: "Abandoned luggage detection using FPGA integrated circuit"
+  author: "Artur Skirzyński"
+  year: "2015/2016"
+  type: MSc
+  group: Alumni
+
+- title: "Estymacja wieku i płci osoby na podstawie informacji wizyjnej z wykorzystaniem konwolucyjnych sieci neuronowych"
+  author: "Bartłomiej Hebda"
+  year: "2015/2016"
+  type: MSc
+  group: Alumni
+
+- title: "Wizyjny system kontroli zapięcia pasów bezpieczenstwa"
+  author: "Mirosław Małek"
+  year: "2015/2016"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja sprzętowa modułu detekcji twarzy algorytmem HOG+SVM na potrzeby wbudowanego systemu wizyjnego do monitorowania stanu kierowcy"
+  author: "Michał Drożdż"
+  year: "2015/2016"
+  type: MSc
+  group: Alumni
+
+- title: "Analiza wybranych dystrybucji systemu Linux dla układu Zynq"
+  author: "Tomasz Jonak"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Detekcja porzuconych przedmiotów zrealizowana w układzie Zynq"
+  author: "Michał Maciejewski"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja algorytmu Flux Tensor with Split Gaussian models (FTSG) w układzie reprogramowalnym"
+  author: "Piotr Janus"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja algorytmu Gaussian Mixture Models (GMM) w układzie reprogramowalnym"
+  author: "Kamil Piszczek"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Monitorowanie zachowań tłumu na podstawie informacji wizyjnej"
+  author: "Krzysztof Kardaś"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do detekcji sylwetek ludzkich z wykorzystaniem podejścia HOG i SVM"
+  author: "Dominik Kotarba"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Wbudowany system wizyjny do śledzenia obiektów dla potrzeb nawigacji robota autonomicznego"
+  author: "Krzysztof Mazur"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Wizyjne rozpoznawanie marki i modelu pojazdu"
+  author: "Marcin Juraszek"
+  supervisor: "Tomasz Kryjak"
+  year: "2015/2016"
+  type: BSc
+  group: Alumni
+
+- title: "Inteligentna kamera do rozpoznawania osób na podstawie obrazu twarzy zrealizowana na platformie heterogenicznej Zynq"
+  author: "Mateusz Bryła"
+  year: "2014/2015"
+  type: MSc
+  group: Alumni
+
+- title: "Wykorzystanie logiki rozmytej w algorytmach generacji i inicjalizacji modelu tła"
+  author: "Jakub Gola"
+  year: "2014/2015"
+  type: MSc
+  group: Alumni
+
+- title: "Wykorzystanie logiki rozmytej w algorytmach generacji i inicjalizacji modelu tła"
+  author: "Zbigniew Tekiela"
+  year: "2014/2015"
+  type: MSc
+  group: Alumni
+
+- title: "Klasyfikacja pojazdów z wykorzystaniem informacji wizyjnej"
+  author: "Paweł Tryba"
+  year: "2014/2015"
+  type: MSc
+  group: Alumni
+
+- title: "Zliczanie osób z wykorzystaniem informacji 3D"
+  author: "Jakub Kośmider"
+  year: "2014/2015"
+  type: MSc
+  group: Alumni
+
+- title: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu w układzie FPGA"
+  author: "Tomasz Krok"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Detakcja wałęsania z wykorzystaniem informacji wizyjnej"
+  author: "Rafał Płonka"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Metody re-identyfikacji osób wykorzystywane w monitoringu wizyjnym"
+  author: "Mirosław Małek"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Detekcja aktów sabotażu kamery"
+  author: "Krzysztof Grzyb"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Detekcja i eliminacja niekorzystnych warunków meteorologicznych w systemach monitoringu wizyjnego"
+  author: "Jacek Antos"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Estymacja wieku i płci osoby na podstawie informacji wizyjnej"
+  author: "Bartłomiej Hebda"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Ewaluacja algorytmów stosowanych w monitoringu wizyjnym na sekwencjach zarejestrowanych w warunkach nocnych"
+  author: "Mateusz Bryła"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja detekcji narożników w układzie rekonfigurowalnym"
+  author: "Michał Drożdż"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Segmentacja obiektów pierwszoplanowych w warunkach obecności drobnego ruchu na scenie"
+  author: "Agata Drobniak"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "System lokalizacji tablic rejestracyjnych"
+  author: "Paweł Brańka"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Wykorzystanie informacji o ruchu w detekcji pieszych"
+  author: "Krzysztof Porzycki"
+  supervisor: "Tomasz Kryjak"
+  year: "2014/2015"
+  type: BSc
+  group: Alumni
+
+- title: "Akceleracja wielowariantowych metod generacji tła i segmentacji obiektów z wykorzystaniem technologii OpenCL"
+  author: "Bartłomiej Bułat"
+  year: "2013/2014"
+  type: MSc
+  group: Alumni
+
+- title: "Analiza i porówanie kosztów dopasowania stosowanych w algorytmach sterowizyjnych"
+  author: "Jakub Kośmider"
+  supervisor: "Tomasz Kryjak"
+  year: "2013/2014"
+  type: BSc
+  group: Alumni
+
+- title: "Implementacja rozpoznawania znaków i tekstów na platformie mobilnej"
+  author: "Jacek Walter"
+  supervisor: "Tomasz Kryjak"
+  year: "2013/2014"
+  type: BSc
+  group: Alumni

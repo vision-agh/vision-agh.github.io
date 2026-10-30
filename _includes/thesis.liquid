@@ -53,6 +53,24 @@
           {{- thesis.year -}}
         </em>
       </div>
+      {% if thesis.cooperation %}
+        <div class="periodical">
+          <em>
+            Co-supervision:
+            {% assign cooperators = thesis.cooperation | split: ', ' %}
+            {% for cooperator in cooperators %}
+              {% assign cooperator_last = cooperator | split: ' ' | last | remove_accents %}
+              {% assign cooperator_url = site.data.coauthors[cooperator_last] | map: 'url' | first %}
+              {%- if cooperator_url -%}
+                <a href="{{ cooperator_url | relative_url }}">{{ cooperator }}</a>
+              {%- else -%}
+                {{- cooperator -}}
+              {%- endif -%}
+              {%- unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </em>
+        </div>
+      {% endif %}
 
       <div class="links">
         {% if thesis.abstract %}
