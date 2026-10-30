@@ -72,9 +72,6 @@
             {%- if thesis.defense_date -%}
               {%- if thesis.year %} · {% endif -%}
               Defended: {{ thesis.defense_date | date: '%-d %B %Y' }}
-            {%- elsif thesis.group != 'Alumni' -%}
-              {%- if thesis.year %} · {% endif -%}
-              In progress
             {%- endif -%}
           </em>
         </div>
@@ -99,6 +96,9 @@
       {% endif %}
 
       <div class="links">
+        {% if thesis.group != 'Alumni' and thesis.defense_date == null %}
+          <span class="thesis-status ongoing"><i class="fa-solid fa-hourglass-half"></i> Ongoing</span>
+        {% endif %}
         {% if thesis.abstract %}
           <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
         {% endif %}

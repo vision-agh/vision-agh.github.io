@@ -1,5 +1,5 @@
 # Student theses listed on the Students page (/students/).
-# Fields: title, author, supervisor, year, type (BSc | MSc | PhD),
+# Fields: title (English), title_pl (original Polish title, optional, not displayed), author, supervisor, year, type (BSc | MSc | PhD),
 #         group (section on the page: MSc | Bachelor | Alumni),
 #         linkedin (author's LinkedIn handle or full profile URL, optional),
 #         supervisor_url (optional; group members are linked automatically),
@@ -609,7 +609,8 @@
   type: BSc
   group: Alumni
 
-- title: "Detekcja obiektów z wykorzystaniem kamery zdarzeniowej oraz impulsowych sieci neuronowych"
+- title: "Object detection using an event camera and spiking neural networks"
+  title_pl: "Detekcja obiektów z wykorzystaniem kamery zdarzeniowej oraz impulsowych sieci neuronowych"
   author: "Mateusz Kowalski"
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
@@ -910,14 +911,16 @@
   type: MSc
   group: Alumni
 
-- title: "Automatyczna rejestracja przebiegu gry w brydża sportowego"
+- title: "Automatic recording of the course of a duplicate bridge game"
+  title_pl: "Automatyczna rejestracja przebiegu gry w brydża sportowego"
   author: "Piotr Wzorek"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: MSc
   group: Alumni
 
-- title: "Detekcja obiektów z wykorzystaniem głębokich sieci neuronowych zrealizowana na wbudowanej platformie obliczeniowej"
+- title: "Object detection using deep neural networks implemented on an embedded computing platform"
+  title_pl: "Detekcja obiektów z wykorzystaniem głębokich sieci neuronowych zrealizowana na wbudowanej platformie obliczeniowej"
   author: "Michał Machura"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
@@ -931,91 +934,104 @@
   type: MSc
   group: Alumni
 
-- title: "Segmentacja jezdni z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
+- title: "Road segmentation using deep convolutional neural networks"
+  title_pl: "Segmentacja jezdni z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
   author: "Michał Knap"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: BSc
   group: Alumni
 
-- title: "Detekcja i rozpoznawanie sygnalizacji świetlnej z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
+- title: "Traffic light detection and recognition using deep convolutional neural networks"
+  title_pl: "Detekcja i rozpoznawanie sygnalizacji świetlnej z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
   author: "Kamil Wrześniak"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: BSc
   group: Alumni
 
-- title: "Projekt i wykonanie rezonansowej ładowarki do dronów autonomicznych"
+- title: "Design and construction of a resonant charger for autonomous drones"
+  title_pl: "Projekt i wykonanie rezonansowej ładowarki do dronów autonomicznych"
   author: "Kamil Bialik"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: BSc
   group: Alumni
 
-- title: "System generowania widoku 3D na podstawie obrazu z wielu kamer"
+- title: "3D view generation system based on images from multiple cameras"
+  title_pl: "System generowania widoku 3D na podstawie obrazu z wielu kamer"
   author: "Dawid Skoczny"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: BSc
   group: Alumni
 
-- title: "Detekcja i rozpoznawanie znaków drogowych z wykorzystaniem głębokiej konwolucyjnej sieci neuronowej oraz platformy obliczeniowej Nvidia Jetson"
+- title: "Traffic sign detection and recognition using a deep convolutional neural network and the Nvidia Jetson computing platform"
+  title_pl: "Detekcja i rozpoznawanie znaków drogowych z wykorzystaniem głębokiej konwolucyjnej sieci neuronowej oraz platformy obliczeniowej Nvidia Jetson"
   author: "Damian Cholewa"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: BSc
   group: Alumni
 
-- title: "Sterowanie dronem na podstawie pozycjonowania wizyjnego opartego o znaczniki ArUco"
+- title: "Drone control based on visual positioning using ArUco markers"
+  title_pl: "Sterowanie dronem na podstawie pozycjonowania wizyjnego opartego o znaczniki ArUco"
   author: "Artur Cyba"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: BSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do detekcji pieszych na obrazach RGB-T"
+- title: "Embedded vision system for pedestrian detection in RGB-T images"
+  title_pl: "Wbudowany system wizyjny do detekcji pieszych na obrazach RGB-T"
   author: "Artur Cabaj"
   supervisor: "Tomasz Kryjak"
   year: "2020/2021"
   type: BSc
   group: Alumni
 
-- title: "Śledzenie wielu obiektów z wykorzystaniem sieci R-CNN"
+- title: "Multi-object tracking using R-CNN networks"
+  title_pl: "Śledzenie wielu obiektów z wykorzystaniem sieci R-CNN"
   author: "Michał Daniłowicz"
   supervisor: "Tomasz Kryjak"
   year: "2019/2020"
   type: MSc
   group: Alumni
 
-- title: "Śledzenie obiektów z wykorzystaniem syjamskich sieci neuronowych"
+- title: "Object tracking using Siamese neural networks"
+  title_pl: "Śledzenie obiektów z wykorzystaniem syjamskich sieci neuronowych"
   author: "Daniel Gacek"
   supervisor: "Tomasz Kryjak"
   year: "2019/2020"
   type: MSc
   group: Alumni
 
-- title: "Klasyfikacja obiektów z wykorzystaniem głębokich i impulsowych sieci neuronowych"
+- title: "Object classification using deep and spiking neural networks"
+  title_pl: "Klasyfikacja obiektów z wykorzystaniem głębokich i impulsowych sieci neuronowych"
   author: "Aleksander Orlikowski"
   supervisor: "Tomasz Kryjak"
   year: "2019/2020"
   type: MSc
   group: Alumni
 
-- title: "Akceleracja sprzętowa głębokich sieci neuronowych do detekcji obiektów na podstawie danych z LiDAR z wykorzystaniem układów reprogramowalnych"
+- title: "Hardware acceleration of deep neural networks for LiDAR-based object detection using reprogrammable devices"
+  title_pl: "Akceleracja sprzętowa głębokich sieci neuronowych do detekcji obiektów na podstawie danych z LiDAR z wykorzystaniem układów reprogramowalnych"
   author: "Joanna Stanisz"
   supervisor: "Tomasz Kryjak"
   year: "2019/2020"
   type: MSc
   group: Alumni
 
-- title: "Akceleracja sprzętowa głębokich sieci neuronowych do detekcji obiektów na podstawie danych z LiDAR z wykorzystaniem układów reprogramowalnych"
+- title: "Hardware acceleration of deep neural networks for LiDAR-based object detection using reprogrammable devices"
+  title_pl: "Akceleracja sprzętowa głębokich sieci neuronowych do detekcji obiektów na podstawie danych z LiDAR z wykorzystaniem układów reprogramowalnych"
   author: "Konrad Lis"
   supervisor: "Tomasz Kryjak"
   year: "2019/2020"
   type: MSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system wizyjny wspomagający autonomiczne lądowanie drona."
+- title: "Hardware-software vision system supporting autonomous drone landing"
+  title_pl: "Sprzętowo-programowy system wizyjny wspomagający autonomiczne lądowanie drona."
   author: "Jakub Kłosiński"
   supervisor: "Tomasz Kryjak"
   year: "2019/2020"
@@ -1029,357 +1045,408 @@
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system wizyjny do wyznaczania miejsc bezpiecznego lądowania dla bezzałogowych pojazdów latających wykorzystujący kamerę 4K"
+- title: "Hardware-software vision system using a 4K camera for determining safe landing sites for unmanned aerial vehicles"
+  title_pl: "Sprzętowo-programowy system wizyjny do wyznaczania miejsc bezpiecznego lądowania dla bezzałogowych pojazdów latających wykorzystujący kamerę 4K"
   author: "Patryk Frączek"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: MSc
   group: Alumni
 
-- title: "Sprzętowo-programowa implementacja modułu SFM dla strumienia wideo o rozdzielczości 4K"
+- title: "Hardware-software implementation of an SfM module for a 4K video stream"
+  title_pl: "Sprzętowo-programowa implementacja modułu SFM dla strumienia wideo o rozdzielczości 4K"
   author: "Karol Radwan"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: MSc
   group: Alumni
 
-- title: "Ewaluacja i integracja algorytmów wizyjnych stosowanych w pojazdach autonomicznych z użyciem symulatora jazdy samochodem"
+- title: "Evaluation and integration of vision algorithms for autonomous vehicles using a driving simulator"
+  title_pl: "Ewaluacja i integracja algorytmów wizyjnych stosowanych w pojazdach autonomicznych z użyciem symulatora jazdy samochodem"
   author: "Jarosław Borzęcki"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: MSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system wizyjny do inspekcji terenu z wykorzystaniem bezzałogowego pojazdu latającego oraz kamer: termowizyjnej lub rozdzielczości 4K"
+- title: "Hardware-software vision system for terrain inspection using an unmanned aerial vehicle with a thermal or 4K camera"
+  title_pl: "Sprzętowo-programowy system wizyjny do inspekcji terenu z wykorzystaniem bezzałogowego pojazdu latającego oraz kamer: termowizyjnej lub rozdzielczości 4K"
   author: "Hubert Szolc"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: MSc
   group: Alumni
 
-- title: "Implementacja sprzętowa wieloskalowej detekcji obiektów z wykorzystaniem algorytmu HOG+SVM dla strumienia wideo o rozdzielczości 4K"
+- title: "Hardware implementation of multi-scale object detection using the HOG+SVM algorithm for a 4K video stream"
+  title_pl: "Implementacja sprzętowa wieloskalowej detekcji obiektów z wykorzystaniem algorytmu HOG+SVM dla strumienia wideo o rozdzielczości 4K"
   author: "Mateusz Wąsala"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: MSc
   group: Alumni
 
-- title: "Implementacja sprzętowa wieloskalowych metod obliczania przepływu optycznego dla strumienia wideo o rozdzielczości 4K"
+- title: "Hardware implementation of multi-scale optical flow methods for a 4K video stream"
+  title_pl: "Implementacja sprzętowa wieloskalowych metod obliczania przepływu optycznego dla strumienia wideo o rozdzielczości 4K"
   author: "Krzysztof Błachut"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: MSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system do wykrywania przeszkód przez drona"
+- title: "Hardware-software obstacle detection system for a drone"
+  title_pl: "Sprzętowo-programowy system do wykrywania przeszkód przez drona"
   author: "Szymon Kamuda"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Detekcja obiektów z wykorzystaniem sieci neuronowych o zredukowanej precyzji obliczeń"
+- title: "Object detection using reduced-precision neural networks"
+  title_pl: "Detekcja obiektów z wykorzystaniem sieci neuronowych o zredukowanej precyzji obliczeń"
   author: "Piotr Kaczmarski"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system do śledzenia obiektów wykorzystujący ruchomą kamerę"
+- title: "Hardware-software object tracking system using a moving camera"
+  title_pl: "Sprzętowo-programowy system do śledzenia obiektów wykorzystujący ruchomą kamerę"
   author: "Michał Daniłowicz"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system detekcji obiektów na podstawie fuzji danych z czujnika LIDAR oraz kamery"
+- title: "Hardware-software object detection system based on LiDAR and camera data fusion"
+  title_pl: "Sprzętowo-programowy system detekcji obiektów na podstawie fuzji danych z czujnika LIDAR oraz kamery"
   author: "Konrad Lis"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system detekcji obiektów na podstawie danych z czujnika LIDAR"
+- title: "Hardware-software object detection system based on LiDAR data"
+  title_pl: "Sprzętowo-programowy system detekcji obiektów na podstawie danych z czujnika LIDAR"
   author: "Joanna Stanisz"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system wizyjny do detekcji jezdni"
+- title: "Hardware-software vision system for road detection"
+  title_pl: "Sprzętowo-programowy system wizyjny do detekcji jezdni"
   author: "Grzegorz Mierzwa"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Implementacja sprzętowa algorytmów wyznaczania map dysparycji dla strumienia wizyjnego 4K"
+- title: "Hardware implementation of disparity map algorithms for a 4K video stream"
+  title_pl: "Implementacja sprzętowa algorytmów wyznaczania map dysparycji dla strumienia wizyjnego 4K"
   author: "Dominika Grabowska"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system do identyfikacji osób na podstawie obrazu twarzy zrealizowany na platformie Zynq SoC"
+- title: "Hardware-software face-based person identification system implemented on the Zynq SoC platform"
+  title_pl: "Sprzętowo-programowy system do identyfikacji osób na podstawie obrazu twarzy zrealizowany na platformie Zynq SoC"
   author: "Bartłomiej Styczeń"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu z ograniczeniem kontrastu (CLAHE) dla strumienia wizyjnego 4K w układzie FPGA"
+- title: "FPGA implementation of the Contrast Limited Adaptive Histogram Equalization (CLAHE) algorithm for a 4K video stream"
+  title_pl: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu z ograniczeniem kontrastu (CLAHE) dla strumienia wizyjnego 4K w układzie FPGA"
   author: "Aleksander Orlikowski"
   supervisor: "Tomasz Kryjak"
   year: "2018/2019"
   type: BSc
   group: Alumni
 
-- title: "Śledzenie obiektów z wykorzystaniem heterogenicznej platformy obliczeniowej Zynq UltraScale+ i ruchomej kamery o rozdzielczości 4K zamontowanej na pojeździe autonomicznym"
+- title: "Object tracking using the Zynq UltraScale+ heterogeneous computing platform and a moving 4K camera mounted on an autonomous vehicle"
+  title_pl: "Śledzenie obiektów z wykorzystaniem heterogenicznej platformy obliczeniowej Zynq UltraScale+ i ruchomej kamery o rozdzielczości 4K zamontowanej na pojeździe autonomicznym"
   author: "Marcin Kowalczyk"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: MSc
   group: Alumni
 
-- title: "Akceleracja sprzętowa głębokich konwolucyjnych sieci neuronowych dla potrzeb sytemu detekcji obiektów"
+- title: "Hardware acceleration of deep convolutional neural networks for an object detection system"
+  title_pl: "Akceleracja sprzętowa głębokich konwolucyjnych sieci neuronowych dla potrzeb sytemu detekcji obiektów"
   author: "Dominika Przewłocka"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: MSc
   group: Alumni
 
-- title: "Implementacja sprzętowa modułu indeksacji dla strumienia wizyjnego UHD."
+- title: "Hardware implementation of a connected component labelling module for a UHD video stream"
+  title_pl: "Implementacja sprzętowa modułu indeksacji dla strumienia wizyjnego UHD."
   author: "Piotr Ciarach"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: MSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system wizyjny do detekcji obiektów z wykorzystaniem termowizji."
+- title: "Hardware-software vision system for object detection using thermal imaging"
+  title_pl: "Sprzętowo-programowy system wizyjny do detekcji obiektów z wykorzystaniem termowizji."
   author: "Tomasz Kańka"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: MSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system do lokalizacji i rozpoznawania tablic rejestracyjnych"
+- title: "Hardware-software system for licence plate localisation and recognition"
+  title_pl: "Sprzętowo-programowy system do lokalizacji i rozpoznawania tablic rejestracyjnych"
   author: "Gabriel Korbiel"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system wizyjny do inspekcji terenu z wykorzystaniem bezzałogowego pojazdu latającego"
+- title: "Hardware-software vision system for terrain inspection using an unmanned aerial vehicle"
+  title_pl: "Sprzętowo-programowy system wizyjny do inspekcji terenu z wykorzystaniem bezzałogowego pojazdu latającego"
   author: "Celina Grabowska"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Wykorzystanie częsciowej dynamicznej rekonfiguracji w systemach wizyjnych czasu rzeczywistego"
+- title: "Use of partial dynamic reconfiguration in real-time vision systems"
+  title_pl: "Wykorzystanie częsciowej dynamicznej rekonfiguracji w systemach wizyjnych czasu rzeczywistego"
   author: "Andrzej Pustelnik"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Implementacja sprzętowa algorytmu wyznaczania map dysparycji Semi-Global Matching"
+- title: "Hardware implementation of the Semi-Global Matching disparity map algorithm"
+  title_pl: "Implementacja sprzętowa algorytmu wyznaczania map dysparycji Semi-Global Matching"
   author: "Szymon Kozłowski"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Implementacja sprzętowa wieloskalowej wersji algorytmu obliczania przepływu optycznego Lucasa-Kanade"
+- title: "Hardware implementation of a multi-scale version of the Lucas-Kanade optical flow algorithm"
+  title_pl: "Implementacja sprzętowa wieloskalowej wersji algorytmu obliczania przepływu optycznego Lucasa-Kanade"
   author: "Krzysztof Błachut"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo - programowa implementacja modułu SFM dla potrzeb nawigacji bezzałogowych pojazdów latających"
+- title: "Hardware-software implementation of an SfM module for unmanned aerial vehicle navigation"
+  title_pl: "Sprzętowo - programowa implementacja modułu SFM dla potrzeb nawigacji bezzałogowych pojazdów latających"
   author: "Karol Radwan"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Sprzętowo-programowa implementacja systemu wizyjnego do wyznaczania miejsc bezpiecznego lądowania dla bezzałogowych pojazdów latających"
+- title: "Hardware-software implementation of a vision system for determining safe landing sites for unmanned aerial vehicles"
+  title_pl: "Sprzętowo-programowa implementacja systemu wizyjnego do wyznaczania miejsc bezpiecznego lądowania dla bezzałogowych pojazdów latających"
   author: "Patryk Frączek"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Implementacja sprzętowa wieloskalowej detekcji obiektów z wykorzystaniem algorytmu HOG+SVM"
+- title: "Hardware implementation of multi-scale object detection using the HOG+SVM algorithm"
+  title_pl: "Implementacja sprzętowa wieloskalowej detekcji obiektów z wykorzystaniem algorytmu HOG+SVM"
   author: "Mateusz Wąsala"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Wykorzystanie heterogenicznej platformy obliczeniowej jako podstawowej jednostki sterującej dla bezzałogowego pojazdu latającego"
+- title: "Use of a heterogeneous computing platform as the main control unit of an unmanned aerial vehicle"
+  title_pl: "Wykorzystanie heterogenicznej platformy obliczeniowej jako podstawowej jednostki sterującej dla bezzałogowego pojazdu latającego"
   author: "Hubert Szolc"
   supervisor: "Tomasz Kryjak"
   year: "2017/2018"
   type: BSc
   group: Alumni
 
-- title: "Analiza możliwości wykorzystania narzędzia Vivado HLS w implementacji sprzętowej wbudowanych systemów wizyjnych."
+- title: "Analysis of the applicability of Vivado HLS to the hardware implementation of embedded vision systems"
+  title_pl: "Analiza możliwości wykorzystania narzędzia Vivado HLS w implementacji sprzętowej wbudowanych systemów wizyjnych."
   author: "Mateusz Woźniak"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Sprzętowo-programowy system do zdalnej opieki nad pacjentem lub osobą samotną."
+- title: "Hardware-software system for remote care of patients or people living alone"
+  title_pl: "Sprzętowo-programowy system do zdalnej opieki nad pacjentem lub osobą samotną."
   author: "Piotr Konopka"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do rozpoznawania kształtu i koloru naczyń"
+- title: "Embedded vision system for recognising the shape and colour of vessels"
+  title_pl: "Wbudowany system wizyjny do rozpoznawania kształtu i koloru naczyń"
   author: "Piotr Brożyna"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do śledzenia obiektów dla potrzeb nawigacji bezzałogowego statku powietrznego (UAV)"
+- title: "Embedded vision system for object tracking for unmanned aerial vehicle (UAV) navigation"
+  title_pl: "Wbudowany system wizyjny do śledzenia obiektów dla potrzeb nawigacji bezzałogowego statku powietrznego (UAV)"
   author: "Miłosz Mach"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Metody jednoczesnej lokalizacji i tworzenia mapy dla potrzeb nawigacji pojazdów autonomicznych"
+- title: "Simultaneous localisation and mapping methods for autonomous vehicle navigation"
+  title_pl: "Metody jednoczesnej lokalizacji i tworzenia mapy dla potrzeb nawigacji pojazdów autonomicznych"
   author: "Michał Fornalgiel"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu z ograniczeniem kontrastu (CLAHE) w układzie FPGA"
+- title: "FPGA implementation of the Contrast Limited Adaptive Histogram Equalization (CLAHE) algorithm"
+  title_pl: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu z ograniczeniem kontrastu (CLAHE) w układzie FPGA"
   author: "Krzystof Grzyb"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Biblioteka modułów sprzętowych do segmentacji obiektów pierwszoplanowych."
+- title: "Library of hardware modules for foreground object segmentation"
+  title_pl: "Biblioteka modułów sprzętowych do segmentacji obiektów pierwszoplanowych."
   author: "Piotr Janus"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Wykorzystanie algorytmów stratnej i bezstratnej kompresji danych w implementacji sprzętowej metod modelowania tła."
+- title: "Use of lossy and lossless data compression algorithms in the hardware implementation of background modelling methods"
+  title_pl: "Wykorzystanie algorytmów stratnej i bezstratnej kompresji danych w implementacji sprzętowej metod modelowania tła."
   author: "Kamil Piszczek"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Przyspieszanie analizy sekwencji wideo z wykorzystaniem detekcji obiektów"
+- title: "Accelerating video sequence analysis using object detection"
+  title_pl: "Przyspieszanie analizy sekwencji wideo z wykorzystaniem detekcji obiektów"
   author: "Modesta Wis"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Wykorzystanie systemu operacyjnego Linux we wbudowanych systemach wizyjnych zrealizowanych na platformie Zynq."
+- title: "Use of the Linux operating system in embedded vision systems implemented on the Zynq platform"
+  title_pl: "Wykorzystanie systemu operacyjnego Linux we wbudowanych systemach wizyjnych zrealizowanych na platformie Zynq."
   author: "Wojciech Gumuła"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Metody re-identyfikacji osób w systemach monitoringu wizyjnego"
+- title: "Person re-identification methods in video surveillance systems"
+  title_pl: "Metody re-identyfikacji osób w systemach monitoringu wizyjnego"
   author: "Rafał Płonka"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: MSc
   group: Alumni
 
-- title: "Implementacja sprzętowa metod normalizacji perspektywy oraz klasyfikatorów dla potrzeb wizyjnego systemu szacowania liczby ludzi w danej lokalizacji."
+- title: "Hardware implementation of perspective normalisation methods and classifiers for a vision system estimating the number of people at a location"
+  title_pl: "Implementacja sprzętowa metod normalizacji perspektywy oraz klasyfikatorów dla potrzeb wizyjnego systemu szacowania liczby ludzi w danej lokalizacji."
   author: "Wiktor Wąsowicz"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Implementacja sprzętowa oraz optymalizacja algorytmu indeksacji jednoprzebiegowej."
+- title: "Hardware implementation and optimisation of a single-pass connected component labelling algorithm"
+  title_pl: "Implementacja sprzętowa oraz optymalizacja algorytmu indeksacji jednoprzebiegowej."
   author: "Piotr Ciarach"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "System wizyjny sledzący obiekty wykorzystujący ruchomą kamerę zrealizowany w oparciu o heterogeniczny układ Zynq."
+- title: "Object tracking vision system with a moving camera based on the Zynq heterogeneous device"
+  title_pl: "System wizyjny sledzący obiekty wykorzystujący ruchomą kamerę zrealizowany w oparciu o heterogeniczny układ Zynq."
   author: "Marcin Kowalczyk"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Inspekcja terenu z wykorzystaniem bezzałogowego statku powietrznego wyposażonego we wbudowany system wizyjny."
+- title: "Terrain inspection using an unmanned aerial vehicle equipped with an embedded vision system"
+  title_pl: "Inspekcja terenu z wykorzystaniem bezzałogowego statku powietrznego wyposażonego we wbudowany system wizyjny."
   author: "Maciej Talar"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do re-identyfikacji osób z wykorzystaniem cech czasowo-przestrzennych."
+- title: "Embedded vision system for person re-identification using spatio-temporal features"
+  title_pl: "Wbudowany system wizyjny do re-identyfikacji osób z wykorzystaniem cech czasowo-przestrzennych."
   author: "Konrad Adamczyk"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do detekcji i rozpoznawania osób na podstawie obrazu twarzy."
+- title: "Embedded vision system for face-based person detection and recognition"
+  title_pl: "Wbudowany system wizyjny do detekcji i rozpoznawania osób na podstawie obrazu twarzy."
   author: "Karolina Szmyd"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do re-identyfikacji osób z wykorzystaniem cech opisujących wygląd"
+- title: "Embedded vision system for person re-identification using appearance features"
+  title_pl: "Wbudowany system wizyjny do re-identyfikacji osób z wykorzystaniem cech opisujących wygląd"
   author: "Kamil Dobrzyński"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Implementacja sprzętowa wybranych modułów obliczania cech dla potrzeb wizyjnego systemu szacowania liczby ludzi w danej lokalizacji"
+- title: "Hardware implementation of selected feature extraction modules for a vision system estimating the number of people at a location"
+  title_pl: "Implementacja sprzętowa wybranych modułów obliczania cech dla potrzeb wizyjnego systemu szacowania liczby ludzi w danej lokalizacji"
   author: "Jakub Tańcula"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Śledzenie obiektów z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
+- title: "Object tracking using deep convolutional neural networks"
+  title_pl: "Śledzenie obiektów z wykorzystaniem głębokich konwolucyjnych sieci neuronowych"
   author: "Dominika Przewłocka"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do detekcji oznakowania poziomego rozdzielającego pasy ruchu."
+- title: "Embedded vision system for detecting lane-dividing road markings"
+  title_pl: "Wbudowany system wizyjny do detekcji oznakowania poziomego rozdzielającego pasy ruchu."
   author: "Damian Paciuch"
   supervisor: "Tomasz Kryjak"
   year: "2016/2017"
   type: BSc
   group: Alumni
 
-- title: "Implementacja algorytmu detekcji twarzy na platformie rekonfigurowalnej FPGA"
+- title: "Implementation of a face detection algorithm on a reconfigurable FPGA platform"
+  title_pl: "Implementacja algorytmu detekcji twarzy na platformie rekonfigurowalnej FPGA"
   author: "Konrad Tomasik"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: MSc
   group: Alumni
 
-- title: "Implementacja algorytmu śledzenia obiektów w heterogenicznym układzie Zynq"
+- title: "Implementation of an object tracking algorithm on the Zynq heterogeneous device"
+  title_pl: "Implementacja algorytmu śledzenia obiektów w heterogenicznym układzie Zynq"
   author: "Tomasz Meresiński"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
@@ -1393,210 +1460,240 @@
   type: MSc
   group: Alumni
 
-- title: "Estymacja wieku i płci osoby na podstawie informacji wizyjnej z wykorzystaniem konwolucyjnych sieci neuronowych"
+- title: "Age and gender estimation from visual information using convolutional neural networks"
+  title_pl: "Estymacja wieku i płci osoby na podstawie informacji wizyjnej z wykorzystaniem konwolucyjnych sieci neuronowych"
   author: "Bartłomiej Hebda"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: MSc
   group: Alumni
 
-- title: "Wizyjny system kontroli zapięcia pasów bezpieczenstwa"
+- title: "Vision system for seat belt fastening monitoring"
+  title_pl: "Wizyjny system kontroli zapięcia pasów bezpieczenstwa"
   author: "Mirosław Małek"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: MSc
   group: Alumni
 
-- title: "Implementacja sprzętowa modułu detekcji twarzy algorytmem HOG+SVM na potrzeby wbudowanego systemu wizyjnego do monitorowania stanu kierowcy"
+- title: "Hardware implementation of a HOG+SVM face detection module for an embedded driver monitoring vision system"
+  title_pl: "Implementacja sprzętowa modułu detekcji twarzy algorytmem HOG+SVM na potrzeby wbudowanego systemu wizyjnego do monitorowania stanu kierowcy"
   author: "Michał Drożdż"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: MSc
   group: Alumni
 
-- title: "Analiza wybranych dystrybucji systemu Linux dla układu Zynq"
+- title: "Analysis of selected Linux distributions for the Zynq device"
+  title_pl: "Analiza wybranych dystrybucji systemu Linux dla układu Zynq"
   author: "Tomasz Jonak"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Detekcja porzuconych przedmiotów zrealizowana w układzie Zynq"
+- title: "Abandoned object detection implemented on the Zynq device"
+  title_pl: "Detekcja porzuconych przedmiotów zrealizowana w układzie Zynq"
   author: "Michał Maciejewski"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Implementacja algorytmu Flux Tensor with Split Gaussian models (FTSG) w układzie reprogramowalnym"
+- title: "Implementation of the Flux Tensor with Split Gaussian models (FTSG) algorithm on a reprogrammable device"
+  title_pl: "Implementacja algorytmu Flux Tensor with Split Gaussian models (FTSG) w układzie reprogramowalnym"
   author: "Piotr Janus"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Implementacja algorytmu Gaussian Mixture Models (GMM) w układzie reprogramowalnym"
+- title: "Implementation of the Gaussian Mixture Models (GMM) algorithm on a reprogrammable device"
+  title_pl: "Implementacja algorytmu Gaussian Mixture Models (GMM) w układzie reprogramowalnym"
   author: "Kamil Piszczek"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Monitorowanie zachowań tłumu na podstawie informacji wizyjnej"
+- title: "Crowd behaviour monitoring based on visual information"
+  title_pl: "Monitorowanie zachowań tłumu na podstawie informacji wizyjnej"
   author: "Krzysztof Kardaś"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do detekcji sylwetek ludzkich z wykorzystaniem podejścia HOG i SVM"
+- title: "Embedded vision system for human silhouette detection using the HOG and SVM approach"
+  title_pl: "Wbudowany system wizyjny do detekcji sylwetek ludzkich z wykorzystaniem podejścia HOG i SVM"
   author: "Dominik Kotarba"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Wbudowany system wizyjny do śledzenia obiektów dla potrzeb nawigacji robota autonomicznego"
+- title: "Embedded vision system for object tracking for autonomous robot navigation"
+  title_pl: "Wbudowany system wizyjny do śledzenia obiektów dla potrzeb nawigacji robota autonomicznego"
   author: "Krzysztof Mazur"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Wizyjne rozpoznawanie marki i modelu pojazdu"
+- title: "Vision-based vehicle make and model recognition"
+  title_pl: "Wizyjne rozpoznawanie marki i modelu pojazdu"
   author: "Marcin Juraszek"
   supervisor: "Tomasz Kryjak"
   year: "2015/2016"
   type: BSc
   group: Alumni
 
-- title: "Inteligentna kamera do rozpoznawania osób na podstawie obrazu twarzy zrealizowana na platformie heterogenicznej Zynq"
+- title: "Smart camera for face-based person recognition implemented on the Zynq heterogeneous platform"
+  title_pl: "Inteligentna kamera do rozpoznawania osób na podstawie obrazu twarzy zrealizowana na platformie heterogenicznej Zynq"
   author: "Mateusz Bryła"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: MSc
   group: Alumni
 
-- title: "Wykorzystanie logiki rozmytej w algorytmach generacji i inicjalizacji modelu tła"
+- title: "Use of fuzzy logic in background model generation and initialisation algorithms"
+  title_pl: "Wykorzystanie logiki rozmytej w algorytmach generacji i inicjalizacji modelu tła"
   author: "Jakub Gola"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: MSc
   group: Alumni
 
-- title: "Wykorzystanie logiki rozmytej w algorytmach generacji i inicjalizacji modelu tła"
+- title: "Use of fuzzy logic in background model generation and initialisation algorithms"
+  title_pl: "Wykorzystanie logiki rozmytej w algorytmach generacji i inicjalizacji modelu tła"
   author: "Zbigniew Tekiela"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: MSc
   group: Alumni
 
-- title: "Klasyfikacja pojazdów z wykorzystaniem informacji wizyjnej"
+- title: "Vehicle classification using visual information"
+  title_pl: "Klasyfikacja pojazdów z wykorzystaniem informacji wizyjnej"
   author: "Paweł Tryba"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: MSc
   group: Alumni
 
-- title: "Zliczanie osób z wykorzystaniem informacji 3D"
+- title: "People counting using 3D information"
+  title_pl: "Zliczanie osób z wykorzystaniem informacji 3D"
   author: "Jakub Kośmider"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: MSc
   group: Alumni
 
-- title: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu w układzie FPGA"
+- title: "FPGA implementation of an adaptive histogram equalisation algorithm"
+  title_pl: "Implementacja algorytmu adaptacyjnego wyrównywania histogramu w układzie FPGA"
   author: "Tomasz Krok"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Detakcja wałęsania z wykorzystaniem informacji wizyjnej"
+- title: "Loitering detection using visual information"
+  title_pl: "Detakcja wałęsania z wykorzystaniem informacji wizyjnej"
   author: "Rafał Płonka"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Metody re-identyfikacji osób wykorzystywane w monitoringu wizyjnym"
+- title: "Person re-identification methods used in video surveillance"
+  title_pl: "Metody re-identyfikacji osób wykorzystywane w monitoringu wizyjnym"
   author: "Mirosław Małek"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Detekcja aktów sabotażu kamery"
+- title: "Camera tampering detection"
+  title_pl: "Detekcja aktów sabotażu kamery"
   author: "Krzysztof Grzyb"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Detekcja i eliminacja niekorzystnych warunków meteorologicznych w systemach monitoringu wizyjnego"
+- title: "Detection and elimination of adverse weather conditions in video surveillance systems"
+  title_pl: "Detekcja i eliminacja niekorzystnych warunków meteorologicznych w systemach monitoringu wizyjnego"
   author: "Jacek Antos"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Estymacja wieku i płci osoby na podstawie informacji wizyjnej"
+- title: "Age and gender estimation from visual information"
+  title_pl: "Estymacja wieku i płci osoby na podstawie informacji wizyjnej"
   author: "Bartłomiej Hebda"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Ewaluacja algorytmów stosowanych w monitoringu wizyjnym na sekwencjach zarejestrowanych w warunkach nocnych"
+- title: "Evaluation of video surveillance algorithms on sequences recorded at night"
+  title_pl: "Ewaluacja algorytmów stosowanych w monitoringu wizyjnym na sekwencjach zarejestrowanych w warunkach nocnych"
   author: "Mateusz Bryła"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Implementacja detekcji narożników w układzie rekonfigurowalnym"
+- title: "Implementation of corner detection on a reconfigurable device"
+  title_pl: "Implementacja detekcji narożników w układzie rekonfigurowalnym"
   author: "Michał Drożdż"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Segmentacja obiektów pierwszoplanowych w warunkach obecności drobnego ruchu na scenie"
+- title: "Foreground object segmentation in the presence of small background motion in the scene"
+  title_pl: "Segmentacja obiektów pierwszoplanowych w warunkach obecności drobnego ruchu na scenie"
   author: "Agata Drobniak"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "System lokalizacji tablic rejestracyjnych"
+- title: "Licence plate localisation system"
+  title_pl: "System lokalizacji tablic rejestracyjnych"
   author: "Paweł Brańka"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Wykorzystanie informacji o ruchu w detekcji pieszych"
+- title: "Use of motion information in pedestrian detection"
+  title_pl: "Wykorzystanie informacji o ruchu w detekcji pieszych"
   author: "Krzysztof Porzycki"
   supervisor: "Tomasz Kryjak"
   year: "2014/2015"
   type: BSc
   group: Alumni
 
-- title: "Akceleracja wielowariantowych metod generacji tła i segmentacji obiektów z wykorzystaniem technologii OpenCL"
+- title: "Acceleration of multi-variant background generation and object segmentation methods using OpenCL"
+  title_pl: "Akceleracja wielowariantowych metod generacji tła i segmentacji obiektów z wykorzystaniem technologii OpenCL"
   author: "Bartłomiej Bułat"
   supervisor: "Tomasz Kryjak"
   year: "2013/2014"
   type: MSc
   group: Alumni
 
-- title: "Analiza i porówanie kosztów dopasowania stosowanych w algorytmach sterowizyjnych"
+- title: "Analysis and comparison of matching costs used in stereo vision algorithms"
+  title_pl: "Analiza i porówanie kosztów dopasowania stosowanych w algorytmach sterowizyjnych"
   author: "Jakub Kośmider"
   supervisor: "Tomasz Kryjak"
   year: "2013/2014"
   type: BSc
   group: Alumni
 
-- title: "Implementacja rozpoznawania znaków i tekstów na platformie mobilnej"
+- title: "Implementation of character and text recognition on a mobile platform"
+  title_pl: "Implementacja rozpoznawania znaków i tekstów na platformie mobilnej"
   author: "Jacek Walter"
   supervisor: "Tomasz Kryjak"
   year: "2013/2014"
