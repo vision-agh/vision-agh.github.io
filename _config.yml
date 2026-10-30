@@ -3,6 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: Embedded Perception and Autonomous Systems Group # the website title (if blank, full name will be used instead)
+navbar_title: EPAS Group # short title shown in the navbar (falls back to title if blank)
 first_name:
 middle_name:
 last_name:

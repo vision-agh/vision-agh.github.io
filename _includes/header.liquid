@@ -26,6 +26,8 @@
           {% if site.last_name %}
             {{- site.last_name -}}
           {% endif %}
+        {% elsif site.navbar_title %}
+          {{- site.navbar_title -}}
         {% else %}
           {{- site.title -}}
         {% endif %}
