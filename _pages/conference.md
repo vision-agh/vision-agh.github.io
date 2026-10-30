@@ -13,7 +13,7 @@ horizontal: false
 {% assign categories = "presentation,poster,demo"  | split: "," %}
 {% assign conferences = site.data.conferences %}
 
-<!-- {{ conferences | jsonify }} -->
+{% include conference_filters.liquid %}
 
 <!-- pages/projects.md -->
 <div class="projects">
@@ -22,6 +22,7 @@ horizontal: false
 
 {% for category in categories %}
 
+<div class="conf-section">
 <h2 class="category">{{ category | capitalize }}</h2>
 
 {% assign categorized_projects = site.data.conferences | where: "presentation_type", category %}
@@ -33,6 +34,7 @@ horizontal: false
       {% include conferences.liquid %}
     {% endfor %}
   </div>
+</div>
 
 {% endfor %}
 

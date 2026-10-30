@@ -1,4 +1,9 @@
-<div class="col">
+<div
+  class="col conf-item"
+  data-year="{{ project.start_date | date: '%Y' }}"
+  data-type="{{ project.presentation_type }}"
+  data-conference="{{ project.name }}"
+>
   <div class="card h-100 hoverable">
     {% if project.img %}
       {%
