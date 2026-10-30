@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 2
 vis_order: 7
 
-title: MSc Piotr Wzorek
-description: Profile of MSc Piotr Wzorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Piotr Wzorek, MSc
+description: Profile of Piotr Wzorek, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Wzorek
 publications: "author^=*Wzorek"
 

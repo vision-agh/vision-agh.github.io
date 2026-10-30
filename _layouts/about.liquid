@@ -44,8 +44,14 @@ layout: default
             <p>
               {% if head_member.url %}<a href="{{ head_member.url | relative_url }}">{% endif %}
               <span class="name font-semibold">
-                {{- head_member.profile.title }}
-                {{ head_member.profile.name -}}
+                {%- assign prefix_titles = 'Prof,Dr' | split: ',' -%}
+                {%- if prefix_titles contains head_member.profile.title -%}
+                  {{ head_member.profile.title }} {{ head_member.profile.name }}
+                {%- elsif head_member.profile.title -%}
+                  {{ head_member.profile.name }}, {{ head_member.profile.title }}
+                {%- else -%}
+                  {{ head_member.profile.name }}
+                {%- endif -%}
               </span>
               {% if head_member.url %}</a>{% endif %}
               {% if head_member.profile.position -%}

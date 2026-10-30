@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 2
 vis_order: 3
 
-title: MSc Hubert Szolc
-description: Profile of MSc Hubert Szolc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Hubert Szolc, MSc
+description: Profile of Hubert Szolc, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Szolc
 publications: "author^=*Szolc"
 

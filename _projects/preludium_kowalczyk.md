@@ -2,7 +2,7 @@
 layout: project
 title: NCN Preludium
 description:
-principal_investigator: MSc Marcin Kowalczyk
+principal_investigator: Marcin Kowalczyk, MSc
 title_en: Acceleration of processing event-based visual data with the use of heterogeneous, reprogrammable computing devices
 title_pl: Akceleracja przetwarzania zdarzeniowych danych wizyjnych z wykorzystaniem heterogenicznych, reprogramowalnych układów obliczeniowych
 budget: 185440

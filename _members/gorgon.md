@@ -18,8 +18,8 @@ teaser: >
 profile:
   title: Prof
   name: Marek Gorgoń
-  position: Research and teaching professor
-  role: Principal Investigator
+  position: Professor
+  role: 
   align: right
   image: people/MarekGorgon.jpg
   email: mago@agh.edu.pl

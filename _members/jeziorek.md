@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 2
 vis_order: 8
 
-title: MSc Kamil Jeziorek
-description: Profile of MSc Kamil Jeziorek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Kamil Jeziorek, MSc
+description: Profile of Kamil Jeziorek, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Jeziorek
 publications: "author^=*Jeziorek"
 

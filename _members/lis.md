@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 3
 vis_order: 6
 
-title: MSc Konrad Lis
-description: Profile of MSc Konrad Lis, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Konrad Lis, MSc
+description: Profile of Konrad Lis, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Lis
 publications: "author^=*Lis"
 

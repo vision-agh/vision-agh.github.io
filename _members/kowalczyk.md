@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 2
 vis_order: 1
 
-title: MSc Marcin Kowalczyk
-description: Profile of MSc Marcin Kowalczyk, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Marcin Kowalczyk, MSc
+description: Profile of Marcin Kowalczyk, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Kowalczyk
 publications: "author^=*Kowalczyk"
 

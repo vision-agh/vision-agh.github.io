@@ -2,12 +2,12 @@
 layout: cv
 inline: false
 group: PhD Students
-team_frontpage: false
+team_frontpage: true
 group_rank: 3
 vis_order: 11
 
-title: MSc Błażej Szargut
-description: Profile of MSc Błażej Szargut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Błażej Szargut, MSc
+description: Profile of Błażej Szargut, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Szargut
 publications: "author^=*Szargut"
 
@@ -20,7 +20,7 @@ profile:
   position:
   role: PhD Student
   align: right
-  image:
+  image: people/placeholder.jpg
   email:
   linkedin:
   orcid:

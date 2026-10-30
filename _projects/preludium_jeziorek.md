@@ -2,7 +2,7 @@
 layout: project
 title: NCN Preludium
 description:
-principal_investigator: MSc Kamil Jeziorek
+principal_investigator: Kamil Jeziorek, MSc
 acronym_en: F+E
 title_en: "F+E: Enhancing Perception through the Integration of Frame and Event Cameras"
 img: assets/img/projects/logo_ncn-preludium.png

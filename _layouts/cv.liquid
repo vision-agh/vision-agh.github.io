@@ -23,8 +23,14 @@ layout: default
             <p>
               {% if page.profile.href %}<a href="{{ page.profile.href | relative_url }}">{% endif %}
               <span class="name font-semibold">
-                {{- page.profile.title }}
-                {{ page.profile.name -}}
+                {%- assign prefix_titles = 'Prof,Dr' | split: ',' -%}
+                {%- if prefix_titles contains page.profile.title -%}
+                  {{ page.profile.title }} {{ page.profile.name }}
+                {%- elsif page.profile.title -%}
+                  {{ page.profile.name }}, {{ page.profile.title }}
+                {%- else -%}
+                  {{ page.profile.name }}
+                {%- endif -%}
               </span>
               {% if page.profile.href %}</a>{% endif %}
               {% if page.profile.position -%}

@@ -16,8 +16,8 @@ teaser: >
   I’m an Associate Professor at the Embedded Perception and Autonomous Systems Group at the AGH University of Krakow, Poland.
 
 profile:
-  title:
-  name: Tomasz Kryjak, PhD
+  title: PhD
+  name: Tomasz Kryjak
   position: Associate Professor
   role: Leader of the Group
   align: right

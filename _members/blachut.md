@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 2
 vis_order: 2
 
-title: MSc Krzysztof Błachut
-description: Profile of MSc Krzysztof Błachut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Krzysztof Błachut, MSc
+description: Profile of Krzysztof Błachut, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Błachut
 publications: "author^=*Blachut"
 

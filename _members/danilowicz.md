@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 2
 vis_order: 5
 
-title: MSc Michał Daniłowicz
-description: Profile of MSc Michał Daniłowicz, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Michał Daniłowicz, MSc
+description: Profile of Michał Daniłowicz, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Daniłowicz
 publications: "author^=*Danilowicz"
 

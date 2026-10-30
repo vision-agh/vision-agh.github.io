@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 2
 vis_order: 4
 
-title: MSc Mateusz Wąsala
-description: Profile of MSc Mateusz Wąsala, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Mateusz Wąsala, MSc
+description: Profile of Mateusz Wąsala, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Wąsala
 publications: "author^=*Wasala"
 

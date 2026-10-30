@@ -6,8 +6,8 @@ team_frontpage: true
 group_rank: 3
 vis_order: 9
 
-title: MSc Mateusz Gołąbek
-description: Profile of MSc Mateusz Gołąbek, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
+title: Mateusz Gołąbek, MSc
+description: Profile of Mateusz Gołąbek, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.
 lastname: Gołąbek
 publications: "author^=*Golabek"
 

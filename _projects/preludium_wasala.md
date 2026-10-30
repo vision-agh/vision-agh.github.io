@@ -7,7 +7,7 @@ category: NCN
 related_publications: true
 
 title: NCN Preludium
-principal_investigator: MSc Mateusz Wąsala
+principal_investigator: Mateusz Wąsala, MSc
 
 acronym_en: EEVONN
 title_en: Embedded Event-Based Visual Odometry Using Neural Networks

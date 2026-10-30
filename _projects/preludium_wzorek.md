@@ -7,7 +7,7 @@ category: NCN
 related_publications: true
 
 title: NCN Preludium
-principal_investigator: MSc Piotr Wzorek
+principal_investigator: Piotr Wzorek, MSc
 
 title_en: Hardware-Aware Neural Network Design for Event-Based Object Detection
 title_pl: Projektowanie sieci neuronowych do detekcji obiektów na podstawie danych zdarzeniowych z uwzględnieniem docelowej platformy sprzętowej.

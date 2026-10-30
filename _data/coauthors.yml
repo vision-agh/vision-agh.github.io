@@ -10,6 +10,10 @@
   - firstname: ["Mateusz", "M.", "Mateusz Golabek", "Mateusz Gołąbek"]
     url: /members/golabek
 
+"Gorgon":
+  - firstname: ["Marek", "M.", "Marek Gorgon", "Marek Gorgoń"]
+    url: /members/gorgon
+
 "Jeziorek":
   - firstname: ["Kamil", "K.", "Kamil Jeziorek"]
     url: /members/jeziorek
@@ -25,6 +29,14 @@
 "Lis":
   - firstname: ["Konrad", "K.", "Konrad Lis"]
     url: /members/lis
+
+"Mietla":
+  - firstname: ["Remigiusz", "R.", "Remigiusz Mietla", "Remigiusz Mietła"]
+    url: /members/mietla
+
+"Szargut":
+  - firstname: ["Błażej", "B.", "Blazej", "Błażej Szargut", "Blazej Szargut"]
+    url: /members/szargut
 
 "Szolc":
   - firstname: ["Hubert", "H.", "Hubert Szolc"]

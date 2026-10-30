@@ -2,12 +2,12 @@
 layout: cv
 inline: false
 group: Lab Engineers
-team_frontpage: false
+team_frontpage: true
 group_rank: 4
-vis_order: 0
+vis_order: 12
 
-title: MSc Remigiusz Mietła
-description: Profile of MSc Remigiusz Mietła, Research/Lab Engineer at the Embedded Perception and Autonomous Systems Group.
+title: Remigiusz Mietła, MSc
+description: Profile of Remigiusz Mietła, MSc, Research/Lab Engineer at the Embedded Perception and Autonomous Systems Group.
 lastname: Mietła
 publications: "author^=*Mietla"
 
@@ -20,7 +20,7 @@ profile:
   position: Research/Lab Engineer
   role: Research/Lab Engineer
   align: right
-  image:
+  image: people/placeholder.jpg
   email:
   linkedin:
   orcid:
