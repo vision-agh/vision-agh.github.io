@@ -2205,6 +2205,47 @@ ol {
     }
   }
 
+  .list-filter-select {
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 9rem;
+    padding: 0.3rem 2.2rem 0.3rem 0.95rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--global-text-color);
+    background-color: var(--global-bg-color);
+    // chevron drawn with two gradients so it follows the theme colour
+    background-image: linear-gradient(45deg, transparent 50%, var(--global-theme-color) 50%),
+      linear-gradient(135deg, var(--global-theme-color) 50%, transparent 50%);
+    background-position:
+      right 1.05rem center,
+      right 0.75rem center;
+    background-size:
+      0.3rem 0.3rem,
+      0.3rem 0.3rem;
+    background-repeat: no-repeat;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+
+    &:hover,
+    &:focus {
+      border-color: var(--global-theme-color);
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
+
+    option {
+      color: var(--global-text-color);
+      background-color: var(--global-bg-color);
+    }
+  }
+
   .list-filter-footer {
     display: flex;
     align-items: center;

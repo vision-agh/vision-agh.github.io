@@ -3,12 +3,12 @@
 <div class="list-filters">
   <div class="list-filter-group" data-filter="year">
     <span class="list-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
-    <div class="list-filter-chips">
-      <button type="button" class="filter-chip active" data-value="">All</button>
+    <select class="list-filter-select" aria-label="Filter by year">
+      <option value="">All years</option>
       {% for year in thesis_years %}
-        <button type="button" class="filter-chip" data-value="{{ year }}">{{ year }}</button>
+        <option value="{{ year }}">{{ year }}</option>
       {% endfor %}
-    </div>
+    </select>
   </div>
   <div class="list-filter-group" data-filter="type">
     <span class="list-filter-label"><i class="fa-solid fa-graduation-cap"></i> Type</span>

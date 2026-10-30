@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const setActive = (group, value) => {
     state[group.dataset.filter] = value;
     group.querySelectorAll(".filter-chip").forEach((chip) => chip.classList.toggle("active", chip.dataset.value === value));
+    const select = group.querySelector(".list-filter-select");
+    if (select) select.value = value;
   };
 
   filters.querySelectorAll(".list-filter-group").forEach((group) => {
@@ -36,6 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const chip = event.target.closest(".filter-chip");
       if (!chip) return;
       setActive(group, chip.dataset.value);
+      applyFilters();
+    });
+    group.addEventListener("change", (event) => {
+      if (!event.target.matches(".list-filter-select")) return;
+      setActive(group, event.target.value);
       applyFilters();
     });
   });

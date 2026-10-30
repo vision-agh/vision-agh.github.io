@@ -20,7 +20,7 @@ profile:
   position: Research/Lab Engineer
   role:
   align: right
-  image: people/placeholder.jpg
+  image: people/RemigiuszMietla.jpg
   email:
   linkedin:
   orcid:

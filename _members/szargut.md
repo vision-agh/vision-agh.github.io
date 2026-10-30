@@ -20,7 +20,7 @@ profile:
   position:
   role: PhD Student
   align: right
-  image: people/placeholder.jpg
+  image: people/BlazejSzargut.jpg
   email:
   linkedin:
   orcid:
