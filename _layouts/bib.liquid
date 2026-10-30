@@ -85,9 +85,13 @@
           {% assign dataContrib = site.data.projects[strippedproject] | first %}
 
           {% if site.data.projects %}
-            <abbr class="badge project"
+            <abbr
+              class="badge project"
+              {% if dataContrib.color %}
+                style="background-color: {{ dataContrib.color }} !important"
+              {% endif %}
               ><a href="{{ dataContrib.url }}">
-                {{- strippedproject }}
+                {{- dataContrib.label | default: strippedproject }}
                 <i class="fas fa-external-link-alt"></i></a></abbr
             ><br>
           {% else %}

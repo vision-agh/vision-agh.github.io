@@ -1,3 +1,7 @@
+# Project badges on publications (field `projects` in _bibliography/papers.bib).
+# url: project page; label (optional): text shown on the badge instead of the key;
+# color (optional): badge background colour.
+
 "NCN":
   - url: /projects/
 
@@ -9,9 +13,12 @@
 
 "Preludium-Kryjak":
   - url: /projects/preludium_kryjak
+    label: Preludium
 
 "ARTIQ":
   - url: /projects/artiq
+    color: "#4472c4"
 
 "Preludium-Wzorek":
   - url: /projects/preludium_wzorek
+    label: Preludium
