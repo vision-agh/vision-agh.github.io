@@ -67,9 +67,9 @@ ninja.data = [{
           description: "Profile of MSc Marcin Kowalczyk, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kowalczyk";
-            },},{id: "members-phd-tomasz-kryjak",
-          title: 'PhD Tomasz Kryjak',
-          description: "Profile of Tomasz Kryjak, Head of the Embedded Perception and Autonomous Systems Group.",
+            },},{id: "members-tomasz-kryjak-phd",
+          title: 'Tomasz Kryjak, PhD',
+          description: "Profile of Tomasz Kryjak, Leader of the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/kryjak";
             },},{id: "members-msc-konrad-lis",
@@ -77,6 +77,16 @@ ninja.data = [{
           description: "Profile of MSc Konrad Lis, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/lis";
+            },},{id: "members-msc-remigiusz-mietła",
+          title: 'MSc Remigiusz Mietła',
+          description: "Profile of MSc Remigiusz Mietła, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+          section: "Members",handler: () => {
+              window.location.href = "/members/mietla";
+            },},{id: "members-msc-błażej-szargut",
+          title: 'MSc Błażej Szargut',
+          description: "Profile of MSc Błażej Szargut, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+          section: "Members",handler: () => {
+              window.location.href = "/members/szargut";
             },},{id: "members-msc-hubert-szolc",
           title: 'MSc Hubert Szolc',
           description: "Profile of MSc Hubert Szolc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
@@ -102,6 +112,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/preludium_kowalczyk";
+            },},{id: "projects-ncn-preludium",
+          title: 'NCN Preludium',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/preludium_kryjak";
             },},{id: "projects-ncn-preludium",
           title: 'NCN Preludium',
           description: "",
