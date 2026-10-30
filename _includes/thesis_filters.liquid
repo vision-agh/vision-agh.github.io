@@ -1,28 +1,28 @@
 {% assign thesis_years = site.data.theses | map: 'year' | compact | uniq | sort | reverse %}
 {% assign thesis_types = site.data.theses | map: 'type' | compact | uniq | sort %}
-<div class="thesis-filters">
-  <div class="thesis-filter-group" data-filter="year">
-    <span class="thesis-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
-    <div class="thesis-filter-chips">
-      <button type="button" class="thesis-chip active" data-value="">All</button>
+<div class="list-filters">
+  <div class="list-filter-group" data-filter="year">
+    <span class="list-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
+    <div class="list-filter-chips">
+      <button type="button" class="filter-chip active" data-value="">All</button>
       {% for year in thesis_years %}
-        <button type="button" class="thesis-chip" data-value="{{ year }}">{{ year }}</button>
+        <button type="button" class="filter-chip" data-value="{{ year }}">{{ year }}</button>
       {% endfor %}
     </div>
   </div>
-  <div class="thesis-filter-group" data-filter="type">
-    <span class="thesis-filter-label"><i class="fa-solid fa-graduation-cap"></i> Type</span>
-    <div class="thesis-filter-chips">
-      <button type="button" class="thesis-chip active" data-value="">All</button>
+  <div class="list-filter-group" data-filter="type">
+    <span class="list-filter-label"><i class="fa-solid fa-graduation-cap"></i> Type</span>
+    <div class="list-filter-chips">
+      <button type="button" class="filter-chip active" data-value="">All</button>
       {% for type in thesis_types %}
-        <button type="button" class="thesis-chip" data-value="{{ type }}">{{ type }}</button>
+        <button type="button" class="filter-chip" data-value="{{ type }}">{{ type }}</button>
       {% endfor %}
     </div>
   </div>
-  <div class="thesis-filter-footer">
+  <div class="list-filter-footer">
     <span id="thesis-filter-count"></span>
-    <button type="button" id="thesis-filter-reset" class="thesis-filter-reset" hidden><i class="fa-solid fa-xmark"></i> Clear filters</button>
+    <button type="button" id="list-filter-reset" class="list-filter-reset" hidden><i class="fa-solid fa-xmark"></i> Clear filters</button>
   </div>
 </div>
-<p id="thesis-filter-empty" class="thesis-filter-empty" hidden>No theses match the selected filters.</p>
+<p id="thesis-filter-empty" class="list-filter-empty" hidden>No theses match the selected filters.</p>
 <script defer src="{{ '/assets/js/theses-filter.js' | relative_url }}"></script>

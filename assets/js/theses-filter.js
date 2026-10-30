@@ -1,11 +1,11 @@
 // Year / type filters for the Students page (_pages/students.md)
 document.addEventListener("DOMContentLoaded", () => {
-  const filters = document.querySelector(".thesis-filters");
+  const filters = document.querySelector(".list-filters");
   if (!filters) return;
 
   const state = { year: "", type: "" };
   const countEl = document.getElementById("thesis-filter-count");
-  const resetEl = document.getElementById("thesis-filter-reset");
+  const resetEl = document.getElementById("list-filter-reset");
   const emptyEl = document.getElementById("thesis-filter-empty");
 
   const applyFilters = () => {
@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setActive = (group, value) => {
     state[group.dataset.filter] = value;
-    group.querySelectorAll(".thesis-chip").forEach((chip) => chip.classList.toggle("active", chip.dataset.value === value));
+    group.querySelectorAll(".filter-chip").forEach((chip) => chip.classList.toggle("active", chip.dataset.value === value));
   };
 
-  filters.querySelectorAll(".thesis-filter-group").forEach((group) => {
+  filters.querySelectorAll(".list-filter-group").forEach((group) => {
     group.addEventListener("click", (event) => {
-      const chip = event.target.closest(".thesis-chip");
+      const chip = event.target.closest(".filter-chip");
       if (!chip) return;
       setActive(group, chip.dataset.value);
       applyFilters();
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   resetEl.addEventListener("click", () => {
-    filters.querySelectorAll(".thesis-filter-group").forEach((group) => setActive(group, ""));
+    filters.querySelectorAll(".list-filter-group").forEach((group) => setActive(group, ""));
     applyFilters();
   });
 

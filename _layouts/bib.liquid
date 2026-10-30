@@ -1,6 +1,18 @@
 ---
 ---
-<div class="row">
+{% case entry.type %}
+  {% when 'article' %}
+    {% assign paper_type = 'Journal' %}
+  {% when 'inproceedings', 'conference', 'proceedings' %}
+    {% assign paper_type = 'Conference' %}
+  {% when 'inbook', 'incollection' %}
+    {% assign paper_type = 'Book chapter' %}
+  {% when 'book' %}
+    {% assign paper_type = 'Book' %}
+  {% else %}
+    {% assign paper_type = 'Other' %}
+{% endcase %}
+<div class="row" data-paper-year="{{ entry.year }}" data-paper-type="{{ paper_type }}">
   {% if entry.preview %}
     <div class="col col-sm-2 abbr preview-col">
       {%- if entry.abbr -%}

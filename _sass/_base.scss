@@ -2134,9 +2134,9 @@ ol {
   height: 24rem;
 }
 
-// Students page – thesis filters
+// List filters (Students and Papers pages)
 
-.thesis-filters {
+.list-filters {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -2147,14 +2147,14 @@ ol {
   background-color: var(--global-card-bg-color);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 
-  .thesis-filter-group {
+  .list-filter-group {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.5rem 1rem;
   }
 
-  .thesis-filter-label {
+  .list-filter-label {
     min-width: 4.5rem;
     font-size: 0.8rem;
     font-weight: 600;
@@ -2168,13 +2168,13 @@ ol {
     }
   }
 
-  .thesis-filter-chips {
+  .list-filter-chips {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
   }
 
-  .thesis-chip {
+  .filter-chip {
     padding: 0.25rem 0.85rem;
     font-size: 0.85rem;
     line-height: 1.4;
@@ -2205,7 +2205,7 @@ ol {
     }
   }
 
-  .thesis-filter-footer {
+  .list-filter-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2215,7 +2215,7 @@ ol {
     border-top: 1px solid var(--global-divider-color);
   }
 
-  .thesis-filter-reset {
+  .list-filter-reset {
     padding: 0;
     font-size: 0.85rem;
     color: var(--global-theme-color);
@@ -2229,8 +2229,13 @@ ol {
   }
 }
 
-.thesis-filter-empty {
+.list-filter-empty {
   padding: 2rem 0;
   text-align: center;
   color: var(--global-text-color-light);
+}
+
+.publications .filtered-out,
+.publications .filter-hidden {
+  display: none !important;
 }
