@@ -10,7 +10,7 @@ display_categories: []
 horizontal: false
 ---
 
-{% assign categories = "presentation,poster"  | split: "," %}
+{% assign categories = "presentation,poster,demo"  | split: "," %}
 {% assign conferences = site.data.conferences %}
 
 <!-- {{ conferences | jsonify }} -->

@@ -78,3 +78,336 @@
   presenter: Tomasz Kryjak
   author: Piotr Wzorek, Kamil Jeziorek, Tomasz Kryjak
   topic: Hardware-aware Graph Neural Networks prunning for embedded event-based vision
+
+"Automation2025":
+  name: "Automation"
+  start_date: 2025-01-01
+  presentation_type: presentation
+  author: Hubert Szolc, Mateusz Wąsala, Remigiusz Mietła, Kacper Iwicki, Tomasz Kryjak
+  topic: "Vision-based automatic fruit counting with UAV"
+  arxiv: 2503.13080
+  journal_link: https://doi.org/10.1007/978-3-032-08359-3_23
+
+"KUKDM2026":
+  name: "KU KDM"
+  start_date: 2026-04-13
+  end_date: 2026-04-15
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Marek Długosz, Kamil Jeziorek, Mateusz Komorkiewicz, Tomasz Kryjak, Dariusz Marchewka, Marcin Szelest, Piotr Wzorek, Paweł Skruch
+  topic: "Towards event-based in-cabin sensing - a synchronized dual-camera dataset pipeline"
+
+"ARC2026":
+  name: "ARC"
+  start_date: 2026-04-08
+  end_date: 2026-04-10
+  presentation_type: presentation
+  author: Michał Filipkowski, Marcin Kowalczyk, Tomasz Kryjak
+  topic: "FPGA-based hardware architecture for contrast maximization in event-based vision"
+  arxiv: 2605.09581
+  journal_link: https://doi.org/10.1007/978-3-032-29365-7_19
+
+"ARC2026_2":
+  name: "ARC"
+  start_date: 2026-04-08
+  end_date: 2026-04-10
+  presentation_type: presentation
+  author: Wiktor Matykiewicz, Piotr Wzorek, Kamil Jeziorek, Tomás Muñoz, Antonio Rios-Navarro, Angel Jiménez-Fernández, Tomasz Kryjak
+  topic: "End-to-end keyword spotting on FPGA using graph neural networks with a neuromorphic auditory sensor"
+  arxiv: 2605.09570
+  journal_link: https://doi.org/10.1007/978-3-032-29365-7_8
+
+"FPL2025":
+  name: "FPL"
+  start_date: 2025-09-01
+  end_date: 2025-09-05
+  presentation_type: demo
+  author: Piotr Wzorek, Kamil Jeziorek, Marcin Kowalczyk, Krzysztof Błachut, Tomasz Kryjak, Marek Gorgoń
+  topic: "Live demonstration - Continuous processing of event-data with Graph Convolutional Neural Networks implemented for SoC FPGA"
+  journal_link: https://doi.org/10.1109/FPL68686.2025.00065
+
+"MMAR2025":
+  name: "MMAR"
+  start_date: 2025-08-26
+  end_date: 2025-08-29
+  presentation_type: presentation
+  author: Mateusz Komorkiewicz, Piotr Wzorek, Paweł Skruch
+  topic: "Memory-efficient hardware implementation of Time-Ordered Recent Event (TORE) volumes"
+  journal_link: https://doi.org/10.1109/MMAR65820.2025.11150932
+
+"CVPRW2025":
+  name: "CVPRW"
+  start_date: 2025-06-11
+  end_date: 2025-06-15
+  presentation_type: demo
+  author: Piotr Wzorek, Krzysztof Błachut, Kamil Jeziorek, Tomasz Kryjak
+  topic: "Live demonstration - real-time event-data processing with Graph Convolutional Neural Networks and SoC FPGA"
+  journal_link: https://doi.org/10.1109/CVPRW67362.2025.00505
+
+"ARC2025":
+  name: "ARC"
+  start_date: 2025-04-09
+  end_date: 2025-04-11
+  presentation_type: presentation
+  author: Michał Daniłowicz, Tomasz Kryjak
+  topic: "Real-time multi-object tracking using YOLOv8 and SORT on a SoC FPGA"
+  arxiv: 2503.13023
+  journal_link: https://doi.org/10.1007/978-3-031-87995-1_13
+
+"SPIERTIPDVI2025":
+  name: "SPIE RTIPDVI"
+  start_date: 2025-04-07
+  end_date: 2025-04-10
+  presentation_type: presentation
+  author: Kamil Jeziorek, Tomasz Kryjak
+  topic: "Self-supervised event representations - towards accurate, real-time perception on SoC FPGAs"
+  arxiv: 2505.07556
+  journal_link: https://doi.org/10.1117/12.3056056
+
+"KUKDM2025":
+  name: "KU KDM"
+  start_date: 2025-04-02
+  end_date: 2025-04-04
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Kamil Jeziorek, Tomasz Kryjak, Marek Gorgoń
+  topic: "High-performance computing for event cameras - DIF filtering and graph convolutional networks for object classification"
+
+"SPA2024":
+  name: "SPA"
+  start_date: 2024-09-01
+  presentation_type: presentation
+  author: Hubert Szolc, Karol Desnos, Tomasz Kryjak
+  topic: "Tangled Program Graphs as an alternative to DRL-based control algorithms for UAVs"
+  arxiv: 2411.05586
+  journal_link: https://doi.org/10.23919/SPA61993.2024.10715635
+
+"ICFPT2024":
+  name: "ICFPT"
+  start_date: 2024-12-10
+  end_date: 2024-12-12
+  presentation_type: presentation
+  author: Piotr Wzorek, Kamil Jeziorek, Tomasz Kryjak, Andrea Pinna
+  topic: "Increasing the scalability of graph convolution for FPGA-implemented event-based vision"
+  arxiv: 2411.04269
+  journal_link: https://doi.org/10.1109/ICFPT64416.2024.11113443
+
+"DSD2024":
+  name: "DSD"
+  start_date: 2024-08-28
+  end_date: 2024-08-30
+  presentation_type: presentation
+  author: Tomasz Kryjak
+  topic: "Event-based vision on FPGAs – a survey"
+  arxiv: 2407.08356
+  journal_link: https://doi.org/10.1109/DSD64264.2024.00078
+
+"DSD2024_2":
+  name: "DSD"
+  start_date: 2024-08-28
+  end_date: 2024-08-30
+  presentation_type: presentation
+  author: Dominika Przewłocka-Rus, Tomasz Kryjak, Marek Gorgoń
+  topic: "PowerYOLO - mixed precision model for hardware efficient object detection with event data"
+  arxiv: 2407.08272
+  journal_link: https://doi.org/10.1109/DSD64264.2024.00036
+
+"DASIP2024":
+  name: "DASIP"
+  start_date: 2024-01-17
+  end_date: 2024-01-19
+  presentation_type: presentation
+  author: Kamil Jeziorek, Piotr Wzorek, Krzysztof Błachut, Andrea Pinna, Tomasz Kryjak
+  topic: "Optimising graph representation for hardware implementation of graph convolutional networks for event-based vision"
+  arxiv: 2401.04988
+  journal_link: https://doi.org/10.1007/978-3-031-62874-0_9
+
+"ARC2023":
+  name: "ARC"
+  start_date: 2023-09-27
+  end_date: 2023-09-29
+  presentation_type: presentation
+  author: Maciej Baczmański, Mateusz Wąsala, Tomasz Kryjak
+  topic: "Implementation of a perception system for autonomous vehicles using a detection-segmentation network in SoC FPGA"
+  arxiv: 2307.08682
+  journal_link: https://doi.org/10.1007/978-3-031-42921-7_14
+
+"SPA2023":
+  name: "SPA"
+  start_date: 2023-09-20
+  end_date: 2023-09-22
+  presentation_type: presentation
+  author: Krzysztof Błachut, Tomasz Kryjak
+  topic: "High-definition event frame generation using SoC FPGA devices"
+  arxiv: 2307.14177
+  journal_link: https://doi.org/10.23919/SPA59660.2023.10274447
+
+"SPA2023_2":
+  name: "SPA"
+  start_date: 2023-09-20
+  end_date: 2023-09-22
+  presentation_type: presentation
+  author: Kamil Jeziorek, Andrea Pinna, Tomasz Kryjak
+  topic: "Memory-efficient graph convolutional networks for object classification and detection with event cameras"
+  arxiv: 2307.14124
+  journal_link: https://doi.org/10.23919/SPA59660.2023.10274464
+
+"DSD2023":
+  name: "DSD"
+  start_date: 2023-09-06
+  end_date: 2023-09-08
+  presentation_type: presentation
+  author: Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Power-of-two quantized YOLO network for pedestrian detection with dynamic vision sensor"
+  journal_link: https://doi.org/10.1109/DSD60849.2023.00016
+
+"MMAR2023":
+  name: "MMAR"
+  start_date: 2023-08-22
+  end_date: 2023-08-25
+  presentation_type: presentation
+  author: Konrad Lis, Tomasz Kryjak
+  topic: "Comparative study of subset selection methods for rapid prototyping of 3D object detection algorithms"
+  arxiv: 2306.17551
+  journal_link: https://doi.org/10.1109/MMAR58394.2023.10242454
+
+"MMAR2023_2":
+  name: "MMAR"
+  start_date: 2023-08-22
+  end_date: 2023-08-25
+  presentation_type: presentation
+  author: Maciej Baczmański, Robert Synoczek, Mateusz Wąsala, Tomasz Kryjak
+  topic: "Detection-segmentation convolutional neural network for autonomous vehicle perception"
+  arxiv: 2306.17485
+  journal_link: https://doi.org/10.1109/MMAR58394.2023.10242398
+
+"CVPRW2023":
+  name: "CVPRW"
+  start_date: 2023-06-18
+  end_date: 2023-06-22
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Tomasz Kryjak
+  topic: "Interpolation-based event visual data filtering algorithms"
+  arxiv: 2507.01557
+  journal_link: https://doi.org/10.1109/CVPRW59228.2023.00425
+
+"DASIP2023":
+  name: "DASIP"
+  start_date: 2023-01-16
+  end_date: 2023-01-18
+  presentation_type: presentation
+  author: Mariusz Grabowski, Tomasz Kryjak
+  topic: "Real-time FPGA implementation of the semi-global matching stereo vision algorithm for a 4K/UHD video stream"
+  arxiv: 2301.04847
+  journal_link: https://doi.org/10.1007/978-3-031-29970-4_6
+
+"SPA2022":
+  name: "SPA"
+  start_date: 2022-09-21
+  end_date: 2022-09-22
+  presentation_type: presentation
+  author: Hubert Szolc, Tomasz Kryjak
+  topic: "Hardware-in-the-loop simulation of a UAV autonomous landing algorithm implemented in SoC FPGA"
+  arxiv: 2207.12198
+  journal_link: https://doi.org/10.23919/SPA53010.2022.9927847
+
+"SPA2022_2":
+  name: "SPA"
+  start_date: 2022-09-21
+  end_date: 2022-09-22
+  presentation_type: presentation
+  author: Piotr Wzorek, Tomasz Kryjak
+  topic: "Traffic sign detection with event cameras and DCNN"
+  arxiv: 2207.13345
+  journal_link: https://doi.org/10.23919/SPA53010.2022.9927864
+
+"ICCVG2022":
+  name: "ICCVG"
+  start_date: 2022-09-19
+  end_date: 2022-09-21
+  presentation_type: presentation
+  author: Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Energy efficient hardware acceleration of neural networks with power-of-two quantisation"
+  arxiv: 2209.15257
+  journal_link: https://doi.org/10.1007/978-3-031-22025-8_16
+
+"ICCVG2022_2":
+  name: "ICCVG"
+  start_date: 2022-09-19
+  end_date: 2022-09-21
+  presentation_type: presentation
+  author: Konrad Lis, Tomasz Kryjak
+  topic: "PointPillars backbone type selection for fast and accurate LiDAR object detection"
+  arxiv: 2209.15252
+  journal_link: https://doi.org/10.1007/978-3-031-22025-8_8
+
+"ICCVG2022_3":
+  name: "ICCVG"
+  start_date: 2022-09-19
+  end_date: 2022-09-21
+  presentation_type: presentation
+  author: Sylwia Kuros, Tomasz Kryjak
+  topic: "Traffic sign classification using deep and quantum neural networks"
+  arxiv: 2209.15251
+  journal_link: https://doi.org/10.1007/978-3-031-22025-8_4
+
+"ARC2022":
+  name: "ARC"
+  start_date: 2022-09-19
+  end_date: 2022-09-20
+  presentation_type: presentation
+  author: Michał Daniłowicz, Tomasz Kryjak
+  topic: "Real-time embedded object tracking with discriminative correlation filters using convolutional features"
+  journal_link: https://doi.org/10.1007/978-3-031-19983-7_12
+
+"DSD2022":
+  name: "DSD"
+  start_date: 2022-08-31
+  end_date: 2022-09-02
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Tomasz Kryjak
+  topic: "Hardware architecture for high throughput event visual data filtering with matrix of IIR filters algorithm"
+  arxiv: 2207.00860
+  journal_link: https://doi.org/10.1109/DSD57027.2022.00046
+
+"DASIP2022":
+  name: "DASIP"
+  start_date: 2022-06-20
+  end_date: 2022-06-22
+  presentation_type: presentation
+  author: Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Towards real-time and energy efficient Siamese tracking – a hardware-software approach"
+  arxiv: 2205.10653
+  journal_link: https://doi.org/10.1007/978-3-031-12748-9_13
+
+"MECO2022":
+  name: "MECO"
+  start_date: 2022-06-07
+  end_date: 2022-06-10
+  presentation_type: presentation
+  author: Mateusz Wąsala, Tomasz Kryjak
+  topic: "Real-time HOG+SVM based object detection using SoC FPGA for a UHD video stream"
+  arxiv: 2204.10619
+  journal_link: https://doi.org/10.1109/MECO55406.2022.9797113
+
+"PPRAI2022":
+  name: "PP-RAI"
+  start_date: 2022-04-25
+  end_date: 2022-04-27
+  presentation_type: presentation
+  author: Piotr Wzorek, Tomasz Kryjak
+  topic: "Playing cards and bidding calls detection for automatic registration of a duplicate bridge game"
+
+"KUKDM2022":
+  name: "KU KDM"
+  start_date: 2022-04-07
+  end_date: 2022-04-08
+  presentation_type: presentation
+  author: Michał Machura, Piotr Wzorek, Tomasz Kryjak, Marek Gorgoń
+  topic: "Accelerated training of object detection DNNs for embedded vision systems"
+
+"TYGIEL2022":
+  name: "TYGIEL"
+  start_date: 2022-03-24
+  end_date: 2022-03-27
+  presentation_type: presentation
+  author: Maciej Baczmański, Balbina Molerus, Robert Synoczek, Tomasz Kryjak
+  topic: "Wbudowany system percepcji i sterowania dla modelu pojazdu autonomicznego"
