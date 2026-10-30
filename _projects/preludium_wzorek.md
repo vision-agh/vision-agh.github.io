@@ -53,5 +53,5 @@ abstract: >
 image: preludium_PW.png
 image_caption:
 
-publications: "author^=*Wzorek, projects^=*Preludium"
+publications: "projects^=*Preludium-Wzorek"
 ---
