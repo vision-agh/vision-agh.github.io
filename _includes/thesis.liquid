@@ -95,7 +95,8 @@
           <a href="{{ thesis.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
         {% endif %}
         {% if thesis.funding %}
-          <a class="award btn btn-sm z-depth-0" role="button">{{ thesis.funding }}</a>
+          {% assign funding_info = site.data.thesis_funding[thesis.funding] %}
+          <a class="award btn btn-sm z-depth-0" role="button">{{ funding_info.button | default: thesis.funding }}</a>
         {% endif %}
       </div>
 
