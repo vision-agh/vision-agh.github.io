@@ -205,6 +205,7 @@
   start_date: 2024-08-28
   end_date: 2024-08-30
   presentation_type: presentation
+  presenter: Tomasz Kryjak
   author: Tomasz Kryjak
   topic: "Event-based vision on FPGAs – a survey"
   arxiv: 2407.08356
@@ -236,6 +237,7 @@
   start_date: 2023-09-27
   end_date: 2023-09-29
   presentation_type: presentation
+  presenter: Maciej Baczmański
   author: Maciej Baczmański, Mateusz Wąsala, Tomasz Kryjak
   topic: "Implementation of a perception system for autonomous vehicles using a detection-segmentation network in SoC FPGA"
   arxiv: 2307.08682
@@ -266,6 +268,7 @@
   start_date: 2023-09-06
   end_date: 2023-09-08
   presentation_type: presentation
+  presenter: Dominika Przewłocka-Rus
   author: Dominika Przewłocka-Rus, Tomasz Kryjak
   topic: "Power-of-two quantized YOLO network for pedestrian detection with dynamic vision sensor"
   journal_link: https://doi.org/10.1109/DSD60849.2023.00016
@@ -275,6 +278,7 @@
   start_date: 2023-08-22
   end_date: 2023-08-25
   presentation_type: presentation
+  presenter: Konrad Lis
   author: Konrad Lis, Tomasz Kryjak
   topic: "Comparative study of subset selection methods for rapid prototyping of 3D object detection algorithms"
   arxiv: 2306.17551
@@ -285,6 +289,7 @@
   start_date: 2023-08-22
   end_date: 2023-08-25
   presentation_type: presentation
+  presenter: Maciej Baczmański
   author: Maciej Baczmański, Robert Synoczek, Mateusz Wąsala, Tomasz Kryjak
   topic: "Detection-segmentation convolutional neural network for autonomous vehicle perception"
   arxiv: 2306.17485
@@ -294,7 +299,8 @@
   name: "CVPRW"
   start_date: 2023-06-18
   end_date: 2023-06-22
-  presentation_type: presentation
+  presentation_type: poster
+  presenter: Marcin Kowalczyk, Tomasz Kryjak
   author: Marcin Kowalczyk, Tomasz Kryjak
   topic: "Interpolation-based event visual data filtering algorithms"
   arxiv: 2507.01557
@@ -305,6 +311,7 @@
   start_date: 2023-01-16
   end_date: 2023-01-18
   presentation_type: presentation
+  presenter: Mariusz Grabowski
   author: Mariusz Grabowski, Tomasz Kryjak
   topic: "Real-time FPGA implementation of the semi-global matching stereo vision algorithm for a 4K/UHD video stream"
   arxiv: 2301.04847
@@ -335,6 +342,7 @@
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
+  presenter: Tomasz Kryjak
   author: Dominika Przewłocka-Rus, Tomasz Kryjak
   topic: "Energy efficient hardware acceleration of neural networks with power-of-two quantisation"
   arxiv: 2209.15257
@@ -345,6 +353,7 @@
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
+  presenter: Tomasz Kryjak
   author: Konrad Lis, Tomasz Kryjak
   topic: "PointPillars backbone type selection for fast and accurate LiDAR object detection"
   arxiv: 2209.15252
@@ -355,6 +364,7 @@
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
+  presenter: Tomasz Kryjak
   author: Sylwia Kuros, Tomasz Kryjak
   topic: "Traffic sign classification using deep and quantum neural networks"
   arxiv: 2209.15251
@@ -374,6 +384,7 @@
   start_date: 2022-08-31
   end_date: 2022-09-02
   presentation_type: presentation
+  presenter: Marcin Kowalczyk
   author: Marcin Kowalczyk, Tomasz Kryjak
   topic: "Hardware architecture for high throughput event visual data filtering with matrix of IIR filters algorithm"
   arxiv: 2207.00860
@@ -384,6 +395,7 @@
   start_date: 2022-06-20
   end_date: 2022-06-22
   presentation_type: presentation
+  presenter: Tomasz Kryjak
   author: Dominika Przewłocka-Rus, Tomasz Kryjak
   topic: "Towards real-time and energy efficient Siamese tracking – a hardware-software approach"
   arxiv: 2205.10653
@@ -394,6 +406,7 @@
   start_date: 2022-06-07
   end_date: 2022-06-10
   presentation_type: presentation
+  presenter: Mateusz Wąsala
   author: Mateusz Wąsala, Tomasz Kryjak
   topic: "Real-time HOG+SVM based object detection using SoC FPGA for a UHD video stream"
   arxiv: 2204.10619
@@ -404,6 +417,7 @@
   start_date: 2022-04-25
   end_date: 2022-04-27
   presentation_type: presentation
+  presenter: Piotr Wzorek
   author: Piotr Wzorek, Tomasz Kryjak
   topic: "Playing cards and bidding calls detection for automatic registration of a duplicate bridge game"
 
