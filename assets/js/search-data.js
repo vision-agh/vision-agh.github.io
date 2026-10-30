@@ -109,6 +109,21 @@ ninja.data = [{
           description: "Profile of Piotr Wzorek, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
           section: "Members",handler: () => {
               window.location.href = "/members/wzorek";
+            },},{id: "projects-ncbr-artiq",
+          title: 'NCBR ARTIQ',
+          description: "ARTIQ programme (NCBR &amp; NCN)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/artiq";
+            },},{id: "projects-fp3-iam4rail",
+          title: 'FP3-IAM4RAIL',
+          description: "EU-Rail FP3 project funded by Horizon Europe",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/iam4rail";
+            },},{id: "projects-idub-agh",
+          title: 'IDUB AGH',
+          description: "Initiative for Excellence – Research University",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/idub_event_uav";
             },},{id: "projects-ncn-preludium",
           title: 'NCN Preludium',
           description: "",
@@ -136,7 +151,7 @@ ninja.data = [{
               window.location.href = "/projects/preludium_wzorek";
             },},{id: "projects-ncn-sonata",
           title: 'NCN Sonata',
-          description: "",
+          description: "National Science Centre, Poland (Sonata 12)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sonata_kryjak";
             },},{
