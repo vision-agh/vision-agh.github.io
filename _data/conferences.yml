@@ -195,8 +195,9 @@
   arxiv: 2411.05586
   journal_link: https://doi.org/10.23919/SPA61993.2024.10715635
 
-"ICFPT2024":
-  name: "ICFPT"
+"FPT2024":
+  name: "FPT"
+  img: assets/img/conferences/fpt2024.png
   start_date: 2024-12-10
   end_date: 2024-12-12
   presentation_type: presentation
@@ -350,6 +351,7 @@
 
 "ICCVG2022":
   name: "ICCVG"
+  logo_bg: light
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
@@ -361,6 +363,7 @@
 
 "ICCVG2022_2":
   name: "ICCVG"
+  logo_bg: light
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
@@ -372,6 +375,7 @@
 
 "ICCVG2022_3":
   name: "ICCVG"
+  logo_bg: light
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation

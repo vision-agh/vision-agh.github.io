@@ -19,7 +19,7 @@
         <img src="{{ conf_logo | relative_url }}" alt="{{ project.name }} logo" loading="lazy">
       </div>
     {% else %}
-      <div class="conf-logo conf-logo-placeholder">
+      <div class="conf-logo conf-logo-placeholder{% if project.logo_bg == 'light' %} conf-logo-placeholder-light{% endif %}">
         <span>{{ project.name }}</span>
         {% if project.start_date -%}
           <small>{{ project.start_date | date: '%Y' }}</small>

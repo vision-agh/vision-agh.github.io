@@ -2430,3 +2430,9 @@ ol {
 .conf-logo.conf-logo-dark {
   background: linear-gradient(135deg, var(--global-theme-color), var(--global-hover-color));
 }
+
+// Conferences page – placeholder header on white (logo_bg: light)
+.conf-logo.conf-logo-placeholder.conf-logo-placeholder-light {
+  color: var(--global-theme-color);
+  background: #fff;
+}
