@@ -1,14 +1,15 @@
-// Country / keyword filters for the Collaboration page (_pages/collaboration.md)
+// Type / country / keyword filters for the Collaboration page (_pages/collaboration.md)
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.querySelector(".collab-filters");
   if (!filters) return;
 
   const items = [...document.querySelectorAll(".collab-item")].map((el) => ({
     el,
+    type: el.dataset.type || "",
     country: el.dataset.country || "",
     keywords: (el.dataset.keywords || "").split("|").filter(Boolean),
   }));
-  const state = { country: "", keyword: "" };
+  const state = { type: "", country: "", keyword: "" };
   const countEl = document.getElementById("collab-filter-count");
   const resetEl = document.getElementById("collab-filter-reset");
   const emptyEl = document.getElementById("collab-filter-empty");
@@ -21,17 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
     .forEach((country) => countrySelect.add(new Option(country, country)));
   if (countrySelect.options.length <= 1) groupOf("country").hidden = true;
 
+  const addChip = (container, value) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "filter-chip";
+    chip.dataset.value = value;
+    chip.textContent = value;
+    container.appendChild(chip);
+  };
+
+  // Types in the order of the sections on the page
+  const typeChips = groupOf("type").querySelector(".list-filter-chips");
+  [...new Set(items.map(({ type }) => type).filter(Boolean))].forEach((type) => addChip(typeChips, type));
+
   const keywordChips = groupOf("keyword").querySelector(".list-filter-chips");
-  [...new Set(items.flatMap(({ keywords }) => keywords))]
-    .sort((a, b) => a.localeCompare(b))
-    .forEach((keyword) => {
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = "filter-chip";
-      chip.dataset.value = keyword;
-      chip.textContent = keyword;
-      keywordChips.appendChild(chip);
-    });
+  [...new Set(items.flatMap(({ keywords }) => keywords))].sort((a, b) => a.localeCompare(b)).forEach((keyword) => addChip(keywordChips, keyword));
 
   const applyFilters = () => {
     let visibleTotal = 0;
@@ -39,7 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
       let visibleInSection = 0;
       section.querySelectorAll(".collab-item").forEach((el) => {
         const item = items.find((i) => i.el === el);
-        const match = (!state.country || item.country === state.country) && (!state.keyword || item.keywords.includes(state.keyword));
+        const match =
+          (!state.type || item.type === state.type) &&
+          (!state.country || item.country === state.country) &&
+          (!state.keyword || item.keywords.includes(state.keyword));
         el.hidden = !match;
         if (match) visibleInSection++;
       });
@@ -48,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "partner" : "partners"}`;
-    resetEl.hidden = !state.country && !state.keyword;
+    resetEl.hidden = Object.values(state).every((value) => !value);
     emptyEl.hidden = visibleTotal > 0;
   };
 
