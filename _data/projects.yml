@@ -22,3 +22,7 @@
 "Preludium-Wzorek":
   - url: /projects/preludium_wzorek
     label: Preludium
+
+"Collaboration":
+  - url: /collaboration/
+    color: "#2e7d6b"
