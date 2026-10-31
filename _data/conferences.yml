@@ -351,7 +351,7 @@
 
 "ICCVG2022":
   name: "ICCVG"
-  logo_bg: light
+  img: assets/img/conferences/iccvg2022.png
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
@@ -363,7 +363,7 @@
 
 "ICCVG2022_2":
   name: "ICCVG"
-  logo_bg: light
+  img: assets/img/conferences/iccvg2022.png
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
@@ -375,7 +375,7 @@
 
 "ICCVG2022_3":
   name: "ICCVG"
-  logo_bg: light
+  img: assets/img/conferences/iccvg2022.png
   start_date: 2022-09-19
   end_date: 2022-09-21
   presentation_type: presentation
