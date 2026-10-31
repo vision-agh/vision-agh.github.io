@@ -78,20 +78,35 @@
 
 - name: "Universidade Nova de Lisboa"
   category: Erasmus+
+  url: https://www.unl.pt/
+  logo: nova_lisboa.png
+  logo_fit: contain
   country: Portugal
 
 - name: "Universidade do Porto"
   category: Erasmus+
+  url: https://www.up.pt/
+  logo: porto.jpg
+  logo_fit: contain
   country: Portugal
 
 - name: "Brandenburg University of Technology"
   category: Erasmus+
+  url: https://www.b-tu.de/
+  logo: btu.svg
+  logo_fit: contain
   country: Germany
 
 - name: "University of Sassari"
   category: Erasmus+
+  url: https://www.uniss.it/
+  logo: sassari.jpg
+  logo_fit: contain
   country: Italy
 
 - name: "Ruhr University Bochum"
   category: Erasmus+
+  url: https://www.ruhr-uni-bochum.de/
+  logo: rub.svg
+  logo_fit: contain
   country: Germany
