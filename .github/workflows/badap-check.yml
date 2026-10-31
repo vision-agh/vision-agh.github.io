@@ -1,0 +1,49 @@
+name: Check BaDAP for new papers
+
+on:
+  schedule:
+    # every Monday at 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    # available images: https://github.com/actions/runner-images#available-images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Look for new papers in BaDAP 🔎
+        run: python .github/scripts/badap_check.py --summary "$RUNNER_TEMP/badap-summary.md"
+      - name: Show summary 📝
+        run: cat "$RUNNER_TEMP/badap-summary.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Prepare pull request body 📝
+        id: body
+        run: |
+          {
+            echo "text<<EOF"
+            echo "New publications found in [BaDAP AGH](https://badap.agh.edu.pl) were added to \`_bibliography/papers.bib\`:"
+            echo
+            cat "$RUNNER_TEMP/badap-summary.md"
+            echo
+            echo "Check the generated entries before merging (venue, pages, \`projects\`, \`preview\`, \`selected\`)."
+            echo "To skip a publication permanently, add its BaDAP ID to \`ignore\` in \`.github/badap.json\`."
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+      - name: Open pull request 🚀
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: badap/new-papers
+          delete-branch: true
+          add-paths: _bibliography/papers.bib
+          commit-message: Add new papers from BaDAP
+          title: New papers from BaDAP
+          body: ${{ steps.body.outputs.text }}
