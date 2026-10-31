@@ -439,6 +439,8 @@
 
 "KUKDM2022":
   name: "KU KDM"
+  img: assets/img/conferences/kukdm2022.png
+  logo_bg: dark
   start_date: 2022-04-07
   end_date: 2022-04-08
   presentation_type: presentation
