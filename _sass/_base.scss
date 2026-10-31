@@ -756,7 +756,8 @@ footer.sticky-bottom {
     margin-bottom: 10px;
   }
 
-  h2.category {
+  h2.category,
+  h3.category {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
@@ -2435,4 +2436,18 @@ ol {
 .conf-logo.conf-logo-placeholder.conf-logo-placeholder-light {
   color: var(--global-theme-color);
   background: #fff;
+}
+
+// Conferences page – International / National section headings
+.conf-scope-title {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--global-theme-color);
+  border-bottom: 2px solid var(--global-theme-color);
+}
+
+.conf-scope:first-child .conf-scope-title {
+  margin-top: 1rem;
 }

@@ -1,11 +1,12 @@
-// Year / type / conference filters for the Conferences page (_pages/conference.md)
+// Year / scope / type / conference filters for the Conferences page (_pages/conference.md)
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.querySelector(".conference-filters");
   if (!filters) return;
 
   const TYPE_LABELS = { presentation: "Presentation", poster: "Poster", demo: "Demo" };
+  const SCOPE_LABELS = { International: "International", National: "National" };
   const items = [...document.querySelectorAll(".conf-item")];
-  const state = { year: "", type: "", conference: "" };
+  const state = { year: "", scope: "", type: "", conference: "" };
   const countEl = document.getElementById("conference-filter-count");
   const resetEl = document.getElementById("conference-filter-reset");
   const emptyEl = document.getElementById("conference-filter-empty");
@@ -24,17 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
     .sort((a, b) => a.localeCompare(b))
     .forEach((name) => conferenceSelect.add(new Option(name, name)));
 
-  const typeChips = groupOf("type").querySelector(".list-filter-chips");
-  Object.keys(TYPE_LABELS)
-    .filter((type) => unique("type").includes(type))
-    .forEach((type) => {
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = "filter-chip";
-      chip.dataset.value = type;
-      chip.textContent = TYPE_LABELS[type];
-      typeChips.appendChild(chip);
-    });
+  const addChips = (filter, labels) => {
+    const chips = groupOf(filter).querySelector(".list-filter-chips");
+    Object.keys(labels)
+      .filter((value) => unique(filter).includes(value))
+      .forEach((value) => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "filter-chip";
+        chip.dataset.value = value;
+        chip.textContent = labels[value];
+        chips.appendChild(chip);
+      });
+  };
+  addChips("scope", SCOPE_LABELS);
+  addChips("type", TYPE_LABELS);
 
   const applyFilters = () => {
     let visibleTotal = 0;
@@ -47,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       section.hidden = visibleInSection === 0;
       visibleTotal += visibleInSection;
+    });
+    document.querySelectorAll(".conf-scope").forEach((scope) => {
+      scope.hidden = !scope.querySelector(".conf-section:not([hidden])");
     });
 
     countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "contribution" : "contributions"}`;

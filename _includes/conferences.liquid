@@ -3,6 +3,7 @@
   data-year="{{ project.start_date | date: '%Y' }}"
   data-type="{{ project.presentation_type }}"
   data-conference="{{ project.name }}"
+  data-scope="{{ project_scope }}"
 >
   <div class="card h-100 hoverable">
     {% assign conf_logo = project.img %}
