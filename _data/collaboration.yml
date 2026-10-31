@@ -1,6 +1,7 @@
 # Partners listed on the Collaboration page (/collaboration/).
 # Fields: name, institution, category (Academic | Industry), country, url,
-#         logo (file in assets/img/collaboration/), pi, collaborators (comma-separated),
+#         logo (file in assets/img/collaboration/), logo_fit (optional: contain = centred on white with padding),
+#         pi, collaborators (comma-separated),
 #         description, keywords (list)
 
 - name: "Neuro-inspired Perception and Cognition Lab"
@@ -15,7 +16,62 @@
     We explore efficient perception using bio-inspired sensors and neuromorphic computing paradigms,
     focusing on multimodal event-based visual attention and efficient hardware processing of asynchronous, sparse data.
   keywords:
-    - Neuromorphic computing
-    - Event camera
-    - Visual attention
-    - Spiking neural networks
+    - Neuromorphic Computing
+    - Event Camera
+    - Visual Attention
+    - Spiking Neural Networks
+
+- name: "Computer Engineering Group"
+  institution: "Paderborn University"
+  category: Academic
+  country: Germany
+  url: https://cs.uni-paderborn.de/en/technische-informatik
+  logo: paderborn.jpg
+  logo_fit: contain
+  pi: "Marco Platzner"
+  collaborators: "Christoph Berganski, Felix Jentzsch"
+  description: >-
+    We collaborate on compiler optimizations for FPGA dataflow accelerators of quantized neural networks built with the open-source
+    FINN framework. Together we developed scaled-integer range analysis (SIRA), which tracks the range, scale and bias of every tensor
+    to generate smaller and more efficient streaming hardware.
+  keywords:
+    - FPGA
+    - Quantized Neural Networks
+    - Range Analysis
+    - Hardware-Aware Compilation
+
+- name: "AMD Research & Advanced Development"
+  category: Academic
+  url: https://xilinx.github.io/finn/
+  logo: amd.svg
+  logo_fit: contain
+  pi: "Michaela Blott"
+  collaborators: "Michaela Blott, Yaman Umuroglu, Thomas Preusser, Jakoba Petri-Koenig, Ian Colbert"
+  description: >-
+    We collaborate on the efficient deployment of quantized neural networks on FPGAs using the open-source FINN dataflow compiler.
+    Our joint work on scaled-integer range analysis (SIRA) reduces accumulator bitwidths and folds scales, biases and elementwise
+    operations into thresholds, cutting the resource usage of FPGA dataflow accelerators.
+  keywords:
+    - FPGA
+    - Quantized Neural Networks
+    - Dataflow Accelerators
+    - FINN Compiler
+
+- name: "Computer Architecture Laboratory (CAL)"
+  institution: "Norwegian University of Science and Technology (NTNU)"
+  category: Academic
+  country: Norway
+  url: https://www.ntnu.edu/idi/lab/cal
+  logo: ntnu.svg
+  logo_fit: contain
+  pi: "Magnus Själander"
+  collaborators: "Magnus Själander, Charalampos Bezaitis, Yaman Umuroglu"
+  description: >-
+    We collaborate on energy-efficient hardware for AI at the edge, focusing on FPGA dataflow accelerators for quantized neural networks.
+    Our joint work on scaled-integer range analysis (SIRA) uses interval arithmetic to derive the range, scale and bias of tensors,
+    enabling narrower accumulators and cheaper streaming hardware.
+  keywords:
+    - FPGA
+    - Edge AI
+    - Quantized Neural Networks
+    - Energy-Efficient Computer Architecture

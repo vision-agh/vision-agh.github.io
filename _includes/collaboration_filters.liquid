@@ -1,0 +1,20 @@
+<div class="list-filters collab-filters">
+  <div class="list-filter-group" data-filter="country">
+    <span class="list-filter-label"><i class="fa-solid fa-earth-europe"></i> Country</span>
+    <select class="list-filter-select" aria-label="Filter by country">
+      <option value="">All countries</option>
+    </select>
+  </div>
+  <div class="list-filter-group" data-filter="keyword">
+    <span class="list-filter-label"><i class="fa-solid fa-tags"></i> Keyword</span>
+    <div class="list-filter-chips">
+      <button type="button" class="filter-chip active" data-value="">All</button>
+    </div>
+  </div>
+  <div class="list-filter-footer">
+    <span id="collab-filter-count"></span>
+    <button type="button" id="collab-filter-reset" class="list-filter-reset" hidden><i class="fa-solid fa-xmark"></i> Clear filters</button>
+  </div>
+</div>
+<p id="collab-filter-empty" class="list-filter-empty" hidden>No partners match the selected filters.</p>
+<script defer src="{{ '/assets/js/collaboration-filters.js' | relative_url }}"></script>

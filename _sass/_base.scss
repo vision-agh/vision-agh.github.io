@@ -2134,7 +2134,7 @@ ol {
   height: 24rem;
 }
 
-// List filters (Students, Papers, Conferences and Projects pages)
+// List filters (Students, Papers, Conferences, Projects and Collaboration pages)
 
 .list-filters {
   display: flex;
@@ -2378,4 +2378,50 @@ ol {
   font-size: 0.5em;
   vertical-align: super;
   opacity: 0.7;
+}
+
+// Collaboration page – logos with transparent background: centred on white with padding
+.collab-card .collab-logo.collab-logo-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+
+  img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+// Collaboration page – quote under the title
+.collab-quote {
+  position: relative;
+  margin: 0.5rem auto 2rem;
+  padding: 1rem 1.5rem 1rem 3rem;
+  max-width: 46rem;
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: var(--global-card-bg-color);
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -0.4rem;
+    left: 0.6rem;
+    font-family: Georgia, serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--global-theme-color);
+    opacity: 0.5;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--global-text-color);
+  }
 }

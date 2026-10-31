@@ -1,7 +1,11 @@
-<div class="col mb-4">
+<div
+  class="col mb-4 collab-item"
+  data-country="{{ partner.country }}"
+  data-keywords="{{ partner.keywords | join: '|' }}"
+>
   <div class="card h-100 hoverable collab-card">
     {% if partner.logo %}
-      <div class="collab-logo">
+      <div class="collab-logo{% if partner.logo_fit == 'contain' %} collab-logo-contain{% endif %}">
         <img
           src="{{ partner.logo | prepend: '/assets/img/collaboration/' | relative_url }}"
           alt="{{ partner.institution | default: partner.name }} logo"
