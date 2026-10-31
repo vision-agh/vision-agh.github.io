@@ -1,5 +1,5 @@
 # Partners listed on the Collaboration page (/collaboration/).
-# Fields: name, institution, category (Academic | Industry), country, url,
+# Fields: name, institution, category (Academic | Industry | Erasmus+), country, url,
 #         logo (file in assets/img/collaboration/), logo_fit (optional: contain = centred on white with padding),
 #         pi, collaborators (comma-separated),
 #         description, keywords (list)
@@ -75,3 +75,23 @@
     - Edge AI
     - Quantized Neural Networks
     - Energy-Efficient Computer Architecture
+
+- name: "Universidade Nova de Lisboa"
+  category: Erasmus+
+  country: Portugal
+
+- name: "Universidade do Porto"
+  category: Erasmus+
+  country: Portugal
+
+- name: "Brandenburg University of Technology"
+  category: Erasmus+
+  country: Germany
+
+- name: "University of Sassari"
+  category: Erasmus+
+  country: Italy
+
+- name: "Ruhr University Bochum"
+  category: Erasmus+
+  country: Germany
