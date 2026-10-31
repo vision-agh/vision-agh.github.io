@@ -72,7 +72,7 @@
 
 - title: "Control System for a Walking Robot Based on Reinforcement Learning and State Space Models Implemented on an SoC FPGA Platform"
   author: "Wojciech Czyżowski"
-  linkedin: https://www.linkedin.com/in/wojciech-czy%C5%BCowski-414070304/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BwfZYY%2FlOT2%2BpXIRPccWh9A%3D%3D
+  linkedin: https://www.linkedin.com/in/wojciech-czy%C5%BCowski-414070304/
   supervisor: "Mateusz Komorkiewicz"
   cooperation: "Tomasz Kryjak, Hubert Szolc"
   year: "2026/2027"
@@ -84,7 +84,7 @@
 
 - title: "Efficiency Analysis of Dynamic Function eXchange Technology in an Embedded Reconfigurable Vision System"
   author: "Paweł Franczak"
-  linkedin: https://www.linkedin.com/in/franczak-pawel/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bhw6Y%2BfFWTwe0Zdj%2FMczB3g%3D%3D
+  linkedin: https://www.linkedin.com/in/franczak-pawel/
   supervisor: "Piotr Pawlik"
   cooperation: "Tomasz Kryjak, Marcin Kowalczyk"
   year: "2026/2027"
@@ -96,7 +96,7 @@
 
 - title: "Design and Implementation of an Actor-Critic MPC Controller for an Autonomous Unmanned Aerial Vehicle on an Embedded Hardware Platform"
   author: "Igor Siata"
-  linkedin: https://www.linkedin.com/in/igor-siata-7b2282359/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BgLhI%2B8ydSkehRTmmVoecvg%3D%3D
+  linkedin: https://www.linkedin.com/in/igor-siata-7b2282359/
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak, Hubert Szolc"
   year: "2026/2027"
@@ -108,7 +108,7 @@
 
 - title: "Keypoint Detection and Description in the Spatio-Temporal Event Cloud"
   author: "Jan Mardyła"
-  linkedin: https://www.linkedin.com/in/jan-mardyla/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B7xJ3NHWATpW695ppEtfGgA%3D%3D
+  linkedin: https://www.linkedin.com/in/jan-mardyla/
   supervisor: "Piotr Pawlik"
   cooperation: "Tomasz Kryjak, Piotr Wzorek, Marcin Kowalczyk"
   year: "2026/2027"
@@ -120,7 +120,7 @@
 
 - title: "Event Camera and IMU Data Fusion for the Detection of Independently Moving Objects"
   author: "Paweł Jerzyna"
-  linkedin: https://www.linkedin.com/in/pawel-jerzyna/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BgLhI%2B8ydSkehRTmmVoecvg%3D%3D
+  linkedin: https://www.linkedin.com/in/pawel-jerzyna/
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak, Piotr Wzorek, Marcin Kowalczyk"
   year: "2026/2027"
@@ -382,6 +382,7 @@
 
 - title: "Mobile robot control using a recurrent neural network accelerated in an FPGA device and trained by reinforcement learning"
   author: "Wojciech Czyżowski"
+  linkedin: https://www.linkedin.com/in/wojciech-czy%C5%BCowski-414070304/
   supervisor: "Zbigniew Bubliński"
   cooperation: "Tomasz Kryjak, Hubert Szolc"
   year: "2025/2026"
@@ -597,6 +598,7 @@
 
 - title: "Locating and counting objects using data fusion from unmanned aerial vehicle sensors"
   author: "Remigiusz Mietła"
+  linkedin: https://www.linkedin.com/in/remigiusz-mietla/
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
   defense_date: 2025-02-03
@@ -619,6 +621,7 @@
 
 - title: "Obstacle detection with an event camera"
   author: "Roman Nowak"
+  linkedin: https://www.linkedin.com/in/roman-nowak-b379a2357/
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
   defense_date: 2025-02-03
@@ -630,6 +633,7 @@
 
 - title: "Integration of an embedded computing platform with the flight controller of the unmanned aerial vehicle"
   author: "Patryk Kamiński"
+  linkedin: https://www.linkedin.com/in/patryk-kami%C5%84ski-91b664300/
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
   defense_date: 2025-01-22
@@ -641,6 +645,7 @@
 
 - title: "Object tracking utilizing fusion of vision and thermal imaging implemented in an SoC FPGA using the Vitis AI tool"
   author: "Mateusz Gołąbek"
+  linkedin: https://www.linkedin.com/in/matgolabek/
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
   defense_date: 2025-01-27
@@ -652,6 +657,7 @@
 
 - title: "Guiding an autonomous unmanned aerial vehicle towards a target"
   author: "Karolina Piotrowska"
+  linkedin: https://www.linkedin.com/in/karolina-piotrowska-/
   supervisor: "Tomasz Kryjak"
   year: "2024/2025"
   defense_date: 2025-01-28
@@ -719,6 +725,7 @@
 
 - title: "Realisation of drone trajectories using the MPC algorithm"
   author: "Sebastian Bucior"
+  linkedin: https://www.linkedin.com/in/sebastian-bucior/
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
   defense_date: 2024-01-29
@@ -730,6 +737,7 @@
 
 - title: "Drone formation flight control algorithms"
   author: "Michał Szmuksta"
+  linkedin: https://www.linkedin.com/in/micha%C5%82-szmuksta-040953309/
   supervisor: "Tomasz Kryjak"
   year: "2023/2024"
   defense_date: 2024-01-25

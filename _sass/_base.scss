@@ -2425,3 +2425,8 @@ ol {
     color: var(--global-text-color);
   }
 }
+
+// Conferences page – light logos (white on transparent) shown on a dark background
+.conf-logo.conf-logo-dark {
+  background: linear-gradient(135deg, var(--global-theme-color), var(--global-hover-color));
+}

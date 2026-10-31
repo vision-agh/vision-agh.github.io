@@ -15,7 +15,7 @@
       {% capture conf_logo_exists %}{% file_exists {{ conf_logo }} %}{% endcapture %}
     {% endif %}
     {% if conf_logo_exists == 'true' %}
-      <div class="conf-logo">
+      <div class="conf-logo{% if project.logo_bg == 'dark' %} conf-logo-dark{% endif %}">
         <img src="{{ conf_logo | relative_url }}" alt="{{ project.name }} logo" loading="lazy">
       </div>
     {% else %}

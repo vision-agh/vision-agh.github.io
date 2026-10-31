@@ -91,6 +91,8 @@
 
 "KUKDM2026":
   name: "KU KDM"
+  img: assets/img/conferences/kukdm2026.png
+  logo_bg: dark
   start_date: 2026-04-13
   end_date: 2026-04-15
   presentation_type: presentation
@@ -174,6 +176,8 @@
 
 "KUKDM2025":
   name: "KU KDM"
+  img: assets/img/conferences/kukdm2025.png
+  logo_bg: dark
   start_date: 2025-04-02
   end_date: 2025-04-04
   presentation_type: presentation
