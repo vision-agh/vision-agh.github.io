@@ -1,9 +1,21 @@
 # Partners listed on the Collaboration page (/collaboration/).
-# category: Academic | Industry
-#
-# - name: Example University
-#   category: Academic
-#   country: France
-#   url: https://example.org
-#   description: Joint research on event-based vision.
-[]
+# Fields: name, institution, category (Academic | Industry), country, url,
+#         logo (file in assets/img/collaboration/), pi, collaborators (comma-separated),
+#         description, keywords (list)
+
+- name: "Neuro-inspired Perception and Cognition Lab"
+  institution: "Czech Technical University in Prague"
+  category: Academic
+  country: Czech Republic
+  url: https://giuliadangelo.github.io/html/npclab.html
+  logo: cvut.jpg
+  pi: "Giulia D'Angelo"
+  collaborators: "Giulia D'Angelo, Karla Štěpánová, Rayane Rocha, Paolo Ritirato"
+  description: >-
+    We explore efficient perception using bio-inspired sensors and neuromorphic computing paradigms,
+    focusing on multimodal event-based visual attention and efficient hardware processing of asynchronous, sparse data.
+  keywords:
+    - Neuromorphic computing
+    - Event camera
+    - Visual attention
+    - Spiking neural networks

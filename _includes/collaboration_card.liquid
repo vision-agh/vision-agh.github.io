@@ -1,0 +1,48 @@
+<div class="col mb-4">
+  <div class="card h-100 hoverable collab-card">
+    {% if partner.logo %}
+      <div class="collab-logo">
+        <img
+          src="{{ partner.logo | prepend: '/assets/img/collaboration/' | relative_url }}"
+          alt="{{ partner.institution | default: partner.name }} logo"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+    <div class="card-body">
+      <h3 class="card-title">
+        {% if partner.url -%}
+          <a href="{{ partner.url }}" target="_blank" rel="noopener">
+            {{- partner.name }}
+            <i class="fas fa-external-link-alt"></i
+          ></a>
+        {%- else -%}
+          {{ partner.name }}
+        {%- endif %}
+      </h3>
+      {% if partner.institution or partner.country %}
+        <p class="card-text text-muted mb-2">
+          {{ partner.institution }}
+          {%- if partner.institution and partner.country %}, {% endif -%}
+          {{ partner.country }}
+        </p>
+      {% endif %}
+      {% if partner.pi %}
+        <p class="card-text mb-1"><strong>Head / PI:</strong> {{ partner.pi }}</p>
+      {% endif %}
+      {% if partner.collaborators %}
+        <p class="card-text mb-2"><strong>Co-authors:</strong> {{ partner.collaborators }}</p>
+      {% endif %}
+      {% if partner.description %}
+        <p class="card-text">{{ partner.description }}</p>
+      {% endif %}
+      {% if partner.keywords %}
+        <div class="more-info-keywords mt-3 flex flex-wrap gap-1">
+          {% for kw in partner.keywords %}
+            <span class="text-xs px-2 py-1 rounded">{{ kw }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
