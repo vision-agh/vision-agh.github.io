@@ -142,9 +142,10 @@ html[data-theme="dark"] {
   --global-hover-color: #5d9cc0;
   --global-hover-text-color: #{$grey-color-dark};
   --global-logo-dark-bg: #2b4c5f;
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
+  // dark footer (slightly darker than the page) instead of the inverted light grey bar
+  --global-footer-bg-color: #111112;
+  --global-footer-text-color: #a3a3a3;
+  --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
