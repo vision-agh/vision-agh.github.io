@@ -581,12 +581,12 @@ footer.sticky-bottom {
       border-color: var(--global-divider-color);
 
       .badge {
-        color: var(--global-card-bg-color) !important;
+        color: var(--global-badge-text-color) !important;
         background-color: var(--global-badge-bg-color) !important;
       }
 
       .badge .project {
-        color: var(--global-card-bg-color) !important;
+        color: var(--global-badge-text-color) !important;
         background-color: var(--global-badge-project-bg-color) !important;
       }
     }
@@ -831,7 +831,7 @@ footer.sticky-bottom {
         abbr {
           display: inline-block;
           // background-color: var(--global-theme-color);
-          color: var(--global-card-bg-color) !important;
+          color: var(--global-badge-text-color) !important;
 
           a {
             color: white;
@@ -848,12 +848,12 @@ footer.sticky-bottom {
         }
 
         .badge {
-          color: var(--global-card-bg-color) !important;
+          color: var(--global-badge-text-color) !important;
           background-color: var(--global-badge-bg-color) !important;
         }
 
         .badge.project {
-          color: var(--global-card-bg-color) !important;
+          color: var(--global-badge-text-color) !important;
           background-color: var(--global-badge-project-bg-color) !important;
         }
       }
@@ -2200,7 +2200,7 @@ ol {
     }
 
     &.active {
-      color: #fff;
+      color: var(--global-hover-text-color);
       background-color: var(--global-theme-color);
       border-color: var(--global-theme-color);
     }
@@ -2318,7 +2318,7 @@ ol {
 
   &.ongoing {
     color: #fff;
-    background-color: #2e9d5b;
+    background-color: var(--global-status-ongoing-color);
   }
 }
 
@@ -2342,7 +2342,7 @@ ol {
   &.conf-logo-placeholder {
     flex-direction: column;
     color: #fff;
-    background: linear-gradient(135deg, var(--global-theme-color), var(--global-hover-color));
+    background: var(--global-logo-dark-bg);
 
     span {
       font-size: 1.6rem;
@@ -2429,7 +2429,7 @@ ol {
 
 // Conferences page – light logos (white on transparent) shown on a dark background
 .conf-logo.conf-logo-dark {
-  background: linear-gradient(135deg, var(--global-theme-color), var(--global-hover-color));
+  background: var(--global-logo-dark-bg);
 }
 
 // Conferences page – placeholder header on white (logo_bg: light)

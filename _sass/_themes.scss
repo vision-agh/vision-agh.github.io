@@ -9,12 +9,15 @@
   --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
+  // darker than $grey-color so secondary text passes WCAG AA (4.5:1) on white
+  --global-text-color-light: #6b6b6b;
   // --global-theme-color: #{$purple-color};
   // --global-hover-color: #{$purple-color};
   --global-theme-color: #8e236b;
   --global-hover-color: #8e236b;
   --global-hover-text-color: #{$white-color};
+  // background behind white logos / text headers on the Conferences page
+  --global-logo-dark-bg: #8e236b;
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
@@ -47,6 +50,8 @@
 
   --global-badge-bg-color: #00693c;
   --global-badge-project-bg-color: #a71930;
+  --global-badge-text-color: #{$white-color};
+  --global-status-ongoing-color: #237a46;
 
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
@@ -128,12 +133,15 @@ html[data-theme="dark"] {
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
+  --global-text-color-light: #a3a3a3;
   // --global-theme-color: #{$cyan-color};
   // --global-hover-color: #{$cyan-color};
-  --global-theme-color: #41708b;
-  --global-hover-color: #41708b;
-  --global-hover-text-color: #{$white-color};
+  // lighter than the former #41708b so links and headings pass WCAG AA on the dark background;
+  // text on theme-coloured backgrounds (active chips, hovered buttons) is therefore dark
+  --global-theme-color: #5d9cc0;
+  --global-hover-color: #5d9cc0;
+  --global-hover-text-color: #{$grey-color-dark};
+  --global-logo-dark-bg: #2b4c5f;
   --global-footer-bg-color: #{$grey-color-light};
   --global-footer-text-color: #{$grey-color-dark};
   --global-footer-link-color: #{$black-color};
