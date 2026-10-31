@@ -251,6 +251,9 @@
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
       {% endif %}
+      {% if entry.collaboration %}
+        <a class="collab btn btn-sm z-depth-0" role="button">Collaboration</a>
+      {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
@@ -417,6 +420,41 @@
       <!-- Hidden Award block -->
       <div class="award hidden d-print-inline">
         <p>{{ entry.award | markdownify }}</p>
+      </div>
+    {% endif %}
+
+    {% if entry.collaboration %}
+      <!-- Hidden collaboration block: partners from _data/collaboration.yml (by id) -->
+      <div class="collab hidden">
+        <ul class="collab-partners">
+          {% assign collab_ids = entry.collaboration | split: ',' %}
+          {% for collab_id in collab_ids %}
+            {% assign collab_key = collab_id | strip %}
+            {% assign partner = site.data.collaboration | where: 'id', collab_key | first %}
+            {% if partner %}
+              <li>
+                {% if partner.url %}
+                  <a href="{{ partner.url }}" target="_blank" rel="noopener"
+                    ><strong>{{ partner.name }}</strong> <i class="fas fa-external-link-alt"></i
+                  ></a>
+                {% else %}
+                  <strong>{{ partner.name }}</strong>
+                {% endif %}
+                {% if partner.institution or partner.country %}
+                  <br>
+                  <span class="collab-partner-place">
+                    {{- partner.institution -}}
+                    {%- if partner.institution and partner.country %}, {% endif -%}
+                    {{- partner.country -}}
+                  </span>
+                {% endif %}
+              </li>
+            {% else %}
+              <li>{{ collab_key }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <p class="collab-more"><a href="{{ '/collaboration/' | relative_url }}">All our collaborations</a></p>
       </div>
     {% endif %}
 

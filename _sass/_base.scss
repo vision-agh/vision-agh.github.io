@@ -2451,3 +2451,37 @@ ol {
 .conf-scope:first-child .conf-scope-title {
   margin-top: 1rem;
 }
+
+// Papers – "Collaboration" button panel (partners from _data/collaboration.yml)
+.publications div.collab.hidden {
+  border: dashed 1px var(--global-bg-color);
+
+  &.open {
+    border-color: var(--global-theme-color);
+  }
+
+  .collab-partners {
+    margin: 10px 10px 0;
+    padding-left: 1.2rem;
+    text-align: left;
+
+    li {
+      margin-bottom: 0.4rem;
+      line-height: 1.4em;
+    }
+
+    .fa-external-link-alt {
+      font-size: 0.7em;
+      opacity: 0.7;
+    }
+  }
+
+  .collab-partner-place {
+    color: var(--global-text-color-light);
+  }
+
+  p.collab-more {
+    margin-top: 0;
+    text-align: left;
+  }
+}

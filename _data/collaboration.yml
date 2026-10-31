@@ -1,10 +1,12 @@
 # Partners listed on the Collaboration page (/collaboration/).
-# Fields: name, institution, category (Academic | Industry | Erasmus+), country, url,
+# Fields: id (short key used in the `collaboration` field of _bibliography/papers.bib),
+#         name, institution, category (Academic | Industry | Erasmus+), country, url,
 #         logo (file in assets/img/collaboration/), logo_fit (optional: contain = centred on white with padding),
 #         pi, collaborators (comma-separated),
 #         description, keywords (list)
 
-- name: "Neuro-inspired Perception and Cognition Lab"
+- id: ctu
+  name: "Neuro-inspired Perception and Cognition Lab"
   institution: "Czech Technical University in Prague"
   category: Academic
   country: Czech Republic
@@ -21,7 +23,8 @@
     - Visual Attention
     - Spiking Neural Networks
 
-- name: "Computer Engineering Group"
+- id: paderborn
+  name: "Computer Engineering Group"
   institution: "Paderborn University"
   category: Academic
   country: Germany
@@ -40,7 +43,8 @@
     - Range Analysis
     - Hardware-Aware Compilation
 
-- name: "AMD Research & Advanced Development"
+- id: amd
+  name: "AMD Research & Advanced Development"
   category: Academic
   url: https://xilinx.github.io/finn/
   logo: amd.svg
@@ -57,7 +61,8 @@
     - Dataflow Accelerators
     - FINN Compiler
 
-- name: "Computer Architecture Laboratory (CAL)"
+- id: ntnu
+  name: "Computer Architecture Laboratory (CAL)"
   institution: "Norwegian University of Science and Technology (NTNU)"
   category: Academic
   country: Norway
