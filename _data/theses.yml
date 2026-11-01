@@ -7,6 +7,7 @@
 #         defense_date (YYYY-MM-DD, optional),
 #         keywords (optional, not displayed),
 #         funding (e.g. IDUB; shows a button with the description from _data/thesis_funding.yml),
+#         avader (true if carried out with the AGH AVADER student research group; shows an "AGH AVADER" label and enables the filter),
 #         image (file in assets/img/theses/, optional), abstract, pdf, code (optional)
 #
 # - title: Example thesis title

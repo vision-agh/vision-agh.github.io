@@ -1,4 +1,10 @@
-<li class="thesis-item" data-year="{{ thesis.year }}" data-type="{{ thesis.type }}" data-funding="{{ thesis.funding }}">
+<li
+  class="thesis-item"
+  data-year="{{ thesis.year }}"
+  data-type="{{ thesis.type }}"
+  data-funding="{{ thesis.funding }}"
+  data-avader="{% if thesis.avader %}yes{% endif %}"
+>
   <div class="row">
     {% if thesis.image %}
       <div class="col col-sm-2 abbr preview-col">
@@ -98,6 +104,11 @@
       <div class="links">
         {% if thesis.group != 'Alumni' and thesis.defense_date == null %}
           <span class="thesis-status ongoing"><i class="fa-solid fa-hourglass-half"></i> Ongoing</span>
+        {% endif %}
+        {% if thesis.avader %}
+          <a class="thesis-avader" href="#avader" title="Carried out with the AGH AVADER student research group"
+            ><img src="{{ '/assets/img/agh_avader_logo_sq_small.png' | relative_url }}" alt="" loading="lazy"> AGH AVADER</a
+          >
         {% endif %}
         {% if thesis.abstract %}
           <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>

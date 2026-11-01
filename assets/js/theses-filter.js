@@ -1,9 +1,9 @@
-// Year / type / funding filters for the Students page (_pages/students.md)
+// Year / type / funding / AVADER filters for the Students page (_pages/students.md)
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.querySelector(".list-filters");
   if (!filters) return;
 
-  const state = { year: "", type: "", funding: "" };
+  const state = { year: "", type: "", funding: "", avader: "" };
   const countEl = document.getElementById("thesis-filter-count");
   const resetEl = document.getElementById("list-filter-reset");
   const emptyEl = document.getElementById("thesis-filter-empty");

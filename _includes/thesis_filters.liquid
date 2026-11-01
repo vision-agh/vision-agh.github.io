@@ -1,6 +1,7 @@
 {% assign thesis_years = site.data.theses | map: 'year' | compact | uniq | sort | reverse %}
 {% assign thesis_types = site.data.theses | map: 'type' | compact | uniq | sort %}
 {% assign thesis_fundings = site.data.theses | map: 'funding' | compact | uniq | sort %}
+{% assign avader_theses = site.data.theses | where: 'avader', true %}
 <div class="list-filters">
   <div class="list-filter-group" data-filter="year">
     <span class="list-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
@@ -28,6 +29,15 @@
         {% for funding in thesis_fundings %}
           <button type="button" class="filter-chip" data-value="{{ funding }}">{{ funding }}</button>
         {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+  {% if avader_theses.size > 0 %}
+    <div class="list-filter-group" data-filter="avader">
+      <span class="list-filter-label"><i class="fa-solid fa-users"></i> Student group</span>
+      <div class="list-filter-chips">
+        <button type="button" class="filter-chip active" data-value="">All</button>
+        <button type="button" class="filter-chip" data-value="yes">AGH AVADER</button>
       </div>
     </div>
   {% endif %}

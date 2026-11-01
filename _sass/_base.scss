@@ -2489,7 +2489,7 @@ ol {
 // Students page – AGH AVADER student research group card
 .avader-card {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: 11rem 1fr;
   gap: 1.5rem;
   align-items: start;
   margin-bottom: 2rem;
@@ -2501,12 +2501,16 @@ ol {
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
+
+    .avader-logo {
+      max-width: 11rem;
+    }
   }
 
   // black logo on transparent background: keep it on white in both themes
   .avader-logo {
     display: block;
-    padding: 0.9rem 1rem;
+    padding: 0.75rem;
     border-radius: 0.5rem;
     background-color: #fff;
 
@@ -2593,4 +2597,38 @@ ol {
     font-size: 0.75em;
     color: var(--global-theme-color);
   }
+}
+
+// Students page – "AGH AVADER" label on theses carried out with the student research group
+.thesis-avader {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.375rem 0.375rem 0.375rem 0;
+  padding: 0.15rem 0.7rem 0.15rem 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  color: var(--global-theme-color) !important;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 999px;
+
+  img {
+    width: 1.4rem;
+    height: 1.4rem;
+    padding: 0.1rem;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// keep the AVADER card visible below the fixed navbar when jumped to from a thesis label
+#avader {
+  scroll-margin-top: 5rem;
 }
