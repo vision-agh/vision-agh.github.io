@@ -102,6 +102,16 @@ layout: default
                     ></i
                   ></a>
                 {%- endif %}
+                {% if page.profile.arxiv -%}
+                  <a
+                    href="https://arxiv.org/search/cs?searchtype=author&query={{ page.profile.arxiv }}"
+                    target="_blank"
+                    title="arXiv"
+                    ><i
+                      class="ai ai-arxiv ai-1x"
+                    ></i
+                  ></a>
+                {%- endif %}
               </div>
             </p>
             <p class="post">{{ page.profile.address }}</p>
@@ -177,7 +187,9 @@ layout: default
                     {%- endif %}
                   </time>
                 {% else %}
-                  <time class="block mb-3 text-sm font-normal leading-none text-gray-500">{{ item.date | date: '%d %B %Y' }}</time>
+                  <time class="block mb-3 text-sm font-normal leading-none text-gray-500">
+                    {%- if item.date contains '-' -%}{{ item.date | date: '%d %B %Y' }}{%- else -%}{{ item.date }}{%- endif -%}
+                  </time>
                 {% endif %}
                 <div class="mb-4 text-base font-normal text-gray-500  prose max-w-none prose-slate">
                   {{ item.summary }}

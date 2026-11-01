@@ -9,6 +9,8 @@ nav_order: 5
 
 <!-- _pages/students.md -->
 
+{% include avader_card.liquid %}
+
 {% include thesis_filters.liquid %}
 
 {% assign sections = "MSc,Bachelor,Alumni" | split: "," %}

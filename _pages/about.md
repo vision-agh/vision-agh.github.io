@@ -32,6 +32,8 @@ We conduct research on the design and implementation of embedded vision systems 
 
 As hardware platforms, we use reprogrammable FPGAs (Field Programmable Gate Arrays), reprogrammable SoCs (System on Chip) such as Zynq SoC and Zynq UltraScale+ MPSoC (Multi-Processor System on Chip), as well as embedded GPU solutions, including NVIDIA Jetson platforms. We are also actively exploring neuromorphic and event-based vision platforms for next-generation autonomous systems.
 
+Students interested in our research can join the [AGH AVADER Student Research Group](https://www.avader.agh.edu.pl/), which works on embedded vision, drones and autonomous vehicles; many of its projects grow into bachelor's and master's theses (see [Students](/students/)).
+
 <!-- Such systems are used in applications requiring very fast and efficient processing of video data so that the information obtained from them can be used almost immediately to support decision-making or control. Current research focuses on the following areas:
 
 - control of autonomous, unmanned flying vehicles **(drones, UAVs, UAS)**,

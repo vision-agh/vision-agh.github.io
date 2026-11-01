@@ -1,0 +1,26 @@
+# Former members shown in the "Alumni" section at the bottom of the Team page (/team).
+# Fields (all optional except name):
+#   name     – full name
+#   role     – role in the group, e.g. "PhD student", "Research assistant"
+#   years    – time in the group, e.g. "2017–2021"
+#   now      – current position / employer
+#   linkedin – LinkedIn profile slug (the part after linkedin.com/in/) or full URL
+#   url      – personal website or profile page
+
+- name: "Dominika Przewłocka-Rus"
+  role: "Contractor in the NCN Sonata project"
+  years:
+  now:
+  linkedin:
+
+- name: "Piotr Janus"
+  role: "Contractor in the NCN Sonata project"
+  years:
+  now:
+  linkedin:
+
+- name: "Piotr Ciarach"
+  role: "Contractor in the NCN Sonata project"
+  years:
+  now:
+  linkedin:

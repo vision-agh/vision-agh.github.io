@@ -98,6 +98,11 @@ layout: default
                     ><i class="ai ai-google-scholar ai-1x"></i
                   ></a>
                 {%- endif %}
+                {% if head_member.profile.arxiv -%}
+                  <a href="https://arxiv.org/search/cs?searchtype=author&query={{ head_member.profile.arxiv }}" target="_blank" title="arXiv"
+                    ><i class="ai ai-arxiv ai-1x"></i
+                  ></a>
+                {%- endif %}
               </div>
             </p>
             <p class="post">{{ head_member.profile.address }}</p>
