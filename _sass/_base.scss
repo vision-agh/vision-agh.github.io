@@ -2320,6 +2320,13 @@ ol {
     color: #fff;
     background-color: var(--global-status-ongoing-color);
   }
+
+  // thesis type (MSc / BSc) – first label in the row of buttons
+  &.thesis-type {
+    color: var(--global-badge-text-color);
+    background-color: var(--global-badge-bg-color);
+    text-transform: none;
+  }
 }
 
 // Conferences page – conference logo / placeholder header on cards

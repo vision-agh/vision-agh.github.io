@@ -23,11 +23,6 @@
     {% endif %}
 
     <div class="{% if thesis.image %}col-sm-10{% else %}col-sm-12{% endif %}">
-      {% if thesis.type %}
-        <div class="abbr">
-          <abbr class="badge">{{ thesis.type }}</abbr>
-        </div>
-      {% endif %}
       <div class="title">{{ thesis.title }}</div>
       {% assign author_first = thesis.author | split: ' ' | first %}
       {% assign author_last = thesis.author | split: ' ' | last | remove_accents %}
@@ -102,6 +97,9 @@
       {% endif %}
 
       <div class="links">
+        {% if thesis.type %}
+          <span class="thesis-status thesis-type">{{ thesis.type }}</span>
+        {% endif %}
         {% if thesis.group != 'Alumni' and thesis.defense_date == null %}
           <span class="thesis-status ongoing"><i class="fa-solid fa-hourglass-half"></i> Ongoing</span>
         {% endif %}
