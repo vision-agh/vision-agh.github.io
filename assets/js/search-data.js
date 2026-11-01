@@ -83,7 +83,7 @@ ninja.data = [{
               window.location.href = "/members/kowalczyk";
             },},{id: "members-tomasz-kryjak-phd",
           title: 'Tomasz Kryjak, PhD',
-          description: "Profile of Tomasz Kryjak, Leader of the Embedded Perception and Autonomous Systems Group.",
+          description: "Profile of Tomasz Kryjak, Associate Professor and Leader of the Embedded Perception and Autonomous Systems Group, AGH University of Krakow.",
           section: "Members",handler: () => {
               window.location.href = "/members/kryjak";
             },},{id: "members-konrad-lis-msc",
