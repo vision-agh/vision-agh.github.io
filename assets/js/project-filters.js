@@ -1,4 +1,4 @@
-// Year / type filters for the Projects page (_pages/projects.md).
+// Funder / status / year filters for the Projects page (_pages/projects.md).
 // A project matches a year if it was active in that year; projects without an end date are treated as ongoing.
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.querySelector(".project-filters");
@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = [...document.querySelectorAll(".project-item")].map((el) => {
     const start = parseInt(el.dataset.start, 10);
     const end = parseInt(el.dataset.end, 10);
-    return { el, type: el.dataset.type, start, end: Number.isNaN(end) ? Math.max(currentYear, start) : end };
+    return { el, type: el.dataset.type, status: el.dataset.status, start, end: Number.isNaN(end) ? Math.max(currentYear, start) : end };
   });
 
-  const state = { year: "", type: "" };
+  const state = { year: "", type: "", status: "" };
   const countEl = document.getElementById("project-filter-count");
   const resetEl = document.getElementById("project-filter-reset");
   const emptyEl = document.getElementById("project-filter-empty");
@@ -44,16 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
       let visibleInSection = 0;
       section.querySelectorAll(".project-item").forEach((el) => {
         const item = items.find((i) => i.el === el);
-        const match = (!state.type || item.type === state.type) && (!state.year || (item.start <= year && year <= item.end));
+        const match =
+          (!state.type || item.type === state.type) &&
+          (!state.status || item.status === state.status) &&
+          (!state.year || (item.start <= year && year <= item.end));
         el.hidden = !match;
         if (match) visibleInSection++;
       });
       section.hidden = visibleInSection === 0;
       visibleTotal += visibleInSection;
+      const sectionCount = section.querySelector(".section-count");
+      if (sectionCount) sectionCount.textContent = `${visibleInSection} ${visibleInSection === 1 ? "project" : "projects"}`;
     });
 
     countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "project" : "projects"}`;
-    resetEl.hidden = !state.year && !state.type;
+    resetEl.hidden = !state.year && !state.type && !state.status;
     emptyEl.hidden = visibleTotal > 0;
   };
 

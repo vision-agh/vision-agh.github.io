@@ -9,7 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .map((li) => ({ li, row: li.querySelector("[data-paper-type]") }))
     .filter(({ row }) => row);
 
-  const state = { year: "", type: "", query: "" };
+  // ?partner=<id> (link from the Collaboration page): show only papers with that partner
+  const partner = new URLSearchParams(window.location.search).get("partner") || "";
+  const state = { year: "", type: "", project: "", featured: "", query: "", partner };
+  const featuredEl = filters.querySelector(".featured-toggle");
   const searchEl = document.getElementById("paper-search");
 
   // Search text of every paper: title, authors, venue and abstract, without accents and case
@@ -52,7 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const anyVisible = [...ol.querySelectorAll(":scope > li")].some(isVisible);
       ol.classList.toggle("filter-hidden", !anyVisible);
       const heading = ol.previousElementSibling;
-      if (heading && heading.tagName === "H2") heading.classList.toggle("filter-hidden", !anyVisible);
+      if (heading && heading.tagName === "H2") {
+        heading.classList.toggle("filter-hidden", !anyVisible);
+        // number of (visible) publications on the right of the year heading
+        const visibleInYear = [...ol.querySelectorAll(":scope > li")].filter(isVisible).length;
+        let count = heading.querySelector(".section-count");
+        if (!count) {
+          heading.classList.add("has-count");
+          count = document.createElement("span");
+          count.className = "section-count";
+          heading.appendChild(count);
+        }
+        count.textContent = `${visibleInYear} ${visibleInYear === 1 ? "publication" : "publications"}`;
+      }
     });
     const visibleTotal = items.filter(({ li }) => isVisible(li)).length;
     countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "paper" : "papers"}`;
@@ -65,10 +80,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const match =
         (!state.year || row.dataset.paperYear === state.year) &&
         (!state.type || row.dataset.paperType === state.type) &&
+        (!state.project || (row.dataset.paperProjects || "").split(",").includes(state.project)) &&
+        (!state.featured || row.dataset.paperFeatured === "yes") &&
+        (!state.partner || (row.dataset.paperPartners || "").split(",").includes(state.partner)) &&
         words.every((word) => text.includes(word));
       li.classList.toggle("filtered-out", !match);
     });
-    resetEl.hidden = !state.year && !state.type && !state.query;
+    resetEl.hidden = !state.year && !state.type && !state.project && !state.featured && !state.query && !state.partner;
     updateGroups();
   };
 
@@ -97,8 +115,22 @@ document.addEventListener("DOMContentLoaded", () => {
     filters.querySelectorAll(".list-filter-group").forEach((group) => setActive(group, ""));
     searchEl.value = "";
     state.query = "";
+    state.featured = "";
+    featuredEl.setAttribute("aria-pressed", "false");
+    if (state.partner) {
+      state.partner = "";
+      partnerEl.hidden = true;
+      history.replaceState(null, "", window.location.pathname);
+    }
     applyFilters();
   });
+
+  // Note above the list naming the partner whose papers are shown
+  const partnerEl = document.getElementById("paper-filter-partner");
+  if (state.partner && partnerEl) {
+    partnerEl.querySelector("span").textContent = partnerEl.dataset[`name${state.partner.toLowerCase()}`] || state.partner;
+    partnerEl.hidden = false;
+  }
 
   let searchTimer;
   searchEl.addEventListener("input", () => {
@@ -107,6 +139,28 @@ document.addEventListener("DOMContentLoaded", () => {
       state.query = normalize(searchEl.value.trim());
       applyFilters();
     }, 150);
+  });
+
+  // "Featured only" toggle: papers marked selected={true}
+  featuredEl.addEventListener("click", () => {
+    state.featured = state.featured ? "" : "yes";
+    featuredEl.setAttribute("aria-pressed", String(Boolean(state.featured)));
+    applyFilters();
+  });
+
+  // Download the BibTeX of the papers currently shown
+  document.getElementById("paper-bibtex-download").addEventListener("click", () => {
+    const entries = items
+      .filter(({ li }) => isVisible(li))
+      .map(({ li }) => li.querySelector(".bibtex.hidden"))
+      .filter(Boolean)
+      .map((el) => el.textContent.trim());
+    const blob = new Blob([entries.join("\n\n") + "\n"], { type: "application/x-bibtex" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "epas-papers.bib";
+    link.click();
+    URL.revokeObjectURL(link.href);
   });
 
   // Re-evaluate after the text search (bibsearch.js) changes what is visible

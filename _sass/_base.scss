@@ -3345,3 +3345,623 @@ html[data-theme="dark"] .home-logos img {
     }
   }
 }
+
+// compact filter bar: search and filter groups side by side (Students page)
+.list-filters.list-filters-inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+
+  .list-filter-search {
+    flex: 1 1 16rem;
+  }
+
+  .list-filter-group {
+    gap: 0.5rem;
+  }
+
+  .list-filter-label {
+    min-width: 0;
+  }
+
+  .list-filter-footer {
+    flex-basis: 100%;
+  }
+}
+
+// section heading with a count on the right
+.publications h2.has-count,
+.page-section-title.has-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+
+  .section-count {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--global-text-color-light);
+  }
+}
+
+// Students page – "Looking for a thesis topic?" banner
+.thesis-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.75rem;
+  background-color: color-mix(in srgb, var(--global-theme-color) 7%, transparent);
+  border-radius: 12px;
+
+  .thesis-cta-text {
+    flex: 1 1 28rem;
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--global-theme-color);
+    }
+
+    p {
+      margin: 0 0 0.75rem;
+      line-height: 1.55;
+    }
+  }
+
+  .thesis-cta-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    span {
+      padding: 0.15rem 0.6rem;
+      font-size: 0.8rem;
+      color: var(--global-theme-color);
+      border: 1px solid color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+      border-radius: 999px;
+    }
+  }
+
+  .thesis-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 15rem;
+
+    .home-btn {
+      text-align: center;
+    }
+  }
+}
+
+// Collaboration page – partner cards
+.collab-card {
+  .card-body {
+    padding: 1rem 1.1rem 0.75rem;
+  }
+
+  .card-title {
+    margin-bottom: 0.3rem;
+    font-size: 1.02rem;
+    text-align: left;
+  }
+
+  .collab-institution,
+  .collab-country {
+    font-size: 0.86rem;
+    color: var(--global-text-color-light);
+  }
+
+  .collab-country i {
+    margin-right: 0.15rem;
+    color: var(--global-theme-color);
+  }
+
+  .collab-contact {
+    margin-top: 0.5rem;
+    font-size: 0.88rem;
+  }
+
+  .collab-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.6rem;
+
+    span {
+      padding: 0.1rem 0.5rem;
+      font-size: 0.75rem;
+      color: var(--global-theme-color);
+      background-color: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
+      border-radius: 999px;
+    }
+  }
+
+  .collab-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 1.1rem 0;
+    padding: 0.6rem 0 0.75rem;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .collab-papers i {
+    margin-right: 0.2rem;
+  }
+
+  .collab-papers-none {
+    color: var(--global-text-color-light);
+  }
+
+  .collab-details-toggle {
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--global-theme-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .collab-details {
+    padding: 0 1.1rem 0.9rem;
+    font-size: 0.86rem;
+    line-height: 1.5;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// muted note on the right of a section heading
+.page-section-title .section-note {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--global-text-color-light);
+}
+
+// Collaboration page – Erasmus+ universities as a row of logos
+.erasmus-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  .erasmus-logo {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  img {
+    max-width: 11rem;
+    height: 3.5rem;
+    object-fit: contain;
+  }
+}
+
+// Papers page – note shown when opened from a partner card (?partner=<id>)
+.list-filter-partner {
+  margin: 0;
+  font-size: 0.9rem;
+
+  i {
+    margin-right: 0.25rem;
+    color: var(--global-theme-color);
+  }
+
+  span {
+    font-weight: 600;
+  }
+}
+
+// partner logo area: same height on every card, logo centred on white
+.collab-card .collab-logo,
+.collab-card .collab-logo.collab-logo-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0;
+
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+// Conferences page – contribution cards
+.conf-card {
+  .conf-logo {
+    border-radius: 0;
+  }
+
+  .card-body {
+    padding: 0.9rem 1.1rem 0.5rem;
+  }
+
+  .conf-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    .card-title {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: left;
+
+      a {
+        color: var(--global-text-color);
+      }
+    }
+  }
+
+  .conf-type {
+    flex-shrink: 0;
+    padding: 0.1rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: var(--global-theme-color);
+    border-radius: 999px;
+
+    &.conf-type-poster {
+      background-color: #4472c4;
+    }
+
+    &.conf-type-demo {
+      background-color: #00693c;
+    }
+  }
+
+  .conf-date {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+
+    i {
+      margin-right: 0.15rem;
+      color: var(--global-theme-color);
+    }
+  }
+
+  .conf-topic {
+    margin: 0.6rem 0 0.4rem;
+    font-size: 0.93rem;
+    line-height: 1.4;
+  }
+
+  .conf-authors {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+  }
+
+  .conf-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin: auto 1.1rem 0;
+    padding: 0.6rem 0 0.75rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .conf-presenters {
+    display: flex;
+
+    img,
+    .conf-presenter-initials {
+      width: 2rem;
+      height: 2rem;
+      margin-right: -0.4rem;
+      object-fit: cover;
+      border: 2px solid var(--global-card-bg-color);
+      border-radius: 50%;
+    }
+
+    .conf-presenter-initials {
+      display: grid;
+      place-items: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--global-hover-text-color);
+      background-color: var(--global-theme-color);
+    }
+  }
+
+  .conf-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.3rem;
+
+    a {
+      padding: 0.1rem 0.55rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--global-text-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 999px;
+
+      &:hover {
+        text-decoration: none;
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+// Projects page – project cards
+.project-card {
+  .project-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .card-body {
+    padding: 0.9rem 1.1rem 0.5rem;
+  }
+
+  .project-card-badges {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-funder {
+    padding: 0.05rem 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--global-badge-text-color);
+    background-color: var(--global-theme-color);
+    border-radius: 4px;
+  }
+
+  .project-status {
+    padding: 0.1rem 0.6rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 999px;
+
+    &.project-status-ongoing {
+      background-color: var(--global-status-ongoing-color);
+    }
+
+    &.project-status-completed {
+      background-color: #6c757d;
+    }
+  }
+
+  .card-title {
+    margin-bottom: 0.25rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-align: left;
+
+    a {
+      color: var(--global-text-color);
+    }
+  }
+
+  .project-subtitle {
+    display: -webkit-box;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--global-text-color-light);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .project-meta {
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    list-style: none;
+
+    i {
+      width: 1.1rem;
+      color: var(--global-theme-color);
+    }
+  }
+
+  .project-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 1.1rem 0;
+    padding: 0.6rem 0 0.75rem;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--global-divider-color);
+
+    i {
+      margin-right: 0.2rem;
+    }
+  }
+}
+
+// Team page – wide cards of the group leaders (photo on the left)
+.team-card.team-card-leader {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+
+  > a {
+    flex-shrink: 0;
+  }
+
+  .card-img-top {
+    margin-top: 0;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .more-info-name {
+    font-size: 1.2rem;
+  }
+
+  .more-info-keywords {
+    justify-content: flex-start;
+    margin-top: 0.6rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+  }
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+// Papers page – numbers next to the publications-per-year chart
+.papers-overview {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .page-stats {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.papers-chart {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.1rem 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  .papers-chart-title {
+    margin-bottom: 0.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  .papers-chart-bars {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    gap: 0.35rem;
+    min-height: 10rem;
+  }
+
+  .papers-chart-bar {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.7rem;
+    color: var(--global-text-color-light);
+  }
+
+  .papers-chart-fill {
+    width: 100%;
+    min-height: 2px;
+    margin: 0.15rem 0;
+    background-color: color-mix(in srgb, var(--global-theme-color) 60%, transparent);
+    border-radius: 4px 4px 0 0;
+  }
+
+  .papers-chart-bar-max .papers-chart-fill {
+    background-color: var(--global-theme-color);
+  }
+}
+
+// filter bar: "Featured only" toggle
+.featured-toggle {
+  padding: 0.25rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color);
+  background: none;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  cursor: pointer;
+
+  i {
+    color: #f5a623;
+  }
+
+  &[aria-pressed="true"] {
+    color: var(--global-hover-text-color);
+    background-color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+
+    i {
+      color: inherit;
+    }
+  }
+}
+
+// group members (linked authors) in bold; Code and Collaboration buttons highlighted
+.publications .author a {
+  font-weight: 600;
+}
+
+.publications .links a.collab,
+.publications .links a.code {
+  color: var(--global-theme-color) !important;
+  border-color: var(--global-theme-color) !important;
+}

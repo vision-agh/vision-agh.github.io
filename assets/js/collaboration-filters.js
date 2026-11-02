@@ -35,8 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const typeChips = groupOf("type").querySelector(".list-filter-chips");
   [...new Set(items.map(({ type }) => type).filter(Boolean))].forEach((type) => addChip(typeChips, type));
 
-  const keywordChips = groupOf("keyword").querySelector(".list-filter-chips");
-  [...new Set(items.flatMap(({ keywords }) => keywords))].sort((a, b) => a.localeCompare(b)).forEach((keyword) => addChip(keywordChips, keyword));
+  const keywordSelect = groupOf("keyword").querySelector(".list-filter-select");
+  [...new Set(items.flatMap(({ keywords }) => keywords))]
+    .sort((a, b) => a.localeCompare(b))
+    .forEach((keyword) => keywordSelect.add(new Option(keyword, keyword)));
 
   const applyFilters = () => {
     let visibleTotal = 0;
@@ -53,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       section.hidden = visibleInSection === 0;
       visibleTotal += visibleInSection;
+      const sectionCount = section.querySelector(".section-count");
+      if (sectionCount) sectionCount.textContent = visibleInSection;
     });
 
     countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "partner" : "partners"}`;
@@ -84,6 +88,16 @@ document.addEventListener("DOMContentLoaded", () => {
   resetEl.addEventListener("click", () => {
     filters.querySelectorAll(".list-filter-group").forEach((group) => setActive(group, ""));
     applyFilters();
+  });
+
+  // "Details" button on partner cards: show the description and collaborators
+  document.querySelectorAll(".collab-details-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const details = button.closest(".collab-card").querySelector(".collab-details");
+      details.hidden = !details.hidden;
+      button.setAttribute("aria-expanded", String(!details.hidden));
+      button.innerHTML = details.hidden ? "Details &rarr;" : "Hide details";
+    });
   });
 
   applyFilters();

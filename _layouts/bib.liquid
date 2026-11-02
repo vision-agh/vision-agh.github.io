@@ -12,7 +12,14 @@
   {% else %}
     {% assign paper_type = 'Other' %}
 {% endcase %}
-<div class="row" data-paper-year="{{ entry.year }}" data-paper-type="{{ paper_type }}">
+<div
+  class="row"
+  data-paper-year="{{ entry.year }}"
+  data-paper-type="{{ paper_type }}"
+  data-paper-partners="{{ entry.collaboration | remove: ' ' }}"
+  data-paper-projects="{{ entry.projects | remove: ' ' }}"
+  data-paper-featured="{% if entry.selected == 'true' or entry.selected == true %}yes{% endif %}"
+>
   {% if entry.preview %}
     <div class="col col-sm-2 abbr preview-col">
       {%- if entry.abbr -%}
@@ -293,7 +300,7 @@
         <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        <a href="{{ entry.code }}" class="code btn btn-sm z-depth-0" role="button">Code</a>
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}

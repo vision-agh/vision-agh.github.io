@@ -4,7 +4,7 @@
   data-country="{{ partner.country }}"
   data-keywords="{{ partner.keywords | join: '|' }}"
 >
-  <div class="card h-100 hoverable collab-card">
+  <div class="card h-100 collab-card">
     {% if partner.logo %}
       <div class="collab-logo{% if partner.logo_fit == 'contain' %} collab-logo-contain{% endif %}">
         <img
@@ -25,29 +25,50 @@
           {{ partner.name }}
         {%- endif %}
       </h3>
-      {% if partner.institution or partner.country %}
-        <p class="card-text text-muted mb-2">
-          {{ partner.institution }}
-          {%- if partner.institution and partner.country %}, {% endif -%}
-          {{ partner.country }}
-        </p>
+      {% if partner.institution %}
+        <div class="collab-institution">{{ partner.institution }}</div>
+      {% endif %}
+      {% if partner.country %}
+        <div class="collab-country"><i class="fa-solid fa-location-dot"></i> {{ partner.country }}</div>
       {% endif %}
       {% if partner.contact %}
-        <p class="card-text mb-1"><strong>Contact person:</strong> {{ partner.contact }}</p>
-      {% endif %}
-      {% if partner.collaborators %}
-        <p class="card-text mb-2"><strong>Collaborators:</strong> {{ partner.collaborators }}</p>
-      {% endif %}
-      {% if partner.description %}
-        <p class="card-text">{{ partner.description }}</p>
+        <div class="collab-contact"><strong>Contact:</strong> {{ partner.contact }}</div>
       {% endif %}
       {% if partner.keywords %}
-        <div class="more-info-keywords mt-3 flex flex-wrap gap-1">
+        <div class="collab-keywords">
           {% for kw in partner.keywords %}
-            <span class="text-xs px-2 py-1 rounded">{{ kw }}</span>
+            <span>{{ kw }}</span>
           {% endfor %}
         </div>
       {% endif %}
     </div>
+    <div class="collab-card-footer">
+      {% if partner.id %}
+        {% capture joint_papers %}{% bibliography_count --query @*[collaboration~={{ partner.id }}] %}{% endcapture %}
+        {% assign joint_papers = joint_papers | strip | plus: 0 %}
+        {% if joint_papers > 0 %}
+          <a class="collab-papers" href="{{ '/publications/' | relative_url }}?partner={{ partner.id }}"
+            ><i class="fa-solid fa-file-lines"></i> {{ joint_papers }} joint {% if joint_papers == 1 %}paper{% else %}papers{% endif -%}
+          </a>
+        {% else %}
+          <span class="collab-papers collab-papers-none"><i class="fa-regular fa-file-lines"></i> no joint papers yet</span>
+        {% endif %}
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if partner.description or partner.collaborators %}
+        <button type="button" class="collab-details-toggle" aria-expanded="false">Details &rarr;</button>
+      {% endif %}
+    </div>
+    {% if partner.description or partner.collaborators %}
+      <div class="collab-details" hidden>
+        {% if partner.description %}
+          <p>{{ partner.description }}</p>
+        {% endif %}
+        {% if partner.collaborators %}
+          <p><strong>Collaborators:</strong> {{ partner.collaborators }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 </div>

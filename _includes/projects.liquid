@@ -1,60 +1,90 @@
+{% assign today = site.time | date: '%Y%m%d' %}
+{% assign project_end = project.end_date | date: '%Y%m%d' %}
+{% if project.end_date == null or project_end >= today %}
+  {% assign project_status = 'Ongoing' %}
+{% else %}
+  {% assign project_status = 'Completed' %}
+{% endif %}
+{% assign project_url = project.redirect | default: project.url %}
+
+{% comment %} papers of the project: the `projects` key in papers.bib whose page (_data/projects.yml) is this project {% endcomment %}
+{% assign project_key = null %}
+{% for pair in site.data.projects %}
+  {% assign key_url = pair[1][0].url %}
+  {% if key_url == project.url %}
+    {% assign project_key = pair[0] %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% assign project_papers = 0 %}
+{% if project_key %}
+  {% capture project_papers %}{% bibliography_count --query @*[projects={{ project_key }}] %}{% endcapture %}
+  {% assign project_papers = project_papers | strip | plus: 0 %}
+{% endif %}
+
 <div
-  class="col project-item"
+  class="col mb-4 project-item"
   data-type="{{ project.category }}"
+  data-status="{{ project_status }}"
   data-start="{{ project.start_date | date: '%Y' }}"
   data-end="{{ project.end_date | date: '%Y' }}"
 >
-  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card h-100 hoverable">
-      {% if project.img %}
-        {%
-          include figure.liquid
-          loading="eager"
-          path=project.img
-          sizes = "250px"
-          alt="project thumbnail"
-          class="card-img-top d-block mx-auto"
-        %}
-      {% endif %}
-      <div class="card-body">
-        <h2 class="card-title">{{ project.title }}</h2>
-        {% if project.principal_investigator %}
-          {% assign pi_lastname = project.principal_investigator | split: ',' | first | split: ' ' | last | remove_accents %}
-          <p class="card-text text-center">
-            <a href="/members/{{ pi_lastname | downcase }}">{{ project.principal_investigator }} </a>
-          </p>
-        {% endif %}
-        {% if project.duration %}
-          <p class="card-text text-center">{{ project.duration }}</p>
-        {% elsif project.start_date and project.end_date %}
-          <p class="card-text text-center">{{ project.start_date | date: '%B %Y' }} - {{ project.end_date | date: '%B %Y' }}</p>
-        {% endif %}
-
-        {% if project.keywords %}
-          {% assign keywords = project.keywords | sort_natural %}
-          <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
-            {% for kw in keywords %}
-              <span class="text-xs px-2 py-1 rounded">{{ kw | strip }}</span>
-            {% endfor %}
-          </div>
-        {% endif %}
-
-        <div class="row ml-1 mr-1 p-0">
-          {% if project.github %}
-            <div class="github-icon">
-              <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-              </div>
-              {% if project.github_stars %}
-                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                  <i class="fa-solid fa-star"></i>
-                  <span id="{{ project.github_stars }}-stars"></span>
-                </span>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
+  <div class="card h-100 project-card">
+    {% if project.img %}
+      <a class="project-logo" href="{{ project_url | relative_url }}">
+        <img src="{{ project.img | relative_url }}" alt="{{ project.title }} logo" loading="lazy">
+      </a>
+    {% endif %}
+    <div class="card-body">
+      <div class="project-card-badges">
+        <span class="project-funder">{{ project.category }}</span>
+        <span class="project-status project-status-{{ project_status | downcase }}">{{ project_status }}</span>
       </div>
+      <h2 class="card-title">
+        <a href="{{ project_url | relative_url }}">{{ project.title }}</a>
+      </h2>
+      {% if project.title_en %}
+        <p class="project-subtitle">{{ project.title_en }}</p>
+      {% endif %}
+      <ul class="project-meta">
+        {% if project.principal_investigator %}
+          {% assign pi_name = project.principal_investigator | split: ',' | first | remove: 'Prof ' %}
+          {% assign pi_member = site.members | where_exp: 'm', 'm.profile.name == pi_name' | first %}
+          <li>
+            <i class="fa-solid fa-user"></i>
+            {% if pi_member -%}
+              <a href="{{ pi_member.url | relative_url }}">{{ project.principal_investigator }}</a>
+            {%- else -%}
+              {{ project.principal_investigator }}
+            {%- endif %}
+          </li>
+        {% endif %}
+        <li>
+          <i class="fa-regular fa-calendar"></i>
+          {% if project.duration %}
+            {{ project.duration }}
+          {% else %}
+            {{ project.start_date | date: '%b %Y' }} –
+            {% if project.end_date %}{{ project.end_date | date: '%b %Y' }}{% else %}ongoing{% endif %}
+          {% endif %}
+        </li>
+        {% if project.budget %}
+          {% assign budget_thousands = project.budget | divided_by: 1000 %}
+          {% assign budget_rest = project.budget | modulo: 1000 | prepend: '00' | slice: -3, 3 %}
+          <li><i class="fa-solid fa-coins"></i> PLN {{ budget_thousands }}&#8239;{{ budget_rest }}</li>
+        {% endif %}
+      </ul>
     </div>
-  </a>
+    <div class="project-card-footer">
+      {% if project_papers > 0 %}
+        <a href="{{ project_url | relative_url }}"
+          ><i class="fa-solid fa-file-lines"></i> {{ project_papers }}
+          {% if project_papers == 1 %}paper{% else %}papers{% endif -%}
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      <a href="{{ project_url | relative_url }}">Details &rarr;</a>
+    </div>
+  </div>
 </div>

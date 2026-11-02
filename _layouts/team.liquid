@@ -8,101 +8,40 @@ layout: page
 {%- endcapture %}
 {% include page_stats.liquid items=team_stats %}
 
-{% assign groups = site.members | sort: 'group_rank' | map: 'group' | uniq %}
-{% for group in groups %}
-  {% if group != 'Principal Investigators' %}
-    <h2 class="page-section-title">{{ group }}</h2>
-  {% endif %}
-  <p>
-    {% assign members = site.members | sort: 'vis_order' | where: 'group', group %}
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-      {% for member in members %}
-        <div class="col mb-4">
-          <div class="card h-100 team-card">
-            <a href="{{ member.url | relative_url }}">
-              {% if member.profile.image %}
-                {% assign profile_image_path = member.profile.image | prepend: 'assets/img/' %}
-                {% if member.profile.image_circular %}
-                  {% assign profile_image_class = 'card-img-top img-fluid z-depth-1 rounded-circle mx-auto' %}
-                {% else %}
-                  {% assign profile_image_class = 'card-img-top img-fluid z-depth-1 rounded mx-auto' %}
-                {% endif %}
-                {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.25}}px,
-                (min-width: 992px) 25vw, (min-width: 768px) 50vw, 95vw"{% endcapture %}
-                {%
-                  include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes
-                  alt=member.profile.image style="max-width:80%; height:auto;"
-                %}
-              {% endif %}
-            </a>
-            <div class="card-body text-center">
-              {% if member.profile.name %}
-                <div class="more-info-name">{{ member.profile.name | split: ',' | first }}</div>
-              {% endif %}
-
-              {% if member.team_head and member.profile.role %}
-                <div class="more-info-role">{{ member.profile.role }}</div>
-              {% elsif member.profile.position %}
-                <div class="more-info-role">{{ member.profile.position }}</div>
-              {% elsif member.profile.role %}
-                <div class="more-info-role">{{ member.profile.role }}</div>
-              {% endif %}
-
-              {% if member.profile.keywords %}
-                {% assign keywords = member.profile.keywords | sort_natural %}
-                <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
-                  {% for kw in keywords %}
-                    <span class="text-xs px-2 py-1 rounded">{{ kw | strip }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
-              <div class="social-icons border-gray-200 pt-2 border-t gap-3 mt-4">
-                {% if member.profile.email %}
-                  <a href="mailto:{{ member.profile.email }}" target="_blank" title="Email"> <i class="fas fa-envelope fa-lg"></i></a>
-                {% endif %}
-
-                {% if member.profile.linkedin %}
-                  <a
-                    href="https://www.linkedin.com/in/{{ member.profile.linkedin }}"
-                    target="_blank"
-                    title="LinkedIn"
-                  >
-                    <i class="fab fa-linkedin fa-lg"></i
-                  ></a>
-                {% endif %}
-                {% if member.profile.orcid %}
-                  <a href="https://orcid.org/{{ member.profile.orcid }}" target="_blank" title="ORCID"> <i class="ai ai-orcid fa-lg"></i></a>
-                {% endif %}
-                {% if member.profile.googlescholar %}
-                  <a href="https://scholar.google.com/citations?user={{ member.profile.googlescholar }}" target="_blank" title="Google Scholar">
-                    <i class="ai ai-google-scholar fa-lg"></i
-                  ></a>
-                {% endif %}
-                {% if member.profile.researchgate %}
-                  <a
-                    href="https://www.researchgate.net/profile/{{ member.profile.researchgate }}"
-                    target="_blank"
-                    title="ResearchGate"
-                  >
-                    <i class="fab fa-researchgate fa-lg"></i
-                  ></a>
-                {% endif %}
-                {% if member.profile.scopus %}
-                  <a
-                    href="https://www.scopus.com/authid/detail.uri?authorId={{ member.profile.scopus }}"
-                    target="_blank"
-                    title="Scopus"
-                  >
-                    <i class="fab fa-scopus fa-lg"></i
-                  ></a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
+{% if page.research_areas %}
+  <div class="list-filters list-filters-inline team-filters">
+    <div class="list-filter-group" data-filter="area">
+      <span class="list-filter-label"><i class="fa-solid fa-tags"></i> Research area</span>
+      <div class="list-filter-chips">
+        <button type="button" class="filter-chip active" data-value="">All</button>
+        {% for area in page.research_areas %}
+          <button type="button" class="filter-chip" data-value="{{ area.match | join: '|' | downcase }}">{{ area.name }}</button>
+        {% endfor %}
+      </div>
     </div>
-  </p>
+  </div>
+  <p id="team-filter-empty" class="list-filter-empty" hidden>Nobody matches the selected research area.</p>
+  <script defer src="{{ '/assets/js/team-filters.js' | relative_url }}"></script>
+{% endif %}
+
+{% for section in page.team_sections %}
+  {% assign section_members = site.members | where_exp: 'm', 'section.groups contains m.group' | sort: 'vis_order' %}
+  {% if section_members.size > 0 %}
+    <div class="team-section">
+      <h2 class="page-section-title has-count">
+        {{ section.title }}
+        <span class="section-count">
+          {{- section_members.size }}
+          {% if section_members.size == 1 %}person{% else %}people{% endif -%}
+        </span>
+      </h2>
+      <div class="row row-cols-1 row-cols-md-2{% unless section.leaders %} row-cols-lg-4{% endunless %}">
+        {% for member in section_members %}
+          {% include team_member_card.liquid leader=section.leaders %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 {% endfor %}
 
 {% if site.data.alumni.size > 0 %}

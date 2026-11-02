@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       section.hidden = visibleInSection === 0;
       visibleTotal += visibleInSection;
+      const scopeCount = section.closest(".conf-scope")?.querySelector(".section-count");
+      if (scopeCount) scopeCount.textContent = visibleInSection;
     });
     document.querySelectorAll(".conf-scope").forEach((scope) => {
       scope.hidden = !scope.querySelector(".conf-section:not([hidden])");

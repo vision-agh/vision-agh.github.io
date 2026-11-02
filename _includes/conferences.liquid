@@ -1,11 +1,11 @@
 <div
-  class="col conf-item"
+  class="col mb-4 conf-item"
   data-year="{{ project.start_date | date: '%Y' }}"
   data-type="{{ project.presentation_type }}"
   data-conference="{{ project.name }}"
   data-scope="{{ project_scope }}"
 >
-  <div class="card h-100 hoverable">
+  <div class="card h-100 conf-card">
     {% assign conf_logo = project.img %}
     {% unless conf_logo %}
       {% assign conf_logo_file = site.data.conference_logos[project.name] %}
@@ -27,89 +27,97 @@
         {%- endif %}
       </div>
     {% endif %}
+
     <div class="card-body">
-      <h2 class="card-title">{{ project.name }}</h2>
-      {% if project.topic %}
-        <p class="card-text text-center">
-          Topic: <span> {{ project.topic }} </span>
-        </p>
+      <div class="conf-card-head">
+        <h2 class="card-title">
+          {%- if project.url -%}
+            <a href="{{ project.url }}" target="_blank" rel="noopener">
+              {{- project.name }}
+              {{ project.start_date | date: '%Y' -}}
+            </a>
+          {%- else -%}
+            {{ project.name }}
+            {{ project.start_date | date: '%Y' }}
+          {%- endif -%}
+        </h2>
+        <span class="conf-type conf-type-{{ project.presentation_type }}">{{ project.presentation_type }}</span>
+      </div>
+      {% if project.start_date %}
+        <div class="conf-date">
+          <i class="fa-regular fa-calendar"></i>
+          {% assign start_month = project.start_date | date: '%b %Y' %}
+          {% assign end_month = project.end_date | date: '%b %Y' %}
+          {% if project.end_date and start_month == end_month -%}
+            {{ project.start_date | date: '%-d' }}–{{ project.end_date | date: '%-d %b %Y' }}
+          {%- elsif project.end_date -%}
+            {{ project.start_date | date: '%-d %b' }} – {{ project.end_date | date: '%-d %b %Y' }}
+          {%- else -%}
+            {{ project.start_date | date: '%-d %b %Y' }}
+          {%- endif %}
+        </div>
       {% endif %}
 
-      {% assign split_authors = project.author | split: ', ' %}
+      {% if project.topic %}
+        <p class="conf-topic">{{ project.topic }}</p>
+      {% endif %}
 
       {% if project.author %}
-        <p class="card-text text-center">
-          <strong>Authors: </strong>
+        <p class="conf-authors">
+          {% assign split_authors = project.author | split: ', ' %}
           {% for author in split_authors %}
-            {% assign author_lastname = author | split: ' ' | last | remove_accents %}
-            <span
-              ><a href="/members/{{ author_lastname | downcase }}">{{ author }}</a></span
-            >
+            {% assign author_member = site.members | where_exp: 'm', 'm.profile.name == author' | first %}
+            {% if author_member -%}
+              <a href="{{ author_member.url | relative_url }}">{{ author }}</a>
+            {%- else -%}
+              {{ author }}
+            {%- endif -%}
             {%- unless forloop.last %}, {% endunless %}
           {% endfor %}
         </p>
       {% endif %}
+    </div>
 
-      {% if project.presenter %}
-        {% if project.presentation_type == 'poster' %}
-          <p class="card-text text-center mb-0"><strong>Poster presented by</strong></p>
-        {% elsif project.presentation_type == 'presentation' %}
-          <p class="card-text text-center mb-0"><strong>Presented by</strong></p>
-        {% elsif project.presentation_type == 'demo' %}
-          <p class="card-text text-center mb-0"><strong>Demo presented by</strong></p>
-        {% endif %}
-
-        <p class="card-text text-center">
+    <div class="conf-card-footer">
+      <div class="conf-presenters">
+        {% if project.presenter %}
           {% assign split_presenter = project.presenter | split: ', ' %}
           {% for presenter in split_presenter %}
-            {% assign author_lastname = presenter | split: ' ' | last | remove_accents %}
-            <span
-              ><a href="/members/{{ author_lastname | downcase }}">{{ presenter }}</a></span
-            >
-            {%- unless forloop.last %}, {% endunless %}
+            {% assign presenter_member = site.members | where_exp: 'm', 'm.profile.name == presenter' | first %}
+            {% if presenter_member and presenter_member.profile.image %}
+              <a href="{{ presenter_member.url | relative_url }}" title="Presented by {{ presenter }}">
+                <img src="{{ presenter_member.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ presenter }}" loading="lazy">
+              </a>
+            {% else %}
+              {% assign initials = '' %}
+              {% assign name_parts = presenter | split: ' ' %}
+              {% for part in name_parts -%}
+                {%- assign initials = initials | append: part.first -%}
+              {%- endfor %}
+              <span class="conf-presenter-initials" title="Presented by {{ presenter }}">{{ initials | slice: 0, 2 }}</span>
+            {% endif %}
           {% endfor %}
-        </p>
-      {% endif %}
-
-      {% if project.start_date and project.end_date %}
-        <p class="card-text text-center">{{ project.start_date | date: '%d %b %Y' }} - {{ project.end_date | date: '%d %b %Y' }}</p>
-      {% endif %}
-
-      <div class="social-icons border-gray-200 pt-2 border-t gap-3 mt-4">
-        {% if project.arxiv %}
-          <a
-            href="https://arxiv.org/pdf/{{ project.arxiv }}"
-            target="_blank"
-            title=""
-          >
-            <i class="ai ai-arxiv ai-1x"></i>
-          </a>
         {% endif %}
-
+      </div>
+      <div class="conf-links">
         {% if project.journal_link %}
-          <a href="{{ project.journal_link }}" target="_blank" title="Link to the journal publication">
-            <i class="fa-brands fa-google-drive"></i>
-          </a>
+          <a href="{{ project.journal_link }}" target="_blank" rel="noopener" title="Paper">Paper</a>
         {% endif %}
-
+        {% if project.arxiv %}
+          <a href="https://arxiv.org/abs/{{ project.arxiv }}" target="_blank" rel="noopener" title="arXiv">arXiv</a>
+        {% endif %}
         {% if project.pdf %}
-          <a
-            href="/assets/pdf/{{ project.pdf }}"
-            target="_blank"
-            title="PDF of the presentation"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
+          {% if project.pdf contains '://' %}
+            {% assign slides_url = project.pdf %}
+          {% else %}
+            {% assign slides_url = project.pdf | prepend: '/assets/pdf/' | relative_url %}
+          {% endif %}
+          <a href="{{ slides_url }}" target="_blank" rel="noopener" title="Slides / poster (PDF)"><i class="fa-solid fa-file-pdf"></i> Slides</a>
         {% endif %}
-
         {% if project.drive %}
-          <a
-            href="{{ project.drive }}"
-            target="_blank"
-            title="Google Drive folder with presentation materials"
+          <a href="{{ project.drive }}" target="_blank" rel="noopener" title="Presentation materials"
+            ><i class="fa-brands fa-google-drive"></i> Materials</a
           >
-            <i class="fa-brands fa-google-drive"></i>
-          </a>
         {% endif %}
       </div>
     </div>

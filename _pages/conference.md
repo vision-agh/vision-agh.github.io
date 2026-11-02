@@ -14,7 +14,6 @@ national_conferences: ["KU KDM", "SPA", "TYGIEL", "MMAR", "Automation", "ICCVG",
 ---
 
 {% assign scopes = "International,National" | split: "," %}
-{% assign categories = "presentation,poster,demo"  | split: "," %}
 
 {% assign conf_names = "" | split: "" %}
 {% assign conf_national = 0 %}
@@ -33,32 +32,18 @@ national_conferences: ["KU KDM", "SPA", "TYGIEL", "MMAR", "Automation", "ICCVG",
 {% include page_stats.liquid items=conf_stats %}
 {% include conference_filters.liquid %}
 
-<!-- pages/projects.md -->
 <div class="projects">
-
+{% assign sorted_projects = site.data.conferences | where_exp: "c", "c.name" | sort: "start_date" | reverse %}
 {% for scope in scopes %}
+{% if scope == "National" %}{% assign scope_count = conf_national %}{% else %}{% assign scope_count = conf_international %}{% endif %}
 
 <div class="conf-scope">
-<h2 class="conf-scope-title page-section-title">{{ scope }} conferences</h2>
-
-{% for category in categories %}
-{% assign categorized_projects = site.data.conferences | where: "presentation_type", category %}
-{% assign sorted_projects = categorized_projects | sort: "start_date" | reverse %}
-
-{% capture cards %}{% for project in sorted_projects %}{% if page.national_conferences contains project.name %}{% assign project_scope = "National" %}{% else %}{% assign project_scope = "International" %}{% endif %}{% if project_scope == scope %}{% include conferences.liquid %}{% endif %}{% endfor %}{% endcapture %}
-
-{% if cards contains "conf-item" %}
-
+<h2 class="conf-scope-title page-section-title has-count">{{ scope }} conferences <span class="section-count">{{ scope_count }}</span></h2>
 <div class="conf-section">
-<h3 class="category">{{ category | capitalize }}</h3>
-  <div class="row row-cols-1 row-cols-md-3">
-    {{ cards }}
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    {% for project in sorted_projects %}{% if page.national_conferences contains project.name %}{% assign project_scope = "National" %}{% else %}{% assign project_scope = "International" %}{% endif %}{% if project_scope == scope %}{% include conferences.liquid %}{% endif %}{% endfor %}
   </div>
 </div>
-{% endif %}
-
-{% endfor %}
-
 </div>
 
 {% endfor %}

@@ -1,15 +1,23 @@
-<div class="list-filters project-filters">
+<div class="list-filters list-filters-inline project-filters">
+  <div class="list-filter-group" data-filter="type">
+    <span class="list-filter-label"><i class="fa-solid fa-landmark"></i> Funder</span>
+    <div class="list-filter-chips">
+      <button type="button" class="filter-chip active" data-value="">All</button>
+    </div>
+  </div>
+  <div class="list-filter-group" data-filter="status">
+    <span class="list-filter-label"><i class="fa-solid fa-circle-half-stroke"></i> Status</span>
+    <div class="list-filter-chips">
+      <button type="button" class="filter-chip active" data-value="">All</button>
+      <button type="button" class="filter-chip" data-value="Ongoing">Ongoing</button>
+      <button type="button" class="filter-chip" data-value="Completed">Completed</button>
+    </div>
+  </div>
   <div class="list-filter-group" data-filter="year">
     <span class="list-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
     <select class="list-filter-select" aria-label="Filter by year">
       <option value="">All years</option>
     </select>
-  </div>
-  <div class="list-filter-group" data-filter="type">
-    <span class="list-filter-label"><i class="fa-solid fa-landmark"></i> Type</span>
-    <div class="list-filter-chips">
-      <button type="button" class="filter-chip active" data-value="">All</button>
-    </div>
   </div>
   <div class="list-filter-footer">
     <span id="project-filter-count"></span>

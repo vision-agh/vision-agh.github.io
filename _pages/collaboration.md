@@ -20,21 +20,41 @@ nav_order: 7
 {% include page_stats.liquid items=collab_stats %}
 {% include collaboration_filters.liquid %}
 
-{% assign categories = "Academic,Industry,Erasmus+" | split: "," %}
-{% for category in categories %}
-{% assign partners = site.data.collaboration | where: "category", category %}
-{% if partners.size > 0 %}
-
-  <div class="collab-section">
-  <h2 class="category page-section-title">{{ category }} partners</h2>
-  <div class="row row-cols-1 row-cols-md-{% if category == 'Erasmus+' %}3{% else %}2{% endif %}">
-    {% for partner in partners %}
+<div class="collab-section">
+  <h2 class="page-section-title has-count">Research partners <span class="section-count">{{ research_partners.size }}</span></h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    {% for partner in research_partners %}
       {% include collaboration_card.liquid %}
     {% endfor %}
   </div>
+</div>
+
+{% if erasmus_partners.size > 0 %}
+
+<div class="collab-section">
+  <h2 class="page-section-title has-count">Erasmus+ partner universities <span class="section-note">student and staff mobility</span></h2>
+  <div class="erasmus-logos">
+    {% for partner in erasmus_partners %}
+      <a
+        class="collab-item erasmus-logo"
+        href="{{ partner.url }}"
+        target="_blank"
+        rel="noopener"
+        title="{{ partner.name }}{% if partner.country %}, {{ partner.country }}{% endif %}"
+        data-type="{{ partner.category }}"
+        data-country="{{ partner.country }}"
+        data-keywords="{{ partner.keywords | join: '|' }}"
+      >
+        {% if partner.logo %}
+          <img src="{{ partner.logo | prepend: '/assets/img/collaboration/' | relative_url }}" alt="{{ partner.name }}" loading="lazy">
+        {% else %}
+          {{ partner.name }}
+        {% endif %}
+      </a>
+    {% endfor %}
   </div>
-  {% endif %}
-{% endfor %}
+</div>
+{% endif %}
 
 {% assign head_member = site.members | where: "team_head", true | first %}
 {% assign contact_url = head_member.profile.email | prepend: "mailto:" %}
