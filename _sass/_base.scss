@@ -4073,11 +4073,18 @@ html[data-theme="dark"] .home-logos img {
 
 // narrower badge column; the paper text takes the rest of the row
 @media (min-width: 576px) {
-  .publications ol.bibliography li .row > .paper-badges {
-    flex: 0 0 9rem;
-    max-width: 9rem;
+  .publications ol.bibliography li .row {
+    > .paper-badges {
+      flex: 0 0 9rem;
+      max-width: 9rem;
+    }
 
-    + .col-sm-10 {
+    > .paper-preview {
+      flex: 0 0 11rem;
+      max-width: 11rem;
+    }
+
+    > .paper-content {
       flex: 1 1 0;
       max-width: none;
     }
@@ -4088,4 +4095,19 @@ html[data-theme="dark"] .home-logos img {
   text-decoration: none;
   border-bottom: none;
   cursor: default;
+}
+
+// preview image column (between the badges and the text)
+.publications ol.bibliography li .paper-preview {
+  margin-bottom: 0.5rem;
+
+  .preview,
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  figure {
+    margin: 0;
+  }
 }

@@ -12,7 +12,11 @@
       {% if thesis.type %}
         <abbr class="badge rounded paper-venue thesis-type-badge">{{ thesis.type }}</abbr>
       {% endif %}
-      {% if thesis.image %}
+    </div>
+
+    {% if thesis.image %}
+      <!-- Preview image between the type badge and the text -->
+      <div class="col-sm-2 paper-preview">
         {% assign thesis_img = thesis.image | prepend: '/assets/img/theses/' %}
         {%
           include figure.liquid
@@ -24,10 +28,10 @@
           avoid_scaling=true
           alt=thesis.title
         %}
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
 
-    <div class="col-sm-10">
+    <div class="col-sm-10 paper-content">
       <div class="title">{{ thesis.title }}</div>
       {% assign author_first = thesis.author | split: ' ' | first %}
       {% assign author_last = thesis.author | split: ' ' | last | remove_accents %}
