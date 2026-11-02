@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Computer Vision Laboratory · Department of Automatic Control and Robotics · AGH University of Krakow, Poland
+subtitle: Computer Vision Laboratory · Department of Automatic Control and Robotics · Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering · AGH University of Krakow, Poland
 
 # main page sections (see _layouts/about.liquid)
 hero_title: Embedded Perception & <b>Autonomous Systems</b>
@@ -21,7 +21,7 @@ research_areas:
     text: "Real-time pipelines for high-resolution video, combining classical vision algorithms with deep networks."
   - icon: fa-solid fa-eye
     title: Event-based vision
-    subtitle: "from filtering to classification and detection"
+    subtitle: "Low-latency perception with event cameras"
     text: "Perception with event cameras (DVS): filtering, visual odometry, tracking and detection from sparse, microsecond-latency event streams."
   - icon: fa-solid fa-brain
     title: Neuromorphic computing

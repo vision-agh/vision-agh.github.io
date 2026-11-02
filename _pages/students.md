@@ -12,7 +12,13 @@ thesis_cta:
   text: >-
     We offer bachelor's and master's topics in embedded vision, drones, autonomous vehicles and event cameras –
     often linked to our research projects, with IDUB funding available.
-  topics: [FPGA / SoC, Event cameras, UAV & PX4 / ROS 2, LiDAR, Embedded AI]
+  topics:
+    - UAV & PX4 / ROS 2
+    - Embedded perception & control
+    - SoC FPGA / embedded GPU
+    - Event cameras
+    - Neuromorphic computing
+    - Embedded AI
 ---
 
 <!-- _pages/students.md -->
@@ -39,11 +45,8 @@ thesis_cta:
   </div>
   <div class="thesis-cta-buttons">
     <a class="home-btn home-btn-primary" href="mailto:{{ head_member.profile.email }}"><i class="fa-solid fa-envelope"></i> Contact a supervisor</a>
-    <a class="home-btn" href="#avader">Join AGH AVADER &rarr;</a>
   </div>
 </div>
-
-{% include avader_card.liquid %}
 
 {% include thesis_filters.liquid %}
 

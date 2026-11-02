@@ -7,8 +7,12 @@
   data-supervisor="{{ thesis.supervisor }}"
 >
   <div class="row">
-    {% if thesis.image %}
-      <div class="col col-sm-2 abbr preview-col">
+    <!-- Left column: thesis type badge and preview image -->
+    <div class="col-sm-2 abbr paper-badges">
+      {% if thesis.type %}
+        <abbr class="badge rounded paper-venue thesis-type-badge">{{ thesis.type }}</abbr>
+      {% endif %}
+      {% if thesis.image %}
         {% assign thesis_img = thesis.image | prepend: '/assets/img/theses/' %}
         {%
           include figure.liquid
@@ -20,10 +24,10 @@
           avoid_scaling=true
           alt=thesis.title
         %}
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
 
-    <div class="{% if thesis.image %}col-sm-10{% else %}col-sm-12{% endif %}">
+    <div class="col-sm-10">
       <div class="title">{{ thesis.title }}</div>
       {% assign author_first = thesis.author | split: ' ' | first %}
       {% assign author_last = thesis.author | split: ' ' | last | remove_accents %}
@@ -98,14 +102,16 @@
       {% endif %}
 
       <div class="links">
-        {% if thesis.type %}
-          <span class="thesis-status thesis-type">{{ thesis.type }}</span>
-        {% endif %}
         {% if thesis.group != 'Alumni' and thesis.defense_date == null %}
           <span class="thesis-status ongoing"><i class="fa-solid fa-hourglass-half"></i> Ongoing</span>
         {% endif %}
         {% if thesis.avader %}
-          <a class="thesis-avader" href="#avader" title="Carried out with the AGH AVADER student research group"
+          <a
+            class="thesis-avader"
+            href="https://www.avader.agh.edu.pl/"
+            target="_blank"
+            rel="noopener"
+            title="Carried out with the AGH AVADER student research group"
             ><img src="{{ '/assets/img/agh_avader_logo_sq_small.png' | relative_url }}" alt="" loading="lazy"> AGH AVADER</a
           >
         {% endif %}
