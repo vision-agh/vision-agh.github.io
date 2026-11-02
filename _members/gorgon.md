@@ -31,6 +31,10 @@ profile:
   address:
   short_bio:
   keywords:
+    - SoC FPGA
+    - Hardware Acceleration
+    - Real-time
+    - Embedded Vision
 ---
 
 I specialise in computer vision architectures, with particular emphasis on real-time systems, FPGA reconfigurable devices, embedded and intelligent systems. More broadly, my interests include many issues in the areas of automation and robotics, electronics and applied computer science. I am the author of 120 scientific publications.
