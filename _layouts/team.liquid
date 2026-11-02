@@ -2,17 +2,23 @@
 layout: page
 
 ---
+{% assign phd_students = site.members | where: 'group', 'PhD Students' %}
+{% capture team_stats -%}
+  {{ site.members.size }}|members;{{ phd_students.size }}|PhD students;{{ site.data.alumni.size }}|alumni
+{%- endcapture %}
+{% include page_stats.liquid items=team_stats %}
+
 {% assign groups = site.members | sort: 'group_rank' | map: 'group' | uniq %}
 {% for group in groups %}
   {% if group != 'Principal Investigators' %}
-    <h2 class="mt-4 mb-3 border-b border-gray-200 pb-2">{{ group }}</h2>
+    <h2 class="page-section-title">{{ group }}</h2>
   {% endif %}
   <p>
     {% assign members = site.members | sort: 'vis_order' | where: 'group', group %}
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
       {% for member in members %}
         <div class="col mb-4">
-          <div class="card h-100 hoverable">
+          <div class="card h-100 team-card">
             <a href="{{ member.url | relative_url }}">
               {% if member.profile.image %}
                 {% assign profile_image_path = member.profile.image | prepend: 'assets/img/' %}
@@ -100,7 +106,7 @@ layout: page
 {% endfor %}
 
 {% if site.data.alumni.size > 0 %}
-  <h2 class="mt-4 mb-3 border-b border-gray-200 pb-2">Alumni</h2>
+  <h2 class="page-section-title">Alumni</h2>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 alumni-list">
     {% for alumnus in site.data.alumni %}
       <div class="col mb-3">
@@ -135,3 +141,13 @@ layout: page
     {% endfor %}
   </div>
 {% endif %}
+
+{% assign head_member = site.members | where: 'team_head', true | first %}
+{% assign contact_url = head_member.profile.email | prepend: 'mailto:' %}
+{%
+  include cta_banner.liquid
+  title="Want to join the team?"
+  text="PhD positions, research projects and student theses in embedded vision, drones and autonomous systems."
+  button="Contact us"
+  url=contact_url
+%}

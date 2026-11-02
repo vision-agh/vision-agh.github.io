@@ -233,12 +233,12 @@ layout: default
 
   <!-- Join us -->
   {% if page.join_us %}
-    <section class="home-join">
-      <div>
-        <h3>{{ page.join_us.title }}</h3>
-        <p>{{ page.join_us.text }}</p>
-      </div>
-      <a class="home-btn" href="{{ page.join_us.url | relative_url }}">{{ page.join_us.button }} &rarr;</a>
-    </section>
+    {%
+      include cta_banner.liquid
+      title=page.join_us.title
+      text=page.join_us.text
+      button=page.join_us.button
+      url=page.join_us.url
+    %}
   {% endif %}
 </div>

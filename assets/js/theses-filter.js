@@ -21,6 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
       visibleTotal += visibleInSection;
     });
 
+    // collapsible academic years of defended theses: hide empty years, show filtered counts,
+    // expand every matching year while a filter is active and only the newest one otherwise
+    const filtering = Object.values(state).some((value) => value);
+    document.querySelectorAll(".thesis-year").forEach((year, index) => {
+      const visible = year.querySelectorAll(".thesis-item:not([hidden])").length;
+      const countEl = year.querySelector(".thesis-year-count");
+      year.hidden = visible === 0;
+      if (filtering) {
+        countEl.dataset.label = countEl.dataset.label || countEl.textContent;
+        countEl.textContent = `${visible} ${visible === 1 ? "thesis" : "theses"}`;
+        year.open = visible > 0;
+      } else {
+        if (countEl.dataset.label) countEl.textContent = countEl.dataset.label;
+        year.open = index === 0;
+      }
+    });
+
     countEl.textContent = `${visibleTotal} ${visibleTotal === 1 ? "thesis" : "theses"}`;
     resetEl.hidden = Object.values(state).every((value) => !value);
     emptyEl.hidden = visibleTotal > 0;

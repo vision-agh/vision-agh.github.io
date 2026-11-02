@@ -1,0 +1,14 @@
+{% comment %}
+  Row of number tiles shown under the page title.
+  Usage: {% include page_stats.liquid items=stats %}, where `stats` is a string "value|label;value|label;..."
+{% endcomment %}
+{% assign stat_items = include.items | split: ';' %}
+<div class="page-stats">
+  {% for stat_item in stat_items %}
+    {% assign stat = stat_item | split: '|' %}
+    <div class="page-stat">
+      <b>{{ stat[0] | strip }}</b>
+      <span>{{ stat[1] | strip }}</span>
+    </div>
+  {% endfor %}
+</div>

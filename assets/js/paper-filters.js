@@ -1,4 +1,4 @@
-// Year / type filters for the Papers page (_pages/publications.md).
+// Text search and year / type filters for the Papers page (_pages/publications.md).
 // Works alongside bibsearch.js: search hides entries with `.unloaded`, these filters use `.filtered-out`.
 document.addEventListener("DOMContentLoaded", () => {
   const filters = document.querySelector(".paper-filters");
@@ -9,7 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
     .map((li) => ({ li, row: li.querySelector("[data-paper-type]") }))
     .filter(({ row }) => row);
 
-  const state = { year: "", type: "" };
+  const state = { year: "", type: "", query: "" };
+  const searchEl = document.getElementById("paper-search");
+
+  // Search text of every paper: title, authors, venue and abstract, without accents and case
+  const normalize = (text) =>
+    text
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  items.forEach((item) => {
+    const parts = item.li.querySelectorAll(".title, .author, .periodical, .abstract");
+    item.text = normalize([...parts].map((el) => el.textContent).join(" "));
+  });
   const countEl = document.getElementById("paper-filter-count");
   const resetEl = document.getElementById("paper-filter-reset");
   const emptyEl = document.getElementById("paper-filter-empty");
@@ -48,11 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const applyFilters = () => {
-    items.forEach(({ li, row }) => {
-      const match = (!state.year || row.dataset.paperYear === state.year) && (!state.type || row.dataset.paperType === state.type);
+    items.forEach(({ li, row, text }) => {
+      const words = state.query.split(/\s+/).filter(Boolean);
+      const match =
+        (!state.year || row.dataset.paperYear === state.year) &&
+        (!state.type || row.dataset.paperType === state.type) &&
+        words.every((word) => text.includes(word));
       li.classList.toggle("filtered-out", !match);
     });
-    resetEl.hidden = !state.year && !state.type;
+    resetEl.hidden = !state.year && !state.type && !state.query;
     updateGroups();
   };
 
@@ -79,7 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   resetEl.addEventListener("click", () => {
     filters.querySelectorAll(".list-filter-group").forEach((group) => setActive(group, ""));
+    searchEl.value = "";
+    state.query = "";
     applyFilters();
+  });
+
+  let searchTimer;
+  searchEl.addEventListener("input", () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      state.query = normalize(searchEl.value.trim());
+      applyFilters();
+    }, 150);
   });
 
   // Re-evaluate after the text search (bibsearch.js) changes what is visible

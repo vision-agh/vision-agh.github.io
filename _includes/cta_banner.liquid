@@ -1,0 +1,15 @@
+{% comment %}
+  Call-to-action banner (main page "Join us", Team, Collaboration).
+  Usage: {% include cta_banner.liquid title="..." text="..." button="..." url="..." %}
+{% endcomment %}
+<section class="cta-banner">
+  <div>
+    <h3>{{ include.title }}</h3>
+    <p>{{ include.text }}</p>
+  </div>
+  {% if include.url contains ':' %}
+    <a class="home-btn" href="{{ include.url }}">{{ include.button }} &rarr;</a>
+  {% else %}
+    <a class="home-btn" href="{{ include.url | relative_url }}">{{ include.button }} &rarr;</a>
+  {% endif %}
+</section>

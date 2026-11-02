@@ -3072,8 +3072,8 @@ html[data-theme="dark"] .home-logos img {
   border-radius: 6px;
 }
 
-// join us
-.home-join {
+// call-to-action banner (_includes/cta_banner.liquid)
+.cta-banner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -3102,5 +3102,235 @@ html[data-theme="dark"] .home-logos img {
     color: var(--global-theme-color) !important;
     background-color: var(--global-bg-color);
     border-color: var(--global-bg-color);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Sub-pages – common style matching the main page
+// ---------------------------------------------------------------------------
+
+// page header
+.post-header .post-title {
+  font-weight: 300;
+}
+
+.post-header .post-description {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: var(--global-text-color-light);
+}
+
+// number tiles (_includes/page_stats.liquid)
+.page-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .page-stat {
+    padding: 1rem 1.1rem;
+    background-color: color-mix(in srgb, var(--global-theme-color) 7%, transparent);
+    border-radius: 12px;
+  }
+
+  b {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--global-theme-color);
+  }
+
+  span {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+}
+
+// section headings: theme colour, left aligned, underlined
+.projects h2.category,
+.publications h2.bibliography,
+.page-section-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--global-theme-color);
+  border-top: none;
+  border-bottom: 2px solid var(--global-theme-color);
+}
+
+.projects h3.category {
+  margin-top: 1.75rem;
+  padding-top: 0;
+  padding-bottom: 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--global-text-color-light);
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+// cards: rounded, flat, highlighted on hover
+.projects .card,
+.conf-item .card,
+.collab-card,
+.team-card {
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  box-shadow: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+// project cards: smaller logo area
+.project-item .card-img-top {
+  height: 9rem;
+  padding: 1rem 1.5rem 0;
+  object-fit: contain;
+}
+
+// paper / thesis buttons as pills
+.publications .links .btn,
+.publications .links .thesis-status {
+  border-radius: 999px;
+}
+
+// team page
+.team-card {
+  picture {
+    display: block;
+    text-align: center;
+  }
+
+  .card-img-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9rem !important;
+    max-width: 9rem !important;
+    height: 9rem;
+    margin-top: 1.25rem;
+    object-fit: cover;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+  }
+
+  .more-info-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .more-info-role {
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// Students page – defended theses grouped by academic year (collapsible)
+.thesis-year {
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "\f054"; // chevron-right
+      margin-right: 0.6rem;
+      font-family: "Font Awesome 6 Free";
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: var(--global-theme-color);
+      transition: transform 0.2s;
+    }
+
+    &:hover .thesis-year-label {
+      color: var(--global-theme-color);
+    }
+  }
+
+  &[open] > summary {
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  .thesis-year-label {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .thesis-year-count {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  > ol.bibliography {
+    margin: 0;
+    padding: 1rem 1rem 0;
+  }
+}
+
+// search field in the filter bar (Papers page)
+.list-filter-search {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 0.9rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    transform: translateY(-50%);
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.4rem;
+    font-size: 0.95rem;
+    color: var(--global-text-color);
+    background-color: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    outline: none;
+
+    &:focus {
+      border-color: var(--global-theme-color);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--global-theme-color) 20%, transparent);
+    }
   }
 }

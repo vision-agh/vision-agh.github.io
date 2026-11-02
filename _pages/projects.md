@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description:
+description: Research projects carried out by the group, funded by NCN, NCBR, the EU and AGH.
 nav: true
 nav_order: 6
 
@@ -12,6 +12,17 @@ horizontal: false
 
 <!-- pages/projects.md -->
 
+{% assign today = site.time | date: '%Y%m%d' %}
+{% assign ongoing_projects = 0 %}
+{% for p in site.projects %}
+{% assign p_end = p.end_date | date: '%Y%m%d' %}
+{% if p.end_date == nil or p_end >= today %}{% assign ongoing_projects = ongoing_projects | plus: 1 %}{% endif %}
+{% endfor %}
+{% assign funders = site.projects | map: 'category' | uniq %}
+{% capture project_stats -%}
+{{ site.projects.size }}|projects;{{ ongoing_projects }}|ongoing;{{ funders.size }}|funding bodies
+{%- endcapture %}
+{% include page_stats.liquid items=project_stats %}
 {% include project_filters.liquid %}
 
 <div class="projects">

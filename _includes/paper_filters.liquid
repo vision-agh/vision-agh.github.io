@@ -1,4 +1,8 @@
 <div class="list-filters paper-filters">
+  <div class="list-filter-search">
+    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+    <input type="search" id="paper-search" placeholder="Search title, author, venue or abstract…" aria-label="Search papers" autocomplete="off">
+  </div>
   <div class="list-filter-group" data-filter="year">
     <span class="list-filter-label"><i class="fa-regular fa-calendar"></i> Year</span>
     <select class="list-filter-select" aria-label="Filter by year">
@@ -16,5 +20,5 @@
     <button type="button" id="paper-filter-reset" class="list-filter-reset" hidden><i class="fa-solid fa-xmark"></i> Clear filters</button>
   </div>
 </div>
-<p id="paper-filter-empty" class="list-filter-empty" hidden>No papers match the selected filters.</p>
+<p id="paper-filter-empty" class="list-filter-empty" hidden>No papers match the search or the selected filters.</p>
 <script defer src="{{ '/assets/js/paper-filters.js' | relative_url }}"></script>
