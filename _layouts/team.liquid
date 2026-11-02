@@ -111,31 +111,41 @@ layout: page
     {% for alumnus in site.data.alumni %}
       <div class="col mb-3">
         <div class="alumni-card h-100">
-          <div class="alumni-name">
-            {% if alumnus.url -%}
-              <a href="{{ alumnus.url }}" target="_blank" rel="noopener">{{ alumnus.name }}</a>
-            {%- else -%}
-              {{ alumnus.name }}
-            {%- endif %}
-            {% if alumnus.linkedin %}
-              {% if alumnus.linkedin contains '://' %}
-                {% assign alumnus_linkedin = alumnus.linkedin %}
-              {% else %}
-                {% assign alumnus_linkedin = alumnus.linkedin | prepend: 'https://www.linkedin.com/in/' %}
+          {% if alumnus.image %}
+            <img
+              class="alumni-photo"
+              src="{{ alumnus.image | prepend: '/assets/img/' | relative_url }}"
+              alt="{{ alumnus.name }}"
+              loading="lazy"
+            >
+          {% endif %}
+          <div class="alumni-info">
+            <div class="alumni-name">
+              {% if alumnus.url -%}
+                <a href="{{ alumnus.url }}" target="_blank" rel="noopener">{{ alumnus.name }}</a>
+              {%- else -%}
+                {{ alumnus.name }}
+              {%- endif %}
+              {% if alumnus.linkedin %}
+                {% if alumnus.linkedin contains '://' %}
+                  {% assign alumnus_linkedin = alumnus.linkedin %}
+                {% else %}
+                  {% assign alumnus_linkedin = alumnus.linkedin | prepend: 'https://www.linkedin.com/in/' %}
+                {% endif %}
+                <a href="{{ alumnus_linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
               {% endif %}
-              <a href="{{ alumnus_linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            {% if alumnus.role or alumnus.years %}
+              <div class="alumni-role">
+                {{- alumnus.role -}}
+                {%- if alumnus.role and alumnus.years %} · {% endif -%}
+                {{- alumnus.years -}}
+              </div>
+            {% endif %}
+            {% if alumnus.now %}
+              <div class="alumni-now"><i class="fa-solid fa-arrow-right"></i> {{ alumnus.now }}</div>
             {% endif %}
           </div>
-          {% if alumnus.role or alumnus.years %}
-            <div class="alumni-role">
-              {{- alumnus.role -}}
-              {%- if alumnus.role and alumnus.years %} · {% endif -%}
-              {{- alumnus.years -}}
-            </div>
-          {% endif %}
-          {% if alumnus.now %}
-            <div class="alumni-now"><i class="fa-solid fa-arrow-right"></i> {{ alumnus.now }}</div>
-          {% endif %}
         </div>
       </div>
     {% endfor %}

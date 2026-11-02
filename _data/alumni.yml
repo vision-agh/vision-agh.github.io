@@ -6,21 +6,11 @@
 #   now      – current position / employer
 #   linkedin – LinkedIn profile slug (the part after linkedin.com/in/) or full URL
 #   url      – personal website or profile page
+#   image    – photo in assets/img/ (e.g. people/Name.jpg), shown as a small circle
 
 - name: "Dominika Przewłocka-Rus"
   role: "Contractor in the NCN Sonata project"
   years:
   now:
-  linkedin:
-
-- name: "Piotr Janus"
-  role: "Contractor in the NCN Sonata project"
-  years:
-  now:
-  linkedin:
-
-- name: "Piotr Ciarach"
-  role: "Contractor in the NCN Sonata project"
-  years:
-  now:
-  linkedin:
+  linkedin: dprze
+  image: people/DominikaPrzewlocka.jpg
