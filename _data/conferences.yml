@@ -454,3 +454,488 @@
   presentation_type: presentation
   author: Maciej Baczmański, Balbina Molerus, Robert Synoczek, Tomasz Kryjak
   topic: "Wbudowany system percepcji i sterowania dla modelu pojazdu autonomicznego"
+
+# Contributions before 2022 – generated from _bibliography/papers.bib (presenters not recorded)
+
+"DSD2021":
+  name: "DSD"
+  start_date: 2021-09-01
+  end_date: 2021-09-03
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Tomasz Kryjak
+  topic: "A connected component labelling algorithm for a multi-pixel per clock cycle video stream"
+  arxiv: 2105.09658
+  journal_link: https://doi.org/10.1109/DSD53832.2021.00016
+
+"FPL2021_1":
+  name: "FPL"
+  start_date: 2021-08-30
+  end_date: 2021-09-03
+  presentation_type: demo
+  author: Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Quantised Siamese tracker for 4K/UltraHD video stream – a demo"
+  journal_link: https://doi.org/10.1109/FPL53798.2021.00089
+
+"FPL2021_2":
+  name: "FPL"
+  start_date: 2021-08-30
+  end_date: 2021-09-03
+  presentation_type: demo
+  author: Joanna Lis, Konrad Lis, Tomasz Kryjak, Marek Gorgoń
+  topic: "Hardware-software implementation of a DNN for 3D object detection using FINN - a demo"
+  journal_link: https://doi.org/10.1109/FPL53798.2021.00083
+
+"FPL2021_3":
+  name: "FPL"
+  start_date: 2021-08-30
+  end_date: 2021-09-03
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Tomasz Kryjak
+  topic: "A comparison of real-time 4K/UltraHD connected component labelling architectures"
+  journal_link: https://doi.org/10.1109/FPL53798.2021.00086
+
+"MMAR2021":
+  name: "MMAR"
+  start_date: 2021-08-23
+  end_date: 2021-08-26
+  presentation_type: presentation
+  author: Artur Cyba, Hubert Szolc, Tomasz Kryjak
+  topic: "A simple vision-based navigation and control strategy for autonomous drone racing"
+  arxiv: 2104.09815
+  journal_link: https://doi.org/10.1109/MMAR49549.2021.9528463
+
+"DASIP2021_1":
+  name: "DASIP"
+  start_date: 2021-01-18
+  end_date: 2021-01-20
+  presentation_type: presentation
+  author: Joanna Lis, Konrad Lis, Tomasz Kryjak, Marek Gorgoń
+  topic: "Hardware-software implementation of the PointPillars network for 3D object detection in point clouds"
+  journal_link: https://doi.org/10.1145/3441110.3441150
+
+"DASIP2021_2":
+  name: "DASIP"
+  start_date: 2021-01-18
+  end_date: 2021-01-20
+  presentation_type: presentation
+  author: Krzysztof Błachut, Michał Daniłowicz, Hubert Szolc, Mateusz Wąsala, Tomasz Kryjak, Nikodem Pankiewicz, Mateusz Komorkiewicz
+  topic: "Automotive perception system evaluation with reference data obtained by a UAV"
+  journal_link: https://doi.org/10.1145/3441110.3441151
+
+"KKA2020":
+  name: "KKA"
+  start_date: 2020-10-14
+  end_date: 2020-10-16
+  presentation_type: presentation
+  author: Piotr Janus, Tomasz Kryjak, Marek Gorgoń
+  topic: "Foreground object segmentation in RGB–D data implemented on GPU"
+  arxiv: 2002.00250
+  journal_link: https://doi.org/10.1007/978-3-030-50936-1_68
+
+"SPA2020":
+  name: "SPA"
+  start_date: 2020-09-23
+  end_date: 2020-09-25
+  presentation_type: presentation
+  author: Joanna Lis, Konrad Lis, Tomasz Kryjak, Marek Gorgoń
+  topic: "Optimisation of the PointPillars network for 3D object detection in point clouds"
+  arxiv: 2007.00493
+  journal_link: https://doi.org/10.23919/SPA50552.2020.9241265
+
+"ICCVG2020_1":
+  name: "ICCVG"
+  start_date: 2020-09-14
+  end_date: 2020-09-16
+  presentation_type: presentation
+  author: Dominika Przewłocka-Rus, Mateusz Wąsala, Hubert Szolc, Krzysztof Błachut, Tomasz Kryjak
+  topic: "Optimisation of a Siamese neural network for real-time energy efficient object tracking"
+  arxiv: 2007.00491
+  journal_link: https://doi.org/10.1007/978-3-030-59006-2_14
+
+"ICCVG2020_2":
+  name: "ICCVG"
+  start_date: 2020-09-14
+  end_date: 2020-09-16
+  presentation_type: presentation
+  author: Krzysztof Błachut, Hubert Szolc, Mateusz Wąsala, Tomasz Kryjak, Marek Gorgoń
+  topic: "A vision based hardware-software real-time control system for the autonomous landing of an UAV"
+  arxiv: 2004.11612
+  journal_link: https://doi.org/10.1007/978-3-030-59006-2_2
+
+"DASIP2019_1":
+  name: "DASIP"
+  start_date: 2019-10-16
+  end_date: 2019-10-18
+  presentation_type: demo
+  author: Dominika Przewłocka-Rus, Marcin Kowalczyk, Tomasz Kryjak
+  topic: "XNOR CNNs in FPGA: real-time detection and classification of traffic signs in 4K – a demo"
+
+"DASIP2019_2":
+  name: "DASIP"
+  start_date: 2019-10-16
+  end_date: 2019-10-18
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Real-time implementation of adaptive correlation filter tracking for 4K video stream in Zynq UltraScale+ MPSoC"
+  journal_link: https://doi.org/10.1109/DASIP48288.2019.9049203
+
+"DASIP2019_3":
+  name: "DASIP"
+  start_date: 2019-10-16
+  end_date: 2019-10-18
+  presentation_type: demo
+  author: Joanna Stanisz, Konrad Lis, Tomasz Kryjak, Marek Gorgoń
+  topic: "Hardware-software implementation of car detection system based on LiDAR sensor data - a demo"
+
+"DASIP2019_4":
+  name: "DASIP"
+  start_date: 2019-10-16
+  end_date: 2019-10-18
+  presentation_type: demo
+  author: Karol Radwan, Tomasz Kryjak
+  topic: "Hardware implementation of the SURF feature detector for 4K 4PPC video stream – a demo"
+
+"ARC2019":
+  name: "ARC"
+  start_date: 2019-04-09
+  end_date: 2019-04-11
+  presentation_type: presentation
+  author: Piotr Ciarach, Marcin Kowalczyk, Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Real-time FPGA implementation of connected component labelling for a 4K video stream"
+  journal_link: https://doi.org/10.1007/978-3-030-17227-5_13
+
+"DASIP2018_1":
+  name: "DASIP"
+  start_date: 2018-10-10
+  end_date: 2018-10-12
+  presentation_type: demo
+  author: Marcin Kowalczyk, Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Real-time implementation of contextual image processing operations for 4K video stream in Zynq UltraScale+ MPSoC – a demo"
+
+"DASIP2018_2":
+  name: "DASIP"
+  start_date: 2018-10-10
+  end_date: 2018-10-12
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Real-time implementation of contextual image processing operations for 4K video stream in Zynq UltraScale+ MPSoC"
+  journal_link: https://doi.org/10.1109/DASIP.2018.8597105
+
+"DASIP2018_3":
+  name: "DASIP"
+  start_date: 2018-10-10
+  end_date: 2018-10-12
+  presentation_type: demo
+  author: Karol Radwan, Tomasz Kryjak, Marek Gorgoń
+  topic: "Hardware – software implementation of a SFM module for navigation an unmanned aerial vehicles – a demo"
+  journal_link: https://doi.org/10.1109/DASIP.2018.8596937
+
+"DASIP2018_4":
+  name: "DASIP"
+  start_date: 2018-10-10
+  end_date: 2018-10-12
+  presentation_type: demo
+  author: Krzysztof Błachut, Tomasz Kryjak, Marek Gorgoń
+  topic: "Hardware implementation of multi-scale Lucas-Kanade optical flow computation algorithm – a demo"
+
+"DASIP2018_5":
+  name: "DASIP"
+  start_date: 2018-10-10
+  end_date: 2018-10-12
+  presentation_type: demo
+  author: Dominika Przewłocka-Rus, Tomasz Kryjak
+  topic: "Hardware acceleration of face detection using a deep convolutional neural network – a demo"
+
+"DASIP2018_6":
+  name: "DASIP"
+  start_date: 2018-10-10
+  end_date: 2018-10-12
+  presentation_type: demo
+  author: Patryk Frączek, Andre Mora, Tomasz Kryjak
+  topic: "Embedded vision system for automated drone landing site detection – a demo"
+
+"SPA2018":
+  name: "SPA"
+  start_date: 2018-09-19
+  end_date: 2018-09-21
+  presentation_type: presentation
+  author: Piotr Janus, Tomasz Kryjak
+  topic: "Hardware implementation of the Gaussian Mixture Model foreground object segmentation algorithm working with ultra-high resolution video stream in real-time"
+  journal_link: https://doi.org/10.23919/SPA.2018.8563404
+
+"ICCVG2018":
+  name: "ICCVG"
+  start_date: 2018-09-17
+  end_date: 2018-09-19
+  presentation_type: presentation
+  author: Patryk Frączek, Andre Mora, Tomasz Kryjak
+  topic: "Embedded vision system for automated drone landing site detection"
+  journal_link: https://doi.org/10.1007/978-3-030-00692-1_35
+
+"ARC2018":
+  name: "ARC"
+  start_date: 2018-05-02
+  end_date: 2018-05-04
+  presentation_type: presentation
+  author: Kamil Piszczek, Piotr Janus, Tomasz Kryjak
+  topic: "The use of HACP+SBT lossless compression in optimizing memory bandwidth requirement for hardware implementation of background modelling algorithms"
+  journal_link: https://doi.org/10.1007/978-3-319-78890-6_31
+
+"DASIP2017_1":
+  name: "DASIP"
+  start_date: 2017-09-27
+  end_date: 2017-09-29
+  presentation_type: demo
+  author: Marcin Kowalczyk, Tomasz Kryjak, Marek Gorgoń
+  topic: "Object tracking with the use of a moving camera implemented in heterogeneous Zynq SoC – a demo"
+
+"DASIP2017_2":
+  name: "DASIP"
+  start_date: 2017-09-27
+  end_date: 2017-09-29
+  presentation_type: presentation
+  author: Tomasz Kryjak, Artur Skirzyński, Marek Gorgoń
+  topic: "Hardware-software abandoned object detection vision system in heterogeneous Zynq device"
+  journal_link: https://doi.org/10.1109/DASIP.2017.8122122
+
+"DASIP2017_3":
+  name: "DASIP"
+  start_date: 2017-09-27
+  end_date: 2017-09-29
+  presentation_type: demo
+  author: Bartosz Meus, Tomasz Kryjak, Marek Gorgoń
+  topic: "Demo: embedded vision system for pedestrian detection based on HoG+SVM and use of motion information implemented in Zynq heterogeneous device"
+
+"SPA2017":
+  name: "SPA"
+  start_date: 2017-09-20
+  end_date: 2017-09-22
+  presentation_type: presentation
+  author: Bartosz Meus, Tomasz Kryjak, Marek Gorgoń
+  topic: "Embedded vision system for pedestrian detection based on HOG+SVM and use of motion information implemented in Zynq heterogeneous device"
+  journal_link: https://doi.org/10.23919/SPA.2017.8166901
+
+"KKA2017":
+  name: "KKA"
+  start_date: 2017-06-18
+  end_date: 2017-06-21
+  presentation_type: presentation
+  author: Marcin Kowalczyk, Tomasz Kryjak
+  topic: "Object tracking with the use of a moving camera implemented in heterogeneous Zynq System on Chip"
+  journal_link: https://doi.org/10.1007/978-3-319-60699-6_34
+
+"AFCAI2016":
+  name: "AfCAI"
+  start_date: 2016-11-24
+  end_date: 2016-11-25
+  presentation_type: presentation
+  author: Piotr Augustyniak, Miroslaw Jablonski, Eliasz Kantoch, Tomasz Kryjak, Zbigniew Mikrut, Elżbieta Pociask, Jaromir Przybylo
+  topic: "Using scanpath analysis for affects detection in computer users"
+
+"DASIP2016_1":
+  name: "DASIP"
+  start_date: 2016-10-12
+  end_date: 2016-10-14
+  presentation_type: presentation
+  author: Mateusz Komorkiewicz, Paweł Skruch, Tomasz Kryjak, Krzysztof Turek, Marek Gorgoń
+  topic: "FPGA-based hardware-in-the-loop environment using video injection concept for camera-based systems in automotive applications"
+
+"DASIP2016_2":
+  name: "DASIP"
+  start_date: 2016-10-12
+  end_date: 2016-10-14
+  presentation_type: demo
+  author: Krzysztof Mazur, Tomasz Kryjak, Marek Gorgoń
+  topic: "Demo: autonomous vehicle model with vision-based tracking system"
+
+"DASIP2016_3":
+  name: "DASIP"
+  start_date: 2016-10-12
+  end_date: 2016-10-14
+  presentation_type: demo
+  author: Piotr Konopka, Tomasz Jonak, Tomasz Kryjak, Marek Gorgoń
+  topic: "Demo: an embedded vision system supporting the home care for convalescent or elderly people"
+
+"DASIP2016_4":
+  name: "DASIP"
+  start_date: 2016-10-12
+  end_date: 2016-10-14
+  presentation_type: demo
+  author: Piotr Janus, Kamil Piszczek, Tomasz Kryjak, Marek Gorgoń
+  topic: "Demo: FPGA implementation of the flux tensor moving object detection method"
+
+"ICCVG2016":
+  name: "ICCVG"
+  start_date: 2016-09-19
+  end_date: 2016-09-21
+  presentation_type: presentation
+  author: Piotr Janus, Kamil Piszczek, Tomasz Kryjak
+  topic: "FPGA implementation of the flux tensor moving object detection method"
+  journal_link: https://doi.org/10.1007/978-3-319-46418-3_43
+
+"FEDCSIS2016":
+  name: "FedCSIS"
+  start_date: 2016-09-11
+  end_date: 2016-09-14
+  presentation_type: presentation
+  author: Bartłomiej Hebda, Tomasz Kryjak
+  topic: "A compact deep convolutional neural network architecture for video based age and gender estimation"
+  journal_link: https://doi.org/10.15439/2016F472
+
+"ARC2016":
+  name: "ARC"
+  start_date: 2016-03-22
+  end_date: 2016-03-24
+  presentation_type: presentation
+  author: Tomasz Kryjak, Marek Gorgoń, Mateusz Komorkiewicz
+  topic: "An efficient hardware architecture for block based image processing algorithms"
+  journal_link: https://doi.org/10.1007/978-3-319-30481-6_5
+
+"DASIP2015":
+  name: "DASIP"
+  start_date: 2015-09-23
+  end_date: 2015-09-25
+  presentation_type: presentation
+  author: Mateusz Komorkiewicz, Tomasz Kryjak, Katarzyna Chuchacz-Kowalczyk, Paweł Skruch, Marek Gorgoń
+  topic: "FPGA based system for real-time structure from motion computation"
+
+"FEDCSIS2015":
+  name: "FedCSIS"
+  start_date: 2015-09-13
+  end_date: 2015-09-16
+  presentation_type: presentation
+  author: Tomasz Kryjak, Damian Król
+  topic: "Shape and colour recognition of dishes for the purpose of customer service process automation in a self-service canteen"
+  journal_link: https://doi.org/10.15439/2015F184
+
+"ICIAP2015":
+  name: "ICIAP"
+  start_date: 2015-09-07
+  end_date: 2015-09-08
+  presentation_type: presentation
+  author: Tomasz Kryjak, Marek Gorgoń
+  topic: "Real-time implementation of background modelling algorithms in FPGA devices"
+  journal_link: https://doi.org/10.1007/978-3-319-23222-5_63
+
+"PIAS2015":
+  name: "PiAS"
+  start_date: 2015-06-17
+  end_date: 2015-06-18
+  presentation_type: presentation
+  author: Tomasz Kryjak, Damian Król, Marek Gorgoń
+  topic: "Segmentation of dishes for the purposes of customer service process automation in a self-service canteen"
+
+"DASIP2014_1":
+  name: "DASIP"
+  start_date: 2014-10-08
+  end_date: 2014-10-10
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Zun, Marek Gorgoń
+  topic: "Video surveillance algorithms implemented on the heterogeneous Zynq platform : [poster]"
+
+"DASIP2014_2":
+  name: "DASIP"
+  start_date: 2014-10-08
+  end_date: 2014-10-10
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Komorkiewicz, Marek Gorgoń
+  topic: "Hardware-software implemantation of vehicle detection and counting using virtual detection lines"
+  journal_link: https://doi.org/10.1109/DASIP.2014.7115618
+
+"ICCVG2014":
+  name: "ICCVG"
+  start_date: 2014-09-15
+  end_date: 2014-09-17
+  presentation_type: presentation
+  author: Bartłomiej Bułat, Tomasz Kryjak, Marek Gorgoń
+  topic: "Implementation of advanced foreground segmentation algorithms GMM, ViBE and PBAS in FPGA and GPU – a comparison"
+  journal_link: https://doi.org/10.1007/978-3-319-11331-9_16
+
+"FEDCSIS2013":
+  name: "FedCSIS"
+  start_date: 2013-09-08
+  end_date: 2013-09-11
+  presentation_type: presentation
+  author: Tomasz Kryjak, Marek Gorgoń
+  topic: "Real-time implementation of the ViBe foreground object segmentation algorithm"
+
+"MIXDES2013":
+  name: "MIXDES"
+  start_date: 2013-06-20
+  end_date: 2013-06-22
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Komorkiewicz, Marek Gorgoń
+  topic: "Hardware implementation of the PBAS foreground detection method in FPGA"
+
+"DASIP2012_1":
+  name: "DASIP"
+  start_date: 2012-10-23
+  end_date: 2012-10-25
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Komorkiewicz, Marek Gorgoń
+  topic: "Is FPGA a suitable platform for advanced video surveillance systems?"
+
+"DASIP2012_2":
+  name: "DASIP"
+  start_date: 2012-10-23
+  end_date: 2012-10-25
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Komorkiewicz, Marek Gorgoń
+  topic: "FPGA implementation of real-time head-shoulder detection using local binary patterns, SVM and foreground object detection"
+
+"DASIP2012_3":
+  name: "DASIP"
+  start_date: 2012-10-23
+  end_date: 2012-10-25
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Komorkiewicz, Marek Gorgoń
+  topic: "FPGA implementation of camera tamper detection in real-time"
+
+"DASIP2011":
+  name: "DASIP"
+  start_date: 2011-11-02
+  end_date: 2011-11-04
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Komorkiewicz, Marek Gorgoń
+  topic: "Real-time moving object detection for video surveillance system in FPGA"
+
+"FPL2011":
+  name: "FPL"
+  start_date: 2011-09-04
+  end_date: 2011-09-04
+  presentation_type: presentation
+  author: Tomasz Kryjak, Mateusz Komorkiewicz, Marek Gorgoń
+  topic: "Single low-power FPGA implementation of moving object detection"
+
+"KUKDM2011":
+  name: "KU KDM"
+  start_date: 2011-03-09
+  end_date: 2011-03-11
+  presentation_type: presentation
+  author: Tomasz Kryjak, Marek Gorgoń
+  topic: "Accelerating computing tasks in video surveillance systems using FPGA"
+
+"KUKDM2010":
+  name: "KU KDM"
+  start_date: 2010-03-18
+  end_date: 2010-03-19
+  presentation_type: presentation
+  author: Tomasz Kryjak, Marek Gorgoń
+  topic: "Pipeline implementation of peer group filtering in FPGA"
+
+"FPL2009":
+  name: "FPL"
+  start_date: 2009-08-31
+  end_date: 2009-09-02
+  presentation_type: presentation
+  author: Tomasz Kryjak, Marek Gorgoń
+  topic: "Pipeline implementation of the 128-bit block cipher CLEFIA in FPGA"
+  journal_link: https://doi.org/10.1109/FPL.2009.5272264
+
+"KUKDM2009":
+  name: "KU KDM"
+  start_date: 2009-03-12
+  end_date: 2009-03-13
+  presentation_type: presentation
+  author: Tomasz Kryjak, Marek Gorgoń
+  topic: "Parallel implementation of local thresholding in Mitrion-C"

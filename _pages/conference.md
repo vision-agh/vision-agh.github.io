@@ -10,7 +10,7 @@ display_categories: []
 horizontal: false
 
 # Conferences (by `name` in _data/conferences.yml) listed under "National"; all others are "International"
-national_conferences: ["KU KDM", "SPA", "TYGIEL", "MMAR", "Automation", "ICCVG", "PP-RAI"]
+national_conferences: ["KU KDM", "SPA", "TYGIEL", "MMAR", "Automation", "ICCVG", "PP-RAI", "KKA", "PiAS"]
 ---
 
 {% assign scopes = "International,National" | split: "," %}
