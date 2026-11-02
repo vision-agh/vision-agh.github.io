@@ -4009,20 +4009,26 @@ html[data-theme="dark"] .home-logos img {
       text-align: center;
     }
   }
+}
 
-  .home-about-keywords {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+// keyword tags (main page header)
+.home-about-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
 
-    span {
-      padding: 0.25rem 0.85rem;
-      font-size: 0.85rem;
-      color: var(--global-theme-color);
-      background-color: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
-      border-radius: 999px;
-    }
+  span {
+    padding: 0.25rem 0.85rem;
+    font-size: 0.85rem;
+    color: var(--global-theme-color);
+    background-color: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
+    border-radius: 999px;
   }
+}
+
+.home-hero-keywords {
+  justify-content: flex-start;
+  margin: 0 0 1.1rem;
 }

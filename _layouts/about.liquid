@@ -10,6 +10,13 @@ layout: default
       <h1 class="home-title">{{ page.hero_title | default: site.title }}</h1>
       <p class="home-subtitle">{{ page.subtitle }}</p>
       <div class="home-lead">{{ page.hero_lead | markdownify }}</div>
+      {% if page.about_keywords %}
+        <div class="home-about-keywords home-hero-keywords">
+          {% for keyword in page.about_keywords %}
+            <span>{{ keyword }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
       {% if page.hero_buttons %}
         <div class="home-buttons">
           {% for button in page.hero_buttons %}
@@ -105,18 +112,13 @@ layout: default
     {% endif %}
   </section>
 
-  <!-- About us: full description of the group (page content) -->
-  <section class="home-section home-about" id="about">
-    <h2 class="home-section-title">About us</h2>
-    <div class="home-about-text">{{ content }}</div>
-    {% if page.about_keywords %}
-      <div class="home-about-keywords">
-        {% for keyword in page.about_keywords %}
-          <span>{{ keyword }}</span>
-        {% endfor %}
-      </div>
-    {% endif %}
-  </section>
+  <!-- About us: full description of the group (page content), shown when show_about: true -->
+  {% if page.show_about %}
+    <section class="home-section home-about" id="about">
+      <h2 class="home-section-title">About us</h2>
+      <div class="home-about-text">{{ content }}</div>
+    </section>
+  {% endif %}
 
   <!-- Research areas -->
   {% if page.research_areas %}

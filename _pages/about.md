@@ -58,7 +58,8 @@ join_us:
   url: https://www.avader.agh.edu.pl/
   logo: assets/img/agh_avader_logo_sq_small.png
 
-# short text in the header; the full description below is shown in the "About us" section
+# short text and keywords in the header; the full description below is shown in an "About us" section only with show_about: true
+show_about: false
 hero_lead: Our research focuses on **embedded perception systems** that process, in real time and at low power, high-resolution video streams, LiDAR point clouds and data from event cameras – for autonomous mobile robots, including UAVs, UGVs and legged robots.
 about_keywords:
   - Embedded perception
