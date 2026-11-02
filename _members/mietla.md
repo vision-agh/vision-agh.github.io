@@ -22,7 +22,7 @@ profile:
   align: right
   image: people/RemigiuszMietla.jpg
   email:
-  linkedin:
+  linkedin: remigiusz-mietla
   orcid:
   researchgate:
   scopus:

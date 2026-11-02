@@ -21,8 +21,8 @@ profile:
   role: PhD Student
   align: right
   image: people/BlazejSzargut.jpg
-  email:
-  linkedin:
+  email: bszargut@agh.edu.pl
+  linkedin: blaise-szargut
   orcid:
   researchgate:
   scopus:
