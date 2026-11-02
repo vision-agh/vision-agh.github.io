@@ -2,7 +2,7 @@
 # Fields: id (short key used in the `collaboration` field of _bibliography/papers.bib),
 #         name, institution, category (Academic | Industry | Erasmus+), country, url,
 #         logo (file in assets/img/collaboration/), logo_fit (optional: contain = centred on white with padding),
-#         pi, collaborators (comma-separated),
+#         contact (contact person), collaborators (comma-separated),
 #         description, keywords (list)
 
 - id: ctu
@@ -12,7 +12,7 @@
   country: Czech Republic
   url: https://giuliadangelo.github.io/html/npclab.html
   logo: cvut.jpg
-  pi: "Giulia D'Angelo"
+  contact: "Giulia D'Angelo"
   collaborators: "Giulia D'Angelo, Karla Štěpánová, Rayane Rocha, Paolo Ritirato"
   description: >-
     We explore efficient perception using bio-inspired sensors and neuromorphic computing paradigms,
@@ -31,7 +31,7 @@
   url: https://cs.uni-paderborn.de/en/technische-informatik
   logo: paderborn.jpg
   logo_fit: contain
-  pi: "Marco Platzner"
+  contact: "Marco Platzner"
   collaborators: "Christoph Berganski, Felix Jentzsch"
   description: >-
     We collaborate on compiler optimizations for FPGA dataflow accelerators of quantized neural networks built with the open-source
@@ -49,7 +49,7 @@
   url: https://xilinx.github.io/finn/
   logo: amd.svg
   logo_fit: contain
-  pi: "Michaela Blott"
+  contact: "Michaela Blott"
   collaborators: "Michaela Blott, Yaman Umuroglu, Thomas Preusser, Jakoba Petri-Koenig, Ian Colbert"
   description: >-
     We collaborate on the efficient deployment of quantized neural networks on FPGAs using the open-source FINN dataflow compiler.
@@ -69,7 +69,7 @@
   url: https://www.ntnu.edu/idi/lab/cal
   logo: ntnu.svg
   logo_fit: contain
-  pi: "Magnus Själander"
+  contact: "Magnus Själander"
   collaborators: "Magnus Själander, Charalampos Bezaitis, Yaman Umuroglu"
   description: >-
     We collaborate on energy-efficient hardware for AI at the edge, focusing on FPGA dataflow accelerators for quantized neural networks.
@@ -80,6 +80,119 @@
     - Edge AI
     - Quantized Neural Networks
     - Energy-Efficient Computer Architecture
+
+- id: cea
+  name: "Digital Systems and Integrated Circuits Division"
+  institution: "CEA-List Grenoble"
+  category: Academic
+  country: France
+  url: https://list.cea.fr/en/
+  logo: cea.svg
+  logo_fit: contain
+  contact: "Pascal Vivet"
+  collaborators: "Thomas Dalgaty, Thomas Mesquida, Manon Dampfhoffer"
+  description: >-
+    We collaborated on implementation of graph neural networks for event-based data, mainly event audio sensors.
+    We developed the first embedded solutions for audio classification and keyword spotting using SoC FPGA devices.
+  keywords:
+    - FPGA
+    - Graph Neural Networks
+    - Event Audio
+
+- id: keio
+  name: "Faculty of Science and Technology, Department of System Design Engineering"
+  institution: "Keio University"
+  category: Academic
+  country: Japan
+  url: https://www.keio.ac.jp/en/
+  logo: keio.png
+  logo_fit: contain
+  contact: "Hiroaki Nishi"
+  collaborators: "Hiroshi Nakano, Hiroaki Nishi"
+  description: >-
+    We collaborated on implementation of graph neural networks for event-based data, mainly event audio sensors.
+    We developed the first embedded solutions for audio classification and keyword spotting using SoC FPGA devices.
+  keywords:
+    - FPGA
+    - Graph Neural Networks
+    - Event Audio
+
+- id: sevilla
+  name: "Robotics and Technology of Computers Lab (RTC)"
+  institution: "Universidad de Sevilla"
+  category: Academic
+  country: Spain
+  url: https://www.rtc.us.es/staff/
+  logo: sevilla.png
+  logo_fit: contain
+  contact: "Antón Abad Civit Balcells"
+  collaborators: "Angel Jiménez-Fernández, Antonio Rios-Navarro, Tomás Muñoz"
+  description: >-
+    We investigate the design of hardware-aware algorithms for event-based data processing on FPGAs, utilising audio data from
+    Neuromorphic Auditory Sensors and visual data from Dynamic Vision Sensors. We combine our expertise in reconfigurable logic
+    design with event-based perception.
+  keywords:
+    - Event Camera
+    - Neuromorphic Auditory Sensors
+    - Reconfigurable Logic
+    - FPGA
+    - Hardware-Aware Design
+
+- id: insa
+  name: "VAADER team, Institute of Electronics and Digital Technologies (IETR)"
+  institution: "National Institute of Applied Sciences (INSA) of Rennes"
+  category: Academic
+  country: France
+  url: https://www.ietr.fr/en/vaader-video-analysis-and-architecture-design-embedded-resources-team#p-4581
+  logo: insa.png
+  logo_fit: contain
+  contact: "Karol Desnos"
+  description: >-
+    We collaborated on applying Tangled Program Graphs (TPGs) to autonomous UAV control. We have compared their performance with
+    deep reinforcement learning (DRL) in a task involving autonomous flight through an unknown environment.
+  keywords:
+    - Tangled Program Graph (TPG)
+    - GEGELATI
+    - Deep Reinforcement Learning (DRL)
+
+- id: nova
+  name: "Department of Electrical and Computer Engineering"
+  institution: "NOVA School of Science and Technology, NOVA University Lisbon"
+  category: Academic
+  country: Portugal
+  url: https://www.dee.fct.unl.pt/
+  logo: nova_deec.png
+  logo_fit: contain
+  contact: "Andre Damas Mora"
+  description: >-
+    We collaborated on an embedded vision system for automated drone landing site detection (eGPU and SoC FPGA). We published two
+    papers: a demo at the DASIP 2018 conference and a paper at the ICCVG 2018 conference. Andre also served as a visiting professor
+    in our group.
+  keywords:
+    - Drone Landing Site Detection
+    - Embedded Vision
+    - eGPU
+    - SoC FPGA
+
+- id: sdu
+  name: "SDU Drone Center"
+  institution: "University of Southern Denmark (SDU)"
+  category: Academic
+  country: Denmark
+  url: https://www.sdu.dk/en/uas
+  logo: sdu.svg
+  logo_fit: contain
+  contact: "Elżbieta Pastucha"
+  collaborators: "Ulrik Pagh Schultz, Elżbieta Pastucha"
+  description: >-
+    We have recently started a collaboration on unmanned aerial vehicles (UAVs), combining our expertise in embedded vision
+    and hardware acceleration with SDU's experience in drone technology and field operations. Our team members spent a week
+    at the SDU Drone Center in Odense, and we also met there as part of EuroDroS.
+  keywords:
+    - UAV
+    - Drones
+    - Autonomous Systems
+    - Embedded Vision
 
 - name: "Universidade Nova de Lisboa"
   category: Erasmus+
