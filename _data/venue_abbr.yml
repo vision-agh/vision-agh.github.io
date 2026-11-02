@@ -1,0 +1,16 @@
+# Short venue labels for the "Featured publications" list on the main page.
+# The first entry whose `match` text occurs in the paper's journal / booktitle is used.
+# Papers without a match show "Journal" or "Conference".
+
+- match: "Reconfigurable Technology and Systems"
+  abbr: TRETS
+  name: "ACM Transactions on Reconfigurable Technology and Systems"
+- match: "Journal of Systems Architecture"
+  abbr: JSA
+  name: "Journal of Systems Architecture"
+- match: "Applied Reconfigurable Computing"
+  abbr: ARC
+  name: "Applied Reconfigurable Computing (ARC)"
+- match: "CVPRW"
+  abbr: CVPRW
+  name: "CVPR Workshops"

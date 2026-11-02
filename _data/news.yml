@@ -1,0 +1,31 @@
+# News shown on the main page (newest first, the first `news_limit` items from _pages/about.md are displayed).
+# Fields:
+#   date – YYYY-MM-DD (only month and year are shown)
+#   tag  – Paper | Talk | Project | Students | Award (sets the label colour)
+#   text – short text, HTML allowed (e.g. <i>journal</i>)
+#   url  – optional link (DOI, project page, ...)
+
+- date: 2026-08-01
+  tag: Paper
+  text: "Embedded graph convolutional networks for real-time event data processing in <i>Journal of Systems Architecture</i>"
+  url: https://doi.org/10.1016/j.sysarc.2026.103850
+
+- date: 2026-05-27
+  tag: Paper
+  text: "SIRA published in <i>ACM TRETS</i> – with Paderborn University, AMD and NTNU"
+  url: https://doi.org/10.1145/3807510
+
+- date: 2026-04-13
+  tag: Talk
+  text: "Event-based in-cabin sensing dataset pipeline presented at KU KDM 2026"
+  url: /conferences/
+
+- date: 2026-04-08
+  tag: Talk
+  text: "Two papers at ARC 2026 in Cagliari: contrast maximization and keyword spotting on FPGA"
+  url: /conferences/
+
+- date: 2025-09-17
+  tag: Talk
+  text: "Three presentations at SPA 2025"
+  url: /conferences/

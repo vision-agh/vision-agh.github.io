@@ -1,0 +1,28 @@
+---
+---
+{% assign venue_text = entry.journal | default: entry.booktitle | default: entry.series | default: '' %}
+{% assign venue = null %}
+{% for v in site.data.venue_abbr %}
+  {% if venue_text contains v.match %}
+    {% assign venue = v %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if entry.type == 'article' %}
+  {% assign venue_fallback = 'Journal' %}
+{% else %}
+  {% assign venue_fallback = 'Conference' %}
+{% endif %}
+<div class="paper-compact">
+  <span class="paper-compact-badge">{{ venue.abbr | default: venue_fallback }}</span>
+  <div>
+    <div class="paper-compact-title">
+      {% if entry.doi -%}
+        <a href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">{{ entry.title }}</a>
+      {%- else -%}
+        {{ entry.title }}
+      {%- endif %}
+    </div>
+    <div class="paper-compact-venue">{{ venue.name | default: venue_fallback }}, {{ entry.year }}</div>
+  </div>
+</div>

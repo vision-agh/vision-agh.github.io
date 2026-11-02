@@ -125,8 +125,8 @@
   url: https://www.rtc.us.es/staff/
   logo: sevilla.png
   logo_fit: contain
-  contact: "Antón Abad Civit Balcells"
-  collaborators: "Angel Jiménez-Fernández, Antonio Rios-Navarro, Tomás Muñoz"
+  contact: "Antonio Rios-Navarro"
+  collaborators: "Angel Jiménez-Fernández, Antonio Rios-Navarro, Tomás Muñoz, Alejandro Linares-Barranco"
   description: >-
     We investigate the design of hardware-aware algorithms for event-based data processing on FPGAs, utilising audio data from
     Neuromorphic Auditory Sensors and visual data from Dynamic Vision Sensors. We combine our expertise in reconfigurable logic
@@ -193,6 +193,42 @@
     - Drones
     - Autonomous Systems
     - Embedded Vision
+
+- id: polymtl
+  name: "Department of Electrical Engineering"
+  institution: "Polytechnique Montréal"
+  category: Academic
+  country: Canada
+  url: https://www.polymtl.ca/ge/
+  logo: polymtl.png
+  logo_fit: contain
+  contact: "Jean-Pierre David"
+  collaborators: "Jean-Pierre David, Pierre Langlois"
+  description: >-
+    Tomasz Kryjak served as a visiting professor at Polytechnique Montréal for two weeks in April 2024,
+    hosted by Pierre Langlois and Jean-Pierre David.
+  keywords:
+    - FPGA
+    - SoC FPGA
+
+- id: lip6
+  name: "SYEL (Systèmes Électroniques), LIP6 laboratory"
+  institution: "Sorbonne Université"
+  category: Academic
+  country: France
+  url: https://www.lip6.fr/recherche/team.php?acronyme=SYEL
+  logo: lip6.png
+  logo_fit: contain
+  contact: "Andrea Pinna"
+  collaborators: "Andrea Pinna"
+  description: >-
+    We collaborated on applying graph neural networks to event-based data classification. This work resulted in three
+    conference papers (SPA 2023, DASIP 2024 and FPT 2024) and a paper in the Journal of Systems Architecture (JSA, 2026).
+    Additionally, Tomasz Kryjak was a visiting professor at the LIP6 lab in November 2022.
+  keywords:
+    - Event-based Vision
+    - Graph Neural Networks
+    - Object Classification
 
 - name: "Universidade Nova de Lisboa"
   category: Erasmus+

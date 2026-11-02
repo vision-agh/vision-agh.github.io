@@ -1,162 +1,244 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social float-right">
-        <div class="contact-icons">{% include social.liquid %}</div>
+{% assign head_member = site.members | where: 'team_head', true | first %}
 
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  {% assign head_member = site.members | where: 'team_head', true | first %}
-
-  {% comment %} {{ head_member | inspect }} {% endcomment %}
-
-  <article>
-    {% if head_member.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if head_member.profile.image %}
-          <a href="{{ head_member.url | relative_url }}">
-            <img
-              class="img-fluid{% assign ext = head_member.profile.image | slice: -4, 4 %}{% if ext != '.svg' %} z-depth-1 rounded{% endif %}"
-              src="{{ head_member.profile.image | prepend: '/assets/img/' | relative_url }}"
-              alt="{{ head_member.profile.name }}"
+<div class="post home">
+  <!-- Header: title, short intro, buttons and the group leader -->
+  <section class="home-hero">
+    <div class="home-hero-text">
+      <h1 class="home-title">{{ page.hero_title | default: site.title }}</h1>
+      <p class="home-subtitle">{{ page.subtitle }}</p>
+      <div class="home-lead">{{ content }}</div>
+      {% if page.hero_buttons %}
+        <div class="home-buttons">
+          {% for button in page.hero_buttons %}
+            <a
+              class="home-btn{% if forloop.first %} home-btn-primary{% endif %}"
+              href="{% if button.url contains '#' %}{{ button.url }}{% else %}{{ button.url | relative_url }}{% endif %}"
             >
-          </a>
-        {% endif %}
-        {% if head_member.profile %}
-          <div class="address">
-            <p>
-              {% if head_member.url %}<a href="{{ head_member.url | relative_url }}">{% endif %}
-              <span class="name font-semibold">
-                {%- assign prefix_titles = 'Prof,Dr' | split: ',' -%}
-                {%- if prefix_titles contains head_member.profile.title -%}
-                  {{ head_member.profile.title }}
-                  {{ head_member.profile.name }}
-                {%- elsif head_member.profile.title -%}
-                  {{ head_member.profile.name }}, {{ head_member.profile.title }}
-                {%- else -%}
-                  {{ head_member.profile.name }}
-                {%- endif -%}
-              </span>
-              {% if head_member.url %}</a>{% endif %}
-              {% if head_member.profile.position -%}
-                <br>
-                {{ head_member.profile.position -}}
-              {%- endif %}
-              {% if head_member.profile.role -%}
-                <br>
-                {{ head_member.profile.role -}}
-              {%- endif %}
-              {% if head_member.profile.email -%}
-                <br>
-                <a href="mailto:{{ head_member.profile.email }}"><i class="fas fa-envelope"></i> {{ head_member.profile.email }}</a>
-              {%- endif %}
-              {% if head_member.profile.phone -%}
-                <br>
-                <a href="tel:{{ head_member.profile.phone }}"><i class="fas fa-phone"></i> {{ head_member.profile.phone }}</a>
-              {%- endif %}
-              {% if head_member.profile.website -%}
-                <br>
-                <a href="{{ head_member.profile.website }}" target="_blank"><i class="fas fa-globe"></i> {{ head_member.profile.website }}</a>
-              {%- endif %}
-
-              <div class="social-icons text-center">
-                {% if head_member.profile.linkedin -%}
-                  <a href="https://www.linkedin.com/in/{{ head_member.profile.linkedin }}/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                {%- endif %}
-                {% if head_member.profile.orcid -%}
-                  <a href="https://orcid.org/{{ head_member.profile.orcid }}" target="_blank"><i class="ai ai-orcid ai-1x"></i> </a>
-                {%- endif %}
-                {% if head_member.profile.researchgate -%}
-                  <a href="https://www.researchgate.net/profile/{{ head_member.profile.researchgate }}" target="_blank"
-                    ><i class="ai ai-researchgate ai-1x"></i
-                  ></a>
-                {%- endif %}
-                {% if head_member.profile.scopus -%}
-                  <a href="https://www.scopus.com/authid/detail.uri?authorId={{ head_member.profile.scopus }}" target="_blank"
-                    ><i class="ai ai-scopus ai-1x"></i
-                  ></a>
-                {%- endif %}
-                {% if head_member.profile.googlescholar -%}
-                  <a href="https://scholar.google.com/citations?user={{ head_member.profile.googlescholar }}" target="_blank"
-                    ><i class="ai ai-google-scholar ai-1x"></i
-                  ></a>
-                {%- endif %}
-                {% if head_member.profile.arxiv -%}
-                  <a href="https://arxiv.org/search/cs?searchtype=author&query={{ head_member.profile.arxiv }}" target="_blank" title="arXiv"
-                    ><i class="ai ai-arxiv ai-1x"></i
-                  ></a>
-                {%- endif %}
-              </div>
-            </p>
-            <p class="post">{{ head_member.profile.address }}</p>
-          </div>
-        {% endif %}
-      </div>
-    {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
-    {% assign members = site.members | where: 'team_frontpage', true | sort: 'vis_order' %}
-    <div class="d-flex flex-wrap align-content-stretch justify-content-center pt-5 no-gutters mb-5">
-      {% for member in members %}
-        {% assign colsMod6 = forloop.length | modulo: 5 %}
-        {% assign colIdMod4 = forloop.index | modulo: 4 %}
-        {% if colsMod6 == 1 and colIdMod4 == 1 %}<div class="col-md-2 w-100"></div>{% endif %}
-        <div class="col-6 col-sm-3 col-md-2 mb-6">
-          <a href="{{ member.url | relative_url }}" class="no-decoration">
-            <div class="card hoverable h-100 m-2">
-              <img src="{{ '/assets/img/' | append: member.profile.image | relative_url }}" class="card-img-top" alt="{{ member.profile.name }}">
-              <div class="card-body p-2">
-                <div class="card-title m-0">{{ member.profile.name }}</div>
-              </div>
-            </div>
-          </a>
+              {{- button.label -}}
+            </a>
+          {% endfor %}
         </div>
-      {% endfor %}
+      {% endif %}
     </div>
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2 class="font-bold text-center">
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-      </h2>
-      {% include news.liquid limit=true %}
+    {% if head_member.profile %}
+      <div class="home-leader">
+        <a href="{{ head_member.url | relative_url }}">
+          <img src="{{ head_member.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ head_member.profile.name }}">
+        </a>
+        <div class="home-leader-name">
+          <a href="{{ head_member.url | relative_url }}">
+            {%- assign prefix_titles = 'Prof,Dr' | split: ',' -%}
+            {%- if prefix_titles contains head_member.profile.title -%}
+              {{ head_member.profile.title }}
+              {{ head_member.profile.name }}
+            {%- elsif head_member.profile.title -%}
+              {{ head_member.profile.name }}, {{ head_member.profile.title }}
+            {%- else -%}
+              {{ head_member.profile.name }}
+            {%- endif -%}
+          </a>
+        </div>
+        <div class="home-leader-role">{{ head_member.profile.role | default: head_member.profile.position }}</div>
+        <div class="home-leader-icons">
+          {% if head_member.profile.email %}
+            <a href="mailto:{{ head_member.profile.email }}" title="Email"><i class="fas fa-envelope"></i></a>
+          {% endif %}
+          {% if head_member.profile.linkedin %}
+            <a href="https://www.linkedin.com/in/{{ head_member.profile.linkedin }}/" target="_blank" rel="noopener" title="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          {% endif %}
+          {% if head_member.profile.orcid %}
+            <a href="https://orcid.org/{{ head_member.profile.orcid }}" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a>
+          {% endif %}
+          {% if head_member.profile.googlescholar %}
+            <a
+              href="https://scholar.google.com/citations?user={{ head_member.profile.googlescholar }}"
+              target="_blank"
+              rel="noopener"
+              title="Google Scholar"
+              ><i class="ai ai-google-scholar"></i
+            ></a>
+          {% endif %}
+          {% if head_member.profile.arxiv %}
+            <a
+              href="https://arxiv.org/search/cs?searchtype=author&query={{ head_member.profile.arxiv }}"
+              target="_blank"
+              rel="noopener"
+              title="arXiv"
+              ><i class="ai ai-arxiv"></i
+            ></a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+
+  <!-- Numbers -->
+  {% assign partner_countries = site.data.collaboration | map: 'country' | compact | uniq %}
+  <section class="home-stats">
+    <div>
+      <b>{% bibliography_count %}</b>
+      <span>publications</span>
+    </div>
+    <div>
+      <b>{{ site.data.theses.size }}</b>
+      <span>supervised theses</span>
+    </div>
+    <div>
+      <b>{{ site.projects.size }}</b>
+      <span>research projects</span>
+    </div>
+    <div>
+      <b>{{ partner_countries.size }}</b>
+      <span>partner countries</span>
+    </div>
+    {% if page.stats.dasip_since %}
+      <div>
+        <b>{{ page.stats.dasip_since }}</b>
+        <span>DASIP co-organisers since</span>
+      </div>
+    {% endif %}
+  </section>
+
+  <!-- Research areas -->
+  {% if page.research_areas %}
+    <section class="home-section" id="research">
+      <h2 class="home-section-title">What we work on</h2>
+      <div class="home-areas">
+        {% for area in page.research_areas %}
+          <div class="home-area">
+            <span class="home-area-icon"><i class="{{ area.icon }}"></i></span>
+            <h3>{{ area.title }}</h3>
+            <p>{{ area.text }}</p>
+            {% if area.link %}
+              <a href="{{ area.link | relative_url }}">{{ area.link_label | default: 'More' }} &rarr;</a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- News and featured publications -->
+  <section class="home-section home-two">
+    {% if site.data.news.size > 0 %}
+      <div class="home-news">
+        <h2 class="home-section-title"><i class="fa-regular fa-newspaper"></i> News</h2>
+        <ul>
+          {% for item in site.data.news limit: page.news_limit %}
+            <li>
+              <span class="home-news-date">{{ item.date | date: '%b %Y' }}</span>
+              <span>
+                <span class="home-news-tag home-news-tag-{{ item.tag | downcase }}">{{ item.tag }}</span>
+                {% if item.url -%}
+                  <a href="{% if item.url contains '://' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.text }}</a>
+                {%- else -%}
+                  {{ item.text }}
+                {%- endif %}
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+        <a class="home-more" href="{{ '/conferences/' | relative_url }}">Conferences &rarr;</a>
+      </div>
     {% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2 class="font-bold text-center">
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+    {% if page.selected_papers != false %}
+      <div class="home-featured">
+        <h2 class="home-section-title"><i class="fa-solid fa-star"></i> Featured publications</h2>
+        <div class="publications">
+          {% bibliography --template bib_compact --group_by none --query @*[selected=true]* --max 4 %}
+        </div>
+        <a class="home-more" href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
+      </div>
     {% endif %}
+  </section>
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2 class="font-bold text-center">
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Featured publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
+  <!-- Team -->
+  {% if page.team_rows %}
+    <section class="home-section">
+      <h2 class="home-section-title"><a href="{{ '/team' | relative_url }}">Our team</a></h2>
+      {% for row in page.team_rows %}
+        {% assign row_members = site.members | where: 'team_frontpage', true | where_exp: 'm', 'row.groups contains m.group' | sort: 'vis_order' %}
+        {% if row_members.size > 0 %}
+          <div class="home-team-group">{{ row.title }}</div>
+          <div class="home-team">
+            {% for member in row_members %}
+              <a class="home-member" href="{{ member.url | relative_url }}">
+                <img src="{{ member.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ member.profile.name }}" loading="lazy">
+                <span class="home-member-name">{{ member.profile.name }}</span>
+                {% if member.profile.position %}
+                  <span class="home-member-role">{{ member.profile.position }}</span>
+                {% elsif member.group == 'PhD Students' %}
+                  <span class="home-member-role">PhD Student</span>
+                {% endif %}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% endif %}
 
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+  <!-- Partners and funding: project funders and research partners -->
+  {% assign project_logos = site.projects | map: 'img' | compact | uniq %}
+  {% assign partners = site.data.collaboration | where_exp: 'p', 'p.id' %}
+  <section class="home-section">
+    <h2 class="home-section-title"><a href="{{ '/collaboration/' | relative_url }}">Partners &amp; funding</a></h2>
+    <div class="home-logos">
+      <div class="home-logos-track">
+        {% for copy in (1..2) %}
+          <div
+            class="home-logos-set"
+            {% if copy == 2 %}
+              aria-hidden="true"
+            {% endif %}
+          >
+            {% for logo in project_logos %}
+              <a
+                href="{{ '/projects/' | relative_url }}"
+                {% if copy == 2 %}
+                  tabindex="-1"
+                {% endif %}
+                ><img src="{{ logo | prepend: '/' | relative_url }}" alt="Project funding" loading="lazy"
+              ></a>
+            {% endfor %}
+            {% for partner in partners %}
+              {% if partner.logo %}
+                <a
+                  href="{{ partner.url }}"
+                  target="_blank"
+                  rel="noopener"
+                  title="{{ partner.institution | default: partner.name }}"
+                  {% if copy == 2 %}
+                    tabindex="-1"
+                  {% endif %}
+                  ><img
+                    src="{{ partner.logo | prepend: '/assets/img/collaboration/' | relative_url }}"
+                    alt="{{ partner.institution | default: partner.name }}"
+                    loading="lazy"
+                ></a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Join us -->
+  {% if page.join_us %}
+    <section class="home-join">
+      <div>
+        <h3>{{ page.join_us.title }}</h3>
+        <p>{{ page.join_us.text }}</p>
+      </div>
+      <a class="home-btn" href="{{ page.join_us.url | relative_url }}">{{ page.join_us.button }} &rarr;</a>
+    </section>
+  {% endif %}
 </div>

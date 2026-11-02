@@ -2639,3 +2639,468 @@ ol {
 #avader {
   scroll-margin-top: 5rem;
 }
+
+// ---------------------------------------------------------------------------
+// Main page (_layouts/about.liquid)
+// ---------------------------------------------------------------------------
+
+.home {
+  --home-soft-bg: color-mix(in srgb, var(--global-theme-color) 7%, transparent);
+
+  .home-section {
+    padding: 2rem 0;
+    scroll-margin-top: 4rem;
+  }
+
+  .home-section-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.45rem;
+    font-weight: 600;
+    text-align: center;
+
+    a {
+      color: inherit;
+    }
+
+    i {
+      color: var(--global-theme-color);
+    }
+  }
+
+  .home-more {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.88rem;
+  }
+}
+
+// header
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 17rem;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-title {
+  margin: 0 0 0.4rem;
+  font-size: 2.3rem;
+  font-weight: 300;
+
+  b {
+    font-weight: 700;
+    color: var(--global-theme-color);
+  }
+}
+
+.home-subtitle {
+  margin-bottom: 1.1rem;
+  color: var(--global-text-color-light);
+}
+
+.home-lead p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  color: var(--global-theme-color) !important;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 999px;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--global-hover-text-color) !important;
+    background-color: var(--global-theme-color);
+  }
+
+  &.home-btn-primary {
+    color: var(--global-hover-text-color) !important;
+    background-color: var(--global-theme-color);
+  }
+}
+
+.home-leader {
+  padding: 1.1rem;
+  text-align: center;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  img {
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .home-leader-name {
+    margin-top: 0.6rem;
+    font-weight: 700;
+
+    a {
+      color: var(--global-text-color);
+    }
+  }
+
+  .home-leader-role {
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+  }
+
+  .home-leader-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 0.6rem;
+  }
+}
+
+// numbers
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  background-color: var(--home-soft-bg);
+  // full-width band: the background extends to the window edges, the numbers stay in the content column
+  box-shadow: 0 0 0 100vmax var(--home-soft-bg);
+  clip-path: inset(0 -100vmax);
+
+  b {
+    display: block;
+    font-size: 1.9rem;
+    color: var(--global-theme-color);
+  }
+
+  span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+}
+
+// research areas
+.home-areas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 575px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-area {
+  padding: 1.1rem;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  .home-area-icon {
+    display: grid;
+    place-items: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+    color: var(--global-theme-color);
+    background-color: var(--home-soft-bg);
+    border-radius: 12px;
+  }
+
+  h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+  }
+
+  a {
+    font-size: 0.85rem;
+  }
+}
+
+// news + featured publications
+.home-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section-title {
+    text-align: left;
+  }
+}
+
+.home-news {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0.6rem;
+    padding: 0.55rem 0;
+    font-size: 0.93rem;
+    list-style: none;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  li > span > a {
+    color: var(--global-text-color);
+  }
+
+  .home-news-date {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.home-news-tag {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0 0.5rem;
+  font-size: 0.7rem;
+  vertical-align: 1px;
+  color: var(--global-badge-text-color);
+  background-color: var(--global-badge-bg-color);
+  border-radius: 999px;
+
+  &.home-news-tag-talk {
+    background-color: var(--global-theme-color);
+  }
+
+  &.home-news-tag-project {
+    background-color: #4472c4;
+  }
+
+  &.home-news-tag-students,
+  &.home-news-tag-award {
+    background-color: var(--global-status-ongoing-color);
+  }
+}
+
+.home-featured {
+  ol.bibliography {
+    margin: 0;
+    padding: 0;
+  }
+
+  ol.bibliography li {
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.paper-compact {
+  display: grid;
+  grid-template-columns: 4.4rem 1fr;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  .paper-compact-badge {
+    height: fit-content;
+    padding: 0.2rem 0.15rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--global-badge-text-color);
+    background-color: var(--global-badge-bg-color);
+    border-radius: 4px;
+  }
+
+  .paper-compact-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+
+    a {
+      color: var(--global-text-color);
+    }
+  }
+
+  .paper-compact-venue {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--global-text-color-light);
+  }
+}
+
+// team
+.home-team-group {
+  margin: 1rem 0 0.6rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.home-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 0.4rem;
+}
+
+.home-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6.6rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--global-text-color) !important;
+
+  &:hover {
+    text-decoration: none;
+
+    img {
+      box-shadow: 0 0 0 3px var(--global-theme-color);
+    }
+  }
+
+  img {
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-bottom: 0.4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: box-shadow 0.2s;
+  }
+
+  .home-member-role {
+    font-size: 0.74rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// partners and funding – logo carousel (scrolls continuously, pauses on hover)
+.home-logos {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+
+  .home-logos-track {
+    display: flex;
+    width: max-content;
+    animation: home-logos-scroll 45s linear infinite;
+  }
+
+  &:hover .home-logos-track,
+  &:focus-within .home-logos-track {
+    animation-play-state: paused;
+  }
+
+  .home-logos-set {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  img {
+    max-width: 9rem;
+    height: 3rem;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.75;
+    transition:
+      filter 0.2s,
+      opacity 0.2s;
+  }
+
+  a:hover img {
+    filter: none;
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    overflow-x: auto;
+    mask-image: none;
+
+    .home-logos-track {
+      animation: none;
+    }
+
+    .home-logos-set[aria-hidden="true"] {
+      display: none;
+    }
+  }
+}
+
+@keyframes home-logos-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+html[data-theme="dark"] .home-logos img {
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+// join us
+.home-join {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+  padding: 1.5rem 1.9rem;
+  color: var(--global-hover-text-color);
+  background-color: var(--global-theme-color);
+  border-radius: 14px;
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--global-hover-text-color);
+  }
+
+  p {
+    margin: 0;
+    color: var(--global-hover-text-color);
+    opacity: 0.9;
+  }
+
+  .home-btn {
+    color: var(--global-theme-color) !important;
+    background-color: var(--global-bg-color);
+    border-color: var(--global-bg-color);
+  }
+}
