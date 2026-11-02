@@ -126,7 +126,6 @@ layout: default
         {% for area in page.research_areas %}
           <div class="home-area">
             <span class="home-area-icon"><i class="{{ area.icon }}"></i></span>
-            <span class="home-area-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
             <h3>{{ area.title }}</h3>
             {% if area.subtitle %}
               <div class="home-area-subtitle">{{ area.subtitle }}</div>
@@ -256,6 +255,7 @@ layout: default
       text=page.join_us.text
       button=page.join_us.button
       url=page.join_us.url
+      logo=page.join_us.logo
     %}
   {% endif %}
 </div>

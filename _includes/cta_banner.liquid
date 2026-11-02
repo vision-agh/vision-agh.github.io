@@ -1,13 +1,18 @@
 {% comment %}
-  Call-to-action banner (main page "Join us", Team, Collaboration).
-  Usage: {% include cta_banner.liquid title="..." text="..." button="..." url="..." %}
+  Call-to-action banner (main page, Team, Collaboration).
+  Usage: {% include cta_banner.liquid title="..." text="..." button="..." url="..." logo="assets/img/..." %} (logo is optional)
 {% endcomment %}
 <section class="cta-banner">
-  <div>
+  {% if include.logo %}
+    <img class="cta-banner-logo" src="{{ include.logo | prepend: '/' | relative_url }}" alt="" loading="lazy">
+  {% endif %}
+  <div class="cta-banner-text">
     <h3>{{ include.title }}</h3>
     <p>{{ include.text }}</p>
   </div>
-  {% if include.url contains ':' %}
+  {% if include.url contains '://' %}
+    <a class="home-btn" href="{{ include.url }}" target="_blank" rel="noopener">{{ include.button }} &rarr;</a>
+  {% elsif include.url contains ':' %}
     <a class="home-btn" href="{{ include.url }}">{{ include.button }} &rarr;</a>
   {% else %}
     <a class="home-btn" href="{{ include.url | relative_url }}">{{ include.button }} &rarr;</a>

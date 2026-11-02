@@ -14,9 +14,6 @@ hero_buttons:
   - label: Theses for students
     url: /students/
 
-stats:
-  dasip_since: 2011
-
 research_areas:
   - icon: fa-solid fa-video
     title: Computer vision
@@ -52,13 +49,17 @@ team_rows:
     groups: [PhD Students, Lab Engineers]
 
 join_us:
-  title: Join us
-  text: Bachelor's and master's theses, PhD positions and cooperation with the AGH AVADER student research group.
-  button: Theses & contact
-  url: /students/
+  title: AGH AVADER Student Research Group
+  text: >-
+    We supervise AGH AVADER, a student research group with four sections – Drones, FPGA, Neuromorphic and Media.
+    Its members build real robotic systems, take part in international competitions and often turn their projects
+    into bachelor's and master's theses.
+  button: Join AVADER
+  url: https://www.avader.agh.edu.pl/
+  logo: assets/img/agh_avader_logo_sq_small.png
 
 # short text in the header; the full description below is shown in the "About us" section
-hero_lead: We design **real-time embedded vision systems** – from UHD video at 60&nbsp;fps to event cameras – running on FPGAs, SoCs and embedded GPUs, for drones, autonomous vehicles and robots.
+hero_lead: Our research focuses on **embedded perception systems** that process, in real time and at low power, high-resolution video streams, LiDAR point clouds and data from event cameras – for autonomous mobile robots, including UAVs, UGVs and legged robots.
 about_keywords:
   - Embedded perception
   - SoC FPGA acceleration

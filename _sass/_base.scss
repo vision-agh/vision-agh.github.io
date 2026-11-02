@@ -2823,18 +2823,8 @@ ol {
 }
 
 .home-area {
-  position: relative;
-  padding: 1.1rem;
-
-  .home-area-number {
-    position: absolute;
-    top: 0.9rem;
-    right: 1.1rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1;
-    color: color-mix(in srgb, var(--global-theme-color) 25%, transparent);
-  }
+  padding: 1.25rem 1.1rem;
+  text-align: center;
 
   .home-area-subtitle {
     margin: -0.15rem 0 0.4rem;
@@ -2856,7 +2846,7 @@ ol {
     place-items: center;
     width: 2.9rem;
     height: 2.9rem;
-    margin-bottom: 0.6rem;
+    margin: 0 auto 0.6rem;
     font-size: 1.4rem;
     color: var(--global-theme-color);
     background-color: var(--home-soft-bg);
@@ -3108,6 +3098,20 @@ html[data-theme="dark"] .home-logos img {
 
 // call-to-action banner (_includes/cta_banner.liquid)
 .cta-banner {
+  .cta-banner-logo {
+    flex-shrink: 0;
+    width: 5rem;
+    height: 5rem;
+    padding: 0.35rem;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+
+  .cta-banner-text {
+    flex: 1 1 20rem;
+  }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
