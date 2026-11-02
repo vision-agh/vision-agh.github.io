@@ -2,6 +2,17 @@
 ---
 References
 ==========
+@article{badap-agh:170304,
+  title         = {Hardware-accelerated graph neural networks: an alternative approach for event-based audio classification and keyword spotting on SoC FPGA},
+  author        = {Jeziorek, Kamil and Wzorek, Piotr and Blachut, Krzysztof and Nakano, Hiroshi and Dampfhoffer, Manon and Mesquida, Thomas and Nishi, Hiroaki and Dalgaty, Thomas and Kryjak, Tomasz},
+  year          = {2026},
+  journal       = {ACM Transactions on Reconfigurable Technology and Systems},
+  volume        = {19},
+  pages         = {45},
+  doi           = {10.1145/3838800},
+  abstract      = {As the volume of data recorded by embedded edge sensors increases, particularly from neuromorphic devices producing discrete event streams, there is a need for hardware-aware neural architectures that enable efficient, low-latency and energy-conscious local processing. To address this research gap, we present an FPGA implementation of event-graph neural networks for audio processing. We utilise an artificial cochlea that converts time-series signals into sparse event data, reducing memory and computation costs. Our architecture was implemented on an SoC FPGA and evaluated on two open source datasets. For the classification task, our baseline floating-point model achieves 92.7\% accuracy on the SHD dataset—only 2.4\% and 2\% below the state-of-the-art—while requiring 10 and 67 fewer parameters, respectively. Compared to FPGA-based spiking neural networks, our quantised model reaches 92.3\% accuracy, outperforming them by 19.3 pps while reducing resource usage and latency. For the SSC dataset, we report the first hardware-accelerated evaluation, and our models achieve 66.9–71.0\% accuracy. Extending our conference work, we further demonstrate the first end-to-end FPGA implementation of the event-audio keyword spotting task, combining graph convolutional layers with recurrent sequence modelling for continuous, streaming operation. The system achieves 95\% word-end detection accuracy, with only 10.53 µs latency and 1.18 W power consumption, establishing a strong benchmark for energy-efficient event-driven KWS.},
+  bibtex_show   = {true}
+}
 @inproceedings{badap-agh:165951,
   title         = {Vision-based automatic fruit counting with UAV},
   author        = {Szolc, Hubert and Wasala, Mateusz and Mietla, Remigiusz and Iwicki, Kacper and Kryjak, Tomasz},
