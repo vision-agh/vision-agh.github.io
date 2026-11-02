@@ -38,7 +38,7 @@ research_areas:
   - icon: fa-solid fa-helicopter
     title: Autonomous drones
     subtitle: "perception and control (classical, MPC, RL)"
-    text: "Closing the loop on board: visual and LiDAR-based localisation coupled with classical, MPC, RL and hybrid controllers, from competitions to field deployment."
+    text: "Perception: detection, tracking and visual navigation. Control: classical, MPC, RL and hybrid controllers."
 news_limit: 5
 
 # rows of the team grid (member `group` values); the group leader is shown in the header
@@ -62,9 +62,10 @@ join_us:
 show_about: false
 hero_lead: Our research focuses on **embedded perception systems** that process, in real time and at low power, high-resolution video streams, LiDAR point clouds and data from event cameras – for autonomous mobile robots, including UAVs, UGVs and legged robots.
 about_keywords:
-  - Embedded perception
+  - Embedded perception & control
   - SoC FPGA acceleration
-  - Event-based perception (neuromorphic)
+  - Event-based perception
+  - Neuromorphic computing
   - Autonomous mobile robotics
   - Real-time edge AI
 ---

@@ -1,16 +1,137 @@
-# Short venue labels for the "Featured publications" list on the main page.
-# The first entry whose `match` text occurs in the paper's journal / booktitle is used.
+# Short venue labels: the badge on the left of every paper (Papers page) and in "Featured publications" (main page).
+# The first entry whose `match` text occurs in the paper's journal / booktitle / series is used (case-sensitive),
+# so more specific texts must come before more general ones.
 # Papers without a match show "Journal" or "Conference".
 
+# journals
 - match: "Reconfigurable Technology and Systems"
   abbr: TRETS
   name: "ACM Transactions on Reconfigurable Technology and Systems"
 - match: "Journal of Systems Architecture"
   abbr: JSA
   name: "Journal of Systems Architecture"
+- match: "Journal of Real-Time Image Processing"
+  abbr: JRTIP
+  name: "Journal of Real-Time Image Processing"
+- match: "Journal of Signal Processing Systems"
+  abbr: JSPS
+  name: "Journal of Signal Processing Systems"
+- match: "Low Power Electronics"
+  abbr: JLPEA
+  name: "Journal of Low Power Electronics and Applications"
+- match: "International Journal of Electronics and Telecommunications"
+  abbr: IJET
+  name: "International Journal of Electronics and Telecommunications"
+- match: "Microprocessors and Microsystems"
+  abbr: MICPRO
+  name: "Microprocessors and Microsystems"
+- match: "Sensors"
+  abbr: Sensors
+  name: "Sensors"
+- match: "Electronics"
+  abbr: Electronics
+  name: "Electronics"
+- match: "Image Processing & Communications"
+  abbr: IPC
+  name: "Image Processing & Communications"
+- match: "Bio-Algorithms"
+  abbr: BAMS
+  name: "Bio-Algorithms and Med-Systems"
+- match: "Pomiary Automatyka Robotyka"
+  abbr: PAR
+  name: "Pomiary Automatyka Robotyka"
+- match: "Pomiary, Automatyka, Kontrola"
+  abbr: PAK
+  name: "Pomiary, Automatyka, Kontrola"
+- match: "Measurement Automation and Monitoring"
+  abbr: MAM
+  name: "Measurement Automation and Monitoring"
+- match: "Elektronika"
+  abbr: Elektronika
+  name: "Elektronika"
+- match: "Zeszyty Studenckiego"
+  abbr: ZSTN
+  name: "Zeszyty Studenckiego Towarzystwa Naukowego"
+
+# conferences
 - match: "Applied Reconfigurable Computing"
   abbr: ARC
   name: "Applied Reconfigurable Computing (ARC)"
 - match: "CVPRW"
   abbr: CVPRW
   name: "CVPR Workshops"
+- match: "ICFPT"
+  abbr: FPT
+  name: "Field-Programmable Technology (FPT)"
+- match: "FPL"
+  abbr: FPL
+  name: "Field-Programmable Logic and Applications (FPL)"
+- match: "dasip"
+  abbr: DASIP
+  name: "Design and Architectures for Signal and Image Processing (DASIP)"
+- match: "DASIP"
+  abbr: DASIP
+  name: "Design and Architectures for Signal and Image Processing (DASIP)"
+- match: "Design and Architecture"
+  abbr: DASIP
+  name: "Design and Architectures for Signal and Image Processing (DASIP)"
+- match: "DSD"
+  abbr: DSD
+  name: "Euromicro Conference on Digital System Design (DSD)"
+- match: "Digital System Design"
+  abbr: DSD
+  name: "Euromicro Conference on Digital System Design (DSD)"
+- match: "SPA"
+  abbr: SPA
+  name: "Signal Processing: Algorithms, Architectures, Arrangements and Applications (SPA)"
+- match: "Signal Processing: Algorithms"
+  abbr: SPA
+  name: "Signal Processing: Algorithms, Architectures, Arrangements and Applications (SPA)"
+- match: "ICCVG"
+  abbr: ICCVG
+  name: "Computer Vision and Graphics (ICCVG)"
+- match: "Computer Vision and Graphics"
+  abbr: ICCVG
+  name: "Computer Vision and Graphics (ICCVG)"
+- match: "Computer vision and graphics"
+  abbr: ICCVG
+  name: "Computer Vision and Graphics (ICCVG)"
+- match: "Real-time processing of image, depth"
+  abbr: SPIE RTIPDVI
+  name: "SPIE Real-time Processing of Image, Depth and Video Information"
+- match: "MMAR"
+  abbr: MMAR
+  name: "Methods and Models in Automation and Robotics (MMAR)"
+- match: "FedCSIS"
+  abbr: FedCSIS
+  name: "Federated Conference on Computer Science and Information Systems"
+- match: "KU KDM"
+  abbr: KU KDM
+  name: "ACC Cyfronet AGH HPC Users' Conference (KU KDM)"
+- match: "PP-RAI"
+  abbr: PP-RAI
+  name: "Polish Conference on Artificial Intelligence (PP-RAI)"
+- match: "Polish artificial intelligence"
+  abbr: PP-RAI
+  name: "Polish Conference on Artificial Intelligence (PP-RAI)"
+- match: "MECO"
+  abbr: MECO
+  name: "Mediterranean Conference on Embedded Computing (MECO)"
+- match: "TYGIEL"
+  abbr: TYGIEL
+  name: "TYGIEL Conference"
+- match: "KKA"
+  abbr: KKA
+  name: "Polish Control Conference (KKA)"
+- match: "ICIAP"
+  abbr: ICIAP
+  name: "ICIAP Workshops"
+- match: "AfCAI"
+  abbr: AfCAI
+  name: "Affective Computing and Context Awareness in Ambient Intelligence (AfCAI)"
+- match: "Automation"
+  abbr: Automation
+  name: "Automation"
+- match: "Automatyka"
+  abbr: Automatyka
+  name: "Automatyka"

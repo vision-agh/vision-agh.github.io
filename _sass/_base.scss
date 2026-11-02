@@ -4032,3 +4032,60 @@ html[data-theme="dark"] .home-logos img {
   justify-content: flex-start;
   margin: 0 0 1.1rem;
 }
+
+// Papers page – left column with the venue badge, project badges and preview image
+.publications ol.bibliography li .abbr.paper-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  float: none;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+
+  br {
+    display: none;
+  }
+
+  .badge {
+    min-width: 4.5rem;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.72rem;
+    text-align: center;
+  }
+
+  .preview {
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+
+  figure {
+    width: 100%;
+    margin: 0.3rem 0 0;
+  }
+
+  @media (max-width: 575px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+// narrower badge column; the paper text takes the rest of the row
+@media (min-width: 576px) {
+  .publications ol.bibliography li .row > .paper-badges {
+    flex: 0 0 9rem;
+    max-width: 9rem;
+
+    + .col-sm-10 {
+      flex: 1 1 0;
+      max-width: none;
+    }
+  }
+}
+
+.publications ol.bibliography li .abbr.paper-badges abbr[title] {
+  text-decoration: none;
+  border-bottom: none;
+  cursor: default;
+}
