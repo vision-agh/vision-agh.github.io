@@ -2823,7 +2823,30 @@ ol {
 }
 
 .home-area {
+  position: relative;
   padding: 1.1rem;
+
+  .home-area-number {
+    position: absolute;
+    top: 0.9rem;
+    right: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: color-mix(in srgb, var(--global-theme-color) 25%, transparent);
+  }
+
+  .home-area-subtitle {
+    margin: -0.15rem 0 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
   background-color: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
   border-radius: 12px;
@@ -3964,4 +3987,38 @@ html[data-theme="dark"] .home-logos img {
 .publications .links a.code {
   color: var(--global-theme-color) !important;
   border-color: var(--global-theme-color) !important;
+}
+
+// main page – "About us" section
+.home-about {
+  .home-about-text {
+    max-width: 52rem;
+    margin: 0 auto;
+
+    p {
+      line-height: 1.65;
+    }
+
+    p:first-child {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .home-about-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    span {
+      padding: 0.25rem 0.85rem;
+      font-size: 0.85rem;
+      color: var(--global-theme-color);
+      background-color: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
+      border-radius: 999px;
+    }
+  }
 }

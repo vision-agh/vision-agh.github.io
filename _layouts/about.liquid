@@ -9,7 +9,7 @@ layout: default
     <div class="home-hero-text">
       <h1 class="home-title">{{ page.hero_title | default: site.title }}</h1>
       <p class="home-subtitle">{{ page.subtitle }}</p>
-      <div class="home-lead">{{ content }}</div>
+      <div class="home-lead">{{ page.hero_lead | markdownify }}</div>
       {% if page.hero_buttons %}
         <div class="home-buttons">
           {% for button in page.hero_buttons %}
@@ -105,6 +105,19 @@ layout: default
     {% endif %}
   </section>
 
+  <!-- About us: full description of the group (page content) -->
+  <section class="home-section home-about" id="about">
+    <h2 class="home-section-title">About us</h2>
+    <div class="home-about-text">{{ content }}</div>
+    {% if page.about_keywords %}
+      <div class="home-about-keywords">
+        {% for keyword in page.about_keywords %}
+          <span>{{ keyword }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </section>
+
   <!-- Research areas -->
   {% if page.research_areas %}
     <section class="home-section" id="research">
@@ -113,7 +126,11 @@ layout: default
         {% for area in page.research_areas %}
           <div class="home-area">
             <span class="home-area-icon"><i class="{{ area.icon }}"></i></span>
+            <span class="home-area-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
             <h3>{{ area.title }}</h3>
+            {% if area.subtitle %}
+              <div class="home-area-subtitle">{{ area.subtitle }}</div>
+            {% endif %}
             <p>{{ area.text }}</p>
             {% if area.link %}
               <a href="{{ area.link | relative_url }}">{{ area.link_label | default: 'More' }} &rarr;</a>

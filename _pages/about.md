@@ -18,37 +18,30 @@ stats:
   dasip_since: 2011
 
 research_areas:
-  - icon: fa-solid fa-microchip
-    title: Embedded AI on FPGA & SoC
-    text: Quantised and graph neural networks accelerated in programmable logic – low power and real-time.
-    link: /publications/
-    link_label: Papers
+  - icon: fa-solid fa-video
+    title: Computer vision
+    subtitle: "4K video processing, object detection and tracking"
+    text: "Real-time pipelines for high-resolution video, combining classical vision algorithms with deep networks."
   - icon: fa-solid fa-eye
-    title: Event cameras & neuromorphic vision
-    text: Filtering, detection and visual odometry on sparse, asynchronous event data.
-    link: /publications/
-    link_label: Papers
+    title: Event-based vision
+    subtitle: "from filtering to classification and detection"
+    text: "Perception with event cameras (DVS): filtering, visual odometry, tracking and detection from sparse, microsecond-latency event streams."
+  - icon: fa-solid fa-brain
+    title: Neuromorphic computing
+    subtitle: "SNNs, event-based audio, neuromorphic control"
+    text: "Spiking Neural Networks, event-based audio processing and neuromorphic control for advanced mobile robotics."
+  - icon: fa-solid fa-diagram-project
+    title: Embedded AI
+    subtitle: "CNNs and GNNs for real-time, low-power inference"
+    text: "Deep neural networks, including Graph Neural Networks for sparse data, compressed and optimised for on-device deployment."
+  - icon: fa-solid fa-microchip
+    title: Hardware acceleration
+    subtitle: "FPGA, SoC FPGA and embedded GPUs"
+    text: "Zynq, Zynq UltraScale+, Versal, NVIDIA Jetson and emerging neuromorphic hardware."
   - icon: fa-solid fa-helicopter
-    title: Drones & UAVs
-    text: Vision-based navigation, landing and control of autonomous flying platforms.
-    link: /publications/
-    link_label: Papers
-  - icon: fa-solid fa-car-side
-    title: Autonomous vehicles & ADAS
-    text: Perception and control for self-driving cars, rail (IAM4Rail) and in-cabin sensing (ARTIQ).
-    link: /projects/
-    link_label: Projects
-  - icon: fa-solid fa-satellite-dish
-    title: LiDAR & 3D perception
-    text: 3D object detection and mapping from point clouds, optimised for FPGAs.
-    link: /publications/
-    link_label: Papers
-  - icon: fa-solid fa-crosshairs
-    title: Detection, tracking & UHD video
-    text: Object detection, tracking and hardware video processing up to 3840×2160 @ 60 fps.
-    link: /publications/
-    link_label: Papers
-
+    title: Autonomous drones
+    subtitle: "perception and control (classical, MPC, RL)"
+    text: "Closing the loop on board: visual and LiDAR-based localisation coupled with classical, MPC, RL and hybrid controllers, from competitions to field deployment."
 news_limit: 5
 
 # rows of the team grid (member `group` values); the group leader is shown in the header
@@ -63,32 +56,25 @@ join_us:
   text: Bachelor's and master's theses, PhD positions and cooperation with the AGH AVADER student research group.
   button: Theses & contact
   url: /students/
+
+# short text in the header; the full description below is shown in the "About us" section
+hero_lead: We design **real-time embedded vision systems** – from UHD video at 60&nbsp;fps to event cameras – running on FPGAs, SoCs and embedded GPUs, for drones, autonomous vehicles and robots.
+about_keywords:
+  - Embedded perception
+  - SoC FPGA acceleration
+  - Event-based perception (neuromorphic)
+  - Autonomous mobile robotics
+  - Real-time edge AI
 ---
 
-We design **real-time embedded vision systems** – from UHD video at 60&nbsp;fps to event cameras – running on FPGAs, SoCs and embedded GPUs, for drones, autonomous vehicles and robots.
-
-<!-- Previous, longer description of the group (kept for reference):
-
-Welcome to the Embedded Perception and Autonomous Systems Group.
+Welcome to the Embedded Perception and Autonomous Systems (EPAS) Group.
 
 We are part of the Computer Vision Laboratory, Department of Automatic Control and Robotics, Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering (EAIiIB), AGH University of Krakow, Poland.
 
-We conduct research on the design and implementation of embedded vision systems capable of real-time operation for high-resolution video streams (up to UHD - 3840 × 2160 @ 60 fps), while maintaining low power consumption. Our work targets autonomous flying platforms (drones, UAVs), ground vehicles and mobile robots, as well as legged and walking robotic systems, where fast and efficient perception is critical for control and decision-making.
+Our research focuses on the design and implementation of embedded perception systems that process, in real time and at low power, high-resolution video streams (up to UHD, 3840 × 2160 at 60 fps), LiDAR point clouds, and data from event cameras (Dynamic Vision Sensors, DVS). We target autonomous mobile robotics, including Unmanned Aerial Vehicles (UAVs), Unmanned Ground Vehicles (UGVs), and legged robots, where fast and efficient perception is critical for control and decision-making. We combine classical computer vision algorithms with deep neural networks, especially Graph Neural Networks (GNNs), which are well suited to sparse data such as event streams and point clouds.
 
-As hardware platforms, we use reprogrammable FPGAs (Field Programmable Gate Arrays), reprogrammable SoCs (System on Chip) such as Zynq SoC and Zynq UltraScale+ MPSoC (Multi-Processor System on Chip), as well as embedded GPU solutions, including NVIDIA Jetson platforms. We are also actively exploring neuromorphic and event-based vision platforms for next-generation autonomous systems.
+Our work with event cameras extends into neuromorphic computing more broadly: we investigate Spiking Neural Networks (SNNs), event-based audio processing, and neuromorphic control for advanced mobile robotics.
 
-Students interested in our research can join the [AGH AVADER Student Research Group](https://www.avader.agh.edu.pl/), which works on embedded vision, drones and autonomous vehicles; many of its projects grow into bachelor's and master's theses (see [Students](/students/)).
+We also investigate embedded implementations of control algorithms, spanning classical methods such as Model Predictive Control (MPC), data-driven approaches such as Reinforcement Learning (RL), and hybrids of the two.
 
- Such systems are used in applications requiring very fast and efficient processing of video data so that the information obtained from them can be used almost immediately to support decision-making or control. Current research focuses on the following areas:
-
-- control of autonomous, unmanned flying vehicles **(drones, UAVs, UAS)**,
-- vision algorithms for autonomous vehicles (self-driving cars) and Advanced Driver Assistance Systems (**ADAS**),
-- **object tracking and trajectory** determination,
-- use of **LiDAR** data for object detection and environment mapping,
-- segmentation of foreground and moving objects, as well as elements of advanced video surveillance systems (AVSS – Advanced Video Surveillance Systems),
-- implementation of **embedded AI** methods - deep convolutional neural networks and spiking neural networks.
-
-Since 2011, members of the group have been co-organizers of the international conference DASIP (The Conference on Design and Architectures for Signal and Image Processing), cooperating with scientists from Germany, France, Italy, Spain, Portugal and Canada. We also present our research at the ARC (International Symposium on Applied Reconfigurable Computing), ICCVG (International Conference on Computer Vision and Graphics), SPA (Signal Processing Algorithms, Architectures, Arrangements and Applications), KKA (National Conference on Automation), FedCSIS (Federated Conference on Computer Science and Information Systems) conferences and in Journal of Real-Time Image Processing, Journal of Signal Processing and Sensors.
-
-The team members teach in the following courses: Digital Image Processing and Vision Systems (Polish and English), Reconfigurable Systems, Structured and Object-Oriented Programming, Advanced Object-Oriented Programming, Algorithms and Data Structures, Architectures of Vision Systems, Image Compression and Coding Methods, Software-Hardware Implementation of Algorithms (Hardware-Software Vision Systems), Perception Systems and Algorithms in Autonomous Vehicles, Parallel Computing in CUDA, Biometrics, and HLS tools. Every year, several bachelor and master theses are defended as a result of cooperation between staff and students. In addition, our team closely cooperates with the [AGH AVADER Student Research Group](https://www.avader.agh.edu.pl/), which brings together students interested in embedded vision systems, drones and autonomous vehicles.
--->
+Our hardware platforms include reprogrammable FPGAs (Field-Programmable Gate Arrays), SoCs (Systems on Chip) such as Zynq, Zynq UltraScale+ MPSoC (Multi-Processor System on Chip), and Versal ACAP (Adaptive Compute Acceleration Platform), as well as embedded GPUs, including NVIDIA Jetson platforms, and emerging neuromorphic hardware.
