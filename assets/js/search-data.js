@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-team",
           title: "Team",
-          description: "",
+          description: "Researchers, PhD students and engineers of the Embedded Perception and Autonomous Systems Group.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/team";
           },
         },{id: "nav-papers",
           title: "Papers",
-          description: "",
+          description: "Journal and conference publications of the group, newest first.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -32,14 +32,14 @@ ninja.data = [{
           },
         },{id: "nav-conferences",
           title: "Conferences",
-          description: "",
+          description: "Talks, posters and live demos presented by our group.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/conferences/";
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "",
+          description: "Research projects carried out by the group, funded by NCN, NCBR, the EU and AGH.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
