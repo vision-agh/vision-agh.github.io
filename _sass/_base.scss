@@ -2709,6 +2709,16 @@ ol {
   }
 }
 
+// navbar title (`navbar_title` in _config.yml) – same style as .home-title: light text, highlighted words bold in theme colour
+.navbar-brand.title {
+  font-weight: 300;
+
+  b {
+    font-weight: 700;
+    color: var(--global-theme-color);
+  }
+}
+
 .home-subtitle {
   margin-bottom: 1.1rem;
   color: var(--global-text-color-light);
