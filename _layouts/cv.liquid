@@ -133,18 +133,21 @@ layout: default
       {% endif %}
     </div>
 
-    {% assign sections = 'experience,education,awards' | split: ',' %}
+    {% comment %} service: reviewing, TPC / Steering Committee memberships – kept in the order written in the member file {% endcomment %}
+    {% assign sections = 'experience,education,awards,service' | split: ',' %}
     {% for section in sections %}
       {% assign entries = page[section] %}
       {% if entries %}
         {% if section == 'awards' %}
           {% assign sorted_entries = entries | sort: 'date' | reverse %}
+        {% elsif section == 'service' %}
+          {% assign sorted_entries = entries %}
         {% else %}
           {% assign sorted_entries = entries | sort: 'start' | reverse %}
         {% endif %}
         <section class="cv-section">
           <h2 class="page-section-title has-count">
-            {{ section | capitalize }}
+            {% if section == 'service' %}Academic service{% else %}{{ section | capitalize }}{% endif %}
             <span class="section-count">{{ entries.size }}</span>
           </h2>
           <ol class="cv-timeline">
@@ -155,6 +158,8 @@ layout: default
                     <i class="fa-solid fa-graduation-cap"></i>
                   {% elsif section == 'experience' %}
                     <i class="fa-solid fa-briefcase"></i>
+                  {% elsif section == 'service' %}
+                    <i class="fa-solid fa-user-check"></i>
                   {% else %}
                     <i class="fa-solid fa-trophy"></i>
                   {% endif %}
@@ -164,29 +169,34 @@ layout: default
                     <h3>
                       {% if section == 'education' %}
                         {{ item.degree }}
-                      {% elsif section == 'experience' %}
+                      {% elsif section == 'experience' or section == 'service' %}
                         {{ item.role }}
                       {% else %}
                         {{ item.title }}
                       {% endif %}
                     </h3>
-                    <span class="cv-item-date">
-                      <i class="fa-regular fa-calendar"></i>
-                      {% if section == 'awards' -%}
-                        {%- if item.date contains '-' -%}{{ item.date | date: '%-d %B %Y' }}{%- else -%}{{ item.date }}{%- endif -%}
-                      {%- else -%}
-                        {%- if item.start contains '-' -%}{{ item.start | date: '%B %Y' }}{%- else -%}{{ item.start }}{%- endif %}
-                        –
-                        {% if item.end -%}
-                          {%- if item.end contains '-' -%}{{ item.end | date: '%B %Y' }}{%- else -%}{{ item.end }}{%- endif -%}
+                    {% if section != 'service' or item.years %}
+                      <span class="cv-item-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        {% if section == 'service' -%}
+                          {{- item.years -}}
+                        {%- elsif section == 'awards' -%}
+                          {%- if item.date contains '-' -%}{{ item.date | date: '%-d %B %Y' }}{%- else -%}{{ item.date }}{%- endif -%}
                         {%- else -%}
-                          Present
-                        {%- endif -%}
-                      {%- endif %}
-                    </span>
+                          {%- if item.start contains '-' -%}{{ item.start | date: '%B %Y' }}{%- else -%}{{ item.start }}{%- endif %}
+                          –
+                          {% if item.end -%}
+                            {%- if item.end contains '-' -%}{{ item.end | date: '%B %Y' }}{%- else -%}{{ item.end }}{%- endif -%}
+                          {%- else -%}
+                            Present
+                          {%- endif -%}
+                        {%- endif %}
+                      </span>
+                    {% endif %}
                   </div>
-                  {% if item.institution %}
-                    <div class="cv-item-org">{{ item.institution }}</div>
+                  {% assign item_org = item.venue | default: item.institution %}
+                  {% if item_org %}
+                    <div class="cv-item-org">{{ item_org }}</div>
                   {% endif %}
                   {% if item.summary %}
                     <p class="cv-item-summary">{{ item.summary }}</p>
