@@ -3696,6 +3696,7 @@ html[data-theme="dark"] .home-logos img {
 
   .conf-card-footer {
     display: flex;
+    flex-wrap: wrap; // buttons move below the presenter when both don't fit in one line
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
@@ -3706,9 +3707,10 @@ html[data-theme="dark"] .home-logos img {
 
   .conf-presenters {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     gap: 0.6rem;
-    min-width: 0;
+    max-width: 100%;
 
     .conf-presenter-avatars {
       display: flex;
@@ -3760,6 +3762,7 @@ html[data-theme="dark"] .home-logos img {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin-left: auto;
     gap: 0.3rem;
 
     a {

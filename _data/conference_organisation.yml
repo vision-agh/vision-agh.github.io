@@ -7,22 +7,23 @@
 #   role      – e.g. "Co-organisers", "Local organising committee" (optional)
 #   img       – logo path relative to the site root (optional)
 
-# TODO: verify DASIP details (years, role)
+# TODO: add roles (e.g. "Local organising committee")
 - name: "DASIP"
   full_name: "Workshop on Design and Architectures for Signal and Image Processing"
-  url:
-  years:
+  url: https://dasip-2026.github.io/
+  years: "2026"
   role:
 
 - name: "HiPEAC"
   full_name: "HiPEAC Conference – High-performance Embedded Architecture and Compilation"
-  url: https://www.hipeac.net/
-  years:
+  url: https://www.hipeac.net/#/
+  img: assets/img/conferences/hipeac.svg
+  years: "2026"
   role:
 
 - name: "DSD/SEAA"
   full_name: "Euromicro Conference on Digital System Design / Software Engineering and Advanced Applications"
-  url: https://www.euromicro.org/
-  img: assets/img/conferences/dsd.png
-  years:
+  url: https://dsd-seaa.com/
+  img: assets/img/conferences/dsd_seaa.png
+  years: "2026"
   role:
