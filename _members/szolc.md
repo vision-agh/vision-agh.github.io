@@ -126,6 +126,9 @@ service:
   - role: "TPC member"
     venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
     years: "2026–2027"
+  - role: "Supervisor"
+    venue: "AGH AVADER Student Research Group, AGH University of Krakow"
+    years: "Since 2024"
 ---
 
 I'm interested in controlling autonomous vehicles - especially Unmanned Aerial Vehicles (UAVs) - primarily based on visual information.

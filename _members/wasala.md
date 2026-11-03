@@ -109,6 +109,9 @@ service:
   - role: "TPC member"
     venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
     years: "2026–2027"
+  - role: "Supervisor"
+    venue: "AGH AVADER Student Research Group, AGH University of Krakow"
+    years: "Since 2024"
 ---
 
 I am interested in embedded vision systems, in particular SLAM algorithms for ambient map generation and positioning of unmanned aerial vehicles. I also design and build equipment for these vehicles.

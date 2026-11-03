@@ -136,6 +136,9 @@ service:
     venue: "FPL – International Conference on Field-Programmable Logic and Applications"
   - role: "TPC member"
     venue: "ARC – International Symposium on Applied Reconfigurable Computing"
+  - role: "Supervisor"
+    venue: "AGH AVADER Student Research Group, AGH University of Krakow"
+    years: "Since 2014"
 ---
 
 I am an Associate Professor in the Embedded Perception and Autonomous Systems Group at the Department of Automatic Control and Robotics, AGH University of Krakow, Poland. My research focuses on embedded perception and control systems implemented in system-on-chip field-programmable gate arrays (SoC FPGAs), with applications in mobile robotics, including unmanned aerial and ground vehicles. My work involves event cameras, embedded artificial intelligence, and neuromorphic computing.

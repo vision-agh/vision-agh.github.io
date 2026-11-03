@@ -98,6 +98,11 @@ awards:
     institution: Institute of Electrical and Electronics Engineers (IEEE)
     date: 2022-09-22
     summary: Presentation titled "Traffic sign detection with event cameras and DCNN"
+
+service:
+  - role: "Supervisor of the FPGA section"
+    venue: "AGH AVADER Student Research Group, AGH University of Krakow"
+    years: "Since October 2025"
 ---
 
 I focus on hardware acceleration for computer vision systems, with particular interest in event-based (neuromorphic) vision and deep neural network solutions. My work covers algorithm design tailored to the target platform, as well as the implementation and verification of hardware modules on reconfigurable FPGA platforms.
