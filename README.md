@@ -1,19 +1,31 @@
-# Embedded Perception and Autonomous Systems Group – website
+# EPAS Group – website
 
-Source of [vision-agh.github.io](https://vision-agh.github.io), the website of the Embedded Perception and Autonomous Systems Group, AGH University of Krakow, Poland.
-
-Built with Jekyll and the [al-folio](https://github.com/alshedivat/al-folio) theme. See [INSTALL.md](INSTALL.md) for running the site locally.
+Source of [vision-agh.github.io](https://vision-agh.github.io) (Embedded Perception and Autonomous Systems Group, AGH University of Krakow). Built with Jekyll and [al-folio](https://github.com/alshedivat/al-folio); every push to `main` is deployed automatically.
 
 ## Where things live
 
-- `_members/` – team member profiles (photos in `assets/img/people/`, link names in papers via `_data/coauthors.yml`)
-- `_projects/` – research grants
+- `_members/` – team profiles (photos in `assets/img/people/`), `_data/alumni.yml` – alumni
+- `_projects/` – research projects, `_data/projects.yml` – project badges on papers
 - `_bibliography/papers.bib` – publications
-- `_data/conferences.yml` – conference talks
-- `_news/` – news items
+- `_data/` – conferences, conference organisation, partners (`collaboration.yml`), theses, news
+- `_pages/about.md` – home page, `_config.yml` – site settings
+
+Each data file starts with a comment listing its fields.
+
+## Run locally
+
+```bash
+docker compose up   # http://localhost:8080
+```
+
+## Formatting
+
+CI runs Prettier; use the pinned versions (`npm ci`), not a newer plugin:
+
+```bash
+npm ci && npx prettier . --write
+```
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/main/LICENSE).
-
-Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](https://liabogoev.com) and under the MIT license). Since then, it got a full re-write of the styles and many additional cool features.
+Theme: [MIT License](https://github.com/alshedivat/al-folio/blob/main/LICENSE), based on the [\*folio theme](https://github.com/bogoli/-folio) by [Lia Bogoev](https://liabogoev.com).
