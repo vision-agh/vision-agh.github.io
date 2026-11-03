@@ -1065,7 +1065,7 @@ progress {
   /* Positioning */
   position: fixed;
   left: 0;
-  top: 56px;
+  top: 62px;
   z-index: 10;
 
   /* Dimensions */
@@ -1103,7 +1103,7 @@ progress::-moz-progress-bar {
   width: 100%;
   background-color: transparent;
   position: fixed;
-  top: 56px;
+  top: 62px;
   left: 0;
   height: 5px;
   display: block;
@@ -3047,7 +3047,6 @@ ol {
     transition:
       filter 0.2s,
       opacity 0.2s;
-    will-change: transform;
   }
 
   &:hover .home-logos-track,
@@ -4080,5 +4079,135 @@ html[data-theme="dark"] .home-logos img {
 
   figure {
     margin: 0;
+  }
+}
+
+// member profile page (_layouts/cv.liquid) – same look as the other pages (section titles, chips, cards)
+.cv-profile {
+  padding: 0.9rem;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  img {
+    border-radius: 8px;
+    box-shadow: none !important;
+  }
+
+  .address {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .social-icons {
+    margin-top: 0.6rem;
+    font-size: 1.5rem;
+  }
+}
+
+.cv-intro {
+  margin-bottom: 1rem;
+}
+
+.cv-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0;
+
+  span {
+    padding: 0.2rem 0.75rem;
+    font-size: 0.82rem;
+    color: var(--global-theme-color);
+    background-color: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
+    border-radius: 999px;
+  }
+}
+
+.cv-section {
+  clear: both;
+}
+
+.cv-timeline {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-item {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  padding-bottom: 1.4rem;
+
+  // vertical line connecting the icons
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 2.4rem;
+    bottom: 0.2rem;
+    left: calc(1.2rem - 1px);
+    width: 2px;
+    background-color: var(--global-divider-color);
+  }
+
+  .cv-item-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 0.95rem;
+    color: var(--global-theme-color);
+    background-color: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
+    border-radius: 50%;
+  }
+
+  .cv-item-body {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.3rem;
+  }
+
+  .cv-item-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--global-text-color);
+    }
+  }
+
+  .cv-item-date {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    color: var(--global-text-color-light);
+
+    i {
+      margin-right: 0.2rem;
+      color: var(--global-theme-color);
+    }
+  }
+
+  .cv-item-org {
+    margin-top: 0.15rem;
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+  }
+
+  .cv-item-summary {
+    margin: 0.4rem 0 0;
+    font-size: 0.92rem;
+    color: var(--global-text-color);
   }
 }

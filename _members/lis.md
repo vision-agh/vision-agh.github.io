@@ -36,6 +36,7 @@ profile:
   keywords:
     - 3D Object Detection
     - LiDAR
+    - Embedded AI
 
 interests:
   - FPGA

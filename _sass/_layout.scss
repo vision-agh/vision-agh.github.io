@@ -18,8 +18,9 @@ body {
 }
 
 body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 56px;
+  // Space for the fixed nav-bar: 45px logo + padding = 62px. Must equal the real navbar height,
+  // otherwise assets/js/progress-bar.js corrects it after load and the whole page jumps down.
+  padding-top: 62px;
 }
 
 body.sticky-bottom-footer {

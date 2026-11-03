@@ -83,12 +83,22 @@ experience:
 awards:
   - title: Obtaining NCN PRELUDIUM Grant
     institution: Polish National Science Centre
-    date: 2025-11-28
+    date: "2025-11-28"
     summary: Project titled EEVONN - Embedded Event-Based Visual Odometry Using Neural Networks
+
+  - title: "2nd Place - Multi-Robot Systems Summer School 2024 Challenge"
+    institution: "Multi-Robot Systems Group, Czech Technical University in Prague (IEEE RAS Summer School on Multi-Robot Systems)"
+    date: "2024"
+    summary: "Second place in the international competition held as part of the IEEE RAS Summer School on Multi-Robot Systems in Prague, with the final round carried out in outdoor experiments with real multi-UAV systems."
+
+  - title: "4th Place - UAV Competition, IEEE ICUAS 2024"
+    institution: "International Conference on Unmanned Aircraft Systems (ICUAS)"
+    date: "2024"
+    summary: "Fourth place in the finals of the international UAV Competition, after placing 6th of 23 teams in the simulation phase. The task was autonomous fruit counting with a UAV equipped with an RGB camera and a depth sensor."
 
   - title: AMD Open Hardware Design Competition 2023 - Finalist in PhD category
     institution: Advanced Micro Devices (AMD)
-    date: 2023-08-28
+    date: "2023-08-28"
     summary: Project titled Detection-segmentation solution for controlling an autonomous vehicle in traffic on a city model on a Kria KV260 platform
 ---
 

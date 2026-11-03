@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const addChips = (filter, values) => {
     const container = filters.querySelector(`[data-filter="${filter}"] .list-filter-chips`);
     values.forEach((value) => {
+      if (container.querySelector(`.filter-chip[data-value="${value}"]`)) return; // already rendered in HTML
       const chip = document.createElement("button");
       chip.type = "button";
       chip.className = "filter-chip";

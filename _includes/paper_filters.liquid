@@ -13,6 +13,23 @@
     <span class="list-filter-label"><i class="fa-solid fa-book-open"></i> Type</span>
     <div class="list-filter-chips">
       <button type="button" class="filter-chip active" data-value="">All</button>
+      {% comment %} chips rendered here (not by JS) so the filter bar does not change width and push the page after load {% endcomment %}
+      {% capture n_journal %}{% bibliography_count --query @article %}{% endcapture %}
+      {% capture n_conference %}{% bibliography_count --query @inproceedings %}{% endcapture %}
+      {% capture n_chapter %}{% bibliography_count --query @inbook %}{% endcapture %}
+      {% capture n_book %}{% bibliography_count --query @book %}{% endcapture %}
+      {% if n_journal != '0' -%}
+        <button type="button" class="filter-chip" data-value="Journal">Journal</button>
+      {%- endif %}
+      {% if n_conference != '0' -%}
+        <button type="button" class="filter-chip" data-value="Conference">Conference</button>
+      {%- endif %}
+      {% if n_chapter != '0' -%}
+        <button type="button" class="filter-chip" data-value="Book chapter">Book chapter</button>
+      {%- endif %}
+      {% if n_book != '0' -%}
+        <button type="button" class="filter-chip" data-value="Book">Book</button>
+      {%- endif %}
     </div>
   </div>
   <div class="list-filter-group" data-filter="project">

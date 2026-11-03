@@ -8,7 +8,7 @@ layout: default
   </header>
   <article>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      <div class="profile cv-profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
           {% if page.profile.href %}<a href="{{ page.profile.href | relative_url }}">{% endif %}
           <img
@@ -120,14 +120,14 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">
+    <div class="clearfix cv-intro">
       {{ content }}
 
       {% if page.interests %}
         {% assign keywords = page.interests | sort_natural %}
-        <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
+        <div class="cv-keywords">
           {% for kw in keywords %}
-            <span class="text-xs px-2 py-1 rounded">{{ kw }}</span>
+            <span>{{ kw }}</span>
           {% endfor %}
         </div>
       {% endif %}
@@ -137,67 +137,65 @@ layout: default
     {% for section in sections %}
       {% assign entries = page[section] %}
       {% if entries %}
-        <div class="w-full">
-          <h3 class="mb-6 font-bold text-center">{{ section | capitalize }}</h3>
-
-          {% if section == 'awards' %}
-            {% assign sorted_entries = entries | sort: 'date' | reverse %}
-          {% else %}
-            {% assign sorted_entries = entries | sort: 'start' | reverse %}
-          {% endif %}
-          {% for item in sorted_entries %}
-            <ol class="relative w-full border-l border-gray-200">
-              <li class="mb-10 ml-6">
-                <span
-                  class="absolute flex items-center justify-center w-10 h-10 bg-primary-100 rounded-full -start-5 ring-8 ring-color"
-                >
+        {% if section == 'awards' %}
+          {% assign sorted_entries = entries | sort: 'date' | reverse %}
+        {% else %}
+          {% assign sorted_entries = entries | sort: 'start' | reverse %}
+        {% endif %}
+        <section class="cv-section">
+          <h2 class="page-section-title has-count">
+            {{ section | capitalize }}
+            <span class="section-count">{{ entries.size }}</span>
+          </h2>
+          <ol class="cv-timeline">
+            {% for item in sorted_entries %}
+              <li class="cv-item">
+                <span class="cv-item-icon">
                   {% if section == 'education' %}
-                    <i class="fas fa-solid fa-graduation-cap text-primary-800"></i>
+                    <i class="fa-solid fa-graduation-cap"></i>
                   {% elsif section == 'experience' %}
-                    <i class="fas fa-briefcase text-primary-800"></i>
-                  {% elsif section == 'awards' %}
-                    <i class="fas fa-solid fa-trophy text-primary-800"></i>
+                    <i class="fa-solid fa-briefcase"></i>
+                  {% else %}
+                    <i class="fa-solid fa-trophy"></i>
                   {% endif %}
                 </span>
-                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">
-                  {% if section == 'education' %}
-                    {{ item.degree }}
-                  {% elsif section == 'experience' %}
-                    {{ item.role }}
-                  {% elsif section == 'awards' %}
-                    {{ item.title }}
-                  {% endif %}
-                </h3>
-                <span class="block mb-2 text-sm font-normal leading-none text-gray-500 ">
-                  {%- if item.institution -%}
-                    {{- item.institution -}}
-                  {%- endif -%}
-                </span>
-                {% if section == 'experience' or section == 'education' %}
-                  <time class="block mb-3 text-sm font-normal leading-none text-gray-500">
-                    {% if item.start contains '-' %}{{ item.start | date: '%B %Y' }}{% else %}{{ item.start }}{% endif %} -
-                    {% if item.end -%}
-                      {%- if item.end contains '-' -%}
-                        {{- item.end | date: '%B %Y' -}}
+                <div class="cv-item-body">
+                  <div class="cv-item-head">
+                    <h3>
+                      {% if section == 'education' %}
+                        {{ item.degree }}
+                      {% elsif section == 'experience' %}
+                        {{ item.role }}
+                      {% else %}
+                        {{ item.title }}
+                      {% endif %}
+                    </h3>
+                    <span class="cv-item-date">
+                      <i class="fa-regular fa-calendar"></i>
+                      {% if section == 'awards' -%}
+                        {%- if item.date contains '-' -%}{{ item.date | date: '%-d %B %Y' }}{%- else -%}{{ item.date }}{%- endif -%}
                       {%- else -%}
-                        {{- item.end -}}
-                      {%- endif -%}
-                    {%- else -%}
-                      Present
-                    {%- endif %}
-                  </time>
-                {% else %}
-                  <time class="block mb-3 text-sm font-normal leading-none text-gray-500">
-                    {%- if item.date contains '-' -%}{{ item.date | date: '%d %B %Y' }}{%- else -%}{{ item.date }}{%- endif -%}
-                  </time>
-                {% endif %}
-                <div class="mb-4 text-base font-normal text-gray-500  prose max-w-none prose-slate">
-                  {{ item.summary }}
+                        {%- if item.start contains '-' -%}{{ item.start | date: '%B %Y' }}{%- else -%}{{ item.start }}{%- endif %}
+                        –
+                        {% if item.end -%}
+                          {%- if item.end contains '-' -%}{{ item.end | date: '%B %Y' }}{%- else -%}{{ item.end }}{%- endif -%}
+                        {%- else -%}
+                          Present
+                        {%- endif -%}
+                      {%- endif %}
+                    </span>
+                  </div>
+                  {% if item.institution %}
+                    <div class="cv-item-org">{{ item.institution }}</div>
+                  {% endif %}
+                  {% if item.summary %}
+                    <p class="cv-item-summary">{{ item.summary }}</p>
+                  {% endif %}
                 </div>
               </li>
-            </ol>
-          {% endfor %}
-        </div>
+            {% endfor %}
+          </ol>
+        </section>
       {% endif %}
     {% endfor %}
 
@@ -222,7 +220,7 @@ layout: default
     {% endif %}
 
     {% if page.publications %}
-      <h3 id="publications" class="mb-6 font-bold text-center">Publications</h3>
+      <h2 id="publications" class="page-section-title">Publications</h2>
       <div class="publications">
         {% bibliography -f papers -q @*[{{page.publications}}]* %}
       </div>
