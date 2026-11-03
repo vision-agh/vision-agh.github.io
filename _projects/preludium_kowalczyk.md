@@ -12,6 +12,7 @@ image: preludium_MK_scheme.png
 importance: 1
 category: NCN
 related_publications: true
+publications: "projects~=Preludium-Kowalczyk"
 keywords:
   - Event Cameras
   - SoC FPGA

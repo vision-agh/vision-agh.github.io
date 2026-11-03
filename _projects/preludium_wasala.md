@@ -39,5 +39,5 @@ abstract: >
 image: preludium_MW_short_scheme.png
 image_caption:
 
-publications: "author^=*Wasala, projects^=*Preludium"
+publications: "projects~=Preludium-Wasala"
 ---

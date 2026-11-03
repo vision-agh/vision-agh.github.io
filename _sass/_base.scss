@@ -3032,27 +3032,41 @@ ol {
 }
 
 // partners and funding – logo carousel (scrolls continuously, pauses on hover)
+// Only `transform` is animated. No mask-image, filter or opacity on the moving strip: with GPU compositing
+// those combinations make the logos blink; the faded edges are static gradient overlays instead.
 .home-logos {
+  position: relative;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
 
-  // grayscale/opacity are applied to the whole moving strip (one composited layer),
-  // not to every logo – per-image filters are re-rasterised each frame and make the logos pulse
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 6%;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, var(--global-bg-color), transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, var(--global-bg-color), transparent);
+  }
+
   .home-logos-track {
     display: flex;
     width: max-content;
-    filter: grayscale(1);
-    opacity: 0.75;
     animation: home-logos-scroll 45s linear infinite;
-    transition:
-      filter 0.2s,
-      opacity 0.2s;
   }
 
   &:hover .home-logos-track,
   &:focus-within .home-logos-track {
-    filter: none;
-    opacity: 1;
     animation-play-state: paused;
   }
 
@@ -3073,7 +3087,11 @@ ol {
 
   @media (prefers-reduced-motion: reduce) {
     overflow-x: auto;
-    mask-image: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
 
     .home-logos-track {
       animation: none;
@@ -3808,33 +3826,6 @@ html[data-theme="dark"] .home-logos img {
     margin-bottom: 0.5rem;
   }
 
-  .project-funder {
-    padding: 0.05rem 0.45rem;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--global-badge-text-color);
-    background-color: var(--global-theme-color);
-    border-radius: 4px;
-  }
-
-  .project-status {
-    padding: 0.1rem 0.6rem;
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #fff;
-    border-radius: 999px;
-
-    &.project-status-ongoing {
-      background-color: var(--global-status-ongoing-color);
-    }
-
-    &.project-status-completed {
-      background-color: #6c757d;
-    }
-  }
-
   .card-title {
     margin-bottom: 0.25rem;
     font-size: 1.05rem;
@@ -4209,5 +4200,152 @@ html[data-theme="dark"] .home-logos img {
     margin: 0.4rem 0 0;
     font-size: 0.92rem;
     color: var(--global-text-color);
+  }
+}
+
+// funder / status badges – project cards (_includes/projects.liquid) and project pages (_layouts/project.liquid)
+.project-funder {
+  padding: 0.05rem 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--global-badge-text-color);
+  background-color: var(--global-theme-color);
+  border-radius: 4px;
+}
+
+.project-status {
+  padding: 0.1rem 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 999px;
+
+  &.project-status-ongoing {
+    background-color: var(--global-status-ongoing-color);
+  }
+
+  &.project-status-completed {
+    background-color: #6c757d;
+  }
+}
+
+// project page (_layouts/project.liquid)
+.project-page {
+  .project-page-badges {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-page-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-page-title-en {
+    margin: 0 0 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+
+    span {
+      color: var(--global-theme-color);
+    }
+  }
+
+  .project-page-title-pl {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--global-text-color-light);
+  }
+
+  .project-page-logo {
+    flex-shrink: 0;
+    padding: 0.5rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 12px;
+
+    img {
+      width: 8rem;
+      height: 4rem;
+      object-fit: contain;
+    }
+  }
+
+  .project-page-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.75rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 0.8rem 1rem;
+      background-color: color-mix(in srgb, var(--global-theme-color) 6%, transparent);
+      border-radius: 12px;
+    }
+  }
+
+  .project-page-meta-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+
+    i {
+      margin-right: 0.2rem;
+      color: var(--global-theme-color);
+    }
+  }
+
+  .project-page-meta-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+
+  .project-page-figure {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 12px;
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      box-shadow: none;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      text-align: center;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .project-page-abstract p {
+    text-align: justify;
+  }
+
+  @media (max-width: 575px) {
+    .project-page-head {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
 }

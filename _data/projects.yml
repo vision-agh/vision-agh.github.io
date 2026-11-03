@@ -5,8 +5,9 @@
 "NCN":
   - url: /projects/
 
-"Preludium":
+"Preludium-Kowalczyk":
   - url: /projects/preludium_kowalczyk
+    label: Preludium
 
 "Sonata":
   - url: /projects/sonata_kryjak
@@ -21,4 +22,8 @@
 
 "Preludium-Wzorek":
   - url: /projects/preludium_wzorek
+    label: Preludium
+
+"Preludium-Wasala":
+  - url: /projects/preludium_wasala
     label: Preludium
