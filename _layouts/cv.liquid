@@ -221,6 +221,7 @@ layout: default
 
     {% if page.publications %}
       <h2 id="publications" class="page-section-title">Publications</h2>
+      {% include paper_filters.liquid query=page.publications %}
       <div class="publications">
         {% bibliography -f papers -q @*[{{page.publications}}]* %}
       </div>

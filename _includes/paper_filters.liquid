@@ -13,11 +13,11 @@
     <span class="list-filter-label"><i class="fa-solid fa-book-open"></i> Type</span>
     <div class="list-filter-chips">
       <button type="button" class="filter-chip active" data-value="">All</button>
-      {% comment %} chips rendered here (not by JS) so the filter bar does not change width and push the page after load {% endcomment %}
-      {% capture n_journal %}{% bibliography_count --query @article %}{% endcapture %}
-      {% capture n_conference %}{% bibliography_count --query @inproceedings %}{% endcapture %}
-      {% capture n_chapter %}{% bibliography_count --query @inbook %}{% endcapture %}
-      {% capture n_book %}{% bibliography_count --query @book %}{% endcapture %}
+      {% comment %} include.query (optional, e.g. a member's 'author^=*Wasala') limits the chips to that person's papers. Chips rendered here (not by JS) so the filter bar does not change width and push the page after load {% endcomment %}
+      {% capture n_journal %}{% if include.query %}{% bibliography_count --query @article[{{include.query}}]* %}{% else %}{% bibliography_count --query @article %}{% endif %}{% endcapture %}
+      {% capture n_conference %}{% if include.query %}{% bibliography_count --query @inproceedings[{{include.query}}]* %}{% else %}{% bibliography_count --query @inproceedings %}{% endif %}{% endcapture %}
+      {% capture n_chapter %}{% if include.query %}{% bibliography_count --query @inbook[{{include.query}}]* %}{% else %}{% bibliography_count --query @inbook %}{% endif %}{% endcapture %}
+      {% capture n_book %}{% if include.query %}{% bibliography_count --query @book[{{include.query}}]* %}{% else %}{% bibliography_count --query @book %}{% endif %}{% endcapture %}
       {% if n_journal != '0' -%}
         <button type="button" class="filter-chip" data-value="Journal">Journal</button>
       {%- endif %}
