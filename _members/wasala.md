@@ -34,6 +34,7 @@ profile:
     - Visual Odometry
     - SLAM
     - Event Cameras
+    - Hardware Acceleration
 
 interests:
   - "UAVs"
