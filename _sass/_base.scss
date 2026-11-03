@@ -3040,6 +3040,8 @@ ol {
     display: flex;
     width: max-content;
     animation: home-logos-scroll 45s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
   }
 
   &:hover .home-logos-track,
@@ -3054,8 +3056,10 @@ ol {
     padding-right: 2.5rem;
   }
 
+  // fixed box so the track width does not change while logos load (avoids jumps/flicker)
   img {
-    max-width: 9rem;
+    flex: 0 0 auto;
+    width: 9rem;
     height: 3rem;
     object-fit: contain;
     filter: grayscale(1);
@@ -3489,7 +3493,7 @@ html[data-theme="dark"] .home-logos img {
     color: var(--global-theme-color);
   }
 
-  .collab-contact {
+  .collab-collaborators {
     margin-top: 0.5rem;
     font-size: 0.88rem;
   }
@@ -3702,11 +3706,40 @@ html[data-theme="dark"] .home-logos img {
 
   .conf-presenters {
     display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+
+    .conf-presenter-avatars {
+      display: flex;
+      flex-shrink: 0;
+      padding-right: 0.4rem;
+    }
+
+    .conf-presenter-label {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      line-height: 1.2;
+
+      small {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--global-text-color-light);
+      }
+
+      span {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--global-text-color);
+      }
+    }
 
     img,
     .conf-presenter-initials {
-      width: 2rem;
-      height: 2rem;
+      width: 2.4rem;
+      height: 2.4rem;
       margin-right: -0.4rem;
       object-fit: cover;
       border: 2px solid var(--global-card-bg-color);
@@ -3891,69 +3924,6 @@ html[data-theme="dark"] .home-logos img {
   @media (max-width: 575px) {
     flex-direction: column;
     text-align: center;
-  }
-}
-
-// Papers page – numbers next to the publications-per-year chart
-.papers-overview {
-  display: grid;
-  grid-template-columns: 15rem 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
-
-  .page-stats {
-    grid-template-columns: 1fr;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.papers-chart {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1.1rem 0.75rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 12px;
-
-  .papers-chart-title {
-    margin-bottom: 0.5rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--global-text-color-light);
-  }
-
-  .papers-chart-bars {
-    display: flex;
-    flex: 1;
-    align-items: stretch;
-    gap: 0.35rem;
-    min-height: 10rem;
-  }
-
-  .papers-chart-bar {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 0.7rem;
-    color: var(--global-text-color-light);
-  }
-
-  .papers-chart-fill {
-    width: 100%;
-    min-height: 2px;
-    margin: 0.15rem 0;
-    background-color: color-mix(in srgb, var(--global-theme-color) 60%, transparent);
-    border-radius: 4px 4px 0 0;
-  }
-
-  .papers-chart-bar-max .papers-chart-fill {
-    background-color: var(--global-theme-color);
   }
 }
 

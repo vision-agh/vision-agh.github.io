@@ -11,7 +11,7 @@ thesis_cta:
   title: Looking for a thesis topic?
   text: >-
     We offer bachelor's and master's topics in embedded vision, drones, autonomous vehicles and event cameras –
-    often linked to our research projects, with IDUB funding available.
+    often linked to our research projects.
   topics:
     - UAV & PX4 / ROS 2
     - Embedded perception & control

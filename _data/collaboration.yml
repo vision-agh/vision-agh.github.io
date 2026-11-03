@@ -2,7 +2,7 @@
 # Fields: id (short key used in the `collaboration` field of _bibliography/papers.bib),
 #         name, institution, category (Academic | Industry | Erasmus+), country, url,
 #         logo (file in assets/img/collaboration/), logo_fit (optional: contain = centred on white with padding),
-#         contact (contact person), collaborators (comma-separated),
+#         collaborators (comma-separated),
 #         description, keywords (list)
 
 - id: ctu
@@ -12,7 +12,6 @@
   country: Czech Republic
   url: https://giuliadangelo.github.io/html/npclab.html
   logo: cvut.jpg
-  contact: "Giulia D'Angelo"
   collaborators: "Giulia D'Angelo, Karla Štěpánová, Rayane Rocha, Paolo Ritirato"
   description: >-
     We explore efficient perception using bio-inspired sensors and neuromorphic computing paradigms,
@@ -31,7 +30,6 @@
   url: https://cs.uni-paderborn.de/en/technische-informatik
   logo: paderborn.jpg
   logo_fit: contain
-  contact: "Marco Platzner"
   collaborators: "Christoph Berganski, Felix Jentzsch"
   description: >-
     We collaborate on compiler optimizations for FPGA dataflow accelerators of quantized neural networks built with the open-source
@@ -49,7 +47,6 @@
   url: https://xilinx.github.io/finn/
   logo: amd.svg
   logo_fit: contain
-  contact: "Michaela Blott"
   collaborators: "Michaela Blott, Yaman Umuroglu, Thomas Preusser, Jakoba Petri-Koenig, Ian Colbert"
   description: >-
     We collaborate on the efficient deployment of quantized neural networks on FPGAs using the open-source FINN dataflow compiler.
@@ -69,7 +66,6 @@
   url: https://www.ntnu.edu/idi/lab/cal
   logo: ntnu.svg
   logo_fit: contain
-  contact: "Magnus Själander"
   collaborators: "Magnus Själander, Charalampos Bezaitis, Yaman Umuroglu"
   description: >-
     We collaborate on energy-efficient hardware for AI at the edge, focusing on FPGA dataflow accelerators for quantized neural networks.
@@ -89,7 +85,6 @@
   url: https://list.cea.fr/en/
   logo: cea.svg
   logo_fit: contain
-  contact: "Pascal Vivet"
   collaborators: "Thomas Dalgaty, Thomas Mesquida, Manon Dampfhoffer"
   description: >-
     We collaborated on implementation of graph neural networks for event-based data, mainly event audio sensors.
@@ -107,7 +102,6 @@
   url: https://www.keio.ac.jp/en/
   logo: keio.png
   logo_fit: contain
-  contact: "Hiroaki Nishi"
   collaborators: "Hiroshi Nakano, Hiroaki Nishi"
   description: >-
     We collaborated on implementation of graph neural networks for event-based data, mainly event audio sensors.
@@ -125,7 +119,6 @@
   url: https://www.rtc.us.es/staff/
   logo: sevilla.png
   logo_fit: contain
-  contact: "Antonio Rios-Navarro"
   collaborators: "Angel Jiménez-Fernández, Antonio Rios-Navarro, Tomás Muñoz, Alejandro Linares-Barranco"
   description: >-
     We investigate the design of hardware-aware algorithms for event-based data processing on FPGAs, utilising audio data from
@@ -146,7 +139,6 @@
   url: https://www.ietr.fr/en/vaader-video-analysis-and-architecture-design-embedded-resources-team#p-4581
   logo: insa.png
   logo_fit: contain
-  contact: "Karol Desnos"
   description: >-
     We collaborated on applying Tangled Program Graphs (TPGs) to autonomous UAV control. We have compared their performance with
     deep reinforcement learning (DRL) in a task involving autonomous flight through an unknown environment.
@@ -163,7 +155,6 @@
   url: https://www.dee.fct.unl.pt/
   logo: nova_deec.png
   logo_fit: contain
-  contact: "Andre Damas Mora"
   description: >-
     We collaborated on an embedded vision system for automated drone landing site detection (eGPU and SoC FPGA). We published two
     papers: a demo at the DASIP 2018 conference and a paper at the ICCVG 2018 conference. Andre also served as a visiting professor
@@ -182,7 +173,6 @@
   url: https://www.sdu.dk/en/uas
   logo: sdu.svg
   logo_fit: contain
-  contact: "Elżbieta Pastucha"
   collaborators: "Ulrik Pagh Schultz, Elżbieta Pastucha"
   description: >-
     We have recently started a collaboration on unmanned aerial vehicles (UAVs), combining our expertise in embedded vision
@@ -202,7 +192,6 @@
   url: https://www.polymtl.ca/ge/
   logo: polymtl.png
   logo_fit: contain
-  contact: "Jean-Pierre David"
   collaborators: "Jean-Pierre David, Pierre Langlois"
   description: >-
     Tomasz Kryjak served as a visiting professor at Polytechnique Montréal for two weeks in April 2024,
@@ -219,7 +208,6 @@
   url: https://www.lip6.fr/recherche/team.php?acronyme=SYEL
   logo: lip6.png
   logo_fit: contain
-  contact: "Andrea Pinna"
   collaborators: "Andrea Pinna"
   description: >-
     We collaborated on applying graph neural networks to event-based data classification. This work resulted in three

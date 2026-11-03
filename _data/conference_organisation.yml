@@ -1,0 +1,28 @@
+# Conferences co-organised by the group, shown at the top of the Conferences page (/conferences/).
+# Fields:
+#   name      – short name (also used to look up the logo in _data/conference_logos.yml unless `img` is given)
+#   full_name – full conference name
+#   url       – conference / series website (optional)
+#   years     – e.g. "2023–2026" or "2025" (optional)
+#   role      – e.g. "Co-organisers", "Local organising committee" (optional)
+#   img       – logo path relative to the site root (optional)
+
+# TODO: verify DASIP details (years, role)
+- name: "DASIP"
+  full_name: "Workshop on Design and Architectures for Signal and Image Processing"
+  url:
+  years:
+  role:
+
+- name: "HiPEAC"
+  full_name: "HiPEAC Conference – High-performance Embedded Architecture and Compilation"
+  url: https://www.hipeac.net/
+  years:
+  role:
+
+- name: "DSD/SEAA"
+  full_name: "Euromicro Conference on Digital System Design / Software Engineering and Advanced Applications"
+  url: https://www.euromicro.org/
+  img: assets/img/conferences/dsd.png
+  years:
+  role:

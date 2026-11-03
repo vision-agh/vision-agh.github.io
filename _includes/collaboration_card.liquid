@@ -31,8 +31,8 @@
       {% if partner.country %}
         <div class="collab-country"><i class="fa-solid fa-location-dot"></i> {{ partner.country }}</div>
       {% endif %}
-      {% if partner.contact %}
-        <div class="collab-contact"><strong>Contact:</strong> {{ partner.contact }}</div>
+      {% if partner.collaborators %}
+        <div class="collab-collaborators"><strong>Collaborators:</strong> {{ partner.collaborators }}</div>
       {% endif %}
       {% if partner.keywords %}
         <div class="collab-keywords">
@@ -56,18 +56,13 @@
       {% else %}
         <span></span>
       {% endif %}
-      {% if partner.description or partner.collaborators %}
+      {% if partner.description %}
         <button type="button" class="collab-details-toggle" aria-expanded="false">Details &rarr;</button>
       {% endif %}
     </div>
-    {% if partner.description or partner.collaborators %}
+    {% if partner.description %}
       <div class="collab-details" hidden>
-        {% if partner.description %}
-          <p>{{ partner.description }}</p>
-        {% endif %}
-        {% if partner.collaborators %}
-          <p><strong>Collaborators:</strong> {{ partner.collaborators }}</p>
-        {% endif %}
+        <p>{{ partner.description }}</p>
       </div>
     {% endif %}
   </div>

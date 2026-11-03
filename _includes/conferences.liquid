@@ -82,6 +82,7 @@
       <div class="conf-presenters">
         {% if project.presenter %}
           {% assign split_presenter = project.presenter | split: ', ' %}
+          <div class="conf-presenter-avatars">
           {% for presenter in split_presenter %}
             {% assign presenter_member = site.members | where_exp: 'm', 'm.profile.name == presenter' | first %}
             {% if presenter_member and presenter_member.profile.image %}
@@ -97,6 +98,11 @@
               <span class="conf-presenter-initials" title="Presented by {{ presenter }}">{{ initials | slice: 0, 2 }}</span>
             {% endif %}
           {% endfor %}
+          </div>
+          <div class="conf-presenter-label">
+            <small>Presented by</small>
+            <span>{{ split_presenter | join: ', ' }}</span>
+          </div>
         {% endif %}
       </div>
       <div class="conf-links">

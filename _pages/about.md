@@ -5,7 +5,7 @@ permalink: /
 subtitle: Computer Vision Laboratory · Department of Automatic Control and Robotics · Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering · AGH University of Krakow, Poland
 
 # main page sections (see _layouts/about.liquid)
-hero_title: Embedded Perception & <b>Autonomous Systems</b>
+hero_title: <b>Embedded</b> Perception & Autonomous <b>Systems</b>
 hero_buttons:
   - label: Our research
     url: "#research"

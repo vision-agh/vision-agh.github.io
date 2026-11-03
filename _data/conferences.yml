@@ -273,6 +273,26 @@
   arxiv: 2307.14124
   journal_link: https://doi.org/10.23919/SPA59660.2023.10274464
 
+"Automation2023":
+  name: "Automation"
+  start_date: 2023-09-01
+  presentation_type: presentation
+  presenter: Krzysztof Błachut
+  author: Kamil Bialik, Marcin Kowalczyk, Krzysztof Błachut, Tomasz Kryjak
+  topic: "Zliczanie szybkich obiektów z wykorzystaniem kamery zdarzeniowej"
+  arxiv: 2212.08384
+  journal_link: https://doi.org/10.14313/PAR_247/79
+
+"Automation2023_2":
+  name: "Automation"
+  start_date: 2023-09-01
+  presentation_type: presentation
+  presenter: Hubert Szolc
+  author: Paweł Miera, Hubert Szolc, Tomasz Kryjak
+  topic: "Sterowanie autonomicznym bezzałogowym statkiem powietrznym z wykorzystaniem uczenia przez wzmacnianie"
+  arxiv: 2307.14313
+  journal_link: https://doi.org/10.14313/PAR_250/85
+
 "DSD2023":
   name: "DSD"
   start_date: 2023-09-06

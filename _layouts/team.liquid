@@ -91,6 +91,7 @@ layout: page
   </div>
 {% endif %}
 
+{% comment %} "Want to join the team?" banner – temporarily disabled; remove the comment tags to restore.
 {% assign head_member = site.members | where: 'team_head', true | first %}
 {% assign contact_url = head_member.profile.email | prepend: 'mailto:' %}
 {%
@@ -100,3 +101,4 @@ layout: page
   button="Contact us"
   url=contact_url
 %}
+{% endcomment %}

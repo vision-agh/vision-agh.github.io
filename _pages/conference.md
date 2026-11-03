@@ -30,6 +30,40 @@ national_conferences: ["KU KDM", "SPA", "TYGIEL", "MMAR", "Automation", "ICCVG",
 {{ site.data.conferences.size }}|contributions;{{ conf_unique.size }}|conferences;{{ conf_international }}|international;{{ conf_national }}|national;{{ conf_demos }}|live demos
 {%- endcapture %}
 {% include page_stats.liquid items=conf_stats %}
+
+{% if site.data.conference_organisation.size > 0 %}
+
+<div class="conf-organisation">
+<h2 class="conf-scope-title page-section-title has-count">Conference organisation <span class="section-count">{{ site.data.conference_organisation.size }}</span></h2>
+<div class="conf-org-section">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    {% for org in site.data.conference_organisation %}
+    {% assign org_logo = org.img %}
+    {% unless org_logo %}{% assign org_logo_file = site.data.conference_logos[org.name] %}{% if org_logo_file %}{% assign org_logo = org_logo_file | prepend: 'assets/img/conferences/' %}{% endif %}{% endunless %}
+    <div class="col mb-4">
+      <div class="card h-100 conf-card">
+        {% if org_logo %}
+        <div class="conf-logo"><img src="{{ org_logo | relative_url }}" alt="{{ org.name }} logo" loading="lazy"></div>
+        {% else %}
+        <div class="conf-logo conf-logo-placeholder"><span>{{ org.name }}</span></div>
+        {% endif %}
+        <div class="card-body">
+          <div class="conf-card-head">
+            <h2 class="card-title">{% if org.url %}<a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.name }}</a>{% else %}{{ org.name }}{% endif %}</h2>
+            <span class="conf-type">organisation</span>
+          </div>
+          {% if org.years %}<div class="conf-date"><i class="fa-regular fa-calendar"></i> {{ org.years }}</div>{% endif %}
+          <p class="conf-topic">{{ org.full_name }}</p>
+          {% if org.role %}<p class="conf-authors">{{ org.role }}</p>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+{% endif %}
 {% include conference_filters.liquid %}
 
 <div class="projects">

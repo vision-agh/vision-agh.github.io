@@ -223,7 +223,7 @@ layout: default
                 {% if copy == 2 %}
                   tabindex="-1"
                 {% endif %}
-                ><img src="{{ logo | prepend: '/' | relative_url }}" alt="Project funding" loading="lazy"
+                ><img src="{{ logo | prepend: '/' | relative_url }}" alt="Project funding" decoding="async"
               ></a>
             {% endfor %}
             {% for partner in partners %}
@@ -239,7 +239,7 @@ layout: default
                   ><img
                     src="{{ partner.logo | prepend: '/assets/img/collaboration/' | relative_url }}"
                     alt="{{ partner.institution | default: partner.name }}"
-                    loading="lazy"
+                    decoding="async"
                 ></a>
               {% endif %}
             {% endfor %}
