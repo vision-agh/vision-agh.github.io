@@ -7,23 +7,22 @@
 #   role      – e.g. "Co-organisers", "Local organising committee" (optional)
 #   img       – logo path relative to the site root (optional)
 
-# TODO: add roles (e.g. "Local organising committee")
 - name: "DASIP"
   full_name: "Workshop on Design and Architectures for Signal and Image Processing"
   url: https://dasip-2026.github.io/
   years: "2026"
-  role:
+  role: "Chair of DASIP 2026 (with HiPEAC 2026, Kraków): Marcin Kowalczyk · Steering Committee: Tomasz Kryjak, Marek Gorgoń, Marcin Kowalczyk · TPC: Kamil Jeziorek, Hubert Szolc, Mateusz Wąsala"
 
 - name: "HiPEAC"
   full_name: "HiPEAC Conference – High-performance Embedded Architecture and Compilation"
   url: https://www.hipeac.net/#/
   img: assets/img/conferences/hipeac.svg
   years: "2026"
-  role:
+  role: "General Chair of HiPEAC 2026 (Kraków, 26–28 January 2026): Tomasz Kryjak"
 
 - name: "DSD/SEAA"
   full_name: "Euromicro Conference on Digital System Design / Software Engineering and Advanced Applications"
   url: https://dsd-seaa.com/
   img: assets/img/conferences/dsd_seaa.png
   years: "2026"
-  role:
+  role: "General Chairs of DSD 2026: Tomasz Kryjak, Marek Gorgoń · Web Co-Chairs: Mateusz Wąsala, Hubert Szolc"

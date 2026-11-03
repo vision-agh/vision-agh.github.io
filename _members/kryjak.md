@@ -114,6 +114,28 @@ awards:
     institution: "President of the Republic of Poland"
     date: "2019"
     summary: "For exemplary and exceptionally conscientious performance of professional duties in the service of the State."
+
+# academic service (shown as "Academic service" on the profile page, in this order); `years` and `summary` are optional
+service:
+  - role: "Steering Committee Chairman"
+    venue: "DSD – Euromicro Conference on Digital System Design"
+  - role: "General Chair"
+    venue: "DSD 2026 – Euromicro Conference on Digital System Design, Kraków"
+    years: "2026"
+  - role: "General Chair"
+    venue: "HiPEAC 2026 – HiPEAC Conference, Kraków"
+    years: "2026"
+  - role: "Steering Committee member"
+    venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
+  - role: "Associate Editor"
+    venue: "Microprocessors and Microsystems (Elsevier)"
+  - role: "TPC member"
+    venue: "DSD – Euromicro Conference on Digital System Design"
+    years: "2026"
+  - role: "TPC member"
+    venue: "FPL – International Conference on Field-Programmable Logic and Applications"
+  - role: "TPC member"
+    venue: "ARC – International Symposium on Applied Reconfigurable Computing"
 ---
 
 I am an Associate Professor in the Embedded Perception and Autonomous Systems Group at the Department of Automatic Control and Robotics, AGH University of Krakow, Poland. My research focuses on embedded perception and control systems implemented in system-on-chip field-programmable gate arrays (SoC FPGAs), with applications in mobile robotics, including unmanned aerial and ground vehicles. My work involves event cameras, embedded artificial intelligence, and neuromorphic computing.

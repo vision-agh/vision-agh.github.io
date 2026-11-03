@@ -33,6 +33,18 @@ profile:
     - Filtration
     - Real-time
     - SoC FPGA
+
+# academic service (shown as "Academic service" on the profile page, in this order); `years` and `summary` are optional
+service:
+  - role: "Chair"
+    venue: "DASIP 2026 – Workshop on Design and Architectures for Signal and Image Processing, Kraków"
+    years: "2026"
+  - role: "Steering Committee member"
+    venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
+    years: "2027"
+  - role: "TPC member"
+    venue: "DSD – Euromicro Conference on Digital System Design"
+    years: "2026"
 ---
 
 My interests are focused on real-time vision systems for autonomous robots. In my research, I use heterogeneous computing platforms and high-level environments enabling the modelling of algorithms and designed systems. My research also concerns the use of neuromorphic event sensors in modern vision data processing systems that require the development of new data processing methods.

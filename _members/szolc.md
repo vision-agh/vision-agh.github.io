@@ -117,6 +117,15 @@ languages:
     label: "Native"
   - name: "english"
     label: "Fluent"
+
+# academic service (shown as "Academic service" on the profile page, in this order); `years` and `summary` are optional
+service:
+  - role: "Web Co-Chair"
+    venue: "DSD 2026 – Euromicro Conference on Digital System Design, Kraków"
+    years: "2026"
+  - role: "TPC member"
+    venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
+    years: "2026–2027"
 ---
 
 I'm interested in controlling autonomous vehicles - especially Unmanned Aerial Vehicles (UAVs) - primarily based on visual information.

@@ -100,6 +100,15 @@ awards:
     institution: Advanced Micro Devices (AMD)
     date: "2023-08-28"
     summary: Project titled Detection-segmentation solution for controlling an autonomous vehicle in traffic on a city model on a Kria KV260 platform
+
+# academic service (shown as "Academic service" on the profile page, in this order); `years` and `summary` are optional
+service:
+  - role: "Web Co-Chair"
+    venue: "DSD 2026 – Euromicro Conference on Digital System Design, Kraków"
+    years: "2026"
+  - role: "TPC member"
+    venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
+    years: "2026–2027"
 ---
 
 I am interested in embedded vision systems, in particular SLAM algorithms for ambient map generation and positioning of unmanned aerial vehicles. I also design and build equipment for these vehicles.

@@ -35,6 +35,17 @@ profile:
     - Hardware Acceleration
     - Real-time
     - Embedded Vision
+
+# academic service (shown as "Academic service" on the profile page, in this order); `years` and `summary` are optional
+service:
+  - role: "General Chair"
+    venue: "DSD 2026 – Euromicro Conference on Digital System Design, Kraków"
+    years: "2026"
+  - role: "Steering Committee member"
+    venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
+  - role: "TPC member"
+    venue: "FPL – International Conference on Field-Programmable Logic and Applications"
+    years: "2026"
 ---
 
 I specialise in computer vision architectures, with particular emphasis on real-time systems, FPGA reconfigurable devices, embedded and intelligent systems. More broadly, my interests include many issues in the areas of automation and robotics, electronics and applied computer science. I am the author of 120 scientific publications.

@@ -141,6 +141,12 @@ awards:
     institution: "AMD"
     date: "2024-08-28"
     summary: "Graph Convolutional Neural Networks for Event-Based Vision for AMD SoC FPGA"
+
+# academic service (shown as "Academic service" on the profile page, in this order); `years` and `summary` are optional
+service:
+  - role: "TPC member"
+    venue: "DASIP – Workshop on Design and Architectures for Signal and Image Processing"
+    years: "2026–2027"
 ---
 
 I design low-power, real-time vision systems for autonomous vehicles and robotics. My research centers on event-based (neuromorphic) cameras and graph neural networks, with an emphasis on turning these ideas into deployable hardware on FPGAs and SoC platforms. I’m especially interested in efficient, low-latency AI pipelines and sensor-fusion methods that make perception faster, and more reliable in the real world.
