@@ -91,14 +91,15 @@ layout: page
   </div>
 {% endif %}
 
-{% comment %} "Want to join the team?" banner – temporarily disabled; remove the comment tags to restore.
-{% assign head_member = site.members | where: 'team_head', true | first %}
-{% assign contact_url = head_member.profile.email | prepend: 'mailto:' %}
-{%
-  include cta_banner.liquid
-  title="Want to join the team?"
-  text="PhD positions, research projects and student theses in embedded vision, drones and autonomous systems."
-  button="Contact us"
-  url=contact_url
-%}
+{% comment %}
+  "Want to join the team?" banner – temporarily disabled; remove the comment tags to restore.
+  {% assign head_member = site.members | where: 'team_head', true | first %}
+  {% assign contact_url = head_member.profile.email | prepend: 'mailto:' %}
+  {%
+    include cta_banner.liquid
+    title="Want to join the team?"
+    text="PhD positions, research projects and student theses in embedded vision, drones and autonomous systems."
+    button="Contact us"
+    url=contact_url
+  %}
 {% endcomment %}

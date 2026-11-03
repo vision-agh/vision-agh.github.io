@@ -83,21 +83,21 @@
         {% if project.presenter %}
           {% assign split_presenter = project.presenter | split: ', ' %}
           <div class="conf-presenter-avatars">
-          {% for presenter in split_presenter %}
-            {% assign presenter_member = site.members | where_exp: 'm', 'm.profile.name == presenter' | first %}
-            {% if presenter_member and presenter_member.profile.image %}
-              <a href="{{ presenter_member.url | relative_url }}" title="Presented by {{ presenter }}">
-                <img src="{{ presenter_member.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ presenter }}" loading="lazy">
-              </a>
-            {% else %}
-              {% assign initials = '' %}
-              {% assign name_parts = presenter | split: ' ' %}
-              {% for part in name_parts -%}
-                {%- assign initials = initials | append: part.first -%}
-              {%- endfor %}
-              <span class="conf-presenter-initials" title="Presented by {{ presenter }}">{{ initials | slice: 0, 2 }}</span>
-            {% endif %}
-          {% endfor %}
+            {% for presenter in split_presenter %}
+              {% assign presenter_member = site.members | where_exp: 'm', 'm.profile.name == presenter' | first %}
+              {% if presenter_member and presenter_member.profile.image %}
+                <a href="{{ presenter_member.url | relative_url }}" title="Presented by {{ presenter }}">
+                  <img src="{{ presenter_member.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ presenter }}" loading="lazy">
+                </a>
+              {% else %}
+                {% assign initials = '' %}
+                {% assign name_parts = presenter | split: ' ' %}
+                {% for part in name_parts -%}
+                  {%- assign initials = initials | append: part.first -%}
+                {%- endfor %}
+                <span class="conf-presenter-initials" title="Presented by {{ presenter }}">{{ initials | slice: 0, 2 }}</span>
+              {% endif %}
+            {% endfor %}
           </div>
           <div class="conf-presenter-label">
             <small>Presented by</small>

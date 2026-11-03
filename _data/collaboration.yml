@@ -139,6 +139,7 @@
   url: https://www.ietr.fr/en/vaader-video-analysis-and-architecture-design-embedded-resources-team#p-4581
   logo: insa.png
   logo_fit: contain
+  collaborators: "Karol Desnos"
   description: >-
     We collaborated on applying Tangled Program Graphs (TPGs) to autonomous UAV control. We have compared their performance with
     deep reinforcement learning (DRL) in a task involving autonomous flight through an unknown environment.
@@ -155,6 +156,7 @@
   url: https://www.dee.fct.unl.pt/
   logo: nova_deec.png
   logo_fit: contain
+  collaborators: "André Mora"
   description: >-
     We collaborated on an embedded vision system for automated drone landing site detection (eGPU and SoC FPGA). We published two
     papers: a demo at the DASIP 2018 conference and a paper at the ICCVG 2018 conference. Andre also served as a visiting professor

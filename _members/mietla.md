@@ -49,12 +49,12 @@ education:
     institution: "AGH University of Krakow, Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering"
     start: "2025"
     end: "2026"
-    summary: "Specialization: Intelligent Control Systems. Master's thesis: \"Autonomous control of a micro-drone swarm within a MoCap system’s feedback loop\"."
+    summary: 'Specialization: Intelligent Control Systems. Master''s thesis: "Autonomous control of a micro-drone swarm within a MoCap system’s feedback loop".'
   - degree: "BSc. Eng. in Automatic Control and Robotics"
     institution: "AGH University of Krakow, Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering"
     start: "2021"
     end: "2025"
-    summary: "Engineering thesis: \"Localization and counting of objects using UAV sensor data fusion\"."
+    summary: 'Engineering thesis: "Localization and counting of objects using UAV sensor data fusion".'
 
 experience:
   - role: "Research Engineer"

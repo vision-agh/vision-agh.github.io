@@ -3036,16 +3036,24 @@ ol {
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
 
+  // grayscale/opacity are applied to the whole moving strip (one composited layer),
+  // not to every logo – per-image filters are re-rasterised each frame and make the logos pulse
   .home-logos-track {
     display: flex;
     width: max-content;
+    filter: grayscale(1);
+    opacity: 0.75;
     animation: home-logos-scroll 45s linear infinite;
+    transition:
+      filter 0.2s,
+      opacity 0.2s;
     will-change: transform;
-    backface-visibility: hidden;
   }
 
   &:hover .home-logos-track,
   &:focus-within .home-logos-track {
+    filter: none;
+    opacity: 1;
     animation-play-state: paused;
   }
 
@@ -3056,22 +3064,12 @@ ol {
     padding-right: 2.5rem;
   }
 
-  // fixed box so the track width does not change while logos load (avoids jumps/flicker)
+  // fixed box so the track width does not change while logos load (avoids jumps)
   img {
     flex: 0 0 auto;
     width: 9rem;
     height: 3rem;
     object-fit: contain;
-    filter: grayscale(1);
-    opacity: 0.75;
-    transition:
-      filter 0.2s,
-      opacity 0.2s;
-  }
-
-  a:hover img {
-    filter: none;
-    opacity: 1;
   }
 
   @media (prefers-reduced-motion: reduce) {
