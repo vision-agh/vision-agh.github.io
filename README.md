@@ -1,6 +1,6 @@
 # EPAS Group – website
 
-Source of [vision-agh.github.io](https://vision-agh.github.io) (Embedded Perception and Autonomous Systems Group, AGH University of Krakow). Built with Jekyll and [al-folio](https://github.com/alshedivat/al-folio); every push to `main` is deployed automatically.
+Source of [epas.agh.edu.pl](https://epas.agh.edu.pl) (Embedded Perception and Autonomous Systems Group, AGH University of Krakow). Built with Jekyll and [al-folio](https://github.com/alshedivat/al-folio); every push to `main` is deployed automatically.
 
 ## Where things live
 
