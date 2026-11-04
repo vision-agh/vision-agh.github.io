@@ -45,6 +45,7 @@ news_limit: 5
 team_rows:
   - title: Research & Teaching Staff
     groups: [Principal Investigators, Research Assistants]
+    per_line: 5 # optional: split the row into lines of N members
   - title: PhD Students & Engineers
     groups: [PhD Students, Lab Engineers]
 

@@ -2,7 +2,7 @@
 layout: cv
 inline: false
 group: Principal Investigators
-team_frontpage: false
+team_frontpage: true
 group_rank: 1
 team_head: true
 vis_order: -1

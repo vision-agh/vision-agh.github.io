@@ -2753,6 +2753,17 @@ ol {
     color: var(--global-hover-text-color) !important;
     background-color: var(--global-theme-color);
   }
+
+  // round icon-only button (group's Facebook / LinkedIn)
+  &.home-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0;
+    font-size: 1rem;
+  }
 }
 
 .home-leader {
@@ -3007,6 +3018,11 @@ ol {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem 0.4rem;
+
+  // consecutive lines of the same row (`per_line` in team_rows)
+  & + & {
+    margin-top: 0.75rem;
+  }
 }
 
 .home-member {
