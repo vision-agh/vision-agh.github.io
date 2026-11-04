@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://vision-agh.github.io/sitemap.xml
+Sitemap: https://epas.agh.edu.pl/sitemap.xml
