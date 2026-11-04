@@ -48,6 +48,9 @@ service:
   - role: "Supervisor of the Neuromorphic section"
     venue: "AGH AVADER Student Research Group, AGH University of Krakow"
     years: "Since October 2026"
+  - role: "Technical support"
+    venue: "DSD/SEAA – Euromicro Conference on Digital System Design / Software Engineering and Advanced Applications"
+    years: "2026"
 ---
 
 My interests are focused on real-time vision systems for autonomous robots. In my research, I use heterogeneous computing platforms and high-level environments enabling the modelling of algorithms and designed systems. My research also concerns the use of neuromorphic event sensors in modern vision data processing systems that require the development of new data processing methods.

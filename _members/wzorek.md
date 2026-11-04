@@ -103,6 +103,12 @@ service:
   - role: "Supervisor of the FPGA section"
     venue: "AGH AVADER Student Research Group, AGH University of Krakow"
     years: "Since October 2025"
+  - role: "Leader of the duplicate bridge section"
+    venue: "University Sports Association of AGH University of Kraków (AZS AGH)"
+    years: "Since 2017"
+  - role: "Technical support"
+    venue: "DSD/SEAA – Euromicro Conference on Digital System Design / Software Engineering and Advanced Applications"
+    years: "2026"
 ---
 
 I focus on hardware acceleration for computer vision systems, with particular interest in event-based (neuromorphic) vision and deep neural network solutions. My work covers algorithm design tailored to the target platform, as well as the implementation and verification of hardware modules on reconfigurable FPGA platforms.
