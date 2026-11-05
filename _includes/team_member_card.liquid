@@ -35,9 +35,9 @@
 
       {% if member.profile.keywords %}
         {% assign keywords = member.profile.keywords | sort_natural %}
-        <div class="more-info-keywords mt-4 mb-4 flex flex-wrap gap-1">
+        <div class="more-info-keywords">
           {% for kw in keywords %}
-            <span class="text-xs px-2 py-1 rounded">{{ kw | strip }}</span>
+            <span>{{ kw | strip }}</span>
           {% endfor %}
         </div>
       {% endif %}

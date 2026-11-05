@@ -201,10 +201,21 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// keyword tags on the team cards – same pills as on the CV, home and collaboration pages
 .more-info-keywords {
-  font-size: 0.9rem;
-  color: var(--global-theme-color);
-  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+  margin: 1rem 0;
+
+  span {
+    padding: 0.1rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--global-theme-color);
+    background-color: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
+    border-radius: 999px;
+  }
 }
 
 // Citation
@@ -3926,8 +3937,7 @@ html[data-theme="dark"] .home-logos img {
 
   .more-info-keywords {
     justify-content: flex-start;
-    margin-top: 0.6rem !important;
-    margin-bottom: 0.6rem !important;
+    margin: 0.6rem 0;
   }
 
   .social-icons {
