@@ -220,6 +220,44 @@
     - Graph Neural Networks
     - Object Classification
 
+- id: tuberlin
+  name: "Robotic Interactive Perception"
+  institution: "Technische Universität Berlin"
+  category: Academic
+  country: Germany
+  url: https://sites.google.com/view/guillermogallego/team
+  logo: tu_berlin.svg
+  logo_fit: contain
+  collaborators: "Guillermo Gallego"
+  description: >-
+    Collaboration on the development and hardware acceleration of algorithms for event-based vision using SoC FPGA technology,
+    focusing on efficient real-time processing, motion estimation, and hardware architectures for high-throughput event data streams.
+  keywords:
+    - Event-based Vision
+    - FPGA Acceleration
+    - Neuromorphic Computing
+    - Motion Estimation
+    - Real-time Processing
+
+- id: tugraz
+  name: "Embedded Automotive Systems, Institute of Technical Informatics"
+  institution: "Graz University of Technology"
+  category: Academic
+  country: Austria
+  url: https://www.tugraz.at/en/arbeitsgruppen/iti-teams/eas/team-contact
+  logo: tu_graz.svg
+  logo_fit: contain
+  collaborators: "Tobias Scheipel"
+  description: >-
+    The collaboration focuses on developing FPGA architectures using dynamic partial reconfiguration to efficiently implement and
+    accelerate image processing algorithms, with particular emphasis on event-based vision and adaptive hardware resource utilization.
+  keywords:
+    - Dynamic Partial Reconfiguration
+    - FPGA-based Image Processing
+    - Event-based Vision
+    - Hardware Acceleration
+    - Reconfigurable Computing
+
 - name: "Universidade Nova de Lisboa"
   category: Erasmus+
   url: https://www.unl.pt/
