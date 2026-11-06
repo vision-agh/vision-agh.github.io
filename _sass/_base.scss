@@ -4084,6 +4084,9 @@ html[data-theme="dark"] .home-logos img {
     > .paper-content {
       flex: 1 1 0;
       max-width: none;
+      // let long unbreakable strings (e.g. URLs in the hidden BibTeX block)
+      // overflow instead of pushing the text column below the badges
+      min-width: 0;
     }
   }
 }
