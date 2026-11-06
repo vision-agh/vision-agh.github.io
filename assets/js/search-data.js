@@ -98,7 +98,7 @@ ninja.data = [{
               window.location.href = "/members/mietla";
             },},{id: "members-błażej-szargut-msc",
           title: 'Błażej Szargut, MSc',
-          description: "Profile of Błażej Szargut, MSc, Doctoral Researcher at the Embedded Perception and Autonomous Systems Group.",
+          description: "Profile of Błażej Szargut (Blazej Szargut), MSc, PhD Student at the Embedded Perception and Autonomous Systems Group, AGH University of Krakow.",
           section: "Members",handler: () => {
               window.location.href = "/members/szargut";
             },},{id: "members-hubert-szolc-msc",
