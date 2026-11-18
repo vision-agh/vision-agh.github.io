@@ -10,10 +10,21 @@ last_name:
 contact_note:
 logo_image: logo_epas_group.png
 
-description: ""
+short_title: EPAS AGH # short brand name appended to page titles and used in search results (SEO)
+home_title: EPAS AGH – Embedded Perception and Autonomous Systems Group, AGH University of Krakow # <title> of the home page (SEO)
+alternate_names: # other names of the group, used in Schema.org data so that search engines connect them with this site
+  - EPAS
+  - EPAS AGH
+  - EPAS Group
+  - Embedded Perception and Autonomous Systems
+  - Vision AGH
+description: >-
+  EPAS (Embedded Perception and Autonomous Systems Group) at AGH University of Krakow, Poland –
+  research on event-based vision, embedded AI on FPGA and SoC, neuromorphic computing,
+  computer vision and autonomous vehicles.
 footer_text: >
   AGH University of Krakow, Poland.
-keywords: event cameras, computer vision, real-time processing, SoC FPGA # add your own keywords or leave empty
+keywords: EPAS, EPAS AGH, Embedded Perception and Autonomous Systems, AGH University of Krakow, AGH Kraków, vision AGH, event cameras, event-based vision, computer vision, embedded vision, real-time processing, SoC FPGA, neuromorphic computing, autonomous vehicles # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon-32x32.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -62,9 +73,9 @@ max_width: 1140px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://epas.agh.edu.pl/assets/img/logo_epas_group.png # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -78,7 +89,7 @@ pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: # your google-site-verification ID (Google Search Console)
+google_site_verification: NbmziYwpxfRwaDkIc-oQxTw0_Jb1LRM5KwVmGTD99fo # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
@@ -234,7 +245,7 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude: ["robots.txt", "google*.html", "assets/js/search/*.js"]
 
 # -----------------------------------------------------------------------------
 # Terser
@@ -383,7 +394,7 @@ enable_google_analytics: false # enables google analytics
 enable_cronitor_analytics: false # enables cronitor RUM analytics
 enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
 enable_openpanel_analytics: false # enables Openpanel analytics (https://openpanel.dev/)
-enable_google_verification: false # enables google site verification
+enable_google_verification: true # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)

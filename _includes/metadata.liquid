@@ -26,18 +26,23 @@
   {% else %}
     {% capture title %}{{ site.title }}{% endcapture %}
   {% endif %}
+  {% assign title_suffix = site.short_title | default: title %}
   {% if page.url == '/blog/index.html' %}
-    {{ page.title }} | {{ title }}
+    {{ page.title }} | {{ title_suffix }}
   {% elsif page.title != 'blank' and page.url != '/' %}
     {% if page.title == null or page.title == '' %}
-      {{ page.date | date: '%Y' }} | {{ title }}
+      {{ page.date | date: '%Y' }} | {{ title_suffix }}
     {% else %}
-      {{ page.title }} | {{ title }}
+      {{ page.title }} | {{ title_suffix }}
     {% endif %}
   {% else %}
-    {{ title }}
+    {{ site.home_title | default: title }}
   {% endif %}
 </title>
+{% assign author_name = author_name | strip %}
+{% if author_name == '' %}
+  {% assign author_name = site.title %}
+{% endif %}
 <meta name="author" content="{{ author_name }}">
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% if page.keywords or site.keywords %}
@@ -55,7 +60,10 @@
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta
+    property="og:title"
+    content="{% if page.url == '/' %}{{ site.home_title | default: title }}{% elsif page.title %}{{ page.title }} | {{ site.short_title | default: title }}{% else %}{{ title }}{% endif %}"
+  >
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
@@ -65,7 +73,10 @@
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta
+    name="twitter:title"
+    content="{% if page.url == '/' %}{{ site.home_title | default: title }}{% elsif page.title %}{{ page.title }} | {{ site.short_title | default: title }}{% else %}{{ title }}{% endif %}"
+  >
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
     <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
@@ -143,6 +154,9 @@
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'leetcode_id' %}
         {% capture link %}https://leetcode.com/u/{{ social[1] }}/{% endcapture %}
+        {% assign sameaslinks = sameaslinks | push: link %}
+      {% when 'linkedin_company' %}
+        {% capture link %}https://www.linkedin.com/company/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'linkedin_username' %}
         {% capture link %}https://www.linkedin.com/in/{{ social[1] }}{% endcapture %}
@@ -222,26 +236,69 @@
         {% capture link %}https://www.zotero.org/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% else %}
-        {% assign sameaslinks = sameaslinks | push: social[1].url %}
+        {% if social[1].url %}
+          {% assign sameaslinks = sameaslinks | push: social[1].url %}
+        {% endif %}
     {% endcase %}
   {% endfor %}
 
+  {% assign site_root = site.url | append: site.baseurl | append: '/' %}
+  {% capture page_description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+
+  <!-- Organization: the research group, so search engines tie "EPAS" / "EPAS AGH" to this site -->
   <script type="application/ld+json">
     {
-        "author":
-        {
-            "@type": "Person",
-            "name": "{{ author_name }}"
-        },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
-        "sameAs": {{ sameaslinks | jsonify }},
-        {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+      "@context": "https://schema.org",
+      "@type": "ResearchOrganization",
+      "@id": {{ site_root | append: '#organization' | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "alternateName": {{ site.alternate_names | jsonify }},
+      "url": {{ site_root | jsonify }},
+      "logo": {{ site.logo_image | prepend: '/assets/img/' | absolute_url | jsonify }},
+      "description": {{ site.description | strip | jsonify }},
+      {% if site.data.socials.email %}"email": {{ site.data.socials.email | jsonify }},{% endif %}
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "al. Mickiewicza 30",
+        "postalCode": "30-059",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      },
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "AGH University of Krakow",
+        "alternateName": "Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie",
+        "url": "https://www.agh.edu.pl"
+      }{% if sameaslinks != empty %},
+      "sameAs": {{ sameaslinks | jsonify }}{% endif %}
     }
   </script>
+
+  {% if page.url == '/' %}
+    <!-- WebSite: defines the site name shown by Google above the search result -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": {{ site_root | append: '#website' | jsonify }},
+        "name": {{ site.short_title | default: site.title | jsonify }},
+        "alternateName": {{ site.alternate_names | push: site.title | jsonify }},
+        "url": {{ site_root | jsonify }},
+        "inLanguage": {{ site.lang | jsonify }},
+        "publisher": { "@id": {{ site_root | append: '#organization' | jsonify }} }
+      }
+    </script>
+  {% else %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebPage{% endif %}",
+        "url": {{ page.url | replace: 'index.html', '' | absolute_url | jsonify }},
+        "name": {{ page.title | default: site.title | jsonify }},
+        "description": {{ page_description | strip | jsonify }},
+        "isPartOf": { "@id": {{ site_root | append: '#website' | jsonify }} },
+        "publisher": { "@id": {{ site_root | append: '#organization' | jsonify }} }
+      }
+    </script>
+  {% endif %}
 {% endif %}
