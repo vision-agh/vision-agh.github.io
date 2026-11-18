@@ -13,3 +13,6 @@ vendor
 .idea
 .venv
 *.xlsx
+
+# Theses summary spreadsheet export (local data, not part of the site)
+Zestawienie Prac Dyplomowych*.csv
