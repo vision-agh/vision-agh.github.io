@@ -1,9 +1,6 @@
 ---
 layout: about
 title: About
-description: >-
-  EPAS (Embedded Perception and Autonomous Systems Group) at AGH University of Krakow – event-based vision,
-  embedded AI on FPGA and SoC, neuromorphic computing, computer vision and autonomous vehicles.
 permalink: /
 subtitle: Computer Vision Laboratory · Department of Automatic Control and Robotics · Faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering · AGH University of Krakow, Poland
 

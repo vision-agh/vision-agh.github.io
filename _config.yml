@@ -11,17 +11,16 @@ contact_note:
 logo_image: logo_epas_group.png
 
 short_title: EPAS AGH # short brand name appended to page titles and used in search results (SEO)
-home_title: EPAS AGH – Embedded Perception and Autonomous Systems Group, AGH University of Krakow # <title> of the home page (SEO)
+home_title: EPAS AGH – Embedded Perception and Autonomous Systems Group # <title> of the home page (SEO, keep under ~60 characters)
 alternate_names: # other names of the group, used in Schema.org data so that search engines connect them with this site
   - EPAS
   - EPAS AGH
   - EPAS Group
   - Embedded Perception and Autonomous Systems
   - Vision AGH
-description: >-
-  EPAS (Embedded Perception and Autonomous Systems Group) at AGH University of Krakow, Poland –
-  research on event-based vision, embedded AI on FPGA and SoC, neuromorphic computing,
-  computer vision and autonomous vehicles.
+description: >- # keep under ~160 characters (longer descriptions are truncated by Google)
+  EPAS – Embedded Perception and Autonomous Systems Group at AGH University of Krakow:
+  event-based vision, embedded AI on FPGA/SoC and autonomous vehicles.
 footer_text: >
   AGH University of Krakow, Poland.
 keywords: EPAS, EPAS AGH, Embedded Perception and Autonomous Systems, AGH University of Krakow, AGH Kraków, vision AGH, event cameras, event-based vision, computer vision, embedded vision, real-time processing, SoC FPGA, neuromorphic computing, autonomous vehicles # add your own keywords or leave empty
@@ -132,13 +131,8 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+# (the al-folio demo sources were removed – they published unrelated posts under /blog/ and in the sitemap)
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -233,6 +227,10 @@ plugins:
 defaults:
   - scope:
       path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "google*.html" # Google Search Console verification file (copied as-is, kept out of the sitemap)
     values:
       sitemap: false
 
