@@ -10,7 +10,9 @@ References
   volume        = {19},
   pages         = {45},
   doi           = {10.1145/3838800},
+  arxiv         = {2602.16442},
   abstract      = {As the volume of data recorded by embedded edge sensors increases, particularly from neuromorphic devices producing discrete event streams, there is a need for hardware-aware neural architectures that enable efficient, low-latency and energy-conscious local processing. To address this research gap, we present an FPGA implementation of event-graph neural networks for audio processing. We utilise an artificial cochlea that converts time-series signals into sparse event data, reducing memory and computation costs. Our architecture was implemented on an SoC FPGA and evaluated on two open source datasets. For the classification task, our baseline floating-point model achieves 92.7\% accuracy on the SHD dataset—only 2.4\% and 2\% below the state-of-the-art—while requiring 10 and 67 fewer parameters, respectively. Compared to FPGA-based spiking neural networks, our quantised model reaches 92.3\% accuracy, outperforming them by 19.3 pps while reducing resource usage and latency. For the SSC dataset, we report the first hardware-accelerated evaluation, and our models achieve 66.9–71.0\% accuracy. Extending our conference work, we further demonstrate the first end-to-end FPGA implementation of the event-audio keyword spotting task, combining graph convolutional layers with recurrent sequence modelling for continuous, streaming operation. The system achieves 95\% word-end detection accuracy, with only 10.53 µs latency and 1.18 W power consumption, establishing a strong benchmark for energy-efficient event-driven KWS.},
+  preview       = {badap-agh-170304.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:165951,
@@ -296,6 +298,7 @@ References
   arxiv         = {2411.04269},
   abstract      = {Event cameras are becoming increasingly popular as an alternative to traditional frame-based vision sensors, especially in mobile robotics. Taking full advantage of their high temporal resolution, high dynamic range, low power consumption and sparsity of event data, which only reflects changes in the observed scene, requires both an efficient algorithm and a specialised hardware platform. A recent trend involves using Graph Convolutional Neural Networks (GCNNs) implemented on a heterogeneous SoC FPGA. In this paper we focus on optimising hardware modules for graph convolution to allow flexible selection of the FPGA resource (BlockRAM, DSP and LUT) for their implementation. We propose a “two-step convolution” approach that utilises additional BRAM buffers in order to reduce up to 94\% of LUT usage for multiplications. This method significantly improves the scalability of GCNNs, enabling the deployment of models with more layers, larger graphs sizes and their application for more dynamic scenarios.},
   collaboration = {lip6},
+  preview       = {badap-agh-162122.png},
   bibtex_show   = {true}
 }
 @inproceedings{10715635,
@@ -340,6 +343,7 @@ References
   collection    = {DSD~2024 [Dokument elektroniczny] : 2024~27th Euromicro Conference on Digital System Design : 28–30 August 2024, Paris, France : proceedings},
   arxiv         = {2407.08356},
   abstract      = {In recent years there has been a growing interest in event cameras, i.e. vision sensors that record changes in illumination independently for each pixel. This type of operation ensures that acquisition is possible in very adverse lighting conditions, both in low light and high dynamic range, and reduces average power consumption. In addition, the independent operation of each pixel results in low latency, which is desirable for robotic solutions. Nowadays, Field Programmable Gate Arrays (FPGAs), along with general-purpose processors (GPPs/CPUs) and programmable graphics processing units (GPUs), are popular architectures for implementing and accelerating computing tasks. In particular, their usefulness in the embedded vision domain has been repeatedly demonstrated over the past 30 years, where they have enabled fast data processing (even in real-time) and energy efficiency. Hence, the combination of event cameras and reconfigurable devices seems to be a good solution, especially in the context of energy-efficient real-time embedded systems. This paper gives an overview of the most important works, where FPGAs have been used in different contexts to process event data. It covers applications in the following areas: filtering, stereovision, optical flow, acceleration of AI-based algorithms (including spiking neural networks) for object classification, detection and tracking, and applications in robotics and inspection systems. Current trends and challenges for such systems are also discussed.},
+  preview       = {badap-agh-156634.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:154027,
@@ -353,6 +357,7 @@ References
   arxiv         = {2401.04988},
   abstract      = {Event-based vision is an emerging research field involving processing data generated by Dynamic Vision Sensors (neuromorphic cameras). One of the latest proposals in this area are Graph Convolutional Networks (GCNs), which allow to process events in its original sparse form while maintaining high detection and classification performance. In this paper, we present the hardware implementation of a~graph generation process from an event camera data stream, taking into account both the advantages and limitations of FPGAs. We propose various ways to simplify the graph representation and use scaling and quantisation of values. We consider both undirected and directed graphs that enable the use of PointNet convolution. The results obtained show that by appropriately modifying the graph representation, it is possible to create a~hardware module for graph generation. Moreover, the proposed modifications have no significant impact on object detection performance, only 0.08\% mAP less for the base model and the N-Caltech data set.Finally, we describe the proposed hardware architecture of the graph generation module.},
   collaboration = {lip6},
+  preview       = {badap-agh-154027.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:156633,
@@ -365,6 +370,7 @@ References
   collection    = {DSD~2024 [Dokument elektroniczny] : 2024~27th Euromicro Conference on Digital System Design : 28–30 August 2024, Paris, France : proceedings},
   arxiv         = {2407.08272},
   abstract      = {The performance of object detection systems in automotive solutions must be as high as possible, with minimal response time and, due to the often battery-powered operation, low energy consumption. When designing such solutions, we therefore face challenges typical for embedded vision systems: the problem of fitting algorithms of high memory and computational complexity into small low-power devices. In this paper we propose PowerYOLO - a mixed precision solution, which targets three essential elements of such application. First, we propose a system based on a Dynamic Vision Sensor (DVS), a novel sensor, that offers low power requirements and operates well in conditions with variable illumination. It is these features that may make event cameras a preferential choice over frame cameras in some applications. Second, to ensure high accuracy and low memory and computational complexity, we propose to use 4-bit width Powers-of- Two (PoT) quantisation for convolution weights of the YOLO detector, with all other parameters quantised linearly. Finally, we embrace from PoT scheme and replace multiplication with bit-shifting to increase the efficiency of hardware acceleration of such solution, with a special convolution-batch normalisation fusion scheme. The use of specific sensor with PoT quantisation and special batch normalisation fusion leads to a unique system with almost 8x reduction in memory complexity and vast computational simplifications, with relation to a standard approach. This efficient system achieves high accuracy of mAP 0.301 on the GENt DVS dataset, marking the new state-of-the-art for such compressed model.},
+  preview       = {badap-agh-156633.jpg},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:148559,
@@ -377,6 +383,7 @@ References
   collection    = {MMAR~2023 [Dokument elektroniczny] : 27th~international conference on Methods and Models in Automation and Robotics : 22–25 August 2023, Mi\k{e}dzyzdroje, Poland : on line proceedings : technical papers},
   arxiv         = {2306.17551},
   abstract      = {Object detection in 3D is a crucial aspect in the context of autonomous vehicles and drones. However, prototyping detection algorithms is time-consuming and costly in terms of energy and environmental impact. To address these challenges, one can check the effectiveness of different models by training on a subset of the original training set. In this paper, we present a comparison of three algorithms for selecting such a subset – random sampling, random per class sampling, and our proposed MONSPeC (Maximum Object Number Sampling per Class). We provide empirical evidence for the superior effectiveness of random per class sampling and MONSPeC over basic random sampling. By replacing random sampling with one of the more efficient algorithms, the results obtained on the subset are more likely to transfer to the results on the entire dataset. The code is available at: https://github.com/vision-agh/monspec.},
+  preview       = {badap-agh-148559.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:148543,
@@ -389,6 +396,7 @@ References
   collection    = {MMAR~2023 [Dokument elektroniczny] : 27th~international conference on Methods and Models in Automation and Robotics : 22–25 August 2023, Mi\k{e}dzyzdroje, Poland : on line proceedings : technical papers},
   arxiv         = {2306.17485},
   abstract      = {Object detection and segmentation are two core modules of an autonomous vehicle perception system. They should have high efficiency and low latency while reducing computational complexity. Currently, the most commonly used algorithms are based on deep neural networks, which guarantee high efficiency but require high-performance computing platforms. In the case of autonomous vehicles, i.e. cars, but also drones, it is necessary to use embedded platforms with limited computing power, which makes it difficult to meet the requirements described above. A reduction in the complexity of the network can be achieved by using an appropriate: architecture, representation (reduced numerical precision, quantisation, pruning), and computing platform. In this paper, we focus on the first factor – the use of so-called detection-segmentation networks as a component of a perception system. We considered the task of segmenting the drivable area and road markings in combination with the detection of selected objects (pedestrians, traffic lights, and obstacles). We compared the performance of three different architectures described in the literature: MultiTask V3, HybridNets, and YOLOP. We conducted the experiments on a custom dataset consisting of approximately 500 images of the drivable area and lane markings, and 250 images of detected objects. Of the three methods analysed, MultiTask V3 proved to be the best, achieving 99\% mAP50for detection, 97\% MIoU for drivable area segmentation, and 91\% MIoU for lane segmentation, as well as 124 fps on the RTX 3060 graphics card. This architecture is a good solution for embedded perception systems for autonomous vehicles. The code is available at: https://github.com/vision-agh/MMAR_2023.},
+  preview       = {badap-agh-148543.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:145407,
@@ -401,6 +409,7 @@ References
   collection    = {Computer Vision and Graphics : proceedings of the International Conference on Computer Vision and Graphics ICCVG 2022 : [19-21 September 2022, Warsaw]},
   arxiv         = {2209.15257},
   abstract      = {Deep neural networks virtually dominate the domain of most modern vision systems, providing high performance at a cost of increased computational complexity.Since for those systems it is often required to operate both in real-time and with minimal energy consumption (e.g., for wearable devices or autonomous vehicles, edge Internet of Things (IoT), sensor networks), various network optimisation techniques are used, e.g., quantisation, pruning, or dedicated lightweight architectures. Due to the logarithmic distribution of weights in neural network layers, a method providing high performance with significant reduction in computational precision (for 4-bit weights and less) is the Power-of-Two (PoT) quantisation (and therefore also with a logarithmic distribution). This method introduces additional possibilities of replacing the typical for neural networks Multiply and ACcumulate (MAC -- performing, e.g., convolution operations) units, with more energy-efficient Bitshift and ACcumulate (BAC). In this paper, we show that a hardware neural network accelerator with PoT weights implemented on the Zynq UltraScale + MPSoC ZCU104 SoC FPGA can be at least 1.4x more energy efficient than the uniform quantisation version. To further reduce the actual power requirement by omitting part of the computation for zero weights, we also propose a new pruning method adapted to logarithmic quantisation.},
+  preview       = {badap-agh-145407.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:150127,
@@ -413,6 +422,7 @@ References
   collection    = {SPA~2023 : Signal Processing Algorithms, Architectures, Arrangements, and Applications : Poznan, 20th - 22nd September 2023},
   arxiv         = {2307.14177},
   abstract      = {In this paper we have addressed the implementation of the accumulation and projection of high-resolution event data stream (HD – 1280×720 pixels) onto the image plane in FPGA devices. The results confirm the feasibility of this approach, but there are a number of challenges, limitations and trade-offs to be considered. The required hardware resources of selected data representations, such as binary frame, event frame, exponentially decaying time surface and event frequency, were compared with those available on several popular platforms from AMD Xilinx. The resulting event frames can be used for typical vision algorithms, such as object classification and detection, using both classical and deep neural network methods.},
+  preview       = {badap-agh-150127.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:149007,
@@ -425,6 +435,7 @@ References
   collection    = {Applied Reconfigurable Computing : architectures, tools, and applications : 19th~international symposium, ARC~2023 : Cottbus, Germany, September 27-29, 2023 : proceedings},
   arxiv         = {2307.08682},
   abstract      = {Perception and control systems for autonomous vehicles are an active area of scientific and industrial research. These solutions should be characterised by high efficiency in recognising obstacles and other environmental elements in different road conditions, real-time capability, and energy efficiency. Achieving such functionality requires an appropriate algorithm and a suitable computing platform. In this paper, we have used the MultiTaskV3 detection-segmentation network as the basis for a perception system that can perform both functionalities within a single architecture. It was appropriately trained, quantised, and implemented on the AMD Xilinx Kria KV260 Vision AI embedded platform. By using this device, it was possible to parallelise and accelerate the computations. Furthermore, the whole system consumes relatively little power compared to a CPU-based implementation (an average of 5 watts, compared to the minimum of 55 watts for weaker CPUs, and the small size (119mm x 140mm x 36mm) of the platform allows it to be used in devices where the amount of space available is limited. It also achieves an accuracy higher than 97\% of the mAP (mean average precision) for object detection and above 90\% of the mIoU (mean intersection over union) for image segmentation. The article also details the design of the Mecanum wheel vehicle, which was used to test the proposed solution in a mock-up city.},
+  preview       = {badap-agh-149007.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:148668,
@@ -439,6 +450,7 @@ References
   selected      = {true},
   arxiv         = {2507.01557},
   abstract      = {The field of neuromorphic vision is developing rapidly, and event cameras are finding their way into more and more applications. However, the data stream from these sensors is characterised by significant noise. In this paper, we propose a method for event data that is capable of removing approximately 99\% of noise while preserving the majority of the valid signal. We have proposed four algorithms based on the matrix of infinite impulse response (IIR) filters method. We compared them on several event datasets that were further modified by adding artificially generated noise and noise recorded with dynamic vision sensor. The proposed methods use about 30KB of memory for a sensor with a resolution of 1280 × 720 and is therefore well suited for implementation in embedded devices.},
+  preview       = {badap-agh-148668.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:150128,
@@ -452,6 +464,7 @@ References
   arxiv         = {2307.14124},
   abstract      = {Recent advances in event camera research emphasize processing data in its original sparse form, which allows the use of its unique features such as high temporal resolution, high dynamic range, low latency, and resistance to image blur. One promising approach for analyzing event data is through graph convolutional networks (GCNs). However, current research in this domain primarily focuses on optimizing computational costs, neglecting the associated memory costs. In this paper, we consider both factors together in order to achieve satisfying results and relatively low model complexity. For this purpose, we performed a comparative analysis of different graph convolution operations, considering factors such as execution time, the number of trainable model parameters, data format requirements, and training outcomes. Our results show a 450-fold reduction in the number of parameters for the feature extraction module and a 4.5-fold reduction in the size of the data representation while maintaining a classification accuracy of 52.3\%, which is 6.3\% higher compared to the operation used in state-of-the-art approaches. To further evaluate performance, we implemented the object detection architecture and evaluated its performance on the N-Caltech101 dataset. The results showed an accuracy of 53.7\% mAP@0.5 and reached an execution rate of 82 graphs per second.},
   collaboration = {lip6},
+  preview       = {badap-agh-150128.png},
   bibtex_show   = {true}
 }
 @inbook{badap-agh:149063,
@@ -464,6 +477,7 @@ References
   collection    = {Progress in Polish artificial intelligence research 4 [Dokument elektroniczny]},
   arxiv         = {2305.18008},
   abstract      = {Despite the dynamic development of computer vision algorithms, the implementation of perception and control systems for autonomous vehicles such as drones and self-driving cars still poses many challenges. A video stream captured by traditional cameras is often prone to problems such as motion blur or degraded image quality due to challenging lighting conditions. In addition, the frame rate - typically 30 or 60 frames per second - can be a limiting factor in certain scenarios. Event cameras (DVS -- Dynamic Vision Sensor) are a potentially interesting technology to address the above mentioned problems. In this paper, we compare two methods of processing event data by means of deep learning for the task of pedestrian detection. We used a representation in the form of video frames, convolutional neural networks and asynchronous sparse convolutional neural networks. The results obtained illustrate the potential of event cameras and allow the evaluation of the accuracy and efficiency of the methods used for high-resolution (1280 x 720 pixels) footage.},
+  preview       = {badap-agh-149063.jpg},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:145406,
@@ -476,6 +490,7 @@ References
   collection    = {Computer Vision and Graphics : proceedings of the International Conference on Computer Vision and Graphics ICCVG 2022 : [19-21 September 2022, Warsaw]},
   arxiv         = {2209.15252},
   abstract      = {3D object detection from LiDAR sensor data is an important topic in the context of autonomous cars and drones. In this paper, we present the results of experiments on the impact of backbone selection of a deep convolutional neural network on detection accuracy and computation speed. We chose the PointPillars network, which is characterised by a simple architecture, high speed, and modularity that allows for easy expansion. During the experiments, we paid particular attention to the change in detection efficiency (measured by the mAP metric) and the total number of multiply-addition operations needed to process one point cloud. We tested 10 different convolutional neural network architectures that are widely used in image-based detection problems. For a backbone like MobilenetV1, we obtained an almost 4x speedup at the cost of a 1.13\% decrease in mAP. On the other hand, for CSPDarknet we got an acceleration of more than 1.5x at an increase in mAP of 0.33\%. We have thus demonstrated that it is possible to significantly speed up a 3D object detector in LiDAR point clouds with a small decrease in detection efficiency. This result can be used when PointPillars or similar algorithms are implemented in embedded systems, including SoC FPGAs. The code is available at https://github.com/vision-agh/pointpillars_backbone.},
+  preview       = {badap-agh-145406.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:152559,
@@ -500,6 +515,7 @@ References
   collection    = {Design and Architecture for Signal and Image Processing : 16th~international workshop, DASIP~2023 : Toulouse, France, January 16–18, 2023 : proceedings},
   arxiv         = {2301.04847},
   abstract      = {In this paper, we propose a real-time FPGA implementation of the Semi-Global Matching (SGM) stereo vision algorithm. The designed module supports a 4K/Ultra HD (3840 x 2160 pixels @ 30 frames per second) video stream in a 4 pixel per clock (ppc) format and a 64-pixel disparity range. The baseline SGM implementation had to be modified to process pixels in the 4ppc format and meet the timing constrains, however, our version provides results comparable to the original design. The solution has been positively evaluated on the Xilinx VC707 development board with a Virtex-7 FPGA device.},
+  preview       = {badap-agh-146665.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:151231,
@@ -515,6 +531,7 @@ References
   collection    = {PAR Pomiary Automatyka Robotyka},
   arxiv         = {2307.14313},
   abstract      = {Reinforcement learning is of increasing importance in the field of robot control and simulation plays a key role in this process. In the unmanned aerial vehicles (UAVs, drones), there is also an increase in the number of published scientific papers involving this approach. In this work, an autonomous drone control system was prepared to fly forward (according to its coordinates system) and pass the trees encountered in the forest based on the data from a rotating LiDAR sensor. The Proximal Policy Optimization (PPO) algorithm, an example of reinforcement learning (RL), was used to prepare it. A custom simulator in the Python language was developed for this purpose. The Gazebo environment, integrated with the Robot Operating System (ROS), was also used to test the resulting control algorithm. Finally, the prepared solution was implemented in the Nvidia Jetson Nano eGPU and verified in the real tests scenarios. During them, the drone successfully completed the set task and was able to repeatable avoid trees and fly through the forest.},
+  preview       = {badap-agh-151231.jpg},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:145405,
@@ -527,6 +544,7 @@ References
   collection    = {Computer Vision and Graphics : proceedings of the International Conference on Computer Vision and Graphics ICCVG 2022 : [19-21 September 2022, Warsaw]},
   arxiv         = {2209.15251},
   abstract      = {Quantum Neural Networks (QNNs) are an emerging technology that can be used in many applications including computer vision. In this paper, we presented a traffic sign classification system implemented using a hybrid quantum-classical convolutional neural network. Experiments on the German Traffic Sign Recognition Benchmark dataset indicate that currently QNN do not outperform classical DCNN (Deep Convolutuional Neural Networks), yet still provide an accuracy of over 90\% and are a definitely promising solution for advanced computer vision.},
+  preview       = {badap-agh-145405.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:145827,
@@ -544,6 +562,7 @@ References
   collection    = {PAR Pomiary Automatyka Robotyka},
   arxiv         = {2212.08384},
   abstract      = {This paper proposes the use of an event camera as a component of a vision system that enables counting of fast-moving objects – in this case, falling corn grains. These cameras transmit, in an asynchronous manner, information about the change in brightness of individual pixels and are characterised by low latency, no motion blur, and correct operation in different lighting conditions, as well as very low power consumption. The proposed counting algorithm processes events in real time. The operation of the solution was demonstrated on a stand consisting of a chute with a vibrating feeder, which allowed the number of falling grains to be adjusted. The objective of the control system with a PID controller was to maintain a constant average number of falling objects. The proposed solution was subjected to a series of tests to determine the correctness of the developed method operation. On their basis, the validity of using an event camera to count small, fast-moving objects and the associated wide range of potential industrial applications can be confirmed.},
+  preview       = {badap-agh-145827.jpg},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:142206,
@@ -569,6 +588,7 @@ References
   issn          = {2079-9292},
   collection    = {Electronics},
   abstract      = {The detection and description of feature points are important components of many computer vision systems. For example, in the field of autonomous unmanned aerial vehicles (UAV), these methods form the basis of so-called Visual Odometry (VO) and Simultaneous Localisation and Mapping (SLAM) algorithms. In this paper, we present a hardware feature points detection system able to process a 4K video stream in real-time. We use the ORB algorithm—Oriented FAST (Features from Accelerated Segment Test) and Rotated BRIEF (Binary Robust Independent Elementary Features)—to detect and describe feature points in the images. We make numerous modifications to the original ORB algorithm (among others, we use the RS-BRIEF instead of classic R-BRIEF) to adapt it to the high video resolution, make it computationally efficient, reduce the resource utilisation and achieve lower power consumption. Our hardware implementation supports a 4 ppc (pixels per clock) format (with simple adaptation to 2 ppc, 8 ppc, and more) and real-time processing of a 4K video stream (UHD—Ultra High Definition, 3840×2160 pixels) @ 60 frames per second (150 MHz clock). We verify our system using simulations in the Vivado IDE and implement it in hardware on the ZCU 104 evaluation board with the AMD Xilinx Zynq UltraScale+ MPSoC device. The proposed design consumes only 5 watts.},
+  preview       = {badap-agh-141501.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:141200,
@@ -584,6 +604,7 @@ References
   issn          = {1939-8018},
   collection    = {Journal of Signal Processing Systems for Signal, Image, and Video Technology},
   abstract      = {Testing and evaluation of an automotive perception system is a complicated task which requires special equipment and infrastructure. To compute key performance indicators and compare the results with real-world situation, some additional sensors and manual data labelling are often required. In this article, we propose a different approach, which is based on a UAV equipped with a 4K camera flying above a test track. Two computer vision methods are used to precisely determine the positions of the objects around the car – one based on ArUco markers and the other on a DCNN (we provide the algorithms used on GitHub). The detections are then correlated with the perception system readings. For the static and dynamic experiments, the differences between various systems are mostly below 0.5 m. The results of the experiments performed indicate that this approach could be an interesting alternative to existing evaluation solutions.},
+  preview       = {badap-agh-141200.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:140225,
@@ -599,6 +620,7 @@ References
   issn          = {2079-9268},
   collection    = {Journal of Low Power Electronics and Applications},
   abstract      = {Object detection is an essential component of many systems used, for example, in advanced driver assistance systems (ADAS) or advanced video surveillance systems (AVSS). Currently, the highest detection accuracy is achieved by solutions using deep convolutional neural networks (DCNN). Unfortunately, these come at the cost of a high computational complexity; hence, the work on the widely understood acceleration of these algorithms is very important and timely. In this work, we compare three different DCNN hardware accelerator implementation methods: coarse-grained (a custom accelerator called LittleNet), fine-grained (FINN) and sequential (Vitis AI). We evaluate the approaches in terms of object detection accuracy, throughput and energy usage on the VOT and VTB datasets. We also present the limitations of each of the methods considered. We describe the whole process of DNNs implementation, including architecture design, training, quantisation and hardware implementation. We used two custom DNN architectures to obtain a higher accuracy, higher throughput and lower energy consumption. The first was implemented in SystemVerilog and the second with the FINN tool from AMD Xilinx. Next, both approaches were compared with the Vitis AI tool from AMD Xilinx. The final implementations were tested on the Avnet Ultra96-V2 development board with the Zynq UltraScale+ MPSoC ZCU3EG device. For two different DNNs architectures, we achieved a throughput of 196 fps for our custom accelerator and 111 fps for FINN. The same networks implemented with Vitis AI achieved 123.3 fps and 53.3 fps, respectively.},
+  preview       = {badap-agh-140225.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:136486,
@@ -612,6 +634,7 @@ References
   collection    = {Progress in image processing, pattern recognition and communication systems : proceedings of the conference (CORES, IP\&C, ACS) – June 28–30 2021},
   arxiv         = {2104.02303},
   abstract      = {Deep learning algorithms are a key component of many state-of-the-art vision systems, especially as Convolutional Neural Networks (CNN) outperform most solutions in the sense of accuracy. To apply such algorithms in real-time applications, one has to address the challenges of memory and computational complexity. To deal with the first issue, we use networks with reduced precision, specifically a binary neural network (also known as XNOR). To satisfy the computational requirements, we propose to use highly parallel and low-power FPGA devices. In this work, we explore the possibility of accelerating XNOR networks for traffic sign classification. The trained binary networks are implemented on the ZCU 104 development board, equipped with a Zynq UltraScale+ MPSoC device using two different approaches. Firstly, we propose a custom HDL accelerator for XNOR networks, which enables the inference with almost 450 fps. Even better results are obtained with the second method - the Xilinx FINN accelerator - enabling to process input images with around 550 frame rate. Both approaches provide over 96\% accuracy on the test set.},
+  preview       = {badap-agh-136486.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:141199,
@@ -638,6 +661,7 @@ References
   collection    = {DSD~2022 [Dokument elektroniczny] : 25th~Euromicro Conference on Digital System Design : 31 August – 2 September 2022, Maspalomas, Spain : proceedings},
   arxiv         = {2207.00860},
   abstract      = {Neuromorphic vision is a rapidly growing field with numerous applications in the perception systems of autonomous vehicles. Unfortunately, due to the sensors working principle, there is a significant amount of noise in the event stream. In this paper we present a novel algorithm based on an IIR filter matrix for filtering this type of noise and a hardware architecture that allows its acceleration using an SoC FPGA. Our method has a very good filtering efficiency for uncorrelated noise - over 99\% of noisy events are removed. It has been tested for several event data sets with added random noise. We designed the hardware architecture in such a way as to reduce the utilisation of the FPGA's internal BRAM resources. This enabled a very low latency and a throughput of up to 385.8 MEPS million events per second. The proposed hardware architecture was verified in simulation and in hardware on the Xilinx Zynq Ultrascale+ MPSoC chip on the Mercury+ XU9 module with the Mercury+ ST1 base board.},
+  preview       = {badap-agh-145044.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:143873,
@@ -650,6 +674,7 @@ References
   collection    = {SPA~2022 [Dokument elektroniczny] : Signal Processing Algorithms, Architectures, Arrangements, and Applications : 25th IEEE SPA conference : Poznan, 21st - 22nd September 2022 : conference proceedings},
   arxiv         = {2207.12198},
   abstract      = {This paper presents a system for hardware-in-the-loop (HiL) simulation of unmanned aerial vehicle (UAV) control algorithms implemented on a heterogeneous SoC FPGA computing platforms. The AirSim simulator running on a PC and an Arty Z7 development board with a Zynq SoC chip from AMD Xilinx were used. Communication was carried out via a serial USB link. An application for autonomous landing on a specially marked landing strip was selected as a case study. A landing site detection algorithm was implemented on the Zynq SoC platform. This allowed processing a 1280 × 720 @ 60 fps video stream in real time. Performed tests showed that the system works correctly and there are no delays that could negatively affect the stability of the control. The proposed concept is characterised by relative simplicity and low implementation cost. At the same time, it can be applied to test various types of high-level perception and control algorithms for UAV implemented on embedded platforms. We provide the code developed on GitHub, which includes both Python scripts running on the PC and C code running on Arty Z7.},
+  preview       = {badap-agh-143873.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:144092,
@@ -691,6 +716,7 @@ References
   issn          = {2079-9292},
   collection    = {Electronics},
   abstract      = {One of the problems encountered in the field of computer vision and video data analysis is the extraction of information from low-contrast images. This problem can be addressed in several ways, including the use of histogram equalisation algorithms. In this work, a method designed for this purpose—the Contrast-Limited Adaptive Histogram Equalization (CLAHE) algorithm—is implemented in hardware. An FPGA platform is used for this purpose due to the ability to run parallel computations and very low power consumption. To enable the processing of a 4K resolution (UHD, 3840 × 2160 pixels) video stream at 60 fps (frames per second) by using the CLAHE method, it is necessary to use a vector data format and process multiple pixels simultaneously. The algorithm realised in this work can be a component of a larger vision system, such as in autonomous vehicles or drones, but it can also support the analysis of underwater, thermal, or medical images both by humans and in an automated system.},
+  preview       = {badap-agh-141231.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:140732,
@@ -704,6 +730,7 @@ References
   collection    = {11th~Mediterranean Conference on Embedded Computing (MECO) [Dokument elektroniczny] : 7–10 June 2022, Budva, Montenegro},
   arxiv         = {2204.10619},
   abstract      = {Object detection is an essential component of many vision systems. For example, pedestrian detection is used in advanced driver assistance systems (ADAS) and advanced video surveillance systems (AVSS). Currently, most detectors (e.g. the YOLO - You Only Look Once - family) use deep convolutional neural networks. However, due to their high computational complexity, they are not able to process a very high-resolution video stream in real-time, especially within a limited energy budget. In this paper we present a hardware implementation of the well-known pedestrian detector with HOG (Histogram of Oriented Gradients) feature extraction and SVM (Support Vector Machine) classification. Our system running onAMD Xilinx Zynq UltraScale+ MPSoC(Multiprocessor System on Chip) device allows real-time processing of 4K resolution (UHD - Ultra High Definition,3840 × 2160 pixels) video for 60 frames per second. The system is capable of detecting a pedestrian in a single scale. The results obtained confirm the high suitability of reprogrammable devices in the real-time implementation of embedded vision systems.},
+  preview       = {badap-agh-140732.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:140919,
@@ -720,6 +747,7 @@ References
   issn          = {1424-8220},
   collection    = {Sensors},
   abstract      = {The information about optical flow, i.e., the movement of pixels between two consecutive images from a video sequence, is used in many vision systems, both classical and those based on deep neural networks. In some robotic applications, e.g., in autonomous vehicles, it is necessary to calculate the flow in real time. This represents a challenging task, especially for high-resolution video streams. In this work, two gradient-based algorithms-Lucas-Kanade and Horn-Schunck-were implemented on a ZCU 104 platform with Xilinx Zynq UltraScale+ MPSoC FPGA. A vector data format was used to enable flow calculation for a 4K (Ultra HD, 3840 × 2160 pixels) video stream at 60 fps. In order to detect larger pixel displacements, a multi-scale approach was used in both algorithms. Depending on the scale, the calculations were performed for different data formats, allowing for more efficient processing by reducing resource utilisation. The presented solution allows real-time optical flow determination in multiple scales for a 4K resolution with estimated energy consumption below 6 W. The algorithms realised in this work can be a component of a larger vision system in advanced surveillance systems or autonomous vehicles.},
+  preview       = {badap-agh-140919.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:143788,
@@ -745,6 +773,7 @@ References
   issn          = {1939-8018},
   collection    = {Journal of Signal Processing Systems for Signal, Image, and Video Technology},
   abstract      = {In this paper, we present a hardware-software implementation of a deep neural network for object detection based on a point cloud obtained by a LiDAR sensor. The PointPillars network was used in the research, as it is a reasonable compromise between detection accuracy and calculation complexity. The Brevitas / PyTorch tools were used for network quantisation (described in our previous paper) and the FINN tool for hardware implementation in the reprogrammable Zynq UltraScale+ MPSoC device. The obtained results show that quite a significant computation precision limitation along with a few network architecture simplifications allows the solution to be implemented on a heterogeneous embedded platform with maximum 19\% AP loss in 3D, maximum 8\% AP loss in BEV and execution time 375ms (the FPGA part takes 262ms). We have also compared our solution in terms of inference speed with a Vitis AI implementation proposed by Xilinx (19 Hz frame rate). Especially, we have thoroughly investigated the fundamental causes of differences in the frame rate of both solutions. The code is available at https://github.com/vision-agh/pp-finn .},
+  preview       = {badap-agh-141196.png},
   bibtex_show   = {true}
 }
 @inbook{badap-agh:141409,
@@ -757,6 +786,7 @@ References
   doi           = {10.7494/978-83-67427-00-5_1},
   collection    = {Nauka – technika – technologia : seria wydawnicza AGH},
   abstract      = {Streszczenie: Systemy wizyjne to dynamicznie rozwijająca się dziedzina nauki i techniki.W niniejszym artykule przedstawiono przegląd zagadnień, nad którymi pracuje zespół Laboratorium Systemów Wizyjnych.Obejmuje on systemy wizyjne dla pojazdów autonomicznych, aplikacje analizy obrazów medycznych, systemy wspomagania szkolenia pracowników, analizę obrazów termowizyjnych, implementacje i akceleracje algorytmów wizyjnych w układach SoC FPGA i GPU, przetwarzanie strumienia wizyjnego w rozdzielczości 4K, a także analizę sygnałów z wykorzystaniem głębokich sieci neuronowych i współpracę przy eksperymencie ALICE w CERN-ie.},
+  preview       = {badap-agh-141409.jpg},
   bibtex_show   = {true}
 }
 @article{badap-agh:139732,
@@ -784,6 +814,7 @@ References
   collection    = {DASIP~2022 : 15th~international workshop on Design and Architectures for Signal and Image Processing : Budapest, Hungary, June 20–22, 2022 : proceedings},
   arxiv         = {2205.10653},
   abstract      = {. Siamese trackers have been among the state-of-the-art solutions in each Visual Object Tracking (VOT) challenge over the past few years. However, with great accuracy comes great computational complexity: to achieve real-time processing, these trackers have to be massively parallelised and are usually run on high-end GPUs. Easy to implement, this approach is energy consuming, and thus cannot be used in many low-power applications. To overcome this, one can use energy-eﬃcient embedded devices, such as heterogeneous platforms joining the ARM processor system with programmable logic (FPGA). In this work, we propose a hardware-software implementation of the well-known fully connected Siamese tracker (SiamFC). We have developed a quantised Siamese network for the FINN accelerator, using algorithm-accelerator co-design, and performed design space exploration to achieve the best eﬃciency-to-energy ratio (determined by FPS and used resources). For our network, running in the programmable logic part of the Zynq UltraScale+ MPSoC ZCU104, we achieved the processing of almost 50 frames-per-second with tracker accuracy on par with its ﬂoating point counterpart, as well as the original SiamFC network. The complete tracking system, implemented in ARM with the network accelerated on FPGA, achieves up to 17 fps. These results bring us towards bridging the gap between the highly accurate but energy-demanding algorithms and energy-eﬃcient solutions ready to be used in low-power, edge systems.},
+  preview       = {badap-agh-141976.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:143548,
@@ -798,6 +829,7 @@ References
   collection    = {Zeszyty Studenckiego Towarzystwa Naukowego},
   arxiv         = {2212.08387},
   abstract      = {This paper presents a method for detection and recognition of traffic signs based on information extracted from an event camera. The solution used a FireNet deep convolutional neural network to reconstruct events into greyscale frames. Two YOLOv4 network models were trained, one based on greyscale images and the other on colour images. The best result was achieved for the model trained on the basis of greyscale images, achieving an efficiency of 87.03\%.},
+  preview       = {badap-agh-143548.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:143871,
@@ -810,6 +842,7 @@ References
   collection    = {SPA~2022 [Dokument elektroniczny] : Signal Processing Algorithms, Architectures, Arrangements, and Applications : 25th IEEE SPA conference : Poznan, 21st - 22nd September 2022 : conference proceedings},
   arxiv         = {2207.13345},
   abstract      = {In recent years, event cameras (DVS - Dynamic Vision Sensors) have been used in vision systems as an alternative or supplement to traditional cameras. They are characterised by high dynamic range, high temporal resolution, low latency, and reliable performance in limited lighting conditions - parameters that are particularly important in the context of advanced driver assistance systems (ADAS) and self-driving cars. In this work, we test whether these rather novel sensors can be applied to the popular task of traffic sign detection. To this end, we analyse different representations of the event data: event frame, event frequency, and the exponentially decaying time surface, and apply video frame reconstruction using a deep neural network called FireNet. We use the deep convolutional neural network YOLOv4 as a detector. For particular representations, we obtain a detection accuracy in the range of 86.9-88.9\% mAP@0.5. The use of a fusion of the considered representations allows us to obtain a detector with higher accuracy of 89.9\% mAP@0.5. In comparison, the detector for the frames reconstructed with FireNet is characterised by an accuracy of 72.67\% mAP@0.5. The results obtained illustrate the potential of event cameras in automotive applications, either as standalone sensors or in close cooperation with typical frame-based cameras.},
+  preview       = {badap-agh-143871.jpg},
   bibtex_show   = {true}
 }
 @inbook{badap-agh:142432,
@@ -856,6 +889,7 @@ References
   collection    = {2021~24th~Euromicro conference on Digital System Design [Dokument elektroniczny] : DSD~2021 : virtual conference, 1–3 September 2021 : proceedings},
   arxiv         = {2105.09658},
   abstract      = {This work describes the hardware implementation of a connected component labelling (CCL) module in reprogammable logic. The main novelty of the design is the "full", i.e. without any simplifications, support of a 4 pixel per clock format (4 ppc) and real-time processing of a 4K/UltraHD video stream (3840 x 2160 pixels) at 60 frames per second. To achieve this, a special labelling method was designed and a functionality that stops the input data stream in order to process pixel groups which require writing more than one merger into the equivalence table. The proposed module was verified in simulation and in hardware on the Xilinx Zynq Ultrascale+ MPSoC chip on the ZCU104 evaluation board.},
+  preview       = {badap-agh-137005.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:135661,
@@ -868,6 +902,7 @@ References
   collection    = {MMAR~2021 [Dokument elektroniczny] : 2021~25th~international conference on Methods and Models in Automation \&~Robotics : August 23–26, 2021, Mi\k{e}dzyzdroje, Poland},
   arxiv         = {2104.09815},
   abstract      = {In this paper, we present a control system that allows a drone to fly autonomously through a series of gates marked with ArUco tags. A simple and low-cost DJI Tello EDU quad-rotor platform was used. Based on the API provided by the manufacturer, we have created a Python application that enables the communication with the drone over WiFi, realises drone positioning based on visual feedback, and generates control. Two control strategies were proposed, compared and critically analysed. In addition, the accuracy of the positioning method used was measured. The application was evaluated on a laptop computer (about 40 fps) and a Nvidia Jetson TX2 embedded GPU platform (about 25 fps). We provide the developed code on GitHub.},
+  preview       = {badap-agh-135661.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:132409,
@@ -929,6 +964,7 @@ References
   issn          = {1939-8018},
   collection    = {Journal of Signal Processing Systems for Signal, Image, and Video Technology},
   abstract      = {In this paper, a hardware implementation in reconfigurable logic of a single-pass connected component labelling (CCL) and connected component analysis (CCA) module is presented. The main novelty of the design is the support of a video stream in 2 and 4 pixel per clock format (2 and 4 ppc) and real-time processing of 4K/UHD video stream (3840 x 2160 pixels) at 60 frames per second. We discuss several approaches to the issue and present in detail the selected ones. The proposed module was verified in an exemplary application – skin colour areas segmentation – on the ZCU 102 and ZCU 104 evaluation boards equipped with Xilinx Zynq UltraScale+ MPSoC devices.},
+  preview       = {badap-agh-134265.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:135211,
@@ -967,6 +1003,7 @@ References
   collection    = {Computer Vision and Graphics : International Conference : ICCVG~2020 : Warsaw, Poland, September 14–16, 2020 : proceedings},
   arxiv         = {2004.11612},
   abstract      = {In this paper we present a vision based hardware-software control system enabling autonomous landing of a mul-tirotor unmanned aerial vehicle (UAV). It allows the detection of a marked landing pad in real-time for a 1280 x 720 @ 60 fps video stream. In addition, a LiDAR sensor is used to measure the altitude above ground. A heterogeneous Zynq SoC device is used as the computing platform. The solution was tested on a number of sequences and the landing pad was detected with 96\% accuracy. This research shows that a reprogrammable heterogeneous computing system is a good solution for UAVs because it enables real-time data stream processing with relatively low energy consumption.},
+  preview       = {badap-agh-130006.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:129297,
@@ -979,6 +1016,7 @@ References
   collection    = {Advanced, contemporary control : proceedings of KKA 2020 – the 20th Polish control conference : [14-16 October, 2020], \L{}\'{o}d\'{z}, Poland},
   arxiv         = {2002.00250},
   abstract      = {This paper presents a GPU implementation of two foreground object segmentation algorithms: Gaussian Mixture Model (GMM) and Pixel Based Adaptive Segmenter (PBAS) modified for RGB-D data support. The simultaneous use of colour (RGB) and depth (D) data allows to improve segmentation accuracy, especially in case of colour camouflage, illumination changes and occurrence of shadows. Three GPUs were used to accelerate calculations: embedded NVIDIA Jetson TX2 (Maxwell architecture), mobile NVIDIA GeForce GTX 1050m (Pascal architecture) and efficient NVIDIA RTX 2070 (Turing architecture).Segmentation accuracy comparable to previously published works was obtained. Moreover, the use of a GPU platform allowed to get real-time image processing. In addition, the system has been adapted to work with two RGB-D sensors: RealSense D415 and D435 from Intel.},
+  preview       = {badap-agh-129297.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:130002,
@@ -991,6 +1029,7 @@ References
   collection    = {Computer Vision and Graphics : International Conference : ICCVG~2020 : Warsaw, Poland, September 14–16, 2020 : proceedings},
   arxiv         = {2007.00491},
   abstract      = {In this paper the research on optimisation of visual object tracking using a Siamese neural network for embedded vision systems is presented. It was assumed that the solution shall operate in real-time, preferably for a high resolution video stream, with the lowest possible energy consumption. To meet these requirements, techniques such as the reduction of computational precision and pruning were considered. Brevitas, a tool dedicated for optimisation and quantisation of neural networks for FPGA implementation, was used. A number of training scenarios were tested with varying levels of optimisations – from integer uniform quantisation with 16 bits to ternary and binary networks. Next, the influence of these optimisations on the tracking performance was evaluated. It was possible to reduce the size of the convolutional filters up to 10 times in relation to the original network. The obtained results indicate that using quantisation can significantly reduce the memory and computational complexity of the proposed network while still enabling precise tracking, thus allow to use it in embedded vision systems. Moreover, quantisation of weights positively affects the network training by decreasing overfitting.},
+  preview       = {badap-agh-130002.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:130350,
@@ -1003,6 +1042,7 @@ References
   collection    = {SPA~2020 [Dokument elektroniczny] : Signal Processing : Algorithms, Architectures, Arrangements and Applications : Poznan, 23rd–25th September 2020 : conference proceedings},
   arxiv         = {2007.00493},
   abstract      = {In this paper we present our research on the optimisation of a deep neural network for 3D object detection in a point cloud. Techniques like quantisation and pruning available in the Brevitas and PyTorch tools were used. We performed the experiments for the PointPillars network, which offers a reasonable compromise between detection accuracy and calculation complexity. The aim of this work was to propose a variant of the network which we will ultimately implement in an FPGA device. This will allow for real-time LiDAR data processing with low energy consumption. The obtained results indicate that even a significant quantisation from 32-bit floating point to 2-bit integer in the main part of the algorithm, results in 5\%-9\% decrease of the detection accuracy, while allowing for almost a 16-fold reduction in size of the model.},
+  preview       = {badap-agh-130350.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:126255,
@@ -1150,6 +1190,7 @@ References
   issn          = {1861-8200},
   collection    = {Journal of Real-Time Image Processing},
   abstract      = {The article demonstrates the usefulness of heterogeneous System on Chip (SoC) devices in smart cameras used in intelligent transportation systems (ITS). In a compact, energy efficient system the following exemplary algorithms were implemented: vehicle queue length estimation, vehicle detection, vehicle counting and speed estimation (using multiple virtual detection lines), as well as vehicle type (local binary features and SVM classifier) and colour (k-means classifier and YCbCr colourspace analysis) recognition. The solution exploits the hardware–software architecture, i.e. the combination of reconfigurable resources and the efficient ARM processor. Most of the modules were implemented in hardware, using Verilog HDL, taking full advantage of the possible parallelization and pipeline, which allowed to obtain real-time image processing. The ARM processor is responsible for executing some parts of the algorithm, i.e. high-level image processing and analysis, as well as for communication with the external systems (e.g. traffic lights controllers). The demonstrated results indicate that modern SoC systems are a very interesting platform for advanced ITS systems and other advanced embedded image processing, analysis and recognition applications.},
+  preview       = {badap-agh-104286.jpg},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:119438,
@@ -1259,6 +1300,7 @@ References
   doi           = {10.15439/2016F472},
   collection    = {FedCSIS : abstracts of the Federated Conference on Computer Science and Information Systems : 11–14 September, 2016, Gdansk, Poland : book of abstracts},
   abstract      = {In this paper research on a compact deep convolutional neural network (DCNN) architecture for age and gender estimation from facial images has been presented.The proposed solution was tested on the FERET and the Adience Benchmark databases.In the first case a 98.6\% accuracy for gender and 86.4\% for age estimation was obtained.For the Adience database, which contains images recorded in unconstrained conditions and is much more demanding, a 62.0\% for gender and 42.0\% for age accuracy was obtained.When compared to the reference results on a much larger network, the performance should be considered as satisfactory.The research shows that a compact DCNN with small input images can provide quite good classification results.},
+  preview       = {badap-agh-101176.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:97049,
@@ -1452,6 +1494,7 @@ References
   issn          = {1424-8220},
   collection    = {Sensors},
   abstract      = {This article presents an efficient hardware implementation of the Horn-Schunck algorithm that can be used in an embedded optical flow sensor. An architecture is proposed, that realises the iterative Horn-Schunck algorithm in a pipelined manner. This modification allows to achieve data throughput of 175 MPixels/s and makes processing of Full HD video stream (1; 920 × 1; 080 @ 60 fps) possible. The structure of the optical flow module as well as pre- and post-filtering blocks and a flow reliability computation unit is described in details. Three versions of optical flow modules, with different numerical precision, working frequency and obtained results accuracy are proposed. The errors caused by switching from floating- to fixed-point computations are also evaluated. The described architecture was tested on popular sequences from an optical flow dataset of the Middlebury University. It achieves state-of-the-art results among hardware implementations of single scale methods. The designed fixed-point architecture achieves performance of 418 GOPS with power efficiency of 34 GOPS/W. The proposed floating-point module achieves 103 GFLOPS, with power efficiency of 24 GFLOPS/W. Moreover, a 100 times speedup compared to a modern CPU with SIMD support is reported. A complete, working vision system realized on Xilinx VC707 evaluation board is also presented. It is able to compute optical flow for Full HD video stream received from an HDMI camera in real-time. The obtained results prove that FPGA devices are an ideal platform for embedded vision systems.},
+  preview       = {badap-agh-80299.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:88627,
@@ -1523,6 +1566,7 @@ References
   collection    = {Journal of Real-Time Image Processing},
   projects      = {Preludium-Kryjak},
   abstract      = {The processing of a high-definition video stream in real-time is a challenging task for embedded systems. However, modern FPGA devices have both a high operating frequency and sufficient logic resources to be successfully used in these tasks. In this article, an advanced system that is able to generate and maintain a complex background model for a scene as well as segment the foreground for an HD colour video stream (1,920 × 1,080 @ 60 fps) in real-time is presented. The possible application ranges from video surveillance to machine vision systems. That is, in all cases, when information is needed about which objects are new or moving in the scene. Excellent results are obtained by using the CIE Lab colour space, advanced background representation as well as integrating information about lightness, colour and texture in the segmentation step. Finally, the complete system is implemented in a single high-end FPGA device.},
+  preview       = {badap-agh-80341.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:81415,
@@ -1537,6 +1581,7 @@ References
   issn          = {2081-8491},
   collection    = {International Journal of Electronics and Telecommunications},
   abstract      = {The article presents a hardware implementation of the foreground object detection algorithm PBAS (Pixel-Based Adaptive Segmenter) with a scene analysis module. A mechanism for static object detection is proposed, which is based on consecutive frame differencing. The method allows to distinguish stopped foreground objects (e.g. a car at the intersection, abandoned luggage) from false detections (so-called ghosts) using edge similarity. The improved algorithm was compared with the original version on popular test sequences from the changedetection.net dataset. The obtained results indicate that the proposed approach allows to improve the performance of the method for sequences with the stopped objects. The algorithm has been implemented and successfully verified on a hardware platform with Virtex 7 FPGA device. The PBAS segmentation, consecutive frame differencing, Sobel edge detection and advanced one-pass connected component analysis modules were designed. The system is capable of processing 50 frames with a resolution of 720 × 576 pixels per second},
+  preview       = {badap-agh-81415.png},
   bibtex_show   = {true}
 }
 @inproceedings{badap-agh:85623,
@@ -1814,6 +1859,7 @@ References
   doi           = {10.2478/v10006-010-0042-2},
   issn          = {1641-876X},
   abstract      = {Mitrion-C based implementations of three image processing algorithms: a look-up table operation, simple local thresholding and Sauvola's local thresholding are described. Implementation results, performance of the design and FPGA logic utilization are discussed.},
+  preview       = {badap-agh-55263.png},
   bibtex_show   = {true}
 }
 @article{badap-agh:57069,
