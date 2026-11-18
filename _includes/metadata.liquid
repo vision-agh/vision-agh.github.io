@@ -68,11 +68,16 @@
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+    {% unless page.og_image %}
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+    {% endunless %}
+    <meta property="og:image:alt" content="{{ site.title }}">
   {% endif %}
-  <meta property="og:locale" content="{{ site.lang }}">
+  <meta property="og:locale" content="{{ site.og_locale | default: site.lang }}">
 
   <!-- Twitter card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta
     name="twitter:title"
     content="{% if page.url == '/' %}{{ site.home_title | default: title }}{% elsif page.title %}{{ page.title }} | {{ site.short_title | default: title }}{% else %}{{ title }}{% endif %}"

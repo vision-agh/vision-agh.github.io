@@ -74,7 +74,8 @@ max_width: 1140px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: https://epas.agh.edu.pl/assets/img/logo_epas_group.png # The site-wide (default for all links) Open Graph preview image
+og_image: https://epas.agh.edu.pl/assets/img/og_epas.png # The site-wide (default for all links) Open Graph preview image (1200x630 for Facebook/LinkedIn)
+og_locale: en_US # Open Graph locale (Facebook expects the ll_CC format)
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
